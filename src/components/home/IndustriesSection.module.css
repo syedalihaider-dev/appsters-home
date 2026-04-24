@@ -1,0 +1,103 @@
+.industriesSection {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #050718, #1d2b97);
+    position: relative;
+    z-index: 1;
+}
+
+.sec_top .title{
+    text-transform: uppercase;
+}
+
+.sec_content{
+    margin-top: 50px;
+}
+
+.sec_left ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.tabBtn {
+    width: 250px;
+    padding: 10px 0;
+    border: 1px solid var(--light-color);
+    border-radius: 50px;
+    color: var(--light-color);
+    font-size: 18px;
+    font-weight: var(--font-500);
+    text-align: center;
+    transition: var(--cubic);   
+    cursor: pointer;
+    opacity: .6;
+}
+
+.tabBtn:hover,
+.activeTab {
+    color: var(--dark-color);
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    opacity: 1;
+}
+
+.imageWrap {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.sec_right .title{
+    font-weight: var(--font-700);
+    text-transform: uppercase;
+}
+
+.sec_right .para{
+    font-size: 20px;
+    margin: 25px 0 40px;
+}  
+
+.fadeSlide {
+    animation: fadeIn 0.5s ease, slideIn 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.fadeSlideRight {
+    animation: fadeIn 0.5s ease, slideRight 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(30px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

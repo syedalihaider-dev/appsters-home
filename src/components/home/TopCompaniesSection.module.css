@@ -1,0 +1,169 @@
+.topCompaniesSection {
+    background: linear-gradient(0deg, #674300 0%, #121212 60%);
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.transparent_heading {
+    display: block;
+    width: 100%;
+    font-size: 182px;
+    line-height: 182px;
+    text-transform: uppercase;
+    font-weight: var(--font-900);
+    color: #F5F5F5;
+    opacity: 0.035;
+    letter-spacing: -8px;
+    font-family: 'Big Shoulders', sans-serif;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 0;
+}
+
+.sub_heading {
+    width: 310px;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--light-color);
+    font-weight: var(--font-500);
+    letter-spacing: 5px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_heading::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+}
+
+.sec_left h2 {
+    text-transform: uppercase;
+    font-weight: var(--font-600);
+    margin-top: 25px;
+}
+
+.sec_right {
+    text-align: end;
+}
+
+.rating {
+    font-size: 90px;
+    line-height: 100px;
+    letter-spacing: -2px;
+    font-family: 'Big Shoulders', sans-serif;
+    font-weight: var(--font-600);
+}
+
+.rating_star {
+    width: 136px;
+    height: 25px;
+    margin: 5px 0 10px;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sec_right h5 {
+    font-family: 'Big Shoulders', sans-serif;
+    text-transform: capitalize;
+}
+
+.sec_content {
+    margin-top: 50px;
+}
+
+.sec_content ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 1px solid #d9d9d950;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transform: scale(1);
+    transition: var(--cubic);
+    cursor: pointer;
+}
+
+.box:hover{
+    transform: scale(.95);
+}
+
+.box::before {
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(0deg, var(--primary-color), var(--light-color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: var(--cubic);
+}
+
+.box:hover::before{
+    opacity: 1;
+}
+
+.awarded_hover {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: var(--cubic);
+    z-index: 3;
+}
+
+.box:hover .awarded_hover{
+    top: 50%;
+}
+
+.awarded_companies_img {
+    width: 168px;
+    height: 85px;
+    position: relative;
+    z-index: 1;
+}
+
+.box p,
+.box p span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.box p span {
+    font-size: 14px;
+    display: block;
+    color: #d9d9d950;
+    margin-top: 10px;
+}

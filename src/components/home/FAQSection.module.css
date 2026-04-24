@@ -1,0 +1,104 @@
+.faqSection {
+    padding: 80px 0;
+}
+
+.sub_heading {
+    width: fit-content;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--dark-color);
+    font-weight: var(--font-500);
+    letter-spacing: 5px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.sub_heading::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+}
+
+.title{
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin: 25px 0;
+}
+
+.diamond{
+    width: 292px;
+    height: 292px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Agar diamond shape chahiye CSS se */
+}
+
+.vimeo_video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Slightly larger to ensure coverage */
+    height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq_item {
+    border-top: 1px solid var(--border-color);
+    padding: 25px 0;
+    cursor: pointer;
+    transition: var(--cubic);
+}
+
+.item_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item_heading h6 {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.arrow {
+    transform: rotateX(180deg);
+    position: relative;
+    width: 28px;
+    height: 28px;
+    transition: var(--cubic);
+}
+
+.rotate {
+    transform: rotateX(0deg);
+}
+
+.item_body {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--cubic);
+}
+
+.para{
+    color: #666666;
+}
+
+.open {
+    max-height: 300px;
+    margin-top: 10px;
+}

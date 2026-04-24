@@ -1,0 +1,88 @@
+.awardsSection {
+    background: #fff;
+    padding: 40px 0 80px;
+}
+
+.awardsSection :global(.container) {
+    border-top: 2px solid rgba(51, 51, 51, 0.16);
+}
+
+.badges {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.img {
+    width: 274px;
+    height: auto;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width:1600px) {
+    .awardsSection {
+        padding: 10px 0 80px;
+    }
+
+    .badges {
+        margin-top: 30px;
+    }
+
+    .img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:1399px) {
+    .awardsSection {
+        padding: 10px 0 60px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .awardsSection {
+        padding: 10px 0 40px;
+    }
+
+    .badges {
+        margin-top: 30px;
+    }
+
+    .img {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .badges {
+        margin-top: 25px;
+    }
+
+    .img {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .badges {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .img {
+        width: 130px;
+    }
+}

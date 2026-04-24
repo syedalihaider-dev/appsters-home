@@ -1,0 +1,69 @@
+.gameSection{
+    position: relative;
+    z-index: 1;
+}
+
+.sec_left{
+    padding: 200px 0;
+    background: var(--light-color);
+    position: relative;
+    z-index: 2;
+}
+
+.after{
+   width: 35px;
+    height: 679px;
+    position: absolute;
+    bottom: 0;
+    right: -47px;
+    z-index: -1;
+}
+
+.sub_heading {
+    width: fit-content;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--dark-color);
+    font-weight: var(--font-600);
+    font-family: 'Big Shoulders', sans-serif;
+}
+
+.title{
+    font-size: 120px;
+    line-height: 130px;
+    margin: 25px 0 10px;
+    color: var(--dark-color);
+    text-transform: uppercase;
+}
+
+.para{
+    font-size: 24px;
+    color: var(--dark-color);
+}
+
+.sec_left :global(.mybtn .text){
+    background: var(--primary-color);
+}
+
+.sec_left :global(.mybtn .text span){
+    color: var(--dark-color);
+}
+
+.sec_left :global(.mybtn .icon){
+    background: var(--primary-color);
+}
+
+.sec_right{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.sec_right video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
