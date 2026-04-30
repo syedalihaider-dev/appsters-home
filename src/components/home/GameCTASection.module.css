@@ -1,17 +1,17 @@
-.gameSection{
+.gameSection {
     position: relative;
     z-index: 1;
 }
 
-.sec_left{
+.sec_left {
     padding: 200px 0;
     background: var(--light-color);
     position: relative;
     z-index: 2;
 }
 
-.after{
-   width: 35px;
+.after {
+    width: 35px;
     height: 679px;
     position: absolute;
     bottom: 0;
@@ -28,7 +28,7 @@
     font-family: 'Big Shoulders', sans-serif;
 }
 
-.title{
+.title {
     font-size: 120px;
     line-height: 130px;
     margin: 25px 0 10px;
@@ -36,24 +36,24 @@
     text-transform: uppercase;
 }
 
-.para{
+.para {
     font-size: 24px;
     color: var(--dark-color);
 }
 
-.sec_left :global(.mybtn .text){
+.sec_left :global(.mybtn .text) {
     background: var(--primary-color);
 }
 
-.sec_left :global(.mybtn .text span){
+.sec_left :global(.mybtn .text span) {
     color: var(--dark-color);
 }
 
-.sec_left :global(.mybtn .icon){
+.sec_left :global(.mybtn .icon) {
     background: var(--primary-color);
 }
 
-.sec_right{
+.sec_right {
     width: 50%;
     height: 100%;
     position: absolute;
@@ -62,8 +62,60 @@
     z-index: 1;
 }
 
-.sec_right video{
+.sec_right video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width:1600px) {
+    .sec_left {
+        padding: 120px 0;
+    }
+
+    .after {
+        width: 14px;
+        height: 270px;
+        right: -26px;
+    }
+
+    .sub_heading {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 80px;
+        line-height: 80px;
+        margin: 20px 0 10px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1399px) {
+    .sec_left {
+        padding: 100px 0;
+    }
+
+    .after {
+        width: 14px;
+        height: 253px;
+        right: -26px;
+    }
+
+    .sub_heading {
+        font-size: 25px;
+    }
+
+    .title {
+        font-size: 65px;
+        line-height: 65px;
+        margin: 15px 0 10px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
 }
