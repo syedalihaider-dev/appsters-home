@@ -70,3 +70,37 @@
         top: -16px;
     }
 }
+
+@media screen and (max-width:991px) {
+    .secBefore {
+        height: 48px;
+        top: -10px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .secBefore {
+        height: 36px;
+        top: -8px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .developmentSection {
+        transform: translateY(60px);
+    }
+
+    .sec_wrapper {
+        padding: 15px;
+    }
+
+    .secBefore {
+        height: 21px;
+        top: -6px;
+    }
+
+    .techIcon {
+        width: 100%;
+        height: 50px;
+    }
+}

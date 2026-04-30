@@ -44,9 +44,30 @@
     z-index: 1;
 }
 
+.tableResponsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tableResponsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.tableContainer {
+    position: relative;
+    min-width: 900px;
+    padding: 15px 0;
+}
+
 .highlight {
     width: var(--col-width, 0);
-    height: 90%;
+    height: calc(100% - 30px);
     background: var(--primary-color);
     border-radius: 20px;
     opacity: 0;
@@ -55,7 +76,8 @@
     transform: translateY(-50%);
     left: var(--col-left, 0);
     z-index: 0;
-    transition: var(--cubic);
+    transition: var(--cubic, all 0.3s ease);
+    pointer-events: none;
 }
 
 .before {
@@ -105,24 +127,211 @@
     border-bottom: unset;
 }
 
-.sec_content :global(.mybtn){
+.sec_content :global(.mybtn) {
     margin: 0 auto;
 }
 
-.sec_content :global(.mybtn .text){
+.sec_content :global(.mybtn .text) {
     width: 130px;
     background: var(--dark-color);
 }
 
-.sec_content :global(.mybtn .text span){
+.sec_content :global(.mybtn .text span) {
     color: var(--light-color);
     font-size: 16px;
 }
 
-.sec_content :global(.mybtn .icon){
+.sec_content :global(.mybtn .icon) {
     background: var(--dark-color);
 }
 
-.sec_content :global(.mybtn .icon img){
+.sec_content :global(.mybtn .icon img) {
     filter: invert(1);
+}
+
+@media screen and (max-width:1600px) {
+    .plansSection {
+        padding: 130px 0 60px;
+    }
+
+    .sub_heading {
+        font-size: 18px;
+    }
+
+    .sub_heading::before {
+        top: 8px;
+    }
+
+    .sec_content {
+        padding: 20px 0;
+        margin-top: 35px;
+    }
+
+    .tableContainer {
+        padding: 10px 0;
+    }
+
+    .highlight {
+        height: calc(100% - 0px);
+    }
+
+    .sec_content tr th {
+        height: 65px;
+        font-size: 35px;
+    }
+
+    .sec_content tr td {
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .sec_content tr .heading {
+        padding-left: 30px;
+    }
+
+}
+
+@media screen and (max-width:1399px) {
+    .plansSection {
+        padding: 120px 0 60px;
+    }
+
+    .sub_heading {
+        font-size: 18px;
+    }
+
+    .sec_content {
+        margin-top: 30px;
+        padding: 15px 0;
+    }
+
+    .tableContainer {
+        padding: 10px 0;
+    }
+
+    .highlight {
+        height: calc(100% - 0px);
+    }
+
+    .before {
+        width: 400px;
+        height: 42px;
+        top: -42px;
+    }
+
+    .sec_content tr th {
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .sec_content tr td {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .sec_content tr .heading {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .plansSection {
+        padding: 120px 0 40px;
+    }
+
+    .sub_heading {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .sub_heading::before {
+        top: 5px;
+    }
+
+    .tableContainer {
+        padding: 10px 0;
+    }
+
+    .before {
+        width: 301px;
+        height: 32px;
+        top: -32px;
+    }
+
+    .highlight {
+        height: calc(100% - 10px);
+    }
+
+    .sec_content tr th {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .sec_content tr td {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .sec_content tr .heading {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .sub_heading::before {
+        top: 6px;
+    }
+
+    .before {
+        width: 300px;
+        height: 32px;
+        top: -32px;
+    }
+
+    .highlight {
+        height: calc(100% - 10px);
+    }
+
+    .sec_content tr th {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .sec_content tr td {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .sec_content tr .heading {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .sub_heading::before {
+        top: 6px;
+    }
+
+    .sec_content {
+        margin-top: 30px;
+        padding: 15px 10px;
+    }
+
+    .before {
+        width: 200px;
+        height: 21px;
+        top: -21px;
+    }
+
+    .sec_content tr th {
+        font-size: 20px;
+    }
+
+    .sec_content tr td {
+        font-size: 16px;
+    }
+
+    .sec_content tr .heading {
+        padding-left: 0px;
+    }
 }

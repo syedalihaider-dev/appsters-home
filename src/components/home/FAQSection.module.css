@@ -28,26 +28,28 @@
     z-index: -1;
 }
 
-.title{
+.title {
     text-transform: uppercase;
     color: var(--dark-color);
     margin: 25px 0;
 }
 
-.diamond{
+.diamond {
     width: 292px;
     height: 292px;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Agar diamond shape chahiye CSS se */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* Agar diamond shape chahiye CSS se */
 }
 
 .vimeo_video {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%; /* Slightly larger to ensure coverage */
+    width: 100%;
+    /* Slightly larger to ensure coverage */
     height: 100%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -94,7 +96,7 @@
     transition: var(--cubic);
 }
 
-.para{
+.para {
     color: #666666;
 }
 

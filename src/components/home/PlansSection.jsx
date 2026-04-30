@@ -8,14 +8,27 @@ export default function PlansSection() {
 
     const [hoverCol, setHoverCol] = useState(null);
 
-  const handleHover = (index) => setHoverCol(index);
-  const handleLeave = () => setHoverCol(null);
+  const handleMouseOver = (e) => {
+    const cell = e.target.closest("td, th");
+    if (!cell) return;
+    const cellIndex = cell.cellIndex;
+    if (cellIndex > 0 && cellIndex <= 4) {
+      setHoverCol(cellIndex);
+    } else {
+      setHoverCol(null);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setHoverCol(null);
+  };
 
   useEffect(() => {
+    const tableContainer = document.querySelector(`.${styles.tableContainer}`);
     const table = document.querySelector(`.${styles.table}`);
     const highlight = document.querySelector(`.${styles.highlight}`);
 
-    if (!table || !highlight) return;
+    if (!table || !highlight || !tableContainer) return;
 
     if (hoverCol === null) {
       highlight.style.opacity = 0;
@@ -26,10 +39,10 @@ export default function PlansSection() {
     if (!th) return;
 
     const rect = th.getBoundingClientRect();
-    const tableRect = table.getBoundingClientRect();
+    const containerRect = tableContainer.getBoundingClientRect();
 
     highlight.style.setProperty("--col-width", `${rect.width}px`);
-    highlight.style.setProperty("--col-left", `${rect.left - tableRect.left}px`);
+    highlight.style.setProperty("--col-left", `${rect.left - containerRect.left}px`);
     highlight.style.opacity = 1;
   }, [hoverCol]);
 
@@ -57,35 +70,19 @@ return (
                 <Image src="/images/plans-before-decor.png" alt="Before Decor Image..." fill sizes="100vw"
                     style={{ objectFit: "contain" }} className={styles.beforeImg} />
             </div>
-            <div className={styles.highlight}></div>
-            <table className={styles.table}>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th onMouseEnter={()=> handleHover(1)}
-                            onMouseLeave={handleLeave}
-                            >
-                            DEDICATED TEAM
-                        </th>
-                        <th onMouseEnter={()=> handleHover(2)}
-                            onMouseLeave={handleLeave}
-                            >
-                            FIXED PRICE
-                        </th>
-
-                        <th onMouseEnter={()=> handleHover(3)}
-                            onMouseLeave={handleLeave}
-                            >
-                            HOURLY PRICE
-                        </th>
-
-                        <th onMouseEnter={()=> handleHover(4)}
-                            onMouseLeave={handleLeave}
-                            >
-                            ONSITE TEAM
-                        </th>
-                    </tr>
-                </thead>
+            <div className={styles.tableResponsive}>
+                <div className={styles.tableContainer}>
+                    <div className={styles.highlight}></div>
+                    <table className={styles.table} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>DEDICATED TEAM</th>
+                                <th>FIXED PRICE</th>
+                                <th>HOURLY PRICE</th>
+                                <th>ONSITE TEAM</th>
+                            </tr>
+                        </thead>
 
                 <tbody>
                     <tr>
@@ -145,6 +142,8 @@ return (
                     </tr>
                 </tbody>
             </table>
+                </div>
+            </div>
         </div>
     </div>
 </section>
