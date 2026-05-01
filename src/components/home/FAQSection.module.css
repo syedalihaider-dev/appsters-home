@@ -104,3 +104,99 @@
     max-height: 300px;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 1600px) {
+    .faqSection {
+        padding: 60px 0;
+    }
+
+    .sub_heading {
+        font-size: 18px;
+        letter-spacing: 2px;
+        padding-left: 20px;
+    }
+
+    .title {
+        margin: 15px 0;
+    }
+
+    .diamond {
+        width: 250px;
+        height: 250px;
+    }
+
+    .faq_item {
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .faqSection {
+        padding: 40px 0;
+    }
+
+    .sub_heading {
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding-left: 15px;
+    }
+
+    .sub_heading::before {
+        top: 8px;
+    }
+
+    .title {
+        margin: 10px 0;
+    }
+
+    .diamond {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .sub_heading {
+        letter-spacing: 1px;
+    }
+
+    .sub_heading::before {
+        top: 8px;
+    }
+
+    .title {
+        margin: 10px 0;
+    }
+
+    .diamond {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .sub_heading {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .sub_heading::before {
+        top: 6px;
+    }
+
+    .diamond {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .diamond {
+        width: 100px;
+        height: 100px;
+    }
+
+    .faqs{
+        margin-top: 25px;
+    }
+}

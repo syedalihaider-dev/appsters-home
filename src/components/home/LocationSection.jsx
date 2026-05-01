@@ -100,11 +100,10 @@ export default function LocationSection() {
             }}
             slidesPerView={3}
             spaceBetween={20}
-            // centeredSlides={true}
-            // centeredSlidesBounds={true}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={handleSlideChange}
             breakpoints={{
+              320: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
@@ -138,7 +137,7 @@ export default function LocationSection() {
 
                         <p className={styles.heading}>
                           Location
-                          <a>299 South Main Street Salt Lake City, Utah 84111</a>
+                          <a>299 South Main Street Salt Lake City, <br />Utah 84111</a>
                         </p>
                       </div>
                     </li>
@@ -211,7 +210,7 @@ export default function LocationSection() {
 
                         <p className={styles.heading}>
                           Location
-                          <a>2139 Hoora Ave, Manama 973, Bahrain</a>
+                          <a>2139 Hoora Ave, Manama 973,<br /> Bahrain</a>
                         </p>
                       </div>
                     </li>
@@ -285,7 +284,7 @@ export default function LocationSection() {
 
                         <p className={styles.heading}>
                           Location
-                          <a>26 Broadway Suite 934, New York, NY 10004</a>
+                          <a>26 Broadway Suite 934, New York,<br /> NY 10004</a>
                         </p>
                       </div>
                     </li>
@@ -359,7 +358,7 @@ export default function LocationSection() {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>Office #101 32 St Al Majarra Mughaidir Suburb<br /> Sharjah UAE</a>
                         </p>
                       </div>
                     </li>
@@ -433,7 +432,7 @@ export default function LocationSection() {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>Office #101 32 St Al Majarra Mughaidir Suburb<br /> Sharjah UAE</a>
                         </p>
                       </div>
                     </li>
@@ -507,7 +506,7 @@ export default function LocationSection() {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>Office #101 32 St Al Majarra Mughaidir<br /> Suburb Sharjah UAE</a>
                         </p>
                       </div>
                     </li>
