@@ -7,6 +7,8 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,13 +46,23 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className={styles.nav}>
-            <Link href="/" className={styles.navLink}>HOME</Link>
-            <Link href="/about" className={styles.navLink}>ABOUT</Link>
+          <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileNavOpen : ""}`}>
+            <div className={styles.closeMenuBtn} onClick={() => setIsMobileMenuOpen(false)}>×</div>
+            <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>HOME</Link>
+            <Link href="/about" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
 
-            <div className={styles.dropdown} onMouseEnter={() => setActiveMenu('services')} onMouseLeave={() => setActiveMenu(null)}>
-              <span className={styles.navLink}>SERVICES <i className={styles.arrow}></i></span>
-              <div className={`${styles.megaMenu} ${activeMenu === 'services' ? styles.show : ''}`}>
+            <div 
+              className={`${styles.dropdown} ${mobileDropdownOpen ? styles.mobileDropdownActive : ""}`} 
+              onMouseEnter={() => setActiveMenu('services')} 
+              onMouseLeave={() => setActiveMenu(null)}
+            >
+              <span 
+                className={styles.navLink} 
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+              >
+                SERVICES <i className={`${styles.arrow} ${mobileDropdownOpen ? styles.arrowUp : ""}`}></i>
+              </span>
+              <div className={`${styles.megaMenu} ${activeMenu === 'services' ? styles.show : ''} ${mobileDropdownOpen ? styles.mobileShow : ''}`}>
                 <div className="container d-flex flex-wrap">
                   <div className={styles.megaLeft}>
                     <h2>Services Recognized by IAOP</h2>
@@ -62,7 +74,7 @@ export default function Header() {
                   <div className={styles.megaRight}>
                     <div className={styles.servicesGrid}>
                       {services.map((service, index) => (
-                        <Link href="#!" key={index} className={styles.serviceItem}>
+                        <Link href="#!" key={index} className={styles.serviceItem} onClick={() => setIsMobileMenuOpen(false)}>
                           <h4>{service.title}</h4>
                           <p>{service.desc}</p>
                         </Link>
@@ -73,17 +85,29 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="#!" className={styles.navLink}>INDUSTRIES <i className={styles.arrow}></i></Link>
-            <Link href="#!" className={styles.navLink}>TECHNOLOGIES <i className={styles.arrow}></i></Link>
-            <Link href="#!" className={styles.navLink}>PORTFOLIO <i className={styles.arrow}></i></Link>
-            <Link href="#!" className={styles.navLink}>SOLUTIONS <i className={styles.arrow}></i></Link>
-            <Link href="/contact" className={styles.navLink}>CONTACT US</Link>
+            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>INDUSTRIES <i className={styles.arrow}></i></Link>
+            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>TECHNOLOGIES <i className={styles.arrow}></i></Link>
+            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>PORTFOLIO <i className={styles.arrow}></i></Link>
+            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SOLUTIONS <i className={styles.arrow}></i></Link>
+            <Link href="/contact" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </nav>
 
-          <div className={styles.headerBtn}>
-            <Link href="#!" className={styles.talkBtn}>
-              <span className={styles.dot}></span> Let's Talk! ↗
-            </Link>
+          <div className={styles.headerRight}>
+            <div className={styles.headerBtn}>
+              <Link href="#!" className={styles.talkBtn}>
+                <span className={styles.dot}></span> Let's Talk! ↗
+              </Link>
+            </div>
+            
+            <button 
+              className={styles.mobileMenuToggle} 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <span className={styles.bar}></span>
+              <span className={styles.bar}></span>
+              <span className={styles.bar}></span>
+            </button>
           </div>
         </div>
       </div>

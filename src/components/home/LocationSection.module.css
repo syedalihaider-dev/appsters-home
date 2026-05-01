@@ -251,9 +251,6 @@
     }
 
     .link {
-        display: flex;
-        justify-content: start;
-        align-items: start;
         gap: 15px;
     }
 
@@ -263,16 +260,11 @@
     }
 
     .heading {
-        color: var(--dark-color);
         font-size: 26px;
         line-height: 26px;
-        font-weight: var(--font-600);
     }
 
     .heading a {
-        color: var(--dark-color);
-        display: block;
-        font-weight: var(--font-400);
         font-size: 16px;
     }
 }

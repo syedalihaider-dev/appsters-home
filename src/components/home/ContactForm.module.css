@@ -1,22 +1,22 @@
-.contactForm{
+.contactForm {
     padding: 100px 0 150px;
     background: var(--dark-color);
 }
 
-.title{
+.title {
     text-transform: uppercase;
     margin: 0;
 }
 
-.para{
+.para {
     color: var(--border-color);
 }
 
-.sec_content{
+.sec_content {
     margin-top: 15px;
 }
 
-.form_group{
+.form_group {
     width: 100%;
     height: 90px;
     background: var(--light-color);
@@ -25,41 +25,145 @@
     margin-top: 25px;
 }
 
-.form_group label{
+.form_group label {
     display: block;
     font-size: 16px;
     color: var(--dark-color);
 }
 
 .form_group input,
-.form_group textarea{
+.form_group textarea {
     width: 100%;
     font-size: 20px;
     color: var(--dark-color);
 }
 
 .form_group input::placeholder,
-.form_group textarea::placeholder{
+.form_group textarea::placeholder {
     color: var(--border-color);
 }
 
-.message{
+.message {
     height: 320px;
 }
 
-.form_group textarea{
+.form_group textarea {
     resize: unset;
     height: 255px;
 }
 
-.sec_content :global(.combo_btn){
+.sec_content :global(.combo_btn) {
     justify-content: end;
 }
 
-.sec_content :global(.mybtn){
+.sec_content :global(.mybtn) {
     background: transparent;
 }
 
-.sec_content :global(.mybtn .text){
+.sec_content :global(.mybtn .text) {
     background: var(--primary-color);
+}
+
+@media screen and (max-width:1600px) {
+    .contactForm {
+        padding: 60px 0 100px;
+    }
+
+    .form_group {
+        height: 80px;
+        padding: 15px;
+    }
+
+    .form_group label {
+        font-size: 16px;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        font-size: 20px;
+    }
+
+    .message {
+        height: 290px;
+        overflow: hidden;
+    }
+
+    .form_group textarea {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1399px) {
+    .contactForm {
+        padding: 40px 0 100px;
+    }
+
+    .form_group {
+        height: 70px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .form_group label {
+        font-size: 14px;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        font-size: 18px;
+    }
+
+    .message {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .contactForm {
+        padding: 40px 0 100px;
+    }
+
+    .form_group {
+        height: 70px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .form_group label {
+        font-size: 14px;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        font-size: 18px;
+    }
+
+    .message {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .para {
+        margin-top: 20px;
+    }
+
+    .form_group {
+        height: 60px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .form_group label {
+        font-size: 14px;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        font-size: 16px;
+    }
+
+    .message {
+        height: 120px;
+    }
 }

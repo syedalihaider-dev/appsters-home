@@ -61,6 +61,7 @@ export default function ServicesSection() {
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
           breakpoints={{
+            320: { slidesPerView: 1.1 },
             768: { slidesPerView: 1.5 },
             1024: { slidesPerView: 1.5 }
           }}

@@ -50,7 +50,7 @@
 }
 
 .navLink:hover {
-    color: #ccff00; /* Neon yellow/green tone from logo */
+    color: #ccff00;
 }
 
 .arrow {
@@ -75,23 +75,23 @@
     position: absolute;
     left: 15px;
     right: 15px;
-    top: 50px; /* Capsule ke mid-point se thoda niche */
+    top: 50px;
     background: #ffffff;
     border-radius: 30px;
     padding: 80px 0 60px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-50px); /* Peeche se startup position */
+    transform: translateY(-50px);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     z-index: -1;
 }
 
-.megaMenu.show {
+/* .megaMenu.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-}
+} */
 
 .megaLeft {
     width: 30%;
@@ -154,8 +154,37 @@
     color: #ccff00;
 }
 
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .headerBtn {
     flex-shrink: 0;
+}
+
+.mobileMenuToggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    z-index: 99;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.closeMenuBtn {
+    display: none;
 }
 
 .talkBtn {
@@ -187,13 +216,6 @@
     box-shadow: 0 0 10px #ccff00;
 }
 
-@media (max-width: 1200px) {
-    .nav {
-        display: none;
-    }
-}
-
-/* Scrolled Styles */
 .header.scrolled {
     top: 0;
     transition: all 0.3s ease;
@@ -216,3 +238,289 @@
     max-width: 100% !important;
     padding: 0 40px;
 }
+
+@media (max-width: 1399px) {
+    .capsule {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .navLink {
+        font-size: 13px;
+        letter-spacing: 0px;
+        gap: 5px;
+    }
+
+    .arrow {
+        padding: 2.5px;
+        margin-bottom: 3px;
+    }
+
+    .megaMenu {
+        padding: 40px 0;
+    }
+
+    .megaLeft {
+        width: 30%;
+        padding-right: 40px;
+    }
+
+    .megaLeft h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .megaLeft p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .iaopLogo {
+        margin-top: 40px;
+    }
+
+    .megaRight {
+        width: 70%;
+        padding-left: 40px;
+    }
+
+    .servicesGrid {
+        gap: 20px;
+    }
+
+    .serviceItem h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .serviceItem p {
+        font-size: 13px;
+    }
+
+    .talkBtn {
+        padding: 10px 25px;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .header.scrolled .capsule {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1199px) {
+    .capsule {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .navLink {
+        font-size: 12px;
+        letter-spacing: 0px;
+        gap: 5px;
+    }
+
+    .arrow {
+        padding: 2.5px;
+        margin-bottom: 3px;
+    }
+
+    .megaMenu {
+       padding: 40px 0 30px;
+        border-radius: 20px;
+    }
+
+    .megaLeft {
+        width: 30%;
+        padding-right: 10px;
+    }
+
+    .megaLeft h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .megaLeft p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .iaopLogo {
+        margin-top: 20px;
+    }
+
+    .megaRight {
+        width: 70%;
+        padding-left: 10px;
+    }
+
+    .servicesGrid {
+        gap: 15px;
+    }
+
+    .serviceItem h4 {
+        font-size: 14px;
+        margin-bottom: 0px;
+        letter-spacing: 0px;
+    }
+
+    .serviceItem p {
+        font-size: 12px;
+    }
+
+    .talkBtn {
+        padding: 10px 15px;
+        font-size: 14px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .capsule {
+        backdrop-filter: none;
+    }
+
+    .mobileMenuToggle {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        width: 300px;
+        height: 100vh;
+        background: #111111;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 30px 20px;
+        gap: 20px;
+        transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), visibility 0.4s, opacity 0.4s;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+        z-index: 999999;
+        overflow-y: auto;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .nav.mobileNavOpen {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .closeMenuBtn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #ffffff;
+        font-size: 40px;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.3s ease;
+    }
+
+    .closeMenuBtn:hover {
+        color: #ccff00;
+    }
+
+    .navLink {
+        font-size: 16px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .megaMenu {
+        position: static;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        transition: all 0.3s ease;
+        border-radius: 0;
+    }
+
+    .megaMenu.mobileShow {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        padding: 20px 0 10px;
+        margin-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .megaMenu :global(.container) {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .megaLeft {
+        display: none;
+    }
+
+    .megaRight {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .serviceItem h4 {
+        color: #ffffff;
+        font-size: 15px;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .arrowUp {
+        transform: rotate(-135deg);
+        margin-bottom: -3px;
+    }
+}
+
+@media (max-width: 575px) {
+    .headerBtn {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+    }
+}
+

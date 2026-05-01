@@ -165,28 +165,129 @@
     flex-shrink: 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1399px) {
+    .footer {
+        padding: 40px 0 20px;
+        border-radius: 50px 50px 0 0;
+        margin-top: -45px;
+    }
+
+    .footer_top {
+        padding-bottom: 30px;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+
+    .footer_menu ul {
+        gap: 10px;
+    }
+
+    .footer_menu ul li a {
+        font-size: 16px;
+    }
+
+    .ft_main {
+        padding-top: 30px;
+    }
+
+    .ft_left_group {
+        gap: 20px;
+    }
+
+    .ft_badges li a {
+        display: block;
+        width: 120px;
+    }
+
+    .ft_social {
+        gap: 10px;
+    }
+
+    .ft_social li a {
+        width: 40px;
+        height: 40px;
+    }
+
     .ft_right {
-        justify-content: flex-start;
-        margin-top: 20px;
-    }
-    .ft_content {
-        text-align: left;
-    }
-    .ft_terms {
-        justify-content: flex-start;
+        gap: 10px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
     .footer {
-        padding: 60px 0 30px;
-        border-radius: 40px 40px 0 0;
+        padding: 40px 0 20px;
+        border-radius: 50px 50px 0 0;
+        margin-top: -45px;
     }
+
+    .footer_top {
+        padding-bottom: 25px;
+    }
+
     .heading {
-        font-size: 20px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        font-size: 18px;
     }
+
+    .footer_menu ul li a {
+        font-size: 14px;
+    }
+
+    .ft_main {
+        padding-top: 20px;
+    }
+
     .ft_left_group {
-        gap: 20px;
+        gap: 15px;
+    }
+
+    .ft_badges li a {
+        width: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        padding: 30px 0 10px;
+        border-radius: 40px 40px 0 0;
+        margin-top: -35px;
+    }
+
+    .footer_top {
+        padding-bottom: 20px;
+    }
+
+    .ft_badges li a {
+        width: 120px;
+    }
+
+    .ft_right {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ft_badges {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 575px) {
+    .ft_badges {
+        flex-wrap: wrap;
+    }
+
+    .ft_right {
+        margin-top: 20px;
+    }
+
+    .ft_left_group {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

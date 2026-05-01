@@ -10,7 +10,7 @@ export default function Footer() {
         <div className={styles.footer_top}>
           <div className="row justify-content-between">
             {/* Column 1: Our Company */}
-            <div className="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+            <div className="col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Our Company</h6>
                 <ul>
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
 
             {/* Column 2: Our Services */}
-            <div className="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+            <div className="col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Our Services</h6>
                 <ul>
@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
 
             {/* Column 3: Technologies */}
-            <div className="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+            <div className="col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Technologies</h6>
                 <ul>
@@ -58,7 +58,7 @@ export default function Footer() {
             </div>
 
             {/* Column 4: Industries */}
-            <div className="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+            <div className="col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Industries</h6>
                 <ul>
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
 
             {/* Column 5: Solutions */}
-            <div className="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+            <div className="col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Solutions</h6>
                 <ul>
