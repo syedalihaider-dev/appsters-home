@@ -25,13 +25,12 @@ export default function HeroSection() {
                 <div className="row align-items-center">
                     <div className="col-sm-12 col-md-6">
                         <div className={styles.banner_left}>
-                            <p className={styles.sub_heading}>Transforming Ambitious ideas</p>
+                            <p className={styles.sub_heading}>A Digital Transformation Company</p>
                             <h1 className={styles.main_heading}>
-                                Into <span className="primarytxt">Powerful</span> <span className="break_line"></span>
-                                <span className="primarytxt">Digital</span> Products
+                                <span className="primarytxt">Create Apps</span> That Scale With Your <span className="primarytxt">Growth.</span>
                             </h1>
                             <p className={styles.paragraph}>
-                                Trusted by CTOs, valued by users, and built for AI scalability. Appsters deliver mobile apps that your business needs today & tomorrow.
+                                Trusted by CTOs, valued by users, and built for AI scalability. Appsters deliver mobile apps and digital ecosystems that your business needs today & tomorrow.
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />

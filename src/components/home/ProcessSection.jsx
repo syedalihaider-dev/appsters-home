@@ -39,8 +39,7 @@ export default function ProcessSection() {
     },
     {
       step: "07",
-      title: "Deployment",
-      text: "We integrate your solution into production environments using zero-downtime deployment strategies. Our team ensures backend configurations, APIs, and third-party services are stable and synchronized. Continuous deployment pipelines keep future releases smooth and predictable. With a focus on scalability, we prepare our infrastructure for peak traffic scenarios from the very first release.",
+      title: "We integrate your solution into production environments using zero-downtime deployment strategies. Our team ensures backend configurations, APIs, and third-party services are stable and synchronized. Continuous deployment pipelines keep future releases smooth and predictable. With a focus on scalability, we prepare our infrastructure for peak traffic scenarios from the very first release.",
     },
     {
       step: "08",
@@ -65,22 +64,16 @@ export default function ProcessSection() {
           <div className="row align-items-center">
 
             <div className="col-sm-12 col-md-6">
-              <p className={styles.sub_heading}>Proven Process For A Powerful Outcome</p>
+              <p className={styles.sub_heading}>8 Steps. 1 Powerful Outcome.</p>
               <h2>
-                Our Development <span className="primarytxt">Process</span> That{" "}
-                <span className="primarytxt">Delivers.</span>
+                A <span className="primarytxt">Battle-Tested</span> App Development <span className="primarytxt">Process.</span>
               </h2>
             </div>
 
             <div className="col-sm-12 col-md-6">
               <p className={styles.para}>
-                Great apps don’t happen by chance, as disruptive apps follow a results-focused process.
-                At Appsters, every project moves through eight carefully structured stages that minimize
-                risk, accelerate delivery, and keep everyone aligned. <br /><br />
-                From early market research to ongoing maintenance, each step is designed to protect your
-                investment and deliver measurable results. The outcome is not just a revolutionary app,
-                but a reliable digital product built to scale, perform under pressure, and grow into a
-                future-ready solution.
+                Great apps don’t happen by chance, as disruptive apps follow a results-focused process. At Appsters, every project moves through eight carefully structured stages that minimize risk, accelerate delivery, and keep everyone aligned. <br /><br />
+                From early market research to ongoing maintenance, each step is designed to protect your investment and deliver measurable results. The outcome is not just a revolutionary app, but a reliable digital product built to scale, perform under pressure, and grow into a future-ready solution.
               </p>
             </div>
 

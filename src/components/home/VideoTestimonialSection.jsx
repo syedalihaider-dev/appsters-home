@@ -49,8 +49,7 @@ export default function VideoTestimonialSection() {
             <div className="col-sm-12 col-md-7">
               <div className={styles.sec_right}>
                 <h2>
-                  Beyond the Code <br /> Real Stories, Real
-                  <span className="primarytxt"> Results</span>
+                  <span className="primarytxt">Real Stories</span> From People Who Wanted <span className="primarytxt">What's Next.</span>
                 </h2>
               </div>
             </div>
@@ -94,9 +93,9 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Financial Services</h6>
+                    <h6>Richard Neeson</h6>
                     <p>
-                      Transforming Financial Services by Overcoming Legacy Challenges.
+                      Appsters delivered a zero-bug MVP that hit the market 30% faster and gave our investors total confidence. It felt like adding an elite product team overnight.
                     </p>
                   </div>
                   <div className={styles.right}>
@@ -168,9 +167,9 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Financial Services</h6>
+                    <h6>Samantha Van Merwe</h6>
                     <p>
-                      Transforming Financial Services by Overcoming Legacy Challenges.
+                      Appsters replaced our outdated legacy systems with AI-driven automation, saving our teams hundreds of hours.
                     </p>
                   </div>
                   <div className={styles.right}>
@@ -205,9 +204,9 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Financial Services</h6>
+                    <h6>Anthony M. Derek</h6>
                     <p>
-                      Transforming Financial Services by Overcoming Legacy Challenges.
+                      Appsters turned a complex fintech concept into an audit-ready app that secured 50% user adoption in 60 days.
                     </p>
                   </div>
                   <div className={styles.right}>
@@ -242,9 +241,9 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Financial Services</h6>
+                    <h6>Matty</h6>
                     <p>
-                      Transforming Financial Services by Overcoming Legacy Challenges.
+                      Appsters mastered the rare hybrid of code and gameplay, delivering a stable sandbox world optimized for multiplayer.
                     </p>
                   </div>
                   <div className={styles.right}>
@@ -279,9 +278,9 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Financial Services</h6>
+                    <h6>Remi Patrick Jr.</h6>
                     <p>
-                      Transforming Financial Services by Overcoming Legacy Challenges.
+                      Appsters built a HIPAA-grade telehealth engine with 99.9% uptime, resolving complex regulatory edge cases.
                     </p>
                   </div>
                   <div className={styles.right}>
