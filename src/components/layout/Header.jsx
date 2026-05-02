@@ -51,13 +51,13 @@ export default function Header() {
             <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>HOME</Link>
             <Link href="/about" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
 
-            <div 
-              className={`${styles.dropdown} ${mobileDropdownOpen ? styles.mobileDropdownActive : ""}`} 
-              onMouseEnter={() => setActiveMenu('services')} 
+            <div
+              className={`${styles.dropdown} ${mobileDropdownOpen ? styles.mobileDropdownActive : ""}`}
+              onMouseEnter={() => setActiveMenu('services')}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <span 
-                className={styles.navLink} 
+              <span
+                className={styles.navLink}
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
               >
                 SERVICES <i className={`${styles.arrow} ${mobileDropdownOpen ? styles.arrowUp : ""}`}></i>
@@ -98,9 +98,9 @@ export default function Header() {
                 <span className={styles.dot}></span> Let's Talk! ↗
               </Link>
             </div>
-            
-            <button 
-              className={styles.mobileMenuToggle} 
+
+            <button
+              className={styles.mobileMenuToggle}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >

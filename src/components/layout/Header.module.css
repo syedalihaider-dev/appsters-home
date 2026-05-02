@@ -87,11 +87,11 @@
     z-index: -1;
 }
 
-/* .megaMenu.show {
+.megaMenu.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-} */
+}
 
 .megaLeft {
     width: 30%;
@@ -471,7 +471,13 @@
         border-radius: 0;
     }
 
-    .megaMenu.mobileShow {
+    .megaMenu.show {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .megaMenu.mobileShow,
+    .megaMenu.show.mobileShow {
         opacity: 1;
         visibility: visible;
         height: auto;
