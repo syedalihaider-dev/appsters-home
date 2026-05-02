@@ -71,7 +71,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>01</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-001.png"
+                      src="/images/virtual-reality.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -99,7 +99,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>02</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-002.png"
+                      src="/images/image-recognition.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -127,7 +127,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>03</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-003.png"
+                      src="/images/big-data.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -155,7 +155,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>04</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-001.png"
+                      src="/images/voice-recognition.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -183,7 +183,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>05</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-002.png"
+                      src="/images/quantum-computing.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -211,7 +211,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>06</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-003.png"
+                      src="/images/progressive-web-apps.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -239,7 +239,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>07</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-001.png"
+                      src="/images/5g-technology.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}
@@ -267,7 +267,7 @@ export default function FeaturesSection() {
                   {/* <h3 className={styles.step}>08</h3> */}
                   <div className={styles.features_icon}>
                     <Image
-                      src="/images/features-icon-001.png"
+                      src="/images/data-science.webp"
                       width={135}
                       height={135}
                       style={{ objectFit: "contain" }}

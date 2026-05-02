@@ -85,23 +85,21 @@ export default function VideoTestimonialSection() {
               <div className={styles.box}>
                 <div className={styles.testimonials_img}>
                   <Image
-                    src="/images/video-testimonials-01.png"
-                    alt="Video Testimonials Image..."
+                    src="/images/cclient-review-sophia.webp"
+                    alt="Client Review Sophia..."
                     fill
                     sizes="100vw"
                   />
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Richard Neeson</h6>
-                    <p>
-                      Appsters delivered a zero-bug MVP that hit the market 30% faster and gave our investors total confidence. It felt like adding an elite product team overnight.
-                    </p>
+                    <h6>Sophia</h6>
+                    <p>Entrepreneur</p>
                   </div>
                   <div className={styles.right}>
                     <a
                       data-fancybox="testimonial-videos"
-                      data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      data-src="https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci"
                       className={styles.play_btn}
                     >
                       <Image
@@ -122,23 +120,21 @@ export default function VideoTestimonialSection() {
               <div className={styles.box}>
                 <div className={styles.testimonials_img}>
                   <Image
-                    src="/images/video-testimonials-02.png"
-                    alt="Video Testimonials Image..."
+                    src="/images/cclient-review-daniel.webp"
+                    alt="Client Review Daniel..."
                     fill
                     sizes="100vw"
                   />
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Financial Services</h6>
-                    <p>
-                      Transforming Financial Services by Overcoming Legacy Challenges.
-                    </p>
+                    <h6>Daniel</h6>
+                    <p>Game Developer</p>
                   </div>
                   <div className={styles.right}>
                     <a
                       data-fancybox="testimonial-videos"
-                      data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      data-src="https://vimeo.com/1184930327?share=copy&fl=sv&fe=ci"
                       className={styles.play_btn}
                     >
                       <Image
@@ -159,7 +155,7 @@ export default function VideoTestimonialSection() {
               <div className={styles.box}>
                 <div className={styles.testimonials_img}>
                   <Image
-                    src="/images/video-testimonials-01.png"
+                    src="/images/cclient-review-mateo.webp"
                     alt="Video Testimonials Image..."
                     fill
                     sizes="100vw"
@@ -167,15 +163,13 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Samantha Van Merwe</h6>
-                    <p>
-                      Appsters replaced our outdated legacy systems with AI-driven automation, saving our teams hundreds of hours.
-                    </p>
+                    <h6>Mateo</h6>
+                    <p>Founder Fintech Company</p>
                   </div>
                   <div className={styles.right}>
                     <a
                       data-fancybox="testimonial-videos"
-                      data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      data-src="https://vimeo.com/1184931603?share=copy&fl=sv&fe=ci"
                       className={styles.play_btn}
                     >
                       <Image
@@ -196,7 +190,7 @@ export default function VideoTestimonialSection() {
               <div className={styles.box}>
                 <div className={styles.testimonials_img}>
                   <Image
-                    src="/images/video-testimonials-02.png"
+                    src="/images/cclient-review-jason.webp"
                     alt="Video Testimonials Image..."
                     fill
                     sizes="100vw"
@@ -204,15 +198,13 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Anthony M. Derek</h6>
-                    <p>
-                      Appsters turned a complex fintech concept into an audit-ready app that secured 50% user adoption in 60 days.
-                    </p>
+                    <h6>Jason</h6>
+                    <p>Fitness App</p>
                   </div>
                   <div className={styles.right}>
                     <a
                       data-fancybox="testimonial-videos"
-                      data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      data-src="https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci"
                       className={styles.play_btn}
                     >
                       <Image
@@ -233,23 +225,21 @@ export default function VideoTestimonialSection() {
               <div className={styles.box}>
                 <div className={styles.testimonials_img}>
                   <Image
-                    src="/images/video-testimonials-01.png"
-                    alt="Video Testimonials Image..."
+                    src="/images/cclient-review-sophia.webp"
+                    alt="Client Review Sophia..."
                     fill
                     sizes="100vw"
                   />
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Matty</h6>
-                    <p>
-                      Appsters mastered the rare hybrid of code and gameplay, delivering a stable sandbox world optimized for multiplayer.
-                    </p>
+                    <h6>Sophia</h6>
+                    <p>Entrepreneur</p>
                   </div>
                   <div className={styles.right}>
                     <a
                       data-fancybox="testimonial-videos"
-                      data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      data-src="https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci"
                       className={styles.play_btn}
                     >
                       <Image
@@ -270,7 +260,42 @@ export default function VideoTestimonialSection() {
               <div className={styles.box}>
                 <div className={styles.testimonials_img}>
                   <Image
-                    src="/images/video-testimonials-02.png"
+                    src="/images/cclient-review-daniel.webp"
+                    alt="Client Review Daniel..."
+                    fill
+                    sizes="100vw"
+                  />
+                </div>
+                <div className={styles.testimonials_info}>
+                  <div className={styles.left}>
+                    <h6>Daniel</h6>
+                    <p>Game Developer</p>
+                  </div>
+                  <div className={styles.right}>
+                    <a
+                      data-fancybox="testimonial-videos"
+                      data-src="https://vimeo.com/1184930327?share=copy&fl=sv&fe=ci"
+                      className={styles.play_btn}
+                    >
+                      <Image
+                        src="/images/play-btn.png"
+                        alt="Play Button Image..."
+                        fill
+                        sizes="100vw"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </SwiperSlide>
+          <SwiperSlide>
+            <li>
+              <div className={styles.box}>
+                <div className={styles.testimonials_img}>
+                  <Image
+                    src="/images/cclient-review-mateo.webp"
                     alt="Video Testimonials Image..."
                     fill
                     sizes="100vw"
@@ -278,15 +303,48 @@ export default function VideoTestimonialSection() {
                 </div>
                 <div className={styles.testimonials_info}>
                   <div className={styles.left}>
-                    <h6>Remi Patrick Jr.</h6>
-                    <p>
-                      Appsters built a HIPAA-grade telehealth engine with 99.9% uptime, resolving complex regulatory edge cases.
-                    </p>
+                    <h6>Mateo</h6>
+                    <p>Founder Fintech Company</p>
                   </div>
                   <div className={styles.right}>
                     <a
                       data-fancybox="testimonial-videos"
-                      data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      data-src="https://vimeo.com/1184931603?share=copy&fl=sv&fe=ci"
+                      className={styles.play_btn}
+                    >
+                      <Image
+                        src="/images/play-btn.png"
+                        alt="Play Button Image..."
+                        fill
+                        sizes="100vw"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </SwiperSlide>
+          <SwiperSlide>
+            <li>
+              <div className={styles.box}>
+                <div className={styles.testimonials_img}>
+                  <Image
+                    src="/images/cclient-review-jason.webp"
+                    alt="Video Testimonials Image..."
+                    fill
+                    sizes="100vw"
+                  />
+                </div>
+                <div className={styles.testimonials_info}>
+                  <div className={styles.left}>
+                    <h6>Jason</h6>
+                    <p>Fitness App</p>
+                  </div>
+                  <div className={styles.right}>
+                    <a
+                      data-fancybox="testimonial-videos"
+                      data-src="https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci"
                       className={styles.play_btn}
                     >
                       <Image
