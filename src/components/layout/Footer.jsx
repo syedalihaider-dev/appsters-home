@@ -16,11 +16,11 @@ export default function Footer() {
                 <ul>
                   <li><Link href="#!">About Us</Link></li>
                   <li><Link href="#!">Projects</Link></li>
-                  <li><Link href="#!">Case Studies</Link></li>
-                  <li><Link href="#!">Insights</Link></li>
+                  <li><Link href="/case-study">Case Studies</Link></li>
+                  <li><Link href="/case-study-detail">Case Study Details</Link></li>
                   <li><Link href="#!">Client Reviews</Link></li>
                   <li><Link href="#!">Locations</Link></li>
-                  <li><Link href="#!">Contact Us</Link></li>
+                  <li><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
               </div>
             </div>

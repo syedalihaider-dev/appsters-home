@@ -1,0 +1,157 @@
+.overviewSection {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.leftContent {
+  padding-right: 40px;
+}
+
+.titleWrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.transparentHeading {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  font-size: 150px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.03);
+  text-transform: uppercase;
+  z-index: 0;
+  white-space: nowrap;
+  font-family: 'Big Shoulders', sans-serif;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.titleWrapper h2 {
+  position: relative;
+  z-index: 1;
+  color: var(--secondary-color);
+  margin: 0;
+  padding-top: 40px; 
+  text-transform: uppercase;
+}
+
+.textContent {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.textContent p {
+  color: var(--secondary-color);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.storeBadges {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.badgeLink {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.badgeLink:hover {
+  transform: translateY(-5px);
+}
+
+.badgeLink img {
+  object-fit: contain;
+}
+
+.rightContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mockupImage {
+  max-width: 643px;
+  height: auto;
+}
+
+.mockupImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1399px) {
+  .transparentHeading {
+    font-size: 110px;
+    top: -40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .transparentHeading {
+    font-size: 90px;
+    top: -35px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .leftContent {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+  .transparentHeading {
+    font-size: 100px;
+    top: -40px;
+  }
+  .titleWrapper h2 {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .transparentHeading {
+    font-size: 65px;
+    top: -20px;
+  }
+  .titleWrapper h2 {
+    padding-top: 30px;
+  }
+  .textContent p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .storeBadges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .transparentHeading {
+    font-size: 45px;
+    top: -10px;
+  }
+  .titleWrapper h2 {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+  .textContent p {
+    font-size: 15px;
+  }
+  .mockupImage {
+    max-width: 100%;
+  }
+}

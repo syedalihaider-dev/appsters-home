@@ -87,9 +87,9 @@ export default function Header() {
 
             <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>INDUSTRIES <i className={styles.arrow}></i></Link>
             <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>TECHNOLOGIES <i className={styles.arrow}></i></Link>
-            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>PORTFOLIO <i className={styles.arrow}></i></Link>
+            <Link href="/case-study" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CASE STUDY <i className={styles.arrow}></i></Link>
             <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SOLUTIONS <i className={styles.arrow}></i></Link>
-            <Link href="/contact" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
+            <Link href="/contact-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </nav>
 
           <div className={styles.headerRight}>

@@ -10,7 +10,7 @@ import { SITE_PHONE, SITE_PHONE_LINK, SITE_EMAIL, SITE_EMAIL_LINK } from "@/app/
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function LocationSection() {
+export default function LocationSection({ className = "" }) {
   const [activeBg, setActiveBg] = useState(0);
   const swiperRef = useRef(null);
 
@@ -36,7 +36,7 @@ export default function LocationSection() {
   };
 
   return (
-    <section className={styles.locationSection}>
+    <section className={`${styles.locationSection} ${className}`}>
       <p className={styles.transparent_heading}>Locations</p>
       {/* BACKGROUND IMAGES */}
       {bgImages.map((bg, i) => (

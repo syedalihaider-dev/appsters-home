@@ -1,0 +1,222 @@
+.featuresSection {
+  padding: 140px 0 120px;
+  background: linear-gradient(#8bb0ff79, #ffa1255d);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bgDecor {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 979px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  filter: grayscale(11) brightness(11);
+  opacity: .5;
+}
+
+.featureImageWrapper {
+  width: 820px;
+  height: 695px;
+  position: absolute;
+  bottom: 0;
+  left: 250px;
+  z-index: 0;
+}
+
+.featureImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.rightContent {
+  position: relative;
+  z-index: 1;
+}
+
+.titleWrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.transparentHeading {
+  position: absolute;
+  top: -60px;
+  left: -10px;
+  font-size: 150px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.03);
+  text-transform: uppercase;
+  z-index: 0;
+  white-space: nowrap;
+  font-family: 'Big Shoulders', sans-serif;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.titleWrapper h2 {
+  position: relative;
+  z-index: 1;
+  color: var(--secondary-color);
+  margin: 0;
+  padding-top: 30px;
+  text-transform: uppercase;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.featureText h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0px;
+}
+
+.featureText p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.storeBadges {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.badgeLink {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.badgeLink:hover {
+  transform: translateY(-5px);
+}
+
+.badgeLink img {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1399px) {
+  .transparentHeading {
+    font-size: 110px;
+    top: -40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .transparentHeading {
+    font-size: 90px;
+    top: -35px;
+  }
+
+  .rightContent {
+    padding-left: 20px;
+  }
+
+  .featureImage {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .rightContent {
+    padding-left: 0;
+    margin-top: 50px;
+  }
+
+  .transparentHeading {
+    font-size: 100px;
+    top: -40px;
+  }
+
+  .titleWrapper h2 {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .transparentHeading {
+    font-size: 65px;
+    top: -20px;
+  }
+
+  .titleWrapper h2 {
+    padding-top: 30px;
+  }
+
+  .featureText h4 {
+    font-size: 20px;
+  }
+
+  .featureText p {
+    font-size: 14px;
+  }
+
+  .storeBadges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .featuresSection {
+    padding: 80px 0 60px;
+  }
+  .featureImageWrapper {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+  .bgDecor {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .transparentHeading {
+    font-size: 45px;
+    top: -10px;
+  }
+  .titleWrapper h2 {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+  .featureText h4 {
+    font-size: 18px;
+  }
+  .featureText p {
+    font-size: 14px;
+  }
+}
