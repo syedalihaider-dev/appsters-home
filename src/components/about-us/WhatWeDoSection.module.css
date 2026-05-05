@@ -1,0 +1,214 @@
+.whatWeDoSection {
+  padding: 100px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.leftSide {
+  flex: 1;
+  max-width: 55%;
+}
+
+.rightSide {
+  flex: 1;
+  max-width: 45%;
+  margin-top: 20px;
+}
+
+/* Left Side Heading */
+.headingWrapper {
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 40px;
+}
+
+.transparentHeading {
+  display: block;
+  font-size: 160px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: 'Big Shoulders', sans-serif;
+  color: #f7f7f7;
+  position: absolute;
+  top: -120px;
+  left: -10px;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.mainHeading {
+  font-family: 'Big Shoulders', sans-serif;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+}
+
+.highlight {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 7px;
+  padding: 3px 8px;
+  font-family: 'Big Shoulders', sans-serif;
+}
+
+/* Left Side Content */
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Right Side Cards */
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background-color: #f6f6f6;
+  border-radius: 12px;
+  padding: 25px 30px;
+  transition: transform 0.3s ease;
+}
+
+.cardTitle {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0 0 10px 0;
+}
+
+.cardText {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1199px) {
+  .transparentHeading {
+    font-size: 120px;
+    top: -10px;
+  }
+
+  .mainHeading {
+    font-size: 48px;
+  }
+
+  .container {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .leftSide,
+  .rightSide {
+    max-width: 100%;
+  }
+
+  .transparentHeading {
+    font-size: 100px;
+    top: 0px;
+  }
+
+  .mainHeading {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .whatWeDoSection {
+    padding: 70px 0;
+  }
+
+  .transparentHeading {
+    font-size: 80px;
+    top: 10px;
+  }
+
+  .mainHeading {
+    font-size: 38px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .whatWeDoSection {
+    padding: 50px 0;
+  }
+
+  .transparentHeading {
+    font-size: 60px;
+    top: 20px;
+  }
+
+  .mainHeading {
+    font-size: 32px;
+  }
+
+  .highlight {
+    padding: 2px 10px;
+    border-width: 3px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .transparentHeading {
+    font-size: 45px;
+    top: 25px;
+  }
+
+  .mainHeading {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .cardText {
+    font-size: 14px;
+  }
+}

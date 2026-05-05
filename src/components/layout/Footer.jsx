@@ -14,12 +14,10 @@ export default function Footer() {
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Our Company</h6>
                 <ul>
-                  <li><Link href="#!">About Us</Link></li>
-                  <li><Link href="#!">Projects</Link></li>
-                  <li><Link href="/case-study">Case Studies</Link></li>
-                  <li><Link href="/case-study-detail">Case Study Details</Link></li>
-                  <li><Link href="#!">Client Reviews</Link></li>
-                  <li><Link href="#!">Locations</Link></li>
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/about-us">About Us</Link></li>
+                  <li><Link href="/services">Services</Link></li>
+                  <li><Link href="/case-study">Case Study</Link></li>
                   <li><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
               </div>

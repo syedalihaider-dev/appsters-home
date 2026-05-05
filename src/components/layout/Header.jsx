@@ -23,18 +23,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const services = [
-    { title: "SOFTWARE DEVELOPMENT", desc: "Custom software solutions to improve efficiency and scale your business." },
-    { title: "MVP DEVELOPMENT", desc: "Launch faster with a lean, functional MVP built to validate your idea and attract early users." },
-    { title: "AI DEVELOPMENT", desc: "Build intelligent AI solutions to automate, optimize, and scale your business." },
-    { title: "WEB DEVELOPMENT", desc: "Build fast, scalable, and responsive websites for modern businesses." },
-    { title: "MOBILE DEVELOPMENT", desc: "Create high-performance mobile apps for seamless user experiences." },
-    { title: "DESKTOP DEVELOPMENT", desc: "Build powerful desktop applications for efficient business operations." },
-    { title: "API DEVELOPMENT", desc: "Build secure and scalable APIs for seamless system integration." },
-    { title: "DATABASE DEVELOPMENT", desc: "Design robust databases for secure, scalable, and efficient data management." },
-    { title: "SOFTWARE MODERNIZATION", desc: "Upgrade legacy software for better performance, security, and scalability." },
-    { title: "IT STAFF AUGMENTATION", desc: "Provide skilled IT professionals to scale your team on demand." },
-  ];
+  // const services = [
+  //   { title: "SOFTWARE DEVELOPMENT", desc: "Custom software solutions to improve efficiency and scale your business." },
+  //   { title: "MVP DEVELOPMENT", desc: "Launch faster with a lean, functional MVP built to validate your idea and attract early users." },
+  //   { title: "AI DEVELOPMENT", desc: "Build intelligent AI solutions to automate, optimize, and scale your business." },
+  //   { title: "WEB DEVELOPMENT", desc: "Build fast, scalable, and responsive websites for modern businesses." },
+  //   { title: "MOBILE DEVELOPMENT", desc: "Create high-performance mobile apps for seamless user experiences." },
+  //   { title: "DESKTOP DEVELOPMENT", desc: "Build powerful desktop applications for efficient business operations." },
+  //   { title: "API DEVELOPMENT", desc: "Build secure and scalable APIs for seamless system integration." },
+  //   { title: "DATABASE DEVELOPMENT", desc: "Design robust databases for secure, scalable, and efficient data management." },
+  //   { title: "SOFTWARE MODERNIZATION", desc: "Upgrade legacy software for better performance, security, and scalability." },
+  //   { title: "IT STAFF AUGMENTATION", desc: "Provide skilled IT professionals to scale your team on demand." },
+  // ];
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -49,9 +49,10 @@ export default function Header() {
           <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileNavOpen : ""}`}>
             <div className={styles.closeMenuBtn} onClick={() => setIsMobileMenuOpen(false)}>×</div>
             <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>HOME</Link>
-            <Link href="/about" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
+            <Link href="/about-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
+            <Link href="/services" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SERVICES</Link>
 
-            <div
+            {/* <div
               className={`${styles.dropdown} ${mobileDropdownOpen ? styles.mobileDropdownActive : ""}`}
               onMouseEnter={() => setActiveMenu('services')}
               onMouseLeave={() => setActiveMenu(null)}
@@ -83,12 +84,9 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>INDUSTRIES <i className={styles.arrow}></i></Link>
-            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>TECHNOLOGIES <i className={styles.arrow}></i></Link>
-            <Link href="/case-study" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CASE STUDY <i className={styles.arrow}></i></Link>
-            <Link href="#!" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SOLUTIONS <i className={styles.arrow}></i></Link>
+            <Link href="/case-study" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CASE STUDY</Link>
             <Link href="/contact-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </nav>
 

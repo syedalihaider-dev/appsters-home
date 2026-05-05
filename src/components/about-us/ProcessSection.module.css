@@ -1,0 +1,277 @@
+.processSection {
+  background: linear-gradient(180deg, #2738d8, #1320a1);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.leftSide {
+  flex: 1;
+  max-width: 45%;
+  position: sticky;
+  top: 150px;
+}
+
+.stickyContent {
+  position: relative;
+  padding-top: 50px;
+}
+
+.transparentHeading {
+  display: block;
+  font-size: 220px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Big Shoulders', sans-serif;
+  color: rgba(255, 255, 255, 0.04);
+  position: absolute;
+  top: -150px;
+  left: -10px;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.mainHeading {
+  font-family: 'Big Shoulders', sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.highlightText {
+  color: var(--primary-color);
+  font-family: 'Big Shoulders', sans-serif;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.rightSide {
+  flex: 1;
+  position: relative;
+  padding-left: 150px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 20px;
+  top: 105px;
+  bottom: -100px;
+  width: 4px;
+  background-color: #4f5ddd;
+}
+
+.cardsWrapper {
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cardItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cardNumber {
+  position: absolute;
+  left: -70px;
+  top: 80px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+}
+
+.cardNumber::before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  width: 45px;
+  height: 4px;
+  background-color: #4f5ddd;
+}
+
+.cardContentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.capWrapper {
+  width: 570px;
+  height: auto;
+  transform: translate(0px, 0px);
+}
+
+.capImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardContent {
+  background-color: #4f5ddd;
+  border: 1px solid #727ce4;
+  border-top: none;
+  border-radius: 0 15px 15px;
+  padding: 30px 30px 40px;
+}
+
+.iconWrapper {
+  margin-bottom: 20px;
+  width: 57px;
+  height: auto;
+}
+
+.iconWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.cardText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1199px) {
+  .transparentHeading {
+    font-size: 120px;
+  }
+
+  .mainHeading {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .leftSide {
+    max-width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .transparentHeading {
+    font-size: 100px;
+    top: 0;
+  }
+
+  .rightSide {
+    padding-left: 50px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .processSection {
+    padding: 70px 0;
+  }
+
+  .transparentHeading {
+    font-size: 80px;
+    top: 15px;
+  }
+
+  .mainHeading {
+    font-size: 38px;
+  }
+
+  .cardNumber {
+    left: -50px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .cardNumber::after {
+    right: -14px;
+    width: 14px;
+  }
+
+  .timelineLine {
+    left: 18px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .transparentHeading {
+    font-size: 60px;
+    top: 25px;
+  }
+
+  .mainHeading {
+    font-size: 32px;
+  }
+
+  .rightSide {
+    padding-left: 40px;
+  }
+
+  .timelineLine {
+    left: 15px;
+  }
+
+  .cardNumber {
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .cardNumber::after {
+    right: -10px;
+    width: 10px;
+  }
+
+  .capWrapper {
+    width: 250px;
+  }
+
+  .cardContent {
+    padding: 0 20px 30px 20px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+}
