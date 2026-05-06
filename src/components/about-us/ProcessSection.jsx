@@ -1,9 +1,21 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import ActionButtons from "@/components/ui/ActionButtons";
 import styles from './ProcessSection.module.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function ProcessSection() {
+  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
+  const cardsWrapperRef = useRef(null);
+  const [activeStep, setActiveStep] = useState(0);
+
   const processes = [
     {
       title: "APP IDEA & RESEARCH",
@@ -42,9 +54,60 @@ export default function ProcessSection() {
     }
   ];
 
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      const wrapper = cardsWrapperRef.current;
+      const cards = gsap.utils.toArray(`.${styles.cardItem}`);
+
+      // Calculate how much we need to scroll the cards wrapper
+      // container height is around 650px (defined in CSS)
+      const containerHeight = 650;
+      const wrapperHeight = wrapper.scrollHeight;
+      const totalMove = wrapperHeight - containerHeight;
+
+      // Pin the entire section and animate the right side wrapper
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top top",
+        end: `+=${wrapperHeight + 500}`, // Creates the scroll distance
+        pin: true,
+        scrub: 1,
+        onUpdate: (self) => {
+          // Move the cards wrapper up as we scroll
+          gsap.to(wrapper, {
+            y: -self.progress * (totalMove + 100),
+            overwrite: true,
+            duration: 0.1
+          });
+
+          // Highlight the active card based on progress
+          const stepIndex = Math.floor(self.progress * (processes.length + 0.5));
+          setActiveStep(Math.min(processes.length - 1, stepIndex));
+        }
+      });
+
+      // Simple timeline progress sync
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top top",
+        end: `+=${wrapperHeight + 500}`,
+        scrub: 1,
+        onUpdate: (self) => {
+          const progressLine = document.querySelector(`.${styles.timelineProgress}`);
+          if (progressLine) {
+            progressLine.style.height = `${self.progress * 100}%`;
+          }
+        }
+      });
+
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [processes.length]);
+
   return (
-    <section className={styles.processSection}>
-      <div className={`container ${styles.container}`}>
+    <section className={styles.processSection} ref={sectionRef}>
+      <div className={`container ${styles.container}`} ref={containerRef}>
         <div className={styles.leftSide}>
           <div className={styles.stickyContent}>
             <span className={styles.transparentHeading}>PROCESS</span>
@@ -61,10 +124,17 @@ export default function ProcessSection() {
           </div>
         </div>
         <div className={styles.rightSide}>
-          <div className={styles.timelineLine}></div>
-          <div className={styles.cardsWrapper}>
+          <div className={styles.timelineLine}>
+            {/* <div className={styles.timelineProgress}>
+              <div className={styles.pointerDot}></div>
+            </div> */}
+          </div>
+          <div className={styles.cardsWrapper} ref={cardsWrapperRef}>
             {processes.map((process, index) => (
-              <div key={index} className={styles.cardItem}>
+              <div
+                key={index}
+                className={`${styles.cardItem} ${activeStep === index ? styles.active : ''}`}
+              >
                 <div className={styles.cardNumber}>
                   0{index + 1}.
                 </div>
@@ -96,7 +166,6 @@ export default function ProcessSection() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export default function ActionButtons() {
+export default function ActionButtons({ text = "Let’s Build Your App" }) {
   return (
     <>
       <a href="#!" className="mybtn btn_1 popup_btn">
         <div className="text">
-          <span>Let’s Build Your App</span>
-          <span>Let’s Build Your App</span>
+          <span>{text}</span>
+          <span>{text}</span>
         </div>
         <div className="icon">
           <Image

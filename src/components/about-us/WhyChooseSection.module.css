@@ -1,0 +1,81 @@
+.whyChooseSection {
+  background-color: #0c0c0c;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.heading {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.highlight {
+  color: var(--primary-color, #c8ff00);
+}
+
+.subtext {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 40px;
+  height: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  background-color: #222;
+  border-color: rgba(200, 255, 0, 0.2);
+}
+
+.cardTitle {
+  font-family: 'Big Shoulders', sans-serif;
+  color: var(--primary-color, #c8ff00);
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .heading {
+    font-size: 45px;
+  }
+  
+  .featureCard {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .whyChooseSection {
+    padding: 70px 0;
+  }
+  
+  .heading {
+    font-size: 36px;
+  }
+  
+  .subtext {
+    font-size: 16px;
+  }
+}
