@@ -12,40 +12,34 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "How long does it take to build a mobile app?",
+      question: "How does Appsters approach a new product from scratch?",
       answer:
-        "Most projects take 12–20 weeks, including planning, design, development, and testing, but we accelerate delivery through agile sprints and parallel workflows.",
+        "Every engagement starts with a full scope session before any sprint is opened. We map the product's core mechanic, user flows, technical requirements, and growth trajectory in that order. What ships first is always intentional, never arbitrary.",
     },
     {
-      question: "Do you sign NDAs for web and app projects?",
+      question: "Do you build for iOS, Android, or both?",
       answer:
-        "Yes. We protect your intellectual property with strict NDAs, secured data handling, and compliance protocols to ensure your idea stays confidential from kickoff to launch.",
+        "Both when it matters. We build natively and cross-platform, depending on the product's requirements. If your users are split across platforms and the core experience depends on performance-critical interactions, we scope accordingly. We don't default to one answer.",
+    }, {
+      question: "What does scalability actually mean in your process?",
+      answer:
+        "It means your architecture handles ten users and ten thousand users without a rebuild in between. We design database structures, API layers, and third-party integrations with future load in mind from day one. Scalability isn't an add-on. It's the starting assumption.",
     },
     {
-      question: "Can I start with MVP development first?",
+      question: "Do you work with founders or only enterprise clients?",
       answer:
-        "Yes, we provide end-to-end maintenance, bug fixes, and performance optimization, ensuring your app runs smoothly and stays updated with the latest OS and security requirements.",
+        "Both. We've built MVPs for first-time founders who had an idea and a deadline, and we've modernized infrastructure for enterprise teams held back by legacy systems. The process adapts. The quality standard doesn't.",
     },
     {
-      question: "What technologies and stacks do you use?",
+      question: "What makes a case study product different from a standard client project?",
       answer:
-        "We work with React Native, Flutter, Swift, Kotlin, Node.js, and scalable cloud platforms, tailoring the tech stack to your project’s goals and future scalability.",
+        "In several of our featured partnerships, Appsters holds a vested interest in the platform's long-term performance. That changes how decisions are made throughout the build. When the team has skin in the game, the product reflects that accountability at every layer.",
     },
     {
-      question: "Do you offer post-launch support for apps?",
+      question: "How long does a typical app build take with Appsters?",
       answer:
-        "Yes, we provide end-to-end maintenance, bug fixes, and performance optimization, ensuring your app runs smoothly and stays updated with the latest OS and security requirements.",
-    },
-    {
-      question: "Do you offer post-launch support for apps?",
-      answer:
-        "Yes, we provide end-to-end maintenance, bug fixes, and performance optimization, ensuring your app runs smoothly and stays updated with the latest OS and security requirements.",
-    },
-    {
-      question: "How do you handle app monetization?",
-      answer:
-        "We integrate in-app purchases, ads, subscriptions, or custom business models, ensuring a seamless user experience and data-driven revenue strategies that align with your app’s growth objectives.",
-    },
+        "A focused MVP with a clean scope, a single core mechanic, and a tested, deployable product typically runs eight to fourteen weeks. Full product builds with complex backends, multiple user roles, and monetization layers vary based on scope. We give timeline estimates after the discovery session, not before.",
+    }
   ];
 
   return (

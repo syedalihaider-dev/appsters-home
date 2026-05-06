@@ -90,7 +90,7 @@ export default function CaseStudiesSection() {
                 <p className={styles.case_heading}>Case</p>
                 <div className={styles.case_img}>
                   <Image
-                    src="/images/case-img-01.png"
+                    src="/images/case-study/mic2money.webp"
                     alt="Case Image"
                     fill
                     style={{ objectFit: "contain" }}
@@ -99,12 +99,11 @@ export default function CaseStudiesSection() {
                 <div className={styles.case_info}>
                   <div className={styles.left}>
                     <h4 className={styles.title}>
-                      PayFlow |
-                      <span className={styles.primarytxt}>FinTech</span>
+                      Mic2Money | <span className={styles.primarytxt}>Music</span> <span className={styles.primarytxt}>Entertainment</span> <span className={styles.primarytxt}>Monetization</span>
                     </h4>
-                    <h5>Engineering financial fluidity for a Fintech powerhouse.</h5>
-                    <p>
-                      Peer-to-peer transfer app with biometric login and instant merchant settlements. Scaled to handle $500M+ volume and &lt;1s speeds for 2M+ users.
+                    {/* <h5>Music · Entertainment · Monetization</h5> */}
+                    <p className="scroll_block">
+                      Mic2Money is a live music competition platform built for artists who are tired of waiting for permission. Artists enter contests, perform for a real audience, and earn actual cash based on fan votes: no label, no algorithm, no gatekeepers deciding who gets heard. For fans, it's the first platform that makes discovery feel like participation. You don't just listen. You influence outcomes and get rewarded for spotting talent before the rest of the world catches on.
                     </p>
                   </div>
                   {/* <div className={styles.right}>
@@ -115,10 +114,9 @@ export default function CaseStudiesSection() {
                   </div> */}
                 </div>
                 <ul className={styles.case_features}>
-                  <li>User Flow Wireframing</li>
-                  <li>Security Architecture</li>
-                  <li>Backend Engineering</li>
-                  <li>Compliance Logic</li>
+                  <li>Live Contest Engine</li>
+                  <li>Real Cash Payouts</li>
+                  <li>Fan-Driven Voting</li>
                 </ul>
                 <div className="combo_btn">
                   <ActionButtons />
@@ -132,7 +130,7 @@ export default function CaseStudiesSection() {
                 <p className={styles.case_heading}>Case</p>
                 <div className={styles.case_img}>
                   <Image
-                    src="/images/case-img-02.png"
+                    src="/images/case-study/global-reflex.webp"
                     alt="Case Image"
                     fill
                     style={{ objectFit: "contain" }}
@@ -141,12 +139,11 @@ export default function CaseStudiesSection() {
                 <div className={styles.case_info}>
                   <div className={styles.left}>
                     <h4 className={styles.title}>
-                      FitSphere |
-                      <span className={styles.primarytxt}>Fitness & Health</span>
+                      Global Reflex | <span className={styles.primarytxt}>Mobile Gaming</span> <span className={styles.primarytxt}>Competitive</span> <span className={styles.primarytxt}>Leaderboards</span>
                     </h4>
-                    <h5>Quantifying human performance on the go. </h5>
-                    <p>
-                      Wearable-synced fitness platform with personalized, gamified training plans. Drove 500k+ downloads, logged 10M+ workouts, and boosted daily retention by 40%.
+                    {/* <h5>Mobile Gaming · Competitive · Leaderboards</h5> */}
+                    <p className="scroll_block">
+                      Global Reflex is a precision reaction-time game that strips competitive mobile gaming down to its most honest form. A dot appears. The millisecond timer starts. You tap. Your score is verified, ranked, and placed on a global leaderboard against every other player on the planet. No upgrades that buy you an edge. No luck mechanics. Just the speed of your nervous system, measured accurately, compared fairly, and ranked in real time against the world.
                     </p>
                   </div>
                   {/* <div className={styles.right}>
@@ -157,10 +154,9 @@ export default function CaseStudiesSection() {
                   </div> */}
                 </div>
                 <ul className={styles.case_features}>
-                  <li>Gamification UX</li>
-                  <li>Wearable Integration</li>
-                  <li>Algorithmic Training</li>
-                  <li>Data Visualization</li>
+                  <li>iOS & Android</li>
+                  <li>Anti-Cheat Verified</li>
+                  <li>Global Leaderboards</li>
                 </ul>
                 <div className="combo_btn">
                   <ActionButtons />
@@ -174,7 +170,7 @@ export default function CaseStudiesSection() {
                 <p className={styles.case_heading}>Case</p>
                 <div className={styles.case_img}>
                   <Image
-                    src="/images/case-img-01.png"
+                    src="/images/case-study/my-tank-virtual.webp"
                     alt="Case Image"
                     fill
                     style={{ objectFit: "contain" }}
@@ -183,12 +179,11 @@ export default function CaseStudiesSection() {
                 <div className={styles.case_info}>
                   <div className={styles.left}>
                     <h4 className={styles.title}>
-                      DropTheBeat |
-                      <span className={styles.primarytxt}>Music & Entertainment</span>
+                      My Tank | Virtual LiveWell <span className={styles.primarytxt}>Gamification</span> <span className={styles.primarytxt}>Conservation</span> <span className={styles.primarytxt}>Community</span>
                     </h4>
-                    <h5>Sonic architecture for low-bandwidth entertainment and music. </h5>
-                    <p>
-                      AI-driven music streaming engineered for seamless, low-bandwidth listening. Delivers 99.9% uptime and 3x faster loads for 1M+ daily streams.
+                    {/* <h5>Sonic architecture for low-bandwidth entertainment and music. </h5> */}
+                    <p className="scroll_block">
+                      Virtual LiveWell is a fishing app that gives your catch a life after release. Photograph what you reel in, upload it through the app, and watch an animated version of that exact species swim into your personal virtual tank. Your tank grows with every trip, decorates with every milestone, and connects you to a community of anglers whose collections tell the story of every river, lake, and shoreline they have fished. It turns catch-and-release into something you genuinely look forward to logging.
                     </p>
                   </div>
                   {/* <div className={styles.right}>
@@ -199,10 +194,9 @@ export default function CaseStudiesSection() {
                   </div> */}
                 </div>
                 <ul className={styles.case_features}>
-                  <li>Adaptive Streaming Engine</li>
-                  <li>AI Discovery Logic</li>
-                  <li>UI/UX Design</li>
-                  <li>Infrastructure</li>
+                  <li>33 Species at Launch</li>
+                  <li>Gold Coin Economy</li>
+                  <li>Daily Retention Loops</li>
                 </ul>
                 <div className="combo_btn">
                   <ActionButtons />
@@ -216,7 +210,7 @@ export default function CaseStudiesSection() {
                 <p className={styles.case_heading}>Case</p>
                 <div className={styles.case_img}>
                   <Image
-                    src="/images/case-img-02.png"
+                    src="/images/case-study/where2map.webp"
                     alt="Case Image"
                     fill
                     style={{ objectFit: "contain" }}
@@ -225,12 +219,11 @@ export default function CaseStudiesSection() {
                 <div className={styles.case_info}>
                   <div className={styles.left}>
                     <h4 className={styles.title}>
-                      RightOps |
-                      <span className={styles.primarytxt}>AI Automation</span>
+                      Where2Map | <span className={styles.primarytxt}>Navigation</span> <span className={styles.primarytxt}>Location Intelligence</span> <span className={styles.primarytxt}>Utility</span>
                     </h4>
-                    <h5>Automating operational intelligence for the workforce.</h5>
-                    <p>
-                      AI automation platform generating predictive insights without workflow disruption. Reduced manual workload by 60% and saved 10,000+ hours with zero downtime.
+                    {/* <h5>Automating operational intelligence for the workforce.</h5> */}
+                    <p className="scroll_block">
+                      Where2Map is a location intelligence platform built for people who need more than a blue dot on a screen. It layers contextual information on top of real-time mapping data so users don't just know where something is, and they understand what it means, what's around it, and whether the trip is worth making. Built for decisions, not just navigation, it's the mapping tool that finally treats location data as something worth acting on rather than just something worth displaying.
                     </p>
                   </div>
                   {/* <div className={styles.right}>
@@ -241,10 +234,9 @@ export default function CaseStudiesSection() {
                   </div> */}
                 </div>
                 <ul className={styles.case_features}>
-                  <li>Process Mapping</li>
-                  <li>Predictive AI Integration</li>
-                  <li>Backend Automation</li>
-                  <li>System Integration</li>
+                  <li>Real-Time Mapping</li>
+                  <li>Smart Location Layer</li>
+                  <li>Cross-Platform</li>
                 </ul>
                 <div className="combo_btn">
                   <ActionButtons />
@@ -258,7 +250,7 @@ export default function CaseStudiesSection() {
                 <p className={styles.case_heading}>Case</p>
                 <div className={styles.case_img}>
                   <Image
-                    src="/images/case-img-02.png"
+                    src="/images/case-study/marine-fitness.webp"
                     alt="Case Image"
                     fill
                     style={{ objectFit: "contain" }}
@@ -267,12 +259,12 @@ export default function CaseStudiesSection() {
                 <div className={styles.case_info}>
                   <div className={styles.left}>
                     <h4 className={styles.title}>
-                      Cars & Wraps |
-                      <span className={styles.primarytxt}>Automotive Marketplace</span>
+                      Marina Fitness |
+                      <span className={styles.primarytxt}>Health & Fitness</span> <span className={styles.primarytxt}>Tracking</span> <span className={styles.primarytxt}>Lifestyle</span>
                     </h4>
-                    <h5>Streamlining operational automotive marketplace intelligence.</h5>
-                    <p>
-                      Automotive marketplace featuring real-time inventory and AR wrap previews. Increased conversions by 25%, drove 100k+ AR interactions, and cut turnaround by 30%.
+                    {/* <h5>Streamlining operational automotive marketplace intelligence.</h5> */}
+                    <p className="scroll_block">
+                      Marina Fitness is an all-in-one fitness platform built around the user who actually exists, not the idealized version who never misses a session and already knows what they're doing. It personalizes from the very first workout, tracks performance in ways that keep motivation alive rather than turning progress into a spreadsheet, and structures programs around real fitness levels, real schedules, and real goals. The result is a fitness app that earns its place on your home screen past the first month, because it stays relevant as you improve.
                     </p>
                   </div>
                   {/* <div className={styles.right}>
@@ -283,11 +275,9 @@ export default function CaseStudiesSection() {
                   </div> */}
                 </div>
                 <ul className={styles.case_features}>
-                  <li>AR Interface Design</li>
-                  <li>Inventory API</li>
-                  <li>Matching Algorithms</li>
-                  <li>3D Rendering </li>
-                  {/* <li>App Development</li> */}
+                  <li>Personalized Fitness Programs</li>
+                  <li>Gamification</li>
+                  <li>Goal-Driven Design</li>
                 </ul>
                 <div className="combo_btn">
                   <ActionButtons />
@@ -301,7 +291,7 @@ export default function CaseStudiesSection() {
                 <p className={styles.case_heading}>Case</p>
                 <div className={styles.case_img}>
                   <Image
-                    src="/images/case-img-02.png"
+                    src="/images/case-study/auto-parts.webp"
                     alt="Case Image"
                     fill
                     style={{ objectFit: "contain" }}
@@ -310,12 +300,11 @@ export default function CaseStudiesSection() {
                 <div className={styles.case_info}>
                   <div className={styles.left}>
                     <h4 className={styles.title}>
-                      PlayNest |
-                      <span className={styles.primarytxt}>Kids Media</span>
+                      AutoParts | <span className={styles.primarytxt}>Automotive</span> <span className={styles.primarytxt}>E-Commerce</span> <span className={styles.primarytxt}>On-Demand</span>
                     </h4>
-                    <h5>Security-first digital learning through next-generation mobile gaming.</h5>
-                    <p>
-                      Secure edutainment platform offering interactive games and robust parental controls. Achieved 100% COPPA/GDPR compliance with a 4.9-star rating across 2M+ sessions.
+                    {/* <h5>Security-first digital learning through next-generation mobile gaming.</h5> */}
+                    <p className="scroll_block">
+                      AutoParts is an on-demand automotive parts platform that solves the wrong-fitment problem before it starts. Enter your VIN and the catalog filters instantly to parts confirmed compatible with your exact make, model, year, and trim with no cross-referencing, no guesswork, no return shipping on a part that almost fit. Multiple vendors surface in a single search, pricing is transparent, and the checkout flow was built for urgency, because when your car is off the road, the platform's job is to get it back on as fast as possible.
                     </p>
                   </div>
                   {/* <div className={styles.right}>
@@ -326,136 +315,9 @@ export default function CaseStudiesSection() {
                   </div> */}
                 </div>
                 <ul className={styles.case_features}>
-                  <li>Safety UX Wireframing</li>
-                  <li>Compliance Engineering</li>
-                  <li>Game Development</li>
-                  <li>Real-time Analytics</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-img-02.png"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      TaskIt |
-                      <span className={styles.primarytxt}>AI Productivity</span>
-                    </h4>
-                    <h5>The scalable brain for distribution teams and beyond.</h5>
-                    <p>
-                      AI collaboration tool for messaging, file sharing, and smart task prioritization. Empowers 150k+ teams, automates 5M+ tasks, and syncs 50% faster.
-                    </p>
-                  </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
-                </div>
-                <ul className={styles.case_features}>
-                  <li>Collaboration UX</li>
-                  <li>AI Task Prioritization</li>
-                  <li>Real-time Sync</li>
-                  <li>Cross-Platform Dev</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-img-02.png"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      The Gate |
-                      <span className={styles.primarytxt}>Next-Gen Mobile Gaming Experience</span>
-                    </h4>
-                    <h5>Simulating massive reality without cuts or lag.</h5>
-                    <p>
-                      Massive open-world sandbox game with real-time physics and scalable servers. Handles 100k+ concurrent players at &lt;20ms latency, driving 1M+ downloads.
-                    </p>
-                  </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
-                </div>
-                <ul className={styles.case_features}>
-                  <li>Server-Side Physics</li>
-                  <li>Concurrency Scaling</li>
-                  <li>Economy Design</li>
-                  <li>Multiplayer Framework</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-img-02.png"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      RightOps |
-                      <span className={styles.primarytxt}>AI Automation</span>
-                    </h4>
-                    <h5>Automating operational intelligence for the workforce.</h5>
-                    <p>
-                      AI automation platform generating predictive insights without workflow disruption. Reduced manual workload by 60% and saved 10,000+ hours with zero downtime.
-                    </p>
-                  </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
-                </div>
-                <ul className={styles.case_features}>
-                  <li>Process Mapping</li>
-                  <li>Predictive AI Integration</li>
-                  <li>Backend Automation</li>
-                  <li>System Integration</li>
+                  <li>VIN-Based Search</li>
+                  <li>Multi-Vendor Catalog</li>
+                  <li>Fitment Guarantee</li>
                 </ul>
                 <div className="combo_btn">
                   <ActionButtons />

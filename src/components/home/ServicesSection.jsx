@@ -83,11 +83,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/ecommerce-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>
@@ -117,11 +116,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/android-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>
@@ -151,11 +149,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/ios-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>
@@ -185,11 +182,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/flutter-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>
@@ -219,11 +215,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/react-native-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>
@@ -253,11 +248,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/cross-platform-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>
@@ -287,11 +281,10 @@ export default function ServicesSection() {
               <div className={styles.box_inner}>
                 <div className={styles.holding_mobile}>
                   <Image
-                    src="/images/hand-holding-mobile-left.png"
+                    src="/images/services/mobile-game-app-development.webp"
                     alt="Mobile"
-                    fill
-                    sizes="100vw"
-                    style={{ objectFit: "contain" }}
+                    width={515}
+                    height={588}
                   />
                 </div>
                 <div className={styles.box_content}>

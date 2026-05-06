@@ -261,3 +261,89 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .processSection {
+    padding: 60px 0;
+  }
+  .mainHeading {
+    font-size: 42px;
+  }
+  .transparentHeading {
+    font-size: 150px;
+    top: -80px;
+  }
+  .rightSide {
+    padding-left: 20px;
+  }
+  .cardNumber {
+    left: -40px;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    top: 50px;
+  }
+  .cardNumber::before {
+    display: none;
+  }
+  .cardTitle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainHeading {
+    font-size: 32px;
+  }
+  .transparentHeading {
+    font-size: 100px;
+    top: -50px;
+  }
+  .paragraph {
+    font-size: 14px;
+  }
+  .rightSide {
+    padding-left: 0;
+  }
+  .cardItem {
+    flex-direction: column;
+  }
+  .cardNumber {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 15px;
+  }
+  .cardTitle {
+    font-size: 20px;
+  }
+  .cardText {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .processSection {
+    padding: 50px 0;
+  }
+  .mainHeading {
+    font-size: 28px;
+  }
+  .transparentHeading {
+    font-size: 80px;
+    top: -40px;
+  }
+  .cardContent {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mainHeading {
+    font-size: 24px;
+  }
+  .transparentHeading {
+    font-size: 60px;
+    top: -30px;
+  }
+}

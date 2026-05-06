@@ -212,3 +212,41 @@
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .whatWeDoSection {
+    padding: 40px 0;
+  }
+  .transparentHeading {
+    font-size: 35px;
+    top: 30px;
+  }
+  .mainHeading {
+    font-size: 24px;
+  }
+  .paragraph {
+    font-size: 14px;
+  }
+  .cardTitle {
+    font-size: 20px;
+  }
+  .cardText {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .whatWeDoSection {
+    padding: 30px 0;
+  }
+  .transparentHeading {
+    font-size: 30px;
+    top: 35px;
+  }
+  .mainHeading {
+    font-size: 20px;
+  }
+  .cardTitle {
+    font-size: 18px;
+  }
+}

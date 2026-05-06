@@ -86,3 +86,27 @@
         width: 130px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .awardsSection {
+        padding: 10px 0 30px;
+    }
+    .img {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .badges {
+        gap: 5px;
+    }
+    .img {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .img {
+        width: 80px;
+    }
+}

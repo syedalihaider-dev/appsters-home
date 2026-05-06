@@ -168,17 +168,22 @@
 
 .title{
     font-size: 30px;
-    line-height: 30px;
     color: var(--dark-color);
     font-weight: var(--font-500);
     text-transform: capitalize;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .title .primarytxt{
     background: var(--secondary-color);
     color: var(--primary-color);
     border-radius: 4px;
-    padding: 1px 5px;
+    padding: 4px 8px;
+    font-size: 18px;
 }
 
 .case_info {
@@ -195,6 +200,7 @@
 }
 
 .left p {
+    height: 145px;
     color: #666666;
     margin-top: 15px;
 }

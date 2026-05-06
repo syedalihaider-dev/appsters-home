@@ -252,3 +252,63 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .heroSection {
+        padding: 100px 0 80px;
+    }
+    .transparent_heading {
+        font-size: 40px;
+        line-height: 40px;
+        bottom: 40px;
+    }
+    .sub_heading {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .main_heading {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .paragraph {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .heroSection {
+        padding: 80px 0 60px;
+    }
+    .transparent_heading {
+        font-size: 35px;
+        line-height: 35px;
+        bottom: 30px;
+    }
+    .sub_heading {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .main_heading {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .paragraph {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .transparent_heading {
+        font-size: 30px;
+        line-height: 30px;
+        bottom: 20px;
+    }
+    .sub_heading {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .main_heading {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
