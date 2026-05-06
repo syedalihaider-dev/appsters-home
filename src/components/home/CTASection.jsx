@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import ActionButtons from "@/components/ui/ActionButtons";
 import styles from "./CTASection.module.css";
 
@@ -41,13 +42,14 @@ export default function CTASection() {
                 </div>
             </div>
             <div className={styles.sec_right}>
-                <div className={styles.circle}>
+                <Link href="#contactForm" className={styles.circle}>
                     <Image
                         src="/images/circle.png"
                         fill
                         sizes="100vw"
                         alt="Circle Image..."
                         style={{ objectFit: "contain" }}
+                        className={styles.circleBg}
                     />
                     <div className={styles.circle_content}>
                         <Image
@@ -67,7 +69,7 @@ export default function CTASection() {
                             alt="Circle Arrow Image..."
                         />
                     </div>
-                </div>
+                </Link>
                 <div className={styles.hand_holding_mobile_center}>
                     <Image
                         src="/images/cta-right-img.png"

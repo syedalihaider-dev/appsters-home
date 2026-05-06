@@ -3,7 +3,7 @@ import styles from './ContactForm.module.css';
 
 export default function ContactForm() {
 return (
-<section className={styles.contactForm}>
+<section className={styles.contactForm} id="contactForm">
     <div className="container">
         <div className={styles.sec_top}>
             <div className="row align-items-center">

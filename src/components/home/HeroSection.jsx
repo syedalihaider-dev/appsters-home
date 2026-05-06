@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import ActionButtons from "@/components/ui/ActionButtons";
 import styles from './HeroSection.module.css';
 
@@ -79,7 +80,7 @@ export default function HeroSection() {
                                     style={{ objectFit: "contain" }}
                                 />
                             </div>
-                            <div className={styles.circle}>
+                            <Link href="#contactForm" className={styles.circle}>
                                 <Image
                                     src="/images/circle.png"
                                     alt="Circle Image..."
@@ -87,6 +88,7 @@ export default function HeroSection() {
                                     priority
                                     sizes="100vw"
                                     style={{ objectFit: "contain" }}
+                                    className={styles.circleBg}
                                 />
                                 <div className={styles.circle_content}>
                                     <Image
@@ -108,7 +110,7 @@ export default function HeroSection() {
                                         style={{ objectFit: "contain" }}
                                     />
                                 </div>
-                            </div>
+                            </Link>
                             <div className={styles.counting}>
                                 <p>200K</p>
                                 <div className={styles.global_clients}>

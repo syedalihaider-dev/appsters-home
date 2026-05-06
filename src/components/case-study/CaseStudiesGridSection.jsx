@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ActionButtons from '@/components/ui/ActionButtons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -15,44 +16,47 @@ const caseStudiesData = [
     id: 1,
     title: "Mic2Money",
     image: "/images/case-study/mic2money.webp",
-    desc: "Mic2Money is a music contest app that empowers artists to showcase their talent, compete in live challenges, and earn rewards based on performance and audience engagement. Built to bridge opportunity and exposure, the platform turns every performance into a chance to be discovered, supported, and monetized.",
-    stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
+    desc: "Mic2Money is a live music competition platform built for artists who are tired of waiting for permission. Artists enter contests, perform for a real audience, and earn actual cash based on fan votes: no label, no algorithm, no gatekeepers deciding who gets heard. For fans, it's the first platform that makes discovery feel like participation. You don't just listen. You influence outcomes and get rewarded for spotting talent before the rest of the world catches on.",
+    stats: ["Live Contest Engine", "Real Cash Payouts", "Fan-Driven Voting"],
+    link: "/case-study/mic-2-money"
   },
   {
     id: 2,
     title: "Global Reflex",
     image: "/images/case-study/global-reflex.webp",
-    desc: "Global Reflex is a high-intensity mobile game designed to test and enhance reaction speed through precise, real-time challenges. Players compete on a global scale, tracking their reflex timing against others while continuously improving accuracy, focus, and decision-making speed.",
-    stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
+    desc: "Global Reflex is a precision reaction-time game that strips competitive mobile gaming down to its most honest form. A dot appears. The millisecond timer starts. You tap. Your score is verified, ranked, and placed on a global leaderboard against every other player on the planet. No upgrades that buy you an edge. No luck mechanics. Just the speed of your nervous system, measured accurately, compared fairly, and ranked in real time against the world.",
+    stats: ["iOS & Android", "Anti-Cheat Verified", "Global Leaderboards"],
+    link: "/case-study/global-reflex"
   },
   {
     id: 3,
     title: "My Tank Virtual Live Well",
     image: "/images/case-study/my-tank-virtual.webp",
-    desc: "My Tank Virtual Live Well is an immersive aquarium simulation app where users can catch and collect fish, then build and personalize their own virtual tank. Players can decorate their aquatic environment with creative items, arrange plants, and design unique underwater scenes. The experience also includes interactive care features like cleaning and maintaining the tank.",
-    stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
+    desc: "Virtual LiveWell is a fishing app that gives your catch a life after release. Photograph what you reel in, upload it through the app, and watch an animated version of that exact species swim into your personal virtual tank. Your tank grows with every trip, decorates with every milestone, and connects you to a community of anglers whose collections tell the story of every river, lake, and shoreline they have fished. It turns catch-and-release into something you genuinely look forward to logging.",
+    stats: ["33 Species at Launch", "Gold Coin Economy", "Daily Retention Loops"],
+    link: "/case-study/my-tank"
   },
-  {
-    id: 4,
-    title: "Where2Map",
-    image: "/images/case-study/where2map.webp",
-    desc: "Where2Map is a smart navigation app designed to make travel simple, fast, and accurate. It helps users find the best routes, explore nearby places, and reach destinations with real-time directions and traffic updates. Built for everyday use, it combines precise mapping with intuitive guidance, ensuring a smooth navigation experience.",
-    stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
-  },
-  {
-    id: 5,
-    title: "Marina Fitness",
-    image: "/images/case-study/marine-fitness.webp",
-    desc: "Fitness is an all-in-one mobile app designed to help users build healthier routines through personalized workouts, progress tracking, and goal-driven plans. It offers guided exercises, performance insights, and flexible programs tailored to different fitness levels and lifestyles. Built to keep users motivated, the app combines smart tracking with intuitive design.",
-    stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
-  },
-  {
-    id: 6,
-    title: "Auto Parts",
-    image: "/images/case-study/auto-parts.webp",
-    desc: "Auto Parts is a comprehensive mobile app designed to help users quickly find, browse, and purchase genuine vehicle parts with ease. It connects car owners, mechanics, and workshops to a wide range of auto components, ensuring accurate compatibility and reliable sourcing. Built for speed and convenience, the app simplifies part discovery.",
-    stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
-  }
+  // {
+  //   id: 4,
+  //   title: "Where2Map",
+  //   image: "/images/case-study/where2map.webp",
+  //   desc: "Where2Map is a smart navigation app designed to make travel simple, fast, and accurate. It helps users find the best routes, explore nearby places, and reach destinations with real-time directions and traffic updates. Built for everyday use, it combines precise mapping with intuitive guidance, ensuring a smooth navigation experience.",
+  //   stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
+  // },
+  // {
+  //   id: 5,
+  //   title: "Marina Fitness",
+  //   image: "/images/case-study/marine-fitness.webp",
+  //   desc: "Fitness is an all-in-one mobile app designed to help users build healthier routines through personalized workouts, progress tracking, and goal-driven plans. It offers guided exercises, performance insights, and flexible programs tailored to different fitness levels and lifestyles. Built to keep users motivated, the app combines smart tracking with intuitive design.",
+  //   stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
+  // },
+  // {
+  //   id: 6,
+  //   title: "Auto Parts",
+  //   image: "/images/case-study/auto-parts.webp",
+  //   desc: "Auto Parts is a comprehensive mobile app designed to help users quickly find, browse, and purchase genuine vehicle parts with ease. It connects car owners, mechanics, and workshops to a wide range of auto components, ensuring accurate compatibility and reliable sourcing. Built for speed and convenience, the app simplifies part discovery.",
+  //   stats: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"]
+  // }
 ];
 
 export default function CaseStudiesGridSection() {
@@ -90,16 +94,13 @@ export default function CaseStudiesGridSection() {
           ))}
         </div>
         <div className={styles.ctaWrapper}>
-          <Link href="#" className={`mybtn ${styles.customBtn}`}>
-            <div className={`text ${styles.btnTextBlack}`}>
-              <span>View Case Study</span>
-              <span>View Case Study</span>
-            </div>
-            <div className={`icon ${styles.btnIconGreen}`}>
-              <Image src="/images/arrow-icon.png" alt="Arrow Icon" width={16} height={14} style={{ objectFit: "contain" }} />
-              <Image src="/images/arrow-icon.png" alt="Arrow Icon" width={16} height={14} style={{ objectFit: "contain" }} />
-            </div>
-          </Link>
+          <ActionButtons 
+            text="View Case Study" 
+            href={item.link} 
+            className={styles.customBtn}
+            textClassName={styles.btnTextBlack}
+            iconClassName={styles.btnIconGreen}
+          />
         </div>
       </div>
     </div>

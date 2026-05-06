@@ -204,7 +204,7 @@ export default function CaseStudiesSection() {
               </div>
             </li>
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <li>
               <div className={styles.box}>
                 <p className={styles.case_heading}>Case</p>
@@ -221,17 +221,10 @@ export default function CaseStudiesSection() {
                     <h4 className={styles.title}>
                       Where2Map | <span className={styles.primarytxt}>Navigation</span> <span className={styles.primarytxt}>Location Intelligence</span> <span className={styles.primarytxt}>Utility</span>
                     </h4>
-                    {/* <h5>Automating operational intelligence for the workforce.</h5> */}
                     <p className="scroll_block">
                       Where2Map is a location intelligence platform built for people who need more than a blue dot on a screen. It layers contextual information on top of real-time mapping data so users don't just know where something is, and they understand what it means, what's around it, and whether the trip is worth making. Built for decisions, not just navigation, it's the mapping tool that finally treats location data as something worth acting on rather than just something worth displaying.
                     </p>
                   </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
                 </div>
                 <ul className={styles.case_features}>
                   <li>Real-Time Mapping</li>
@@ -262,17 +255,10 @@ export default function CaseStudiesSection() {
                       Marina Fitness |
                       <span className={styles.primarytxt}>Health & Fitness</span> <span className={styles.primarytxt}>Tracking</span> <span className={styles.primarytxt}>Lifestyle</span>
                     </h4>
-                    {/* <h5>Streamlining operational automotive marketplace intelligence.</h5> */}
                     <p className="scroll_block">
                       Marina Fitness is an all-in-one fitness platform built around the user who actually exists, not the idealized version who never misses a session and already knows what they're doing. It personalizes from the very first workout, tracks performance in ways that keep motivation alive rather than turning progress into a spreadsheet, and structures programs around real fitness levels, real schedules, and real goals. The result is a fitness app that earns its place on your home screen past the first month, because it stays relevant as you improve.
                     </p>
                   </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
                 </div>
                 <ul className={styles.case_features}>
                   <li>Personalized Fitness Programs</li>
@@ -302,17 +288,10 @@ export default function CaseStudiesSection() {
                     <h4 className={styles.title}>
                       AutoParts | <span className={styles.primarytxt}>Automotive</span> <span className={styles.primarytxt}>E-Commerce</span> <span className={styles.primarytxt}>On-Demand</span>
                     </h4>
-                    {/* <h5>Security-first digital learning through next-generation mobile gaming.</h5> */}
                     <p className="scroll_block">
                       AutoParts is an on-demand automotive parts platform that solves the wrong-fitment problem before it starts. Enter your VIN and the catalog filters instantly to parts confirmed compatible with your exact make, model, year, and trim with no cross-referencing, no guesswork, no return shipping on a part that almost fit. Multiple vendors surface in a single search, pricing is transparent, and the checkout flow was built for urgency, because when your car is off the road, the platform's job is to get it back on as fast as possible.
                     </p>
                   </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
                 </div>
                 <ul className={styles.case_features}>
                   <li>VIN-Based Search</li>
@@ -324,7 +303,7 @@ export default function CaseStudiesSection() {
                 </div>
               </div>
             </li>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </section>
