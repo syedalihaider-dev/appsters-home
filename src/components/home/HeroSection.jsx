@@ -60,14 +60,6 @@ export default function HeroSection() {
                                 />
                             </div>
                             <div className={styles.mobile_screen}>
-                                {/* <iframe
-                                    src="https://player.vimeo.com/video/1184236936?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&background=1"
-                                    frameBorder="0"
-                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                                    allowFullScreen
-                                    title="diamond-animation"
-                                    className={styles.vimeo_video}
-                                ></iframe> */}
                                 <Image
                                     src="/video/banner-mobile.gif"
                                     alt="Banner Mobile Image..."

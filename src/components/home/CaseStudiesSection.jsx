@@ -119,7 +119,7 @@ export default function CaseStudiesSection() {
                   <li>Fan-Driven Voting</li>
                 </ul>
                 <div className="combo_btn">
-                  <ActionButtons />
+                  <ActionButtons text="View Case Study" href="/case-study/mic-2-money" />
                 </div>
               </div>
             </li>
@@ -159,7 +159,7 @@ export default function CaseStudiesSection() {
                   <li>Global Leaderboards</li>
                 </ul>
                 <div className="combo_btn">
-                  <ActionButtons />
+                  <ActionButtons text="View Case Study" href="/case-study/global-reflex" />
                 </div>
               </div>
             </li>
@@ -199,7 +199,7 @@ export default function CaseStudiesSection() {
                   <li>Daily Retention Loops</li>
                 </ul>
                 <div className="combo_btn">
-                  <ActionButtons />
+                  <ActionButtons text="View Case Study" href="/case-study/my-tank" />
                 </div>
               </div>
             </li>
@@ -239,7 +239,7 @@ export default function CaseStudiesSection() {
                   <li>Cross-Platform</li>
                 </ul>
                 <div className="combo_btn">
-                  <ActionButtons />
+                  <ActionButtons text="View Case Study" href="/case-study/where-2-map" />
                 </div>
               </div>
             </li>
@@ -280,7 +280,7 @@ export default function CaseStudiesSection() {
                   <li>Goal-Driven Design</li>
                 </ul>
                 <div className="combo_btn">
-                  <ActionButtons />
+                  <ActionButtons text="View Case Study" href="/case-study/marina-fitness" />
                 </div>
               </div>
             </li>
@@ -320,7 +320,7 @@ export default function CaseStudiesSection() {
                   <li>Fitment Guarantee</li>
                 </ul>
                 <div className="combo_btn">
-                  <ActionButtons />
+                  <ActionButtons text="View Case Study" href="/case-study/auto-parts" />
                 </div>
               </div>
             </li>
