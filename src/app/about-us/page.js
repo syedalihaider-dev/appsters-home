@@ -6,6 +6,7 @@ import WhatWeDoSection from '@/components/about-us/WhatWeDoSection';
 import ProcessSection from '@/components/about-us/ProcessSection';
 import WhyChooseSection from '@/components/about-us/WhyChooseSection';
 import CTASection from '@/components/about-us/CTASection';
+import AppSolutionsSection from '@/components/about-us/AppSolutionsSection';
 import VideoTestimonialSection from '@/components/home/VideoTestimonialSection';
 import LocationSection from '@/components/home/LocationSection';
 import ContactForm from '@/components/home/ContactForm';
@@ -23,6 +24,7 @@ export default function AboutUsPage() {
       <ProcessSection />
       <WhyChooseSection />
       <CTASection />
+      <AppSolutionsSection />
       <VideoTestimonialSection />
       <LocationSection />
       <ContactForm />

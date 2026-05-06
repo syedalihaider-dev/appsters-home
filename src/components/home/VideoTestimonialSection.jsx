@@ -63,7 +63,7 @@ export default function VideoTestimonialSection() {
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay, Navigation]}
-          pagination={{ clickable: true }}
+          pagination={{ clickable: false }}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

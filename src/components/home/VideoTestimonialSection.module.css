@@ -198,10 +198,15 @@
 }
 
 .sec_content :global(.swiper) {
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
+    padding-bottom: 0px;
 }
 
-.sec_content :global(.swiper .swiper-pagination) {
+.sec_content :global(.swiper .swiper-pagination){
+    display: none;
+}
+
+/* .sec_content :global(.swiper .swiper-pagination) {
     bottom: 10px !important;
 }
 
@@ -217,7 +222,7 @@
     width: 70px;
     background: var(--primary-color);
     border-radius: 30px;
-}
+} */
 
 @media screen and (max-width:1600px) {
     .videoTestimonialSection {
@@ -276,7 +281,8 @@
     }
 
     .sec_content :global(.swiper) {
-        padding-bottom: 60px;
+        /* padding-bottom: 60px; */
+        padding-bottom: 0px;
     }
 
     .sec_content :global(.swiper .swiper-pagination-bullet) {
@@ -328,7 +334,8 @@
     }
 
     .sec_content :global(.swiper) {
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
+        padding-bottom: 0px;
     }
 
     .sec_content :global(.swiper .swiper-pagination-bullet) {
