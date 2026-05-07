@@ -1,0 +1,51 @@
+.thankYouPage {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--dark-color);
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.icon {
+    margin-bottom: 30px;
+    animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon svg{
+    margin: auto;
+}
+
+.thankYouPage h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.thankYouPage p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: var(--light-color);
+    opacity: 0.8;
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media screen and (max-width: 767px) {
+    .thankYouPage h1 {
+        font-size: 50px;
+    }
+    .thankYouPage p {
+        font-size: 16px;
+    }
+}

@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from './Banner.module.css';
 
@@ -26,6 +28,53 @@ const ArrowRight = () => (
 );
 
 export default function Banner() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    budget: '',
+    msg: '',
+    pageTitle: 'Contact Us Banner',
+    pageUrl: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    setFormData(prev => ({ ...prev, pageUrl: window.location.href }));
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        router.push('/thank-you');
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please check your connection.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className={`sec_padding ${styles.bannerSection}`}>
       <div className="container">
@@ -53,27 +102,59 @@ export default function Banner() {
             <div className={styles.rightContent}>
               <div className={styles.formContainer}>
                 <h2>LET'S TURN IDEAS INTO IMPACT.</h2>
-                <form className={styles.contactForm}>
+                <form className={styles.contactForm} onSubmit={handleSubmit}>
                   <div className={styles.inputGroup}>
-                    <input type="text" placeholder="Full Name*" required />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <input type="email" placeholder="Email Address*" required />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <input type="tel" placeholder="Phone Number*" required />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <input type="text" placeholder="Project Budget" />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Full Name*"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className={styles.inputGroup}>
-                    <textarea placeholder="Tell us about your Requirements*" rows="4" required></textarea>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address*"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
                   </div>
-                  <div className={styles.privacyText}>
-                    We take your privacy seriously. Read our <Link href="/privacy-policy">Privacy Policy</Link>
+                  <div className={styles.inputGroup}>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number*"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
                   </div>
-                  <button type="submit" className={styles.submitBtn}>
-                    <span>Submit</span>
+                  <div className={styles.inputGroup}>
+                    <input
+                      type="text"
+                      name="budget"
+                      placeholder="Project Budget"
+                      required
+                      value={formData.budget}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className={styles.inputGroup}>
+                    <textarea
+                      name="msg"
+                      placeholder="Tell us about your Requirements*"
+                      rows="4"
+                      required
+                      value={formData.msg}
+                      onChange={handleChange}
+                    ></textarea>
+                  </div>
+                  <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                    <span>{isSubmitting ? 'Sending...' : 'Submit'}</span>
                     <span className={styles.iconCircle}>
                       <ArrowRight />
                     </span>
@@ -87,3 +168,4 @@ export default function Banner() {
     </section>
   );
 }
+
