@@ -504,7 +504,7 @@
 
 @media screen and (max-width:767px) {
     .caseStudiesSection {
-        padding: 20px 0 40px;
+        padding: 40px 0 40px;
     }
 
     .transparent_heading {
@@ -513,16 +513,20 @@
         letter-spacing: -2px;
     }
 
+    .sec_top :global(.row) {
+        flex-direction: column-reverse !important;
+    }
+
     .caseStudies_before {
         width: 200px;
         height: 22px;
-        top: -61px;
+        top: -81px;
     }
 
     .sub_heading {
         letter-spacing: 1px;
         font-size: 14px;
-        top: -55px;
+        top: -75px;
         left: 30px;
     }
 
@@ -535,6 +539,10 @@
         font-size: 14px;
         top: 0px;
         right: 0px;
+    }
+
+    .custom_arrow {
+        margin: 30px 0px 20px;
     }
 
     .sec_content {

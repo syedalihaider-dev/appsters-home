@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from './DeliveredSolutions.module.css';
+import ActionButtons from "@/components/ui/ActionButtons";
 
 import Script from "next/script";
 
@@ -72,6 +73,9 @@ export default function DeliveredSolutions() {
                                 <p className={`${styles.para} scroll_block`}>
                                     Our experience spans Saas, healthcare, finance, retail, automotive, and more, with solutions adapted to each sector’s demands for security, AI, compliance, and user adoption.
                                 </p>
+                                <div className="combo_btn">
+                                    <ActionButtons text="Read More" href="#contactForm" />
+                                </div>
                             </div>
                             <div className={styles.box}>
                                 <div className={styles.box_before}>
@@ -107,6 +111,9 @@ export default function DeliveredSolutions() {
                                 <p className={`${styles.para} scroll_block`}>
                                     Thousands of projects executed with an emphasis on speed, AI-adoption, stability, and clear ROI across both startup and enterprise environments.
                                 </p>
+                                <div className="combo_btn">
+                                    <ActionButtons text="Read More" href="#contactForm" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,6 +153,9 @@ export default function DeliveredSolutions() {
                                 <p className={`${styles.para} scroll_block`}>
                                     Every model is designed for high accuracy, reliable outputs, and performance at scale for mission-critical workflows and more.
                                 </p>
+                                <div className="combo_btn">
+                                    <ActionButtons text="Read More" href="#contactForm" />
+                                </div>
                             </div>
                             <div className={styles.box}>
                                 <div className={styles.box_before}>
@@ -181,6 +191,9 @@ export default function DeliveredSolutions() {
                                 <p className={`${styles.para} scroll_block`}>
                                     Outdated processes replaced with modern, streamlined systems that cut costs and improve operational efficiency.
                                 </p>
+                                <div className="combo_btn">
+                                    <ActionButtons text="Read More" href="#contactForm" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,4 +201,4 @@ export default function DeliveredSolutions() {
             </div>
         </section>
     )
-}
+}

@@ -1,15 +1,27 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ActionButtons from "@/components/ui/ActionButtons";
 import styles from './HeroSection.module.css';
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay } from "swiper/modules";
-// import "swiper/css";
+import gsap from "gsap";
 
 export default function HeroSection() {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        const obj = { value: 0 };
+        gsap.to(obj, {
+            value: 200,
+            duration: 2,
+            ease: "power2.out",
+            onUpdate: () => {
+                setCount(Math.floor(obj.value));
+            }
+        });
+    }, []);
+
     return (
         <section className={styles.heroSection}>
             <span className={styles.transparent_heading}>Creative Agency</span>
@@ -112,7 +124,7 @@ export default function HeroSection() {
                                 </div>
                             </Link>
                             <div className={styles.counting}>
-                                <p>200K</p>
+                                <p>{count}K</p>
                                 <div className={styles.global_clients}>
                                     <Image
                                         src="/images/global-clients.png"

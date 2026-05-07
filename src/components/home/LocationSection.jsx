@@ -137,7 +137,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>299 South Main Street Salt Lake City, <br />Utah 84111</a>
+                          <a>141 W Jackson Blvd STE 300 A, Chicago, <br />IL 60604, United States</a>
                         </p>
                       </div>
                     </li>
@@ -210,7 +210,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>2139 Hoora Ave, Manama 973,<br /> Bahrain</a>
+                          <a>Office 1402, JBC 3 Cluster Y, Jumeirah Lake Towers <br />Dubai UAE</a>
                         </p>
                       </div>
                     </li>
@@ -284,7 +284,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>26 Broadway Suite 934, New York,<br /> NY 10004</a>
+                          <a>2800 Post Oak Blvd STE 4100, Houston,<br /> TX 77056, United States</a>
                         </p>
                       </div>
                     </li>
@@ -358,7 +358,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb<br /> Sharjah UAE</a>
+                          <a>500 W 2nd St Suite 133, Austin,<br /> TX 78701, United States</a>
                         </p>
                       </div>
                     </li>
@@ -432,7 +432,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb<br /> Sharjah UAE</a>
+                          <a>1425 Flower St, Los Angeles,<br /> CA 90015, United States</a>
                         </p>
                       </div>
                     </li>
@@ -506,7 +506,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir<br /> Suburb Sharjah UAE</a>
+                          <a>124 W Dakota Ave, Pierre,<br /> SD 57501, United States</a>
                         </p>
                       </div>
                     </li>
@@ -580,7 +580,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>2139 Hoora Ave,<br /> Manama 973, Bahrain</a>
                         </p>
                       </div>
                     </li>
@@ -654,7 +654,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>51 Al Miqdad St,<br /> Doha, Qatar</a>
                         </p>
                       </div>
                     </li>
@@ -728,7 +728,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>1826 Park Rd NW, Washington,<br /> DC 20010, United States</a>
                         </p>
                       </div>
                     </li>
@@ -802,7 +802,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>1341 W Mockingbird Ln, Dallas,<br /> TX 75247, United States</a>
                         </p>
                       </div>
                     </li>
@@ -876,7 +876,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>512 Wellington St W, Toronto,<br /> ON M5V 1E3, Canada</a>
                         </p>
                       </div>
                     </li>
@@ -950,7 +950,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>488 Folsom St, San Francisco,<br /> CA 94105, United States</a>
                         </p>
                       </div>
                     </li>
@@ -1024,7 +1024,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>26 Broadway Suite 934, New York,<br /> NY 10004, United States</a>
                         </p>
                       </div>
                     </li>
@@ -1098,7 +1098,7 @@ export default function LocationSection({ className = "" }) {
 
                         <p className={styles.heading}>
                           Location
-                          <a>Office #101 32 St Al Majarra Mughaidir Suburb Sharjah UAE</a>
+                          <a>601 Brickell Key Dr #700, Miami,<br /> FL 33131, United States</a>
                         </p>
                       </div>
                     </li>

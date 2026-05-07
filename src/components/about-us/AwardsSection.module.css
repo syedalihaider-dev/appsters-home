@@ -3,9 +3,9 @@
     padding: 40px 0 80px;
 }
 
-.awardsSection :global(.container) {
+/* .awardsSection :global(.container) {
     border-top: 2px solid rgba(51, 51, 51, 0.16);
-}
+} */
 
 .badges {
     display: flex;
