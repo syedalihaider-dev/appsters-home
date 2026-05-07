@@ -7,18 +7,21 @@ import SolutionSection from '@/components/case-study-detail/SolutionSection';
 import DevelopmentStack from '@/components/home/DevelopmentStack';
 import ContactForm from '@/components/home/ContactForm';
 import LocationSection from '@/components/home/LocationSection';
+import { caseStudies } from '@/data/case-studies';
 
 import styles from "./page.module.css";
 
 export default function CaseStudyDetailPage() {
+  const data = caseStudies["where-2-map"];
+
   return (
     <div className={styles.CaseStudyDetailPage}>
-      <HeroSection />
+      <HeroSection data={data.hero} />
       <AwardsSection />
-      <OverviewSection />
-      <FeaturesDetailSection />
-      <OverviewTwoSection />
-      <SolutionSection />
+      <OverviewSection data={data.overview} />
+      <FeaturesDetailSection data={data.features} />
+      <OverviewTwoSection data={data.problem} />
+      <SolutionSection data={data.solution} />
       <DevelopmentStack/>
       <LocationSection className={styles.customLocationPadding} />
       <ContactForm />

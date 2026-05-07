@@ -4,13 +4,14 @@ import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
 import styles from './HeroSection.module.css';
 
-export default function HeroSection() {
+export default function HeroSection({ data }) {
+    if (!data) return null;
     return (
         <section className={styles.heroSection}>
             <span className={styles.transparent_heading}>Case Study Detail</span>
             <Image
                 src="/images/banner-bg.png"
-                alt="Main Banner Image..."
+                alt="Banner Background Image..."
                 fill
                 priority
                 sizes="100vw"
@@ -21,13 +22,14 @@ export default function HeroSection() {
                 <div className="row align-items-center">
                     <div className="col-sm-12 col-md-6">
                         <div className={styles.banner_left}>
-                            <p className={styles.sub_heading}>Mic2Money</p>
-                            <h1 className={styles.main_heading}>
-                                Turn Talent Into
-                                <span className="primarytxt"> Currency</span>
+                            <p className={styles.sub_heading}>{data.subTitle}</p>
+                            <h1 
+                                className={styles.main_heading}
+                                dangerouslySetInnerHTML={{ __html: data.mainTitle }}
+                            >
                             </h1>
                             <p className={styles.paragraph}>
-                                Our approach focuses on building meaningful digital experiences that improve efficiency, engage users, and generate measurable results.
+                                {data.description}
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />
@@ -38,10 +40,10 @@ export default function HeroSection() {
                         <div className={styles.banner_right}>
                             <div className={styles.banner_mobile}>
                                 <Image
-                                    src="/images/services/banner-mobile.webp"
-                                    alt="Banner Mobile Image..."
+                                    src={data.mobileImage}
+                                    alt={`${data.subTitle} Mobile Image...`}
                                     priority
-                                    width={971}
+                                    width={972}
                                     height={704}
                                     style={{ objectFit: "contain" }}
                                 />
@@ -52,4 +54,4 @@ export default function HeroSection() {
             </div>
         </section >
     )
-}
+}

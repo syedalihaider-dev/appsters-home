@@ -38,7 +38,7 @@ export default function HeroSection() {
                         <div className={styles.banner_right}>
                             <div className={styles.banner_mobile}>
                                 <Image
-                                    src="/images/services/banner-mobile.webp"
+                                    src="/images/case-study/banner-mobile.webp"
                                     alt="Banner Mobile Image..."
                                     priority
                                     width={635}
