@@ -25,7 +25,7 @@ export default function HeroSection({ data }) {
                             <p className={styles.sub_heading}>{data.subTitle}</p>
                             <h1 
                                 className={styles.main_heading}
-                                dangerouslySetInnerHTML={{ __html: data.mainTitle }}
+                                dangerouslySetInnerHTML={{ __html: data.mainTitle || "" }}
                             >
                             </h1>
                             <p className={styles.paragraph}>

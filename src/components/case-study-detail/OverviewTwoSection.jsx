@@ -16,7 +16,7 @@ export default function OverviewTwoSection({ data }) {
                                 <h2>{data.title}</h2>
                             </div>
                             <div className={styles.textContent}>
-                                <p dangerouslySetInnerHTML={{ __html: data.text }}>
+                                <p dangerouslySetInnerHTML={{ __html: data.text || "" }}>
                                 </p>
                             </div>
                             <div className={styles.storeBadges}>

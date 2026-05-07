@@ -2,40 +2,40 @@ export const caseStudies = {
   "mic-2-money": {
     slug: "mic-2-money",
     hero: {
-      subTitle: "Mic2Money",
-      mainTitle: "Turn Talent Into <span class='primarytxt'> Currency</span>",
-      description: "Our approach focuses on building meaningful digital experiences that improve efficiency, engage users, and generate measurable results.",
+      subTitle: "Mic2Money App",
+      mainTitle: "Turn Talent Into <span class='primarytxt'>Real Currency.</span>",
+      description: "Mic2Money is a live music competition platform where artists earn, fans decide, and real rewards follow real talent. No labels. No gatekeepers. Just pure performance and proof.",
       mobileImage: "/images/case-study/mic-2-money/banner-mobile.webp",
     },
     overview: {
       transparentHeading: "OVERVIEW",
-      title: "THE RISE OF MIC2MONEY",
-      text1: "Mic2Money is built for artists who have already put in the work — the late nights, the recordings, the unseen performances. It transforms raw talent into opportunity by creating a space where artists compete live, grow real audiences, and earn from their craft.",
-      text2: "At the same time, it empowers fans to become active participants — discovering emerging artists, influencing outcomes, and getting rewarded for backing talent early.",
+      title: "The Booming Rise of Mic2Money.",
+      text1: "Mic2Money is built for artists who have already put in the work, the late nights, the recordings, the unseen performances. It transforms raw talent into opportunity by creating a space where artists compete live, grow real audiences, and earn from their passion for music and singing. ",
+      text2: "At the same time, it empowers fans to become active participants, discover emerging artists, influence outcomes, and get rewarded for backing talent early. The result is an ecosystem where merit moves the mic, not industry access.",
       image: "/images/case-study/mic-2-money/mic2money.webp",
     },
     features: {
       transparentHeading: "FEATURES",
-      title: "KEY HIGHLIGHTS OF MIC2MONEY",
+      title: "Some Key Highlights of the App.",
       list: [
         {
           title: "Easy Contest Entry",
-          desc: "Jump into competitions in seconds. No complicated setup, no industry connections.",
+          desc: "Jump into competitions in seconds. No complicated setup, no industry connections required.",
           icon: "/images/case-study/icon-01.webp"
         },
         {
           title: "Upload Your Performance",
-          desc: "Put your best track forward and let it speak for itself.",
+          desc: "Put your best track forward and let it speak for itself. The platform handles the rest of the distribution, and competition placement.",
           icon: "/images/case-study/icon-02.webp"
         },
         {
           title: "Fair Voting System",
-          desc: "Fan-driven. Transparent. No backroom deals.",
+          desc: "Fan-driven. Transparent. No backroom deals. Votes are cast by real listeners who have something at stake.",
           icon: "/images/case-study/icon-03.webp"
         },
         {
           title: "Real Cash Rewards",
-          desc: "Your talent deserves more than likes. Win and actually get paid.",
+          desc: "Your talent deserves more than a like count. Win competitions and receive actual payouts.",
           icon: "/images/case-study/icon-04.webp"
         }
       ],
@@ -43,19 +43,20 @@ export const caseStudies = {
     },
     problem: {
       transparentHeading: "The Problem",
-      title: "Breaking Through Without Industry Access",
-      text: "Emerging artists struggle to get visibility without industry connections, labels, or viral luck. Traditional platforms prioritize algorithms over authenticity, making it harder for real talent to stand out.\n\nFans, on the other hand, consume music passively — with no real influence or reward for discovering talent early.",
+      title: "Break Through The Music Scene.",
+      text: "Emerging artists struggle to get visibility without industry connections, labels, or viral luck. Traditional platforms prioritize algorithms over authenticity with a system designed to reward what's already popular, not what deserves to be. <br/><br/> Fans, on the other hand, are stuck in passive consumption. They discover artists they love, share a post, and that's where their influence ends. No recognition. No reward. No role in the outcome. The music industry has an access problem. Mic2Money was built to remove it.",
       image: "/images/case-study/mic-2-money/choose-role.webp",
     },
     solution: {
       transparentHeading: "THE SOLUTION",
-      title: "A PLATFORM WHERE TALENT MEETS OPPORTUNITY",
-      description: "Mic2Money flips the system. Instead of relying on gatekeepers, it gives power directly to the audience. Artists compete in live contests, fans vote to decide winners, and both sides are rewarded for participation.",
+      title: "Mic2money Flips The System.",
+      description: "Instead of relying on gatekeepers, it puts power directly in the hands of the audience. Artists compete in live contests, fans vote to decide winners, and both sides are rewarded for participation. This creates a transparent, merit-driven ecosystem where artists grow based on performance, fans become part of the discovery story, and talent is recognized in real time, not after a label signs off on it.",
       infoText: "This creates a transparent, engaging ecosystem where:",
       points: [
-        "Artists grow based on merit",
-        "Fans become part of the journey",
-        "Talent is recognized in real time"
+        "Artists grow based on merit, not marketing budgets",
+        "Fans become part of the journey from day one",
+        "Talent is recognized in real time",
+        "Payouts are real, not promises"
       ],
       image: "/images/case-study/mic-2-money/iphone-cta.webp",
     }
@@ -125,62 +126,63 @@ export const caseStudies = {
   "my-tank": {
     slug: "my-tank",
     hero: {
-      subTitle: "My Tank",
-      mainTitle: "Virtual Life <span class='primarytxt'> Well</span>",
-      description: "A fishing app that gives your catch a life after release, turning catch-and-release into a rewarding collection game.",
-      mobileImage: "/images/case-study/my-tank/banner-mobile.webp",
+      subTitle: "My Tank – Virtual LiveWell.",
+      mainTitle: "Catch It. Release It. <span class='primarytxt'>Keep It Forever.</span>",
+      description: "Virtual LiveWell turns real-world fishing catches into animated, collectible fish that live in your personalized virtual tank. Conservation meets community, and every cast you make adds to a living, growing collection that's uniquely yours.",
+      mobileImage: "/images/case-study/my-tank/banner-mobile.png",
     },
     overview: {
       transparentHeading: "OVERVIEW",
-      title: "THE VIRTUAL LIVEWELL JOURNEY",
-      text1: "Virtual LiveWell is a fishing app that gives your catch a life after release. Photograph what you reel in, upload it through the app, and watch an animated version of that exact species swim into your personal virtual tank.",
-      text2: "Your tank grows with every trip, decorates with every milestone, and connects you to a community of anglers whose collections tell the story of every water body they have fished.",
-      image: "/images/case-study/my-tank/mockup.webp",
+      title: "The Idea Behind The Virtual LiveWell App.",
+      text1: "Virtual LiveWell was developed in partnership with Joseph Ramirez and built by Appsters as a genuinely original product in the angling space. The concept is simple on the surface: photograph your real-world catch, upload it to the app, and watch that fish come to life as an animated, customizable version inside your personal virtual tank.",
+      text2: "Under the surface, it's a masterclass in retention-driven gamification. Every mechanic from the daily feeding streaks, the Gold Coin economy, the tank decoration system, and the friends layer was designed by the Appsters team to give anglers a reason to open the app on days they can't get to the water.",
+      image: "/images/case-study/my-tank/my-tank.png",
     },
     features: {
       transparentHeading: "FEATURES",
-      title: "KEY FEATURES OF MY TANK",
+      title: "Some Key Highlights of the App.",
       list: [
         {
-          title: "Photo Recognition",
-          desc: "AI-powered species identification from your photos.",
+          title: "Animated Freshwater Species",
+          desc: "Launch includes 33 immersive animated freshwater species, each modeled from real-world catch data.",
           icon: "/images/case-study/icon-01.webp"
         },
         {
-          title: "Animated Tanks",
-          desc: "Beautifully rendered virtual environments for your fish.",
+          title: "Daily Feeding & Streak System",
+          desc: "Feed your fish daily to earn Gold Coins and build consecutive streaks that escalate your rewards.",
           icon: "/images/case-study/icon-02.webp"
         },
         {
-          title: "Catch Tracking",
-          desc: "Detailed logs of every catch, including location and date.",
+          title: "Tank Decoration & Progression",
+          desc: "Start with a basic tank and build it into something personal. Unlock items ranging from a simple pyramid to a pirate ship, a sub, and more.",
           icon: "/images/case-study/icon-03.webp"
         },
         {
-          title: "Community Feed",
-          desc: "Share your virtual tank and see what others are catching.",
+          title: "Social Tank Sharing & Friends",
+          desc: "Share your tank, visit friends' collections, and discover species you haven't caught yet.",
           icon: "/images/case-study/icon-04.webp"
         }
       ],
-      image: "/images/case-study/my-tank/features.webp",
+      image: "/images/case-study/my-tank/features.png",
     },
     problem: {
       transparentHeading: "The Problem",
-      title: "The Ephemeral Nature of Catch & Release",
-      text: "Anglers who practice catch-and-release often feel a disconnect once the fish is back in the water. Photos sit in galleries, and the sense of accomplishment fades over time.",
-      image: "/images/case-study/my-tank/problem.webp",
+      title: "Preservation, Community, & Gamfificaiton.",
+      text: "The angling app market is saturated with loggers and tools that record a catch and do nothing with it. There's no reason to open them between fishing trips. No progression. No community. No reward for the discipline of catch-and-release. The catch gets logged and forgotten. <br/><br/>At the same time, conservation behavior specifically catch-and-release lacks a meaningful incentive structure for casual anglers. The ecosystem needed a product that made responsible fishing feel rewarding, not just responsible.",
+      image: "/images/case-study/my-tank/choose-role.png",
     },
     solution: {
       transparentHeading: "THE SOLUTION",
-      title: "A PERMANENT RECORD OF YOUR ADVENTURES",
-      description: "My Tank bridges the gap between the physical and digital worlds. It allows anglers to maintain a living, breathing history of their catches in a fun and interactive way.",
+      title: "A Living Collection That Grows With Every Cast.",
+      description: "Virtual LiveWell solves the retention problem by making the app genuinely worth opening every day, not just on fishing days. The gamification architecture operates across multiple layers simultaneously: collection building, daily engagement loops, a fair economy, and social features that make the community aspect inseparable from the fishing experience itself. The Gold Coin economy was tuned specifically for the angling audience.",
       infoText: "The platform offers:",
       points: [
-        "Gamified collection mechanics",
-        "Educational content about species",
-        "Social connection for anglers"
+        "Real catches become permanent digital collectibles",
+        "Daily habits built around feeding streaks and tank maintenance",
+        "Fair economy with genuine free and premium paths",
+        "Social layer that connects the app to the motivation to fish"
       ],
-      image: "/images/case-study/my-tank/solution.webp",
+      image: "/images/case-study/my-tank/iphone-cta.png",
     }
   },
   "where-2-map": {
