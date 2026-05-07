@@ -38,8 +38,8 @@ export default function OverviewSection({ data }) {
               <Image
                 src={data.image}
                 alt={`${data.title} App Screens`}
-                width={571}
-                height={708}
+                width={457}
+                height={574}
                 className={styles.mockupImage}
               />
             </div>

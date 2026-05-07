@@ -5,7 +5,7 @@ export const caseStudies = {
       subTitle: "Mic2Money App",
       mainTitle: "Turn Talent Into <span class='primarytxt'>Real Currency.</span>",
       description: "Mic2Money is a live music competition platform where artists earn, fans decide, and real rewards follow real talent. No labels. No gatekeepers. Just pure performance and proof.",
-      mobileImage: "/images/case-study/mic-2-money/banner-mobile.webp",
+      mobileImage: "/images/case-study/mic-2-money/banner-mobile.png",
     },
     overview: {
       transparentHeading: "OVERVIEW",

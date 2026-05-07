@@ -34,8 +34,8 @@ export default function OverviewTwoSection({ data }) {
                             <Image
                                 src={data.image}
                                 alt={`${data.title} App Screens`}
-                                width={648}
-                                height={768}
+                                width={595}
+                                height={737}
                                 className={styles.mockupImage}
                             />
                         </div>

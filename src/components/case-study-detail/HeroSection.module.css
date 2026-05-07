@@ -56,9 +56,8 @@
 }
 
 .banner_mobile {
-    width: 972px;
+    width: 624px;
     height: auto;
-    transform: translateX(-100px);
 }
 
 .banner_mobile img{

@@ -22,8 +22,8 @@ export default function SolutionSection({ data }) {
                             <Image
                                 src={data.image}
                                 alt={`${data.title} Solution App Screen`}
-                                width={582}
-                                height={675}
+                                width={527}
+                                height={660}
                                 className={styles.mockupImage}
                             />
                         </div>

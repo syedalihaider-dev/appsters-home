@@ -81,8 +81,7 @@
 }
 
 .mockupImage {
-  width: 100%;
-  max-width: 700px;
+  width: 457px;
   height: auto;
   object-fit: contain;
   margin-left: auto;

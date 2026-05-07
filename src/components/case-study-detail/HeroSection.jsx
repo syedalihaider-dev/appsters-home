@@ -23,7 +23,7 @@ export default function HeroSection({ data }) {
                     <div className="col-sm-12 col-md-6">
                         <div className={styles.banner_left}>
                             <p className={styles.sub_heading}>{data.subTitle}</p>
-                            <h1 
+                            <h1
                                 className={styles.main_heading}
                                 dangerouslySetInnerHTML={{ __html: data.mainTitle || "" }}
                             >
@@ -42,9 +42,8 @@ export default function HeroSection({ data }) {
                                 <Image
                                     src={data.mobileImage}
                                     alt={`${data.subTitle} Mobile Image...`}
-                                    priority
-                                    width={972}
-                                    height={704}
+                                    width={624}
+                                    height={600}
                                     style={{ objectFit: "contain" }}
                                 />
                             </div>
@@ -54,4 +53,4 @@ export default function HeroSection({ data }) {
             </div>
         </section >
     )
-}
+}
