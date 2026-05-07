@@ -67,8 +67,10 @@ export default function Banner() {
       if (response.ok) {
         router.push('/thank-you');
       } else {
-        alert(`Error: ${result.message || 'Something went wrong'}`);
+        const errorMsg = result.error ? `${result.message}: ${result.error}` : (result.message || 'Something went wrong');
+        alert(`Error: ${errorMsg}`);
       }
+
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Failed to send message. Please check your connection.');
