@@ -23,17 +23,20 @@ export async function POST(req) {
 
         const transporter = nodemailer.createTransport({
             host: "appsters.io",
-            port: 465,
-            secure: true,
-            pool: true, // Use pooling for serverless performance
+            port: 587,
+            secure: false, // Use STARTTLS
+            pool: true,
             auth: {
                 user: 'support@appsters.io',
                 pass: "N;v-Om+OIZJ8?tdD"
             },
             tls: {
-                rejectUnauthorized: false // Helps with some SMTP server certificates
-            }
+                rejectUnauthorized: false,
+                minVersion: 'TLSv1.2'
+            },
+            requireTLS: true
         });
+
 
 
 
