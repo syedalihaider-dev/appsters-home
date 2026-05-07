@@ -28,13 +28,13 @@ export default function Footer() {
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Our Services</h6>
                 <ul>
-                  <li><Link href="#!">App Development</Link></li>
-                  <li><Link href="#!">Game Development</Link></li>
-                  <li><Link href="#!">Android App Development</Link></li>
-                  <li><Link href="#!">Artificial Intelligence</Link></li>
-                  <li><Link href="#!">Augmented Reality</Link></li>
-                  <li><Link href="#!">Website Development</Link></li>
-                  <li><Link href="#!">App Maintenance</Link></li>
+                  <li><Link href="/contact-us">App Development</Link></li>
+                  <li><Link href="/contact-us">Game Development</Link></li>
+                  <li><Link href="/contact-us">Android App Development</Link></li>
+                  <li><Link href="/contact-us">Artificial Intelligence</Link></li>
+                  <li><Link href="/contact-us">Augmented Reality</Link></li>
+                  <li><Link href="/contact-us">Website Development</Link></li>
+                  <li><Link href="/contact-us">App Maintenance</Link></li>
                 </ul>
               </div>
             </div>
@@ -44,13 +44,13 @@ export default function Footer() {
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Technologies</h6>
                 <ul>
-                  <li><Link href="#!">Artificial Intelligence</Link></li>
-                  <li><Link href="#!">Data Science</Link></li>
-                  <li><Link href="#!">Machine Learning</Link></li>
-                  <li><Link href="#!">Image Analysis</Link></li>
-                  <li><Link href="#!">Blockchain</Link></li>
-                  <li><Link href="#!">Big Data</Link></li>
-                  <li><Link href="#!">Internet Of Things</Link></li>
+                  <li><Link href="/contact-us">Artificial Intelligence</Link></li>
+                  <li><Link href="/contact-us">Data Science</Link></li>
+                  <li><Link href="/contact-us">Machine Learning</Link></li>
+                  <li><Link href="/contact-us">Image Analysis</Link></li>
+                  <li><Link href="/contact-us">Blockchain</Link></li>
+                  <li><Link href="/contact-us">Big Data</Link></li>
+                  <li><Link href="/contact-us">Internet Of Things</Link></li>
                 </ul>
               </div>
             </div>
@@ -60,13 +60,13 @@ export default function Footer() {
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Industries</h6>
                 <ul>
-                  <li><Link href="#!">Healthcare IT Services</Link></li>
-                  <li><Link href="#!">Hospitals & Health Systems</Link></li>
-                  <li><Link href="#!">Medical Groups</Link></li>
-                  <li><Link href="#!">Medical Devices & Diagnostics</Link></li>
-                  <li><Link href="#!">Mental Health Care Providers</Link></li>
-                  <li><Link href="#!">Home Healthcare Providers</Link></li>
-                  <li><Link href="#!">Medical Laboratories</Link></li>
+                  <li><Link href="/contact-us">Healthcare IT Services</Link></li>
+                  <li><Link href="/contact-us">Hospitals & Health Systems</Link></li>
+                  <li><Link href="/contact-us">Medical Groups</Link></li>
+                  <li><Link href="/contact-us">Medical Devices & Diagnostics</Link></li>
+                  <li><Link href="/contact-us">Mental Health Care Providers</Link></li>
+                  <li><Link href="/contact-us">Home Healthcare Providers</Link></li>
+                  <li><Link href="/contact-us">Medical Laboratories</Link></li>
                 </ul>
               </div>
             </div>
@@ -76,13 +76,13 @@ export default function Footer() {
               <div className={styles.footer_menu}>
                 <h6 className={styles.heading}>Solutions</h6>
                 <ul>
-                  <li><Link href="#!">ERP</Link></li>
-                  <li><Link href="#!">Operations Management</Link></li>
-                  <li><Link href="#!">Supply Chain Management</Link></li>
-                  <li><Link href="#!">Warehouse Management</Link></li>
-                  <li><Link href="#!">Enterprise Asset Management</Link></li>
-                  <li><Link href="#!">Vendor Management</Link></li>
-                  <li><Link href="#!">Project Management</Link></li>
+                  <li><Link href="/contact-us">ERP</Link></li>
+                  <li><Link href="/contact-us">Operations Management</Link></li>
+                  <li><Link href="/contact-us">Supply Chain Management</Link></li>
+                  <li><Link href="/contact-us">Warehouse Management</Link></li>
+                  <li><Link href="/contact-us">Enterprise Asset Management</Link></li>
+                  <li><Link href="/contact-us">Vendor Management</Link></li>
+                  <li><Link href="/contact-us">Project Management</Link></li>
                 </ul>
               </div>
             </div>

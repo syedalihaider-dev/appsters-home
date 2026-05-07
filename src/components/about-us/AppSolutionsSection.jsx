@@ -21,10 +21,10 @@ export default function AppSolutionsSection() {
       />
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-md-6">
             <h2 className={styles.heading}>
               ROBUST MOBILE APP SOLUTIONS<br />
-              THAT GROW WITH YOUR<br />
+              THAT GROW WITH YOUR <br />
               <span className={styles.highlight}>BUSINESS CURVE</span>
             </h2>
             <div className={styles.imageWrapper}>
@@ -37,7 +37,7 @@ export default function AppSolutionsSection() {
               />
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-md-6">
             <p className={styles.paragraph}>
               As a custom app development company, we bring together leading app developers
               and strategists who understand what makes digital products thrive. From MVP

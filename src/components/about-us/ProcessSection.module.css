@@ -110,7 +110,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  /* padding: 50px 0; */
   will-change: transform;
 }
 
@@ -221,40 +220,160 @@
 }
 
 /* Responsive Styles */
+@media screen and (max-width: 1600px) {
+  .container {
+    gap: 20px;
+  }
+
+  .transparentHeading {
+    font-size: 180px;
+    line-height: 180px;
+    top: -100px;
+    left: -10px;
+  }
+
+  .mainHeading {
+    font-size: 50px;
+  }
+
+  .cardsWrapper {
+    width: 90%;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .container {
+    gap: 0px;
+  }
+
+  .transparentHeading {
+    font-size: 140px;
+    line-height: 140px;
+    top: -80px;
+    left: -10px;
+  }
+
+  .mainHeading {
+    font-size: 45px;
+  }
+
+  .timelineLine {
+    width: 2px;
+    top: 0;
+    left: 10px;
+  }
+
+  .rightSide {
+    padding-top: 40px;
+    padding-left: 138px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .transparentHeading {
+    font-size: 120px;
+    line-height: 120px;
+    top: -80px;
+    left: -10px;
+  }
+
+  .cardsWrapper {
+    gap: 25px;
+    width: 100%;
+  }
+
+  .mainHeading {
+    font-size: 40px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .timelineLine {
+    width: 2px;
+    top: 0;
+    left: 10px;
+  }
+
+  .cardNumber:before {
+    width: 20px;
+    height: 2px;
+    left: -19px;
+  }
+
+  .cardNumber {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    top: 60px;
+    left: -60px;
+  }
+
+  .rightSide {
+    padding-bottom: 40px;
+    padding-left: 90px;
+  }
+
+  .cardContent {
+    padding: 20px;
+  }
+
+  .cardText {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .processSection {
-    height: auto;
-    padding: 80px 0;
+    height: unset;
+    padding: 40px 0;
   }
 
   .container {
-    height: auto;
     flex-direction: column;
-    padding: 0 20px;
+  }
+
+  .transparentHeading {
+    top: -40px;
+    left: -10px;
   }
 
   .leftSide {
     max-width: 100%;
-    margin-bottom: 50px;
-    text-align: center;
+    height: unset;
   }
 
   .rightSide {
     width: 100%;
     height: auto;
-    padding-left: 50px;
-    overflow: visible;
+    margin-bottom: 0px;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .cardItem {
+    margin-bottom: 0px;
+    opacity: 1;
   }
 
   .cardsWrapper {
     transform: none !important;
     padding: 0;
+    gap: 25px;
   }
 
-  .cardItem {
-    opacity: 1;
-    transform: none;
-    margin-bottom: 40px;
+  .capWrapper {
+    display: none;
+  }
+
+  .cardNumber {
+    display: none;
+  }
+
+  .cardContent {
+    border-radius: 15px;
   }
 
   .timelineLine {
@@ -263,87 +382,37 @@
 }
 
 @media screen and (max-width: 767px) {
-  .processSection {
-    padding: 60px 0;
-  }
   .mainHeading {
-    font-size: 42px;
+    font-size: 35px;
   }
+
   .transparentHeading {
     font-size: 150px;
-    top: -80px;
-  }
-  .rightSide {
-    padding-left: 20px;
-  }
-  .cardNumber {
-    left: -40px;
-    width: 45px;
-    height: 45px;
-    font-size: 16px;
-    top: 50px;
-  }
-  .cardNumber::before {
-    display: none;
-  }
-  .cardTitle {
-    font-size: 22px;
+    top: -30px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 575px) {
   .mainHeading {
-    font-size: 32px;
+    font-size: 25px;
   }
+
   .transparentHeading {
-    font-size: 100px;
+    font-size: 60px;
+    line-height: 60px;
+    left: 0;
     top: -50px;
   }
-  .paragraph {
-    font-size: 14px;
-  }
-  .rightSide {
-    padding-left: 0;
-  }
+
   .cardItem {
     flex-direction: column;
   }
-  .cardNumber {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-bottom: 15px;
-  }
-  .cardTitle {
-    font-size: 20px;
-  }
-  .cardText {
-    font-size: 14px;
-  }
-}
 
-@media screen and (max-width: 375px) {
-  .processSection {
-    padding: 50px 0;
-  }
-  .mainHeading {
-    font-size: 28px;
-  }
-  .transparentHeading {
-    font-size: 80px;
-    top: -40px;
-  }
   .cardContent {
-    padding: 20px;
+    padding: 15px;
   }
-}
 
-@media screen and (max-width: 320px) {
-  .mainHeading {
-    font-size: 24px;
-  }
-  .transparentHeading {
-    font-size: 60px;
-    top: -30px;
+  .cardTitle {
+    font-size: 22px;
   }
 }

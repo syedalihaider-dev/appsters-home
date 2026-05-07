@@ -55,7 +55,9 @@ export default function ProcessSection() {
   ];
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 992px)", () => {
       const wrapper = cardsWrapperRef.current;
       const cards = gsap.utils.toArray(`.${styles.cardItem}`);
 
@@ -68,7 +70,7 @@ export default function ProcessSection() {
       // Pin the entire section and animate the right side wrapper
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top top",
+        start: "bottom bottom",
         end: `+=${wrapperHeight + 500}`, // Creates the scroll distance
         pin: true,
         scrub: 1,
@@ -99,10 +101,9 @@ export default function ProcessSection() {
           }
         }
       });
+    });
 
-    }, sectionRef);
-
-    return () => ctx.revert();
+    return () => mm.revert();
   }, [processes.length]);
 
   return (

@@ -92,7 +92,7 @@
     z-index: 1;
 }
 
-.sec_left .tab_01 video {
+.sec_left video {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -509,12 +509,26 @@
     }
 
     .dots_wrapper {
-        bottom: 100px;
         top: unset;
-        transform: unset;
-        right: 5px;
+        right: unset;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         gap: 10px;
         justify-content: end;
+        flex-direction: row;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .activeDot {
+        width: 10px;
+        height: 10px;
+        transform: scale(1.2);
     }
 }
 
@@ -544,20 +558,5 @@
 
     .sec_right .process_before {
         display: none;
-    }
-
-    .dots_wrapper {
-        bottom: 298px;
-        right: 13px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .activeDot {
-        width: 10px;
-        height: 10px;
     }
 }
