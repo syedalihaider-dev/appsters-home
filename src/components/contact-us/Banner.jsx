@@ -62,10 +62,12 @@ export default function Banner() {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         router.push('/thank-you');
       } else {
-        alert('Something went wrong. Please try again.');
+        alert(`Error: ${result.message || 'Something went wrong'}`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -74,6 +76,7 @@ export default function Banner() {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <section className={`sec_padding ${styles.bannerSection}`}>

@@ -38,10 +38,12 @@ export default function ContactForm() {
                 body: JSON.stringify(formData),
             });
 
+            const result = await response.json();
+
             if (response.ok) {
                 router.push('/thank-you');
             } else {
-                alert('Something went wrong. Please try again.');
+                alert(`Error: ${result.message || 'Something went wrong'}`);
             }
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -50,6 +52,7 @@ export default function ContactForm() {
             setIsSubmitting(false);
         }
     };
+
 
     return (
         <section className={styles.contactForm} id="contactForm">

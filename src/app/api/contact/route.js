@@ -15,7 +15,7 @@ export async function POST(req) {
         // Fetch location data from IP-API
         let ipInfo = {};
         try {
-            const ipResponse = await fetch(`http://pro.ip-api.com/json/${ip}?key=5XpThOAEkfgOvEJ`);
+            const ipResponse = await fetch(`https://pro.ip-api.com/json/${ip}?key=5XpThOAEkfgOvEJ`, { signal: AbortSignal.timeout(5000) });
             ipInfo = await ipResponse.json();
         } catch (e) {
             console.error("IP Info fetch failed", e);
@@ -25,11 +25,17 @@ export async function POST(req) {
             host: "appsters.io",
             port: 465,
             secure: true,
+            pool: true, // Use pooling for serverless performance
             auth: {
                 user: 'support@appsters.io',
                 pass: "N;v-Om+OIZJ8?tdD"
+            },
+            tls: {
+                rejectUnauthorized: false // Helps with some SMTP server certificates
             }
         });
+
+
 
         const mailOptions = {
             from: 'support@appsters.io',
