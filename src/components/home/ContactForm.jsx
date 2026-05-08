@@ -182,7 +182,7 @@ export default function ContactForm() {
                                 </div>
                             </div>
                             {formData.service && (
-                                <div className="col-sm-12 col-md-6">
+                                <div className="col-sm-12 col-md-12">
                                     <div className={styles.form_group}>
                                         <label htmlFor="budget">Estimated Budget / Scope</label>
                                         <select
@@ -200,7 +200,7 @@ export default function ContactForm() {
                                 </div>
                             )}
                             {showCustomQuote && (
-                                <div className="col-sm-12 col-md-6">
+                                <div className="col-sm-12 col-md-12">
                                     <div className={styles.form_group}>
                                         <label htmlFor="customQuote">Custom Quote ($)</label>
                                         <input
