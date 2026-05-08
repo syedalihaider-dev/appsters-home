@@ -4,13 +4,47 @@ import nodemailer from 'nodemailer';
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { name, email, phone, msg, pageTitle, pageUrl, budget } = body;
+        const { name, email, phone, msg, pageTitle, pageUrl, service, budget, customQuote, country, state, city } = body;
 
         // Get IP Address from headers for tracking
         const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || 
                    req.headers.get('x-real-ip') || 
                    req.headers.get('cf-connecting-ip') || 
                    '127.0.0.1';
+
+        // Try to get location info if not provided
+        let detectedCountry = country || '';
+        let detectedState = state || '';
+        let detectedCity = city || '';
+        let locationSummary = '';
+
+        if (ip === '::1' || ip === '127.0.0.1') {
+            detectedCountry = 'Localhost';
+            detectedState = 'Development';
+            detectedCity = 'Local';
+            locationSummary = 'Local Development Environment';
+        } else if (!detectedCountry && ip && !ip.startsWith('192.168.')) {
+            try {
+                const geoRes = await fetch(`http://ip-api.com/json/${ip}`);
+                const geoData = await geoRes.json();
+                if (geoData.status === 'success') {
+                    detectedCountry = geoData.country;
+                    detectedState = geoData.regionName;
+                    detectedCity = geoData.city;
+                    locationSummary = `${detectedCity}, ${detectedState}, ${detectedCountry}`;
+                } else {
+                    locationSummary = `Geo Lookup Failed: ${geoData.message || 'Unknown'}`;
+                }
+            } catch (e) {
+                console.error("Geo lookup failed", e);
+                locationSummary = 'Geo Lookup Error';
+            }
+        } else if (country || state || city) {
+            locationSummary = `${detectedCity ? detectedCity + ', ' : ''}${detectedState ? detectedState + ', ' : ''}${detectedCountry || 'N/A'}`;
+        } else {
+            locationSummary = 'N/A';
+        }
+
         const transporter = nodemailer.createTransport({
             host: "maltaserver.stagingtestserver.com",
             port: 465,
@@ -33,11 +67,17 @@ export async function POST(req) {
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Phone:</strong> ${phone}</p>
+                ${service ? `<p><strong>Service:</strong> ${service}</p>` : ''}
                 ${budget ? `<p><strong>Budget:</strong> ${budget}</p>` : ''}
+                ${customQuote ? `<p><strong>Custom Quote ($):</strong> ${customQuote}</p>` : ''}
                 <p><strong>Message:</strong> ${msg}</p>
                 <br>
                 <hr>
                 <h3>Tracking Information:</h3>
+                <p><strong>Country:</strong> ${detectedCountry || 'N/A'}</p>
+                <p><strong>State/Region:</strong> ${detectedState || 'N/A'}</p>
+                <p><strong>City:</strong> ${detectedCity || 'N/A'}</p>
+                <p><strong>Location Summary:</strong> ${locationSummary || 'N/A'}</p>
                 <p><strong>Page Title:</strong> ${pageTitle || 'N/A'}</p>
                 <p><strong>Page URL:</strong> ${pageUrl || 'N/A'}</p>
                 <p><strong>IP Address:</strong> ${ip}</p>

@@ -33,10 +33,15 @@ export default function Banner() {
     name: '',
     email: '',
     phone: '',
+    service: '',
     budget: '',
+    customQuote: '',
     msg: '',
     pageTitle: 'Contact Us Banner',
-    pageUrl: ''
+    pageUrl: '',
+    country: '',
+    state: '',
+    city: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -46,7 +51,19 @@ export default function Banner() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => {
+      const newData = { ...prev, [name]: value };
+      // Reset budget if service changes
+      if (name === 'service') {
+        newData.budget = '';
+        newData.customQuote = '';
+      }
+      // Reset custom quote if budget changes and is not 'Request a custom quote'
+      if (name === 'budget' && !value.includes('Request a custom quote')) {
+        newData.customQuote = '';
+      }
+      return newData;
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -78,6 +95,40 @@ export default function Banner() {
       setIsSubmitting(false);
     }
   };
+
+  const serviceOptions = [
+    "Mobile App Development",
+    "Web App Development",
+    "SaaS Platform",
+    "MVP Development",
+    "Game Development",
+    "Blockchain Solutions",
+    "Business Proposal"
+  ];
+
+  const standardBudgets = [
+    "$3,000 to $5,000",
+    "$5,000 to $10,000",
+    "$10,000 to $25,000",
+    "$25,000 to $50,000",
+    "Request a custom quote"
+  ];
+
+  const proposalBudgets = [
+    "$999 – Starter Proposal",
+    "$2,499 – Investor Ready Proposal",
+    "$4,900 – Corporate Proposal Pack",
+    "Request a custom quote (Corporate / Enterprise)"
+  ];
+
+  const getBudgetOptions = () => {
+    if (formData.service === "Business Proposal") {
+      return proposalBudgets;
+    }
+    return standardBudgets;
+  };
+
+  const showCustomQuote = formData.budget.includes("Request a custom quote");
 
 
   return (
@@ -139,21 +190,51 @@ export default function Banner() {
                     />
                   </div>
                   <div className={styles.inputGroup}>
-                    <input
-                      type="text"
-                      name="budget"
-                      placeholder="Project Budget"
+                    <select
+                      name="service"
                       required
-                      value={formData.budget}
+                      value={formData.service}
                       onChange={handleChange}
-                    />
+                    >
+                      <option value="" disabled>Select Services*</option>
+                      {serviceOptions.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
                   </div>
+                  {formData.service && (
+                    <div className={styles.inputGroup}>
+                      <select
+                        name="budget"
+                        required
+                        value={formData.budget}
+                        onChange={handleChange}
+                      >
+                        <option value="" disabled>Estimated Budget / Scope*</option>
+                        {getBudgetOptions().map((option, index) => (
+                          <option key={index} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+                  {showCustomQuote && (
+                    <div className={styles.inputGroup}>
+                      <input
+                        type="number"
+                        name="customQuote"
+                        placeholder="Min $30,000 required ..."
+                        required
+                        min="30000"
+                        value={formData.customQuote}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  )}
                   <div className={styles.inputGroup}>
                     <textarea
                       name="msg"
-                      placeholder="Tell us about your Requirements*"
+                      placeholder="Tell us about your Requirements"
                       rows="4"
-                      required
                       value={formData.msg}
                       onChange={handleChange}
                     ></textarea>
