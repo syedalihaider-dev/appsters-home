@@ -11,14 +11,16 @@ export async function POST(req) {
                    req.headers.get('x-real-ip') || 
                    req.headers.get('cf-connecting-ip') || 
                    '127.0.0.1';
-
         const transporter = nodemailer.createTransport({
-            host: "appsters.io",
+            host: "maltaserver.stagingtestserver.com",
             port: 465,
             secure: true,
             auth: {
-                user: 'support@appsters.io',
-                pass: "N;v-Om+OIZJ8?tdD"
+                user: 'no-reply@appsters.io', 
+                pass: "lG;nI8Y333TUIpfg" 
+            },
+            tls: {
+                rejectUnauthorized: false
             }
         });
 
