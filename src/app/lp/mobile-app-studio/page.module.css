@@ -1,0 +1,28 @@
+.lpMobileAppStudio {
+    font-family: var(--font-dmsans);
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+.lpMobileAppStudio h1,
+.lpMobileAppStudio h2,
+.lpMobileAppStudio h3,
+.lpMobileAppStudio h4,
+.lpMobileAppStudio h5,
+.lpMobileAppStudio h6 {
+    font-family: var(--font-montserrat);
+}
+
+.lpMobileAppStudio section {
+    position: relative;
+}
+
+.cover {
+    position: relative;
+    z-index: 1;
+}
+
+.coverImg {
+    z-index: -1;
+}

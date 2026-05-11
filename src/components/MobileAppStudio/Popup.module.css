@@ -1,0 +1,371 @@
+.popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(8px);
+}
+
+.popupContainer {
+    max-width: 1300px;
+    height: auto;
+    min-height: 550px;
+    background: #1128E6;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: transparent;
+    border: none;
+    font-size: 60px;
+    line-height: 60px;
+    color: #E3F91D;
+    z-index: 100;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.leftCol {
+    padding: 60px 0px 60px 40px;
+}
+
+.contentBox {
+    text-align: left;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: #E3F91D;
+    position: relative;
+    display: inline-block;
+}
+
+.spring {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+}
+
+.description {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.featureList li {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    padding-left: 20px;
+}
+
+.featureList li::before {
+    content: '•';
+    color: #E3F91D;
+    position: absolute;
+    left: 0;
+}
+
+.clutchBox {
+    margin-bottom: 25px;
+}
+
+.partnerLogos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rightCol {
+    padding: 60px 40px 60px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.formBox {
+    width: 100%;
+}
+
+.inputGroup {
+    background: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup label {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 300;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #111111;
+    font-weight: 500;
+    background: transparent;
+    width: 100%;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+    font-size: 18px;
+    color: #111111;
+}
+
+.textareaGroup {
+    border-radius: 20px;
+    min-height: 150px;
+}
+
+.textareaGroup textarea {
+    height: 140px;
+    resize: none;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 15px;
+    background: #111111;
+    color: #fff;
+    border: none;
+    padding: 18px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: #E3F91D;
+    color: #000;
+}
+
+@media (max-width: 1600px) {
+    .popupContainer {
+        max-width: 1000px;
+        height: auto;
+        min-height: unset;
+    }
+
+    .leftCol {
+        padding: 40px 0px 40px 30px;
+    }
+
+    .rightCol {
+        padding: 40px 30px 40px 30px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .featureList li {
+        font-size: 18px;
+    }
+
+    .featureList {
+        margin-bottom: 20px;
+    }
+
+    .clutchBox {
+        width: 160px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .partnerLogos {
+        gap: 10px;
+    }
+
+    .partnerLogos img {
+        width: 100px;
+    }
+
+    .inputGroup {
+        padding: 10px 25px;
+        margin-bottom: 10px;
+    }
+
+    .inputGroup label {
+        font-size: 14px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea {
+        font-size: 16px;
+    }
+
+    .textareaGroup {
+        min-height: 110px;
+    }
+
+    .textareaGroup textarea {
+        height: 100%;
+    }
+
+    .submitBtn {
+        margin-top: 10px;
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .popupContainer {
+        max-width: 700px;
+        height: auto;
+        min-height: unset;
+    }
+
+    .leftCol {
+        padding: 30px 0px 30px 25px;
+    }
+
+    .rightCol {
+        padding: 30px 25px 30px 25px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .featureList li {
+        font-size: 14px;
+    }
+
+    .featureList {
+        margin-bottom: 10px;
+    }
+
+    .clutchBox {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .partnerLogos {
+        gap: 10px;
+    }
+
+    .partnerLogos img {
+        width: 70px;
+    }
+
+    .closeBtn {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .inputGroup {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .inputGroup label {
+        font-size: 12px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .inputGroup input::placeholder,
+    .inputGroup textarea::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .textareaGroup {
+        min-height: 80px;
+    }
+
+    .submitBtn {
+        margin-top: 0px;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .popupContainer {
+        max-width: 300px;
+    }
+
+    .leftCol {
+        display: none;
+    }
+
+    .rightCol {
+        padding: 50px 15px 20px 15px;
+    }
+
+    .inputGroup {
+        padding: 10px;
+        border-radius: 6px;
+    }
+}

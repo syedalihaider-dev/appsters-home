@@ -1,0 +1,194 @@
+.ctaSection {
+    position: relative;
+    padding: 80px 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.bgImg {
+    object-fit: cover;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: #D2FF28;
+    position: relative;
+    display: inline-block;
+}
+
+.spring {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+}
+
+.desc {
+    font-size: 24px;
+    line-height: 35px;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.ctaBtn {
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.callBtn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.chatBtn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.callBtn:hover,
+.chatBtn:hover {
+    background: #D2FF28;
+    color: #000;
+    border-color: #D2FF28;
+}
+
+.mockupBox {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mockupImg {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 1600px) {
+    .ctaSection {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .desc {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .ctaBtn {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .ctaSection {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 25px;
+        max-width: 500px;
+    }
+
+    .ctaBtn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        max-width: unset;
+    }
+
+    .ctaBtn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .title {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .mockupBox {
+        margin-top: 30px;
+        margin-left: auto;
+        width: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .btnGroup {
+        display: flex;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,271 @@
+.industriesSection {
+    padding: 80px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.headingBox {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.spring {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    filter: brightness(111) invert(1);
+    z-index: -1;
+}
+
+.desc {
+    font-size: 24px;
+    color: #111111;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.ctaBtn {
+    background: #222;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+.sliderWrapper {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sliderWrapper :global(.swiper-wrapper) {
+    transition-timing-function: linear !important;
+}
+
+.sliderWrapper:hover :global(.swiper-wrapper) {
+    transition-duration: 1ms !important;
+}
+
+.industryCard {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.cardImg {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.industryCard:hover .cardImg {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+}
+
+.cardTitle {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.cardHoverContent {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.cardHoverContent p {
+    color: #eee;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.industryCard:hover .cardHoverContent {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.industryCard:hover .overlay {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.footerTitle {
+    text-align: center;
+    margin-top: 15px;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1600px) {
+    .industriesSection {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .desc {
+        font-size: 20px;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    .industryCard {
+        height: 450px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .footerTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .industriesSection {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .desc {
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+    .ctaBtn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .industryCard {
+        height: 390px;
+    }
+
+    .footerTitle {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .spring {
+        bottom: -10px;
+    }
+
+    .desc {
+        font-size: 14px;
+        max-width: 400px;
+    }
+
+    .ctaBtn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .industryCard {
+        height: 390px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .cardHoverContent p {
+        font-size: 14px;
+    }
+
+    .footerTitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+.title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .spring {
+        bottom: -5px;
+    }
+
+    .desc {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .cardHoverContent p {
+        margin: 10px 0 0;
+    }
+
+    .footerTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 1199px) {}

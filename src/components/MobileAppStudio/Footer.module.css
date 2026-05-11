@@ -1,0 +1,200 @@
+.footerSection {
+    background: rgba(0, 0, 0, 0.49);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px 50px 0 0;
+    font-family: var(--font-dmsans);
+    margin-top: -107px;
+    z-index: 2;
+    position: relative;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.badgesWrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.badgeBox:hover {
+    transform: translateY(-3px);
+}
+
+.socialWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.socialIcon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.socialIcon:hover {
+    background: #E3F91D;
+    color: #000;
+    border-color: #E3F91D;
+    transform: scale(1.1);
+}
+
+.rightInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legalLinks {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.legalLinks a {
+    color: #66727D;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.legalLinks a:hover {
+    opacity: 1;
+    color: #E3F91D;
+}
+
+.legalLinks span {
+    margin: 0 12px;
+    color: #66727D;
+}
+
+.copy {
+    color: #66727D;
+    font-size: 14px;
+    margin: 0;
+}
+
+.logoWrapper:hover {
+    border-color: #E3F91D;
+    transform: rotate(15deg);
+}
+
+@media (max-width: 1600px) {
+
+    .footerSection {
+        padding: 15px 0;
+        margin-top: -97px;
+    }
+
+    .badgeBox {
+        width: 120px;
+    }
+
+}
+
+@media (max-width: 1399px) {
+    .badgeBox {
+        width: 120px;
+    }
+
+    .socialIcon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .footerSection {
+        padding: 15px 0;
+        margin-top: -81px;
+    }
+
+    .badgesWrapper {
+        gap: 5px;
+    }
+
+    .badgeBox {
+        width: 100px;
+    }
+
+    .socialWrapper {
+        gap: 5px;
+    }
+
+    .socialIcon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .legalLinks {
+        font-size: 14px;
+    }
+
+    .logoWrapper {
+        width: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .footerSection {
+        padding: 15px 0;
+        margin-top: 0;
+        border-radius: 0;
+        background: rgb(9 20 117);
+    }
+
+    .footerContent {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .badgesWrapper {
+        gap: 5px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .badgeBox {
+        width: 120px;
+    }
+
+    .socialWrapper {
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footerContent {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .badgeBox {
+        width: 49%;
+    }
+
+    .logoWrapper {
+        width: 36px;
+    }
+}

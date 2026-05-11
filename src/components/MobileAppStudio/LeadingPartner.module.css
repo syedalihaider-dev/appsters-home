@@ -1,0 +1,245 @@
+.leadingPartner {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.mainImg {
+    max-width: 100%;
+    height: auto;
+}
+
+.contentBox {
+    padding-left: 30px;
+}
+
+.title {
+    font-family: var(--font-montserrat);
+    font-size: 55px;
+    line-height: 65px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.bling {
+    position: absolute;
+    top: -15px;
+    right: -35px;
+}
+
+.spring {
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+}
+
+.desc {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.discoverBtn {
+    background: #000;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 60px;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.discoverBtn:hover {
+    background: #E1F81C;
+    color: #000;
+}
+
+.statsRow {
+    display: flex;
+    justify-content: space-between;
+    /* border-top: 1px solid #EBEBEB; */
+    padding-top: 40px;
+}
+
+.statItem {
+    position: relative;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.statItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60px;
+    background: #EBEBEB;
+}
+
+.statItem h4 {
+    font-family: var(--font-montserrat);
+    font-size: 48px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.statItem p {
+    font-size: 20px;
+    color: #111111;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1600px) {
+    .contentBox {
+        padding-left: 0px;
+    }
+
+    .title {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .desc {
+        font-size: 20px;
+        line-height: 30px
+    }
+
+    .discoverBtn {
+        padding: 12px 25px;
+    }
+
+    .statItem h4 {
+        font-size: 35px;
+    }
+
+    .statItem p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .statItem:not(:last-child)::after {
+        height: 40px;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .statsRow {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .leadingPartner {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .bling {
+        width: 30px;
+        top: -7px;
+        right: -20px;
+    }
+
+    .statItem:not(:last-child)::after {
+        height: 40px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .discoverBtn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .statsRow {
+        padding-top: 30px;
+    }
+
+    .statItem h4 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .statItem p {
+        font-size: 14px;
+    }
+
+    .statItem:not(:last-child)::after {
+        height: 35px;
+        right: -5px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mainImg {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .bling,
+    .spring {
+        display: none;
+    }
+
+    .statItem:not(:last-child)::after {
+        height: 35px;
+        right: -35px;
+    }
+
+    .title {
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .statItem:not(:last-child)::after {
+        right: -8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .statsRow {
+        padding-top: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .statItem {
+        width: 46%;
+    }
+
+    .statItem p {
+        font-size: 12px;
+    }
+}

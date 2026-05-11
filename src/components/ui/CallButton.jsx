@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { PHONE_NUMBER } from "@/config/config";
+import { SITE_PHONE as PHONE_NUMBER } from "@/app/constants";
 
 export default function SingleCallButton() {
   return (

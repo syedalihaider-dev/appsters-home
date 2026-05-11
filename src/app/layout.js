@@ -1,8 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { bigShoulders, interTight } from '@/font';
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import GlobalLayoutWrapper from "@/components/layout/GlobalLayoutWrapper";
 import Script from 'next/script';
 
 export const metadata = {
@@ -14,9 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <GlobalLayoutWrapper>
+          {children}
+        </GlobalLayoutWrapper>
 
         {/* ZenDesk Chat Snippet */}
         <Script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=239dfa05-01f6-4362-bfb9-4f75a7455e10" strategy="afterInteractive" />

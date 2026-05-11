@@ -1,0 +1,300 @@
+.toolsSection {
+    padding: 80px 0 40px;
+}
+
+.card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(250px);
+    padding: 60px;
+    min-height: 630px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.title {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #D2FF28;
+    position: relative;
+    z-index: 1;
+}
+
+.springVector {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.tabsRow {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    margin-bottom: 40px;
+    border-radius: 30.5px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(42px);
+}
+
+.tab {
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.32px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset -1px -1px 1px 0px #eee;
+    font-family: var(--font-montserrat);
+}
+
+.activeTab {
+    background: #E3F91D;
+    color: #000;
+    border-color: #E3F91D;
+}
+
+.desc {
+    color: #fff;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 40px;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.ctaBtn {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.ctaBtn:hover {
+    background: #D2FF28;
+    color: #000;
+    border-color: #D2FF28;
+}
+
+.callBtn{
+    display: block;
+}
+
+.rightCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.assetBox {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.assetImg {
+    object-fit: contain;
+}
+
+@media (max-width: 1600px) {
+    .toolsSection {
+        padding: 60px 0 20px;
+    }
+
+    .card {
+        padding: 40px;
+        min-height: 550px;
+    }
+
+    .title {
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+
+    .springVector {
+        bottom: -5px;
+    }
+
+    .tabsRow {
+        width: unset;
+        margin-bottom: 30px;
+    }
+
+    .tab {
+        padding: 10px 15px;
+    }
+
+    .desc {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+    .btnGroup {
+        gap: 15px;
+    }
+
+    .ctaBtn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .toolsSection {
+        padding: 40px 0 20px;
+    }
+    .title {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 30px;
+        min-height: 400px;
+    }
+
+    .tabsRow {
+        margin-bottom: 25px;
+    }
+
+    .tab {
+        padding: 10px;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .card {
+        min-height: 300px;
+    }
+
+    .tabsRow {
+        margin-bottom: 25px;
+        justify-content: start;
+        gap: 10px;
+    }
+
+    .tab {
+        padding: 10px 25px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .card {
+        min-height: unset;
+    }
+
+    .tabsRow {
+        gap: 5px;
+    }
+
+    .tab {
+        padding: 8px 15px;
+    }
+
+    .ctaBtn {
+        padding: 10px 25px;
+    }
+
+    .assetBox {
+        width: 350px;
+        height: 300px;
+        margin-top: 25px;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        padding: 10px;
+    }
+
+    .tabsRow {
+        gap: 2px;
+        justify-content: start;
+        border-radius: 0px;
+        background: unset;
+        backdrop-filter: unset;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        padding: 20px 10px;
+    }
+
+    .tab {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .ctaBtn {
+        padding: 8px 15px;
+    }
+    .desc {
+        margin-bottom: 10px;
+    }
+
+    .assetBox {
+        width: 100%;
+        height: 245px;
+        margin-top: 20px;
+    }
+}

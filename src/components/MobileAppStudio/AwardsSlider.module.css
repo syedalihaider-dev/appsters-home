@@ -1,0 +1,88 @@
+.awardsSection {
+    padding: 0 0 40px;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.headingBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.title {
+    font-family: var(--font-montserrat);
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    white-space: nowrap;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.lineLeft, .lineRight {
+    height: auto;
+}
+
+.lineRight{
+    rotate: 180deg;
+}
+
+.sliderContainer {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.sliderTrack {
+    display: flex;
+    width: fit-content;
+    animation: scroll 40s linear infinite;
+}
+
+.sliderTrack:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.awardItem {
+    flex: 0 0 auto;
+    padding: 0 15px;
+}
+
+.imgWrapper {
+    width: 224px;
+    height: 223px;
+    transition: 0.3s;
+}
+
+.imgWrapper:hover {
+    transform: translateY(-5px);
+}
+
+.imgWrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .lineLeft, .lineRight {
+        display: none;
+    }
+}
