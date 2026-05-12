@@ -41,12 +41,12 @@ export default function FeaturesSection({ data }) {
               </div>
 
               <div className={styles.storeBadges}>
-                <Link href="#" className={styles.badgeLink}>
+                {/* <Link href="#" className={styles.badgeLink}>
                   <Image src="/images/case-study/google-play.webp" alt="Get it on Google Play" width={159} height={47} />
                 </Link>
                 <Link href="#" className={styles.badgeLink}>
                   <Image src="/images/case-study/app-store.webp" alt="Download on the App Store" width={141} height={47} />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
