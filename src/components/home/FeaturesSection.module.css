@@ -301,6 +301,7 @@
         width: 100px;
         height: 100px;
     }
+
 }
 
 @media screen and (max-width:992px) {
@@ -325,6 +326,8 @@
         width: 90px;
         height: 90px;
     }
+
+
 }
 
 @media screen and (max-width:767px) {

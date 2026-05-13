@@ -125,8 +125,9 @@ export default function CaseStudiesGridSection() {
             pagination={{ clickable: true }}
             className={styles.mobileSwiper}
             breakpoints={{
-              576: { slidesPerView: 1.2 },
-              768: { slidesPerView: 2.2 },
+              576: { slidesPerView: 1 },
+              768: { slidesPerView: 1.5 }
+              
             }}
           >
             {caseStudiesData.map((item) => (
