@@ -3,6 +3,7 @@ import { bigShoulders, interTight } from '@/font';
 import "./globals.css";
 import GlobalLayoutWrapper from "@/components/layout/GlobalLayoutWrapper";
 import Script from 'next/script';
+import GoogleConversionTracker from '@/components/ui/GoogleConversionTracker';
 
 export const metadata = {
   title: "Tech Company That Provides App Solutions - Appsters",
@@ -13,9 +14,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <GlobalLayoutWrapper>
-          {children}
-        </GlobalLayoutWrapper>
+        {/* Google Tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16476280714"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16476280714');
+          `}
+        </Script>
 
         {/* ZenDesk Chat Snippet */}
         <Script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=239dfa05-01f6-4362-bfb9-4f75a7455e10" strategy="afterInteractive" />
@@ -66,6 +78,11 @@ export default function RootLayout({ children }) {
             });
           `}
         </Script>
+
+        <GlobalLayoutWrapper>
+          <GoogleConversionTracker />
+          {children}
+        </GlobalLayoutWrapper>
       </body>
     </html>
   );
