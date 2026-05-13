@@ -97,7 +97,6 @@ const Services = () => {
                         </p>
                     </div>
                 </div>
-x
                 <div className={styles.servicesList}>
                     {services.map((item) => (
                         <div
