@@ -57,9 +57,9 @@ export async function POST(req) {
         const mailOptions = {
             from: '"Appsters - LP" <support@appsters.io>',
             to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, aleehaiderbalti@gmail.com',
-            subject: `New LP Lead: Mobile App Studio`,
+            subject: `New LP Lead: MVP Development`,
             html: `
-                <h3>New Lead Details (Mobile App Studio LP):</h3>
+                <h3>New Lead Details (MVP Development LP):</h3>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Phone:</strong> ${phone}</p>

@@ -18,8 +18,8 @@ const CTA = () => {
                     <div className="col-lg-7">
                         <div className={styles.content}>
                             <h2 className={styles.title}>
-                                Ready To Validate Your <br />
-                                MVP Idea <span className={styles.highlight}>Today?
+                                Ready To Start Your <br />
+                                Mobile App <span className={styles.highlight}>Journey?
                                     <Image
                                         src="/images/mobile-app-studio/spring-vector.png"
                                         alt="spring"
@@ -30,9 +30,10 @@ const CTA = () => {
                                 </span>
                             </h2>
                             <p className={styles.desc}>
-                                Don't wait for months to launch. Build a lean, high-performing MVP
-                                and start collecting real user data. Get a free consultation and
-                                a roadmap for your product development today.
+                                Your business deserves apps that create impact from day one. Let’s turn your
+                                idea base into a solution that’s fast, secure, and ready to scale. Get started with a
+                                free consultation today and take the first step toward building your next
+                                breakthrough with Appsters.
                             </p>
                             <div className={styles.btnGroup}>
                                 <a href={`tel:${PHONE_NUMBER}`} className={`${styles.ctaBtn} ${styles.callBtn}`}>CALL NOW</a>

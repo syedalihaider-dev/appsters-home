@@ -1,0 +1,341 @@
+.engagementSection {
+    padding: 60px 0;
+    background: #1128E6;
+    overflow: hidden;
+}
+
+.title {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.highlight {
+    color: #E3F91D;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.spring {
+    position: absolute;
+    bottom: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.tableCard {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(42px);
+    padding: 30px;
+    position: relative;
+}
+
+.modelsGrid {
+    display: flex;
+    position: relative;
+}
+
+.attributeCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 25px;
+    padding: 25px 0;
+}
+
+.cell {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-montserrat);
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 26px;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background for rows */
+.cell:nth-of-type(odd) {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.headerCell {
+    height: 110px;
+    font-size: 26px;
+    color: #fff;
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.attributeCol .cell {
+    justify-content: flex-start;
+    font-family: var(--font-montserrat);
+    font-size: 23px;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.attributeCol .headerCell {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.attributeCol .cell:last-child,
+.column .cell:last-child {
+    border-bottom: none;
+}
+
+/* Hover & Active Effect Styles */
+.column:hover,
+.column.isActive {
+    background: #E3F91D !important;
+    z-index: 10;
+    margin-top: -10px;
+    height: calc(100% + 20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.column:hover .cell,
+.column:hover .headerCell,
+.column.isActive .cell,
+.column.isActive .headerCell {
+    color: #000 !important;
+    background: transparent !important;
+    border-bottom: 1px solid transparent !important;
+    /* Remove row border on hover/active */
+}
+
+.column:hover .cell:nth-of-type(odd),
+.column.isActive .cell:nth-of-type(odd) {
+    background: transparent !important;
+}
+
+.ctaWrapper {
+    /* height: 100px; */
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.column:hover .ctaWrapper,
+.column.isActive .ctaWrapper {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.letsTalk {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 1600px) {
+    .title {
+        font-size: 45px;
+    }
+
+    .tableCard {
+        padding: 25px;
+    }
+
+    .headerCell {
+        height: 90px;
+        font-size: 22px;
+    }
+
+    .attributeCol .cell {
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    .cell {
+        height: 70px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .engagementSection {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .tableCard {
+        padding: 20px 0;
+    }
+
+    .headerCell {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .attributeCol .cell {
+        font-size: 18px;
+    }
+
+    .cell {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .ctaWrapper {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .title {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .spring {
+        bottom: -10px;
+    }
+
+    .headerCell {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .attributeCol .cell {
+        font-size: 16px;
+    }
+
+    .cell {
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .attributeCol,
+    .column {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .headerCell {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .attributeCol .cell {
+        font-size: 14px;
+    }
+
+    .cell {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .attributeCol,
+    .column {
+        padding: 20px 0;
+        border-radius: 12px;
+    }
+    .attributeCol {
+        flex: 1.2;
+    }
+
+    .letsTalk {
+        padding: 8px 15px;
+        font-size: 14px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title br {
+        display: none;
+    }
+
+    .tableCard {
+        padding: 15px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .modelsGrid {
+        min-width: 850px; 
+        padding-bottom: 20px; 
+    }
+
+    .headerCell {
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .attributeCol .cell {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .cell {
+        height: 55px;
+        font-size: 14px;
+    }
+
+    .ctaWrapper {
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: 15px;
+    }
+
+    .letsTalk {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modelsGrid {
+        min-width: 750px;
+    }
+
+    .headerCell {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .cell {
+        height: 50px;
+        font-size: 13px;
+    }
+}

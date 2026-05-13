@@ -64,7 +64,7 @@ const Banner = () => {
         };
 
         try {
-            const response = await fetch("/api/lp-mobile-app-studio", {
+            const response = await fetch("/api/lp-mvp-development", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)
@@ -93,9 +93,9 @@ const Banner = () => {
                             <h1 className={styles.title}>
                                 Launch a
                                 <span className={styles.highlightBling}> Scalable
-                                    <Image src="/mvp-development/highlight-bling.webp" alt="spring vector" width={57} height={55} className={styles.highlightBlingAfter} />
+                                    <Image src="/images/mobile-app-studio/highlight-bling.png" alt="spring vector" width={57} height={55} className={styles.highlightBlingAfter} />
                                 </span> MVP Without <span className={styles.specialist}>Wasting Time.
-                                    <Image src="/mvp-development/spring-vector.webp" alt="underline" width={423} height={22} className={styles.springVector} />
+                                    <Image src="/images/mobile-app-studio/spring-vector.png" alt="underline" width={423} height={22} className={styles.springVector} />
                                 </span>
                             </h1>
                             <p className={styles.desc}>
@@ -187,7 +187,7 @@ const Banner = () => {
                 <div className={styles.trustedBox}>
                     <div className={styles.headingBox}>
                         <Image src="/images/mobile-app-studio/heading-line.png" alt="line" width={134} height={2} className={styles.lineLeft} />
-                        <h2 className={styles.headingBoxTitle}>TRUSTED BY STARTUPS</h2>
+                        <h2 className={styles.headingBoxTitle}>TRUSTED BY INDUSTRY</h2>
                         <Image src="/images/mobile-app-studio/heading-line.png" alt="line" width={134} height={2} className={styles.lineRight} />
                     </div>
                     <div className={styles.logoRow}>
@@ -196,6 +196,9 @@ const Banner = () => {
                         <div className={styles.logoItem}><Image src="/images/mobile-app-studio/industry-icon-03.png" alt="logo" width={120} height={40} /></div>
                         <div className={styles.logoItem}><Image src="/images/mobile-app-studio/industry-icon-04.png" alt="logo" width={120} height={40} /></div>
                         <div className={styles.logoItem}><Image src="/images/mobile-app-studio/industry-icon-05.png" alt="logo" width={120} height={40} /></div>
+                        <div className={styles.logoItem}><Image src="/images/mobile-app-studio/industry-icon-01.png" alt="logo" width={120} height={40} /></div>
+                        <div className={styles.logoItem}><Image src="/images/mobile-app-studio/industry-icon-02.png" alt="logo" width={120} height={40} /></div>
+                        <div className={styles.logoItem}><Image src="/images/mobile-app-studio/industry-icon-03.png" alt="logo" width={120} height={40} /></div>
                     </div>
                 </div>
             </div>

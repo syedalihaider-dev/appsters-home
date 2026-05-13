@@ -1,22 +1,22 @@
 "use client"
 import React from 'react'
 import { Montserrat, DM_Sans } from 'next/font/google'
-import Header from '@/components/MobileAppStudio/Header'
+import Header from '@/components/MVPDevelopment/Header'
 import Banner from '@/components/MVPDevelopment/Banner'
 import LeadingPartner from '@/components/MVPDevelopment/LeadingPartner'
-import AwardsSlider from '@/components/MobileAppStudio/AwardsSlider'
+import AwardsSlider from '@/components/MVPDevelopment/AwardsSlider'
 import Services from '@/components/MVPDevelopment/Services'
-import Portfolio from '@/components/MobileAppStudio/Portfolio'
+import Portfolio from '@/components/MVPDevelopment/Portfolio'
 import CTA from '@/components/MVPDevelopment/CTA'
-import Process from '@/components/MobileAppStudio/Process'
-import ToolsMaster from '@/components/MobileAppStudio/ToolsMaster'
-import Testimonials from '@/components/MobileAppStudio/Testimonials'
-import Industries from '@/components/MobileAppStudio/Industries'
-import EngagementModels from '@/components/MobileAppStudio/EngagementModels'
-import FAQs from '@/components/MobileAppStudio/FAQs'
+import Process from '@/components/MVPDevelopment/Process'
+import ToolsMaster from '@/components/MVPDevelopment/ToolsMaster'
+import Testimonials from '@/components/MVPDevelopment/Testimonials'
+import Industries from '@/components/MVPDevelopment/Industries'
+import EngagementModels from '@/components/MVPDevelopment/EngagementModels'
+import FAQs from '@/components/MVPDevelopment/FAQs'
 import Location from '@/components/home/LocationSection'
-import ContactForm from '@/components/MobileAppStudio/ContactForm'
-import Footer from '@/components/MobileAppStudio/Footer'
+import ContactForm from '@/components/MVPDevelopment/ContactForm'
+import Footer from '@/components/MVPDevelopment/Footer'
 import styles from './page.module.css'
 import Image from 'next/image'
 
@@ -36,7 +36,7 @@ const dmsans = DM_Sans({
 
 const Page = () => {
     return (
-        <main className={`${styles.lpMobileAppStudio} ${montserrat.variable} ${dmsans.variable}`}>
+        <main className={`${styles.lpMVPDevelopment} ${montserrat.variable} ${dmsans.variable}`}>
             <Header />
             <Banner />
             <LeadingPartner />

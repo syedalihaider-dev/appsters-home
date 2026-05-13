@@ -1,20 +1,20 @@
-.lpMobileAppStudio {
+.lpMVPDevelopment {
     font-family: var(--font-dmsans);
     background: #fff;
     color: #111;
     overflow-x: hidden;
 }
 
-.lpMobileAppStudio h1,
-.lpMobileAppStudio h2,
-.lpMobileAppStudio h3,
-.lpMobileAppStudio h4,
-.lpMobileAppStudio h5,
-.lpMobileAppStudio h6 {
+.lpMVPDevelopment h1,
+.lpMVPDevelopment h2,
+.lpMVPDevelopment h3,
+.lpMVPDevelopment h4,
+.lpMVPDevelopment h5,
+.lpMVPDevelopment h6 {
     font-family: var(--font-montserrat);
 }
 
-.lpMobileAppStudio section {
+.lpMVPDevelopment section {
     position: relative;
 }
 

@@ -1,0 +1,358 @@
+.contactSection {
+    background: #1128E6;
+    padding: 80px 0 200px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.leftTitle,
+.rightContact{
+    flex: 1;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #E3F91D;
+    position: relative;
+    display: inline-block;
+}
+
+.spring {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+}
+
+.subtitle {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+    margin: 0;
+}
+
+.rightContact {
+    display: flex;
+    gap: 30px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconCircle {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.formWrapper {
+    margin-top: 30px;
+}
+
+.inputGroup {
+    background: #fff;
+    border-radius: 50px;
+    padding: 13px 35px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.textareaGroup {
+    border-radius: 30px;
+    height: 278px;
+    padding: 30px 40px;
+}
+
+.inputGroup label {
+    color: #111;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.selectInput {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder,
+.selectInput::placeholder {
+    color: #111;
+    font-weight: 500;
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup input:-webkit-autofill:hover,
+.inputGroup input:-webkit-autofill:focus,
+.inputGroup textarea:-webkit-autofill {
+    -webkit-text-fill-color: #111 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.selectInput {
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.inputGroup textarea {
+    resize: none;
+    height: 100%;
+    height: 200px;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.submitBtn {
+    background: #fff;
+    color: #111;
+    border: none;
+    padding: 18px 60px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.submitBtn:hover {
+    background: #E3F91D;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1600px) {
+    .contactSection {
+        padding: 40px 0 150px;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .spring {
+        bottom: -5px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .contactSection {
+        padding: 40px 0 150px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .rightContact {
+        gap: 10px;
+    }
+
+    .contactItem {
+        gap: 10px;
+    }
+
+    .iconCircle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .value {
+        font-size: 16px;
+    }
+
+    .inputGroup label {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        font-size: 18px;
+    }
+
+    .inputGroup {
+        padding: 12px 25px;
+        margin-bottom: 20px;
+    }
+
+    .textareaGroup {
+        height: 245px;
+        padding: 20px 25px;
+    }
+
+    .submitBtn {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .contactSection {
+        padding: 40px 0 150px;
+    }
+
+    .title {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .headerRow {
+        align-items: start;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .rightContact {
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        font-size: 16px;
+    }
+
+    .inputGroup {
+        padding: 10px 25px;
+        margin-bottom: 15px;
+    }
+
+    .textareaGroup {
+        height: 216px;
+        padding: 25px 25px;
+    }
+
+    .inputGroup textarea {
+        height: 100%;
+    }
+
+    .btnWrapper {
+        margin-top: 15px;
+    }
+
+    .submitBtn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contactSection {
+        padding: 0px 0 40px;
+    }
+    .title {
+        font-size: 25px;
+    }
+
+    .formWrapper :global(.mb) {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .rightContact {
+        gap: 15px;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .inputGroup {
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .inputGroup label {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        font-size: 14px;
+    }
+
+    .textareaGroup {
+        height: 100px;
+    }
+}
