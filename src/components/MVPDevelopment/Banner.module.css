@@ -1,0 +1,517 @@
+.banner {
+    padding: 230px 0 50px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.bannerBg {
+    z-index: -1;
+}
+
+.title {
+    font-size: 75px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 88px;
+    margin-bottom: 30px;
+    font-family: var(--font-montserrat);
+}
+
+.highlightBling {
+    position: relative;
+    z-index: 1;
+}
+
+.highlightBlingAfter {
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    z-index: 1;
+}
+
+.specialist {
+    color: #E1F81C;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.springVector {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.desc {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 35px;
+}
+
+.ctaBtn {
+    background: #E1F81C;
+    color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 40px;
+    text-align: center;
+    font-family: var(--font-montserrat);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border-radius: 60px;
+}
+
+.ctaBtn:hover {
+    background: #fff;
+    color: #150E60;
+}
+
+.awards {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.awards img {
+    object-fit: contain;
+}
+
+.formCard {
+    width: 520px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    top: -50px;
+    left: -80px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.formCard h3 {
+    color: #000;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.formCard p {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.selectInput {
+    width: 100%;
+    height: 52px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 60px;
+    background: #F4F4F4;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.10);
+    font-family: var(--font-dmsans);
+    font-size: 16px;
+    color: #000;
+}
+
+.selectInput {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 18px;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder,
+.inputGroup .selectInput::placeholder {
+    color: #111;
+}
+
+.inputGroup textarea {
+    height: 80px;
+    resize: none;
+    border-radius: 20px;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+    outline: 2px solid #4A78EF;
+}
+
+.inputGroup input:-webkit-autofill,
+.inputGroup input:-webkit-autofill:hover,
+.inputGroup input:-webkit-autofill:focus,
+.inputGroup textarea:-webkit-autofill {
+    -webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.submitBtn {
+    width: 264px;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.submitBtn:hover {
+    background: #101FC4;
+    transform: translateY(-2px);
+}
+
+.trustedBox {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.headingBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.headingBoxTitle {
+    font-family: var(--font-montserrat);
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.lineLeft,
+.lineRight {
+    height: auto;
+    filter: invert(1);
+}
+
+.lineRight {
+    rotate: 180deg;
+}
+
+.trustedLabel span {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.logoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 30px;
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(250px);
+}
+
+.logoItem {
+    opacity: 0.7;
+    transition: 0.3s;
+    filter: brightness(0) invert(1);
+}
+
+.logoItem:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1600px) {
+    .banner {
+        padding: 180px 0 60px;
+    }
+
+    .title {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
+
+    .ctaBtn {
+        padding: 15px 40px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .awards {
+        margin-top: 40px;
+    }
+
+    .formCard {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .star {
+        top: -30px;
+        left: -50px;
+    }
+
+    .star img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .formCard h3 {
+        font-size: 24px;
+    }
+
+    .formCard p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .inputGroup {
+        margin-bottom: 10px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        font-size: 16px;
+    }
+
+    .submitBtn {
+        font-size: 16px;
+    }
+
+    .headingBoxTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .banner {
+        padding: 150px 0 60px;
+    }
+
+    .title {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .highlightBlingAfter {
+        width: 40px;
+        top: -5px;
+        right: -25px;
+    }
+
+    .desc {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+
+    .ctaBtn {
+        padding: 15px 30px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .awards {
+        margin-top: 30px;
+    }
+
+    .awards img {
+        width: 80px;
+        object-fit: contain;
+    }
+
+    .formCard {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .star {
+        top: -25px;
+        left: -35px;
+    }
+
+    .star img {
+        width: 30px;
+        object-fit: contain;
+    }
+
+    .inputGroup {
+        margin-bottom: 10px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        font-size: 16px;
+    }
+
+    .submitBtn {
+        font-size: 16px;
+    }
+
+    .headingBoxTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .banner {
+        padding: 130px 0 40px;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .highlightBlingAfter {
+        width: 35px;
+        top: -8px;
+        right: -23px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .ctaBtn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .formCard {
+        padding: 20px;
+    }
+
+    .formCard h3 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .formCard p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        font-size: 14px;
+        height: 40px;
+        padding: 10px 15px;
+    }
+
+    .inputGroup textarea {
+        height: 80px;
+    }
+
+    .submitBtn {
+        width: 200px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .headingBoxTitle {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 991px) {
+    .title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .highlightBlingAfter,
+    .star {
+        display: none;
+    }
+
+    .formCard {
+        margin-top: 30px;
+    }
+
+    .logoRow {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .formCard h3 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea,
+    .selectInput {
+        border-radius: 4px;
+    }
+
+    .logoItem {
+        width: 100px;
+    }
+}
