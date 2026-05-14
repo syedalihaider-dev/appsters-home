@@ -85,7 +85,7 @@ const Banner = () => {
 
     return (
         <section id='banner' className={styles.banner}>
-            <Image src="/images/mobile-app-studio/banner.png" alt="banner-bg" priority fill className={styles.bannerBg} />
+            <Image src="/images/mobile-app-studio/banner-black.png" alt="banner-bg" priority fill className={styles.bannerBg} />
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7">
