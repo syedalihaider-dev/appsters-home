@@ -81,7 +81,7 @@ const Services = () => {
 
     return (
         <section id='services' className={styles.servicesSection}>
-            <Image src="/images/mobile-app-studio/services-banner.png" alt="bg" fill priority className={styles.bgImg} />
+            <Image src="/images/mobile-app-studio/services-banner-black.png" alt="bg" fill priority className={styles.bgImg} />
             <div className='container position-relative'>
                 <div className='row align-items-center mb-5'>
                     <div className='col-lg-6'>
