@@ -7,7 +7,7 @@ const CTA = () => {
     return (
         <section className={styles.ctaSection}>
             <Image
-                src="/images/mobile-app-studio/cta-bg.png"
+                src="/images/mobile-app-studio/cta-bg-black.png"
                 alt="bg"
                 fill
                 className={styles.bgImg}

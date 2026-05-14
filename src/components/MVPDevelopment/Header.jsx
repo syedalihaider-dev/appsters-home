@@ -30,9 +30,9 @@ const Header = () => {
         <div className={styles.headerInner}>
           {/* Logo Column */}
           <div className={styles.logoCol}>
-            <Link href="/lp/mobile-app-studio" className={styles.logo}>
+            <Link href="/lp/mvp-development" className={styles.logo}>
               <Image
-                src="/images/mobile-app-studio/logo.png"
+                src="/images/mobile-app-studio/logo-black.png"
                 alt="Logo"
                 width={82}
                 height={82}
@@ -75,9 +75,9 @@ const Header = () => {
         <div className={styles.menuOverlay} onClick={toggleMenu}></div>
         <div className={styles.sidebar}>
           <div className={styles.sidebarHeader}>
-            <Link href="/lp/mobile-app-studio" className={styles.logo}>
+            <Link href="/lp/mvp-development" className={styles.logo}>
               <Image
-                src="/images/mobile-app-studio/logo.png"
+                src="/images/mobile-app-studio/logo-black.png"
                 alt="Logo"
                 width={70}
                 height={70}

@@ -46,7 +46,7 @@ const Page = () => {
             <CTA />
             <Process />
             <div className={styles.cover}>
-                <Image src="/images/mobile-app-studio/cover-bg.png" alt="cover" fill className={styles.coverImg} />
+                <Image src="/images/mobile-app-studio/cover-bg-black.png" alt="cover" fill className={styles.coverImg} />
                 <ToolsMaster />
                 <Testimonials />
             </div>

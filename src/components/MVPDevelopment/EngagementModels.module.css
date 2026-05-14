@@ -1,6 +1,7 @@
 .engagementSection {
     padding: 60px 0;
     background: #1128E6;
+    background: #000;
     overflow: hidden;
 }
 
@@ -29,6 +30,7 @@
 .tableCard {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.14);
+    background: #000;
     backdrop-filter: blur(42px);
     padding: 30px;
     position: relative;
@@ -62,7 +64,7 @@
     align-items: center;
     font-family: var(--font-montserrat);
     justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: #fff;
     font-size: 26px;
     color: #fff;
     font-weight: 300;
@@ -74,7 +76,8 @@
 
 /* Background for rows */
 .cell:nth-of-type(odd) {
-    background: rgba(255, 255, 255, 0.14);
+    background: #eaf522;
+    color: #000 !important;
 }
 
 .headerCell {
@@ -85,7 +88,7 @@
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #fff;
 }
 
 .attributeCol .cell {
@@ -98,7 +101,7 @@
 }
 
 .attributeCol .headerCell {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #fff;
 }
 
 .attributeCol .cell:last-child,
