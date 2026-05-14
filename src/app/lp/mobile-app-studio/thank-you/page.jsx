@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Script from 'next/script'
+
 import styles from './ThankYou.module.css'
 
 export const metadata = {
@@ -17,15 +17,11 @@ export default function ThankYou() {
     return (
         <main className={styles.thankYouPage}>
             {/* Event snippet for conversion */}
-            <Script id="google-conversion" strategy="afterInteractive">
-                {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'
-                });
-                `}
-            </Script>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `gtag('event', 'conversion', {'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'});`
+                }}
+            />
             <div className="container">
                 <div className={styles.content}>
                     {/* <div className={styles.iconBox}>

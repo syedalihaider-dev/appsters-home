@@ -4,6 +4,12 @@ import styles from './ThankYou.module.css';
 export default function ThankYou() {
     return (
         <main className={styles.thankYouPage}>
+            {/* Event snippet for appsters-Sign-up conversion page */}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `gtag('event', 'conversion', {'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'});`
+                }}
+            />
             <div className="container">
                 <div className={styles.content}>
                     <div className={styles.icon}>

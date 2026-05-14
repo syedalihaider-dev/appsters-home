@@ -15,7 +15,12 @@ export const metadata = {
 export default function ThankYou() {
     return (
         <main className={styles.thankYouPage}>
-            {/* Note: Google Conversion Event is handled globally in root layout */}
+            {/* Event snippet for conversion */}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `gtag('event', 'conversion', {'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'});`
+                }}
+            />
             <div className="container">
                 <div className={styles.content}>
                     <h1 className={styles.title}>Thank You!</h1>
