@@ -1,0 +1,208 @@
+.section {
+  padding: 80px 0;
+  background-color: #fff;
+  font-family: var(--font-poppins);
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.mapContainer {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.mapBgWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mapBg {
+  object-fit: contain;
+  object-position: top center;
+}
+
+.statsWrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.statBox {
+  background: #f35c34;
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 160px;
+  box-shadow: 0 10px 20px rgba(243, 92, 52, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.middleBox {
+  transform: translateY(-20px);
+}
+
+.statNumber {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+}
+
+.sliderSection {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.clientsSayTitle {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  padding-left: 10px;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0 40px 0;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollInfinite 30s linear infinite;
+}
+
+.sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
+}
+
+.testimonialCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 40px 30px;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.testimonialCard:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.cardLogo {
+  height: 153px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.cardLogo img {
+  object-fit: contain;
+}
+
+.stars {
+  color: #fca120;
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.cardText {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.cardAuthor strong {
+  display: block;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.cardAuthor span {
+  display: block;
+  font-size: 13px;
+  color: #8b5cf6;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .statsWrapper {
+    gap: 15px;
+  }
+  .statBox {
+    padding: 20px;
+    min-width: 120px;
+  }
+  .statNumber {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .statsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .statBox {
+    width: 80%;
+  }
+  .middleBox {
+    transform: translateY(0);
+  }
+  .clientsSayTitle {
+    text-align: center;
+  }
+}

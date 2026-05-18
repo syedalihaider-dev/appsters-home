@@ -1,0 +1,8 @@
+.cover{
+    position: relative;
+    z-index: 1;
+}
+
+.coverImg{
+    z-index: -1;
+}

@@ -1,0 +1,247 @@
+.bannerSection {
+  padding: 180px 0 60px 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bgImg {
+  z-index: -1
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.actionBtns {
+  margin-bottom: 40px;
+}
+
+.quoteBtn {
+  background: -webkit-linear-gradient(0deg, rgb(230, 35, 98) 0%, rgb(243, 92, 52) 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.quoteBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.chatBtn {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins);
+}
+
+.chatBtn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.reviewsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reviewLogo {
+  object-fit: contain;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.shapeBg {
+  position: absolute;
+  top: 58%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  width: 684px;
+  height: 573px;
+  z-index: -1;
+}
+
+.shapeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mainImg {
+  width: 495px;
+  height: 428px;
+  position: relative;
+  z-index: 2;
+}
+
+.statsBar {
+  width: 100%;
+  background: -webkit-linear-gradient(0deg, rgb(230, 35, 98) 0%, rgb(243, 92, 52) 100%);
+  padding: 20px;
+  border-radius: 25px;
+  margin: 140px auto 0;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(230, 35, 98, 0.2);
+}
+
+.statsBar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.statsBar ul li{
+  width: 25%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.statsBar ul li::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.statsBar ul li:last-child::after{
+  display: none;
+}
+
+.statNumber {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.statText {
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .bannerSection {
+    padding: 120px 0 150px 0;
+    min-height: auto;
+  }
+
+  .shapeBg {
+    width: 100%;
+    height: auto;
+    left: 50%;
+  }
+
+  .shapeImg {
+    height: auto;
+  }
+
+  .mainImg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .imageWrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .statsBar {
+    position: relative;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .statsBar {
+    padding: 30px 15px;
+  }
+
+  .statNumber {
+    font-size: 28px;
+  }
+
+  .statsBar ul li {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .statsBar ul li:nth-child(even)::after {
+    display: none;
+  }
+
+  .statsBar ul li:nth-child(1),
+  .statsBar ul li:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .statText {
+    font-size: 12px;
+  }
+
+  .actionBtns {
+    justify-content: center;
+  }
+
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .reviewsWrapper {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
