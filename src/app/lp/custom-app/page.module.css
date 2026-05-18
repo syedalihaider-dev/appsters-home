@@ -6,3 +6,27 @@
 .coverImg{
     z-index: -1;
 }
+
+:global(html) {
+    scroll-behavior: smooth;
+}
+
+.lpCustomApp {
+    font-family: var(--font-poppins);
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+.lpCustomApp :global(h1), 
+.lpCustomApp :global(h2), 
+.lpCustomApp :global(h3), 
+.lpCustomApp :global(h4), 
+.lpCustomApp :global(h5), 
+.lpCustomApp :global(h6) {
+    font-family: var(--font-poppins);
+}
+
+.lpCustomApp :global(section) {
+    position: relative;
+}

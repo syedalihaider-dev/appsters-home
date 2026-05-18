@@ -74,33 +74,7 @@ const Page = () => {
           };
         `}
       </Script>
-      <style jsx global>{`
-        :root {
-          --font-poppins: 'Poppins', sans-serif;
-        }
-        html {
-          scroll-behavior: smooth;
-        }
-        .lp-custom-app {
-          font-family: var(--font-poppins);
-          background: #fff;
-          color: #111;
-          overflow-x: hidden;
-        }
-        .lp-custom-app h1, 
-        .lp-custom-app h2, 
-        .lp-custom-app h3, 
-        .lp-custom-app h4, 
-        .lp-custom-app h5, 
-        .lp-custom-app h6 {
-          font-family: var(--font-poppins);
-        }
-        section {
-            position: relative;
-        }
-      `}</style>
-      
-      <main className="lp-custom-app">
+      <main className={styles.lpCustomApp}>
         <Banner />
         <IndustrySolutions />
         <CaseStudySlider />
