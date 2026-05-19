@@ -1,0 +1,170 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.logoWrapper {
+    z-index: 10002;
+    transition: transform 0.3s ease;
+}
+
+.logoWrapper:hover {
+    transform: scale(1.02);
+}
+
+/* Nav Pill Design */
+.navPill {
+    background: #000;
+    border: 1px solid #ffffff0d;
+    border-radius: 50px;
+    padding: 15px 60px 15px 60px;
+    transition: all .3s;
+    box-shadow: 0 10px 30px #00000040;
+}
+
+.navLink {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    transition: color 0.25s ease;
+}
+
+.navLink:hover {
+    color: #bef000; /* Neon Lime Color from design */
+}
+
+.connectBtn {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #bef000; /* Neon Lime Border */
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.connectBtn:hover {
+    background: #bef000;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(190, 240, 0, 0.4);
+}
+
+/* Hamburger Toggle */
+.menuToggle {
+    background: transparent;
+    border: none;
+    color: #000000; 
+    cursor: pointer;
+    z-index: 10002;
+    padding: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.menuToggle:focus {
+    outline: none;
+}
+
+.toggleOpen {
+    color: #ffffff !important;
+}
+
+/* Mobile Drawer Menu */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #000000;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+    z-index: 10001;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.mobileMenu.active {
+    right: 0;
+}
+
+.mobileLink {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobileLink:hover {
+    color: #bef000;
+}
+
+.mobileConnectBtn {
+    display: block;
+    text-align: center;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #bef000;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobileConnectBtn:hover {
+    background: #bef000;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(190, 240, 0, 0.4);
+}
+
+/* Overlay back shadow */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}

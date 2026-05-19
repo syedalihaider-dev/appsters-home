@@ -1,0 +1,60 @@
+/* Scoped fonts for the Mobile App Development Services Landing Page */
+
+.lp-mobile-app-wrapper {
+  font-family: var(--font-inter), sans-serif !important;
+}
+
+.lp-mobile-app-wrapper h1,
+.lp-mobile-app-wrapper h2,
+.lp-mobile-app-wrapper h3,
+.lp-mobile-app-wrapper h4,
+.lp-mobile-app-wrapper h5,
+.lp-mobile-app-wrapper h6,
+.lp-mobile-app-wrapper button,
+.lp-mobile-app-wrapper .btn,
+.lp-mobile-app-wrapper a,
+.lp-mobile-app-wrapper .navLink,
+.lp-mobile-app-wrapper navLink,
+.lp-mobile-app-wrapper [class*="btn"],
+.lp-mobile-app-wrapper [class*="Link"],
+.lp-mobile-app-wrapper [class*="button"] {
+  font-family: var(--font-space-grotesk), sans-serif !important;
+}
+
+/* Ensure paragraph tags specifically fallback to Inter */
+.lp-mobile-app-wrapper p,
+.lp-mobile-app-wrapper span,
+.lp-mobile-app-wrapper li,
+.lp-mobile-app-wrapper label,
+.lp-mobile-app-wrapper input,
+.lp-mobile-app-wrapper textarea {
+  font-family: var(--font-inter), sans-serif !important;
+}
+
+/* Pulsing Animation for blackPulse class buttons - Premium Theme Variant */
+.blackPulse {
+  --pulse-color: #CCFF00; 
+  --pulse-glow: rgba(204, 255, 0, 0.45);
+  --pulse-fade: rgba(204, 255, 0, 0);
+  
+  animation: pulsingThree 2.2s cubic-bezier(0.25, 0, 0, 1) infinite;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.blackPulse:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 255, 0, 0.35) !important;
+}
+
+@keyframes pulsingThree {
+  0% {
+    box-shadow: 0 0 0 0 var(--pulse-glow);
+  }
+  70% {
+    box-shadow: 0 0 0 15px var(--pulse-fade);
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--pulse-fade);
+  }
+}
