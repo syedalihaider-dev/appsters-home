@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Link from 'next/link'
 import Image from 'next/image'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 
 import styles from "./AppsJourney.module.css"
 
@@ -24,7 +25,7 @@ const Card = ({ content, isActive }) => {
 const CardContainer = ({ content, isActive }) => {
     return (
         <div className={styles.cardsMain}>
-            <a href="tel:1 855 799 1171">
+            <a href={PHONE_NUMBER_TEL}>
                 <Card content={content} isActive={isActive} />
             </a>
         </div>
@@ -87,7 +88,7 @@ const AppsJourney = ({ content, onAnchorClick }) => {
                             </Col>
                             <Col lg={7}>
                                 <div className={`d-none d-lg-block ${styles.secImage}`}>
-                                    <Image src="/newmobileapp/smal_banner.png" fill alt='Appsters' className='img-fluid' />
+                                    <Image src="/newmobileapp/smal_banner.png" width={651} height={537} alt='Appsters' className='img-fluid' />
                                 </div>
                             </Col>
                         </Row>

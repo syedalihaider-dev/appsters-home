@@ -39,7 +39,7 @@
     font-weight: 500;
     line-height: 28px;
     padding: 0 20px;
-    width: 220px;
+    width: 240px;
     height: 45px;
     border-radius: 6px;
     background: #F32F53;
@@ -110,7 +110,13 @@
 }
 
 .clutch {
-    width: 25%;
+    width: 100%;
+}
+
+.clutch img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Media Query Start */

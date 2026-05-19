@@ -112,7 +112,7 @@ const Deliver = () => {
                     </Col>
                     <Col lg={12}>
                         <div className={styles.btns}>
-                            <a href="#form" className='pink'>Let’s Discuss Your Project</a>
+                            <a href="#contact" className='pink'>Let’s Discuss Your Project</a>
                         </div>
                     </Col>
                 </Row>

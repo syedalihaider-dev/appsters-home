@@ -3,6 +3,7 @@ import { Col, Row } from 'react-bootstrap'
 import Slider from 'react-slick'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 
 // Images 
 import styles from "./AppsLived.module.css"
@@ -220,7 +221,7 @@ const AppsLived = ({ content, onAnchorClick }) => {
                                     <p>We aim to provide the best value for money through quality provisions. ROI’s that far exceed expectations.</p>
 
                                     <div className={styles.blackBtn}>
-                                        <a href="tel:1 855 799 1171" className='d-flex align-items-center gap-4 blackPulse'>
+                                        <a href={PHONE_NUMBER_TEL} className='d-flex align-items-center gap-4 blackPulse'>
                                             Free Consultation
                                             <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={12} />
                                         </a>
@@ -255,7 +256,7 @@ const AppsLived = ({ content, onAnchorClick }) => {
                                     <div className=''>
                                         <div key={index} className={styles.slider}>
                                             <div className={styles.sliderImage}>
-                                                <Image src={content.image} fill alt='Appsters' className='img-fluid' />
+                                                <Image src={content.image} width={830} height={570} alt='Appsters' className='img-fluid' />
                                             </div>
                                             <div className={styles.sliderTxt}>
                                                 <div className="txt">

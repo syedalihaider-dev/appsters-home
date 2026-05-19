@@ -108,17 +108,17 @@ const Whowearenew = ({ content, contentTwo, onAnchorClick }) => {
                     <Row className='align-items-center w-100 mt-4'>
                         <Col md={4} className='p-0'>
                             <motion.div className={`${styles.ImageDiv}`} variants={variantOne} initial="initial" whileInView="animate">
-                                <Image src="/newmobileapp/ban4.png" fill alt='ban4' className={`img-fluid mx-auto d-block`} />
+                                <Image src="/newmobileapp/ban4.png" width={562} height={571} alt='ban4' className={`img-fluid mx-auto d-block`} />
                             </motion.div>
                         </Col>
                         <Col md={4} className='p-0'>
                             <motion.div className={`${styles.ImageDiv}`} variants={variantTwo} initial="initial" whileInView="animate">
-                                <Image src="/newmobileapp/ban2.png" alt='ban2' fill className={`img-fluid mx-auto d-block`} />
+                                <Image src="/newmobileapp/ban22.png" width={562} height={571} alt='ban2' className={`img-fluid mx-auto d-block`} />
                             </motion.div>
                         </Col>
                         <Col md={4} className='p-0'>
                             <motion.div className={`${styles.ImageDiv}`} variants={variantThree} initial="initial" whileInView="animate">
-                                <Image src="/newmobileapp/ban5.png" alt='ban5' fill className={`img-fluid mx-auto d-block`} />
+                                <Image src="/newmobileapp/ban5.png" width={562} height={571} alt='ban5' className={`img-fluid mx-auto d-block`} />
                             </motion.div>
                         </Col>
                     </Row>

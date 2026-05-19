@@ -16,7 +16,8 @@ import Deliver from '@/components/NewMobileApp/Deliver/Deliver';
 import LogoSlider from '@/components/NewMobileApp/LogoSlider/LogoSlider';
 import JournyForm from '@/components/NewMobileApp/JourneyForm/JournyForm';
 import Faqs from '@/components/NewMobileApp/Faqs/Faqs';
-import Location from '@/components/NewMobileApp/Location/Location';
+// import Location from '@/components/NewMobileApp/Location/Location';
+import LpFooter from '@/components/NewMobileApp/LpFooter/LpFooter';
 
 const page = ({ content }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,6 +39,22 @@ const page = ({ content }) => {
     return () => {
       window.removeEventListener("resize", checkMobile);
       clearTimeout(desktopTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.replaceChat = () => {
+      if (window.$zopim && window.$zopim.livechat) {
+        window.$zopim.livechat.window.show();
+      } else if (window.zE) {
+        try {
+          window.zE('webWidget', 'open');
+        } catch (e) {
+          console.error("Zendesk error:", e);
+        }
+      } else {
+        console.warn("Chat widget is not loaded yet.");
+      }
     };
   }, []);
 
@@ -239,7 +256,8 @@ const page = ({ content }) => {
                 },
               ]}
             />
-            <Location />
+            {/* <Location /> */}
+            <LpFooter />
           </>
         )
       ) : (
@@ -292,7 +310,8 @@ const page = ({ content }) => {
                 },
               ]}
             />
-            <Location />
+            {/* <Location /> */}
+            <LpFooter />
           </>
         )
       )}

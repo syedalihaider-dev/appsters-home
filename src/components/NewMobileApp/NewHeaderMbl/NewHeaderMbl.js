@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { usePathname } from "next/navigation" 
 import styles from "./Header.module.css"; 
 import { BsFillTelephoneFill } from 'react-icons/bs'
+import { PHONE_NUMBER, PHONE_NUMBER_TEL } from '@/config/phone'
 // images
 import logo from '/public/images/icons/footerlogo.webp'
 import mbllogo from '/public/images/icons/footerlogo.png' 
@@ -84,8 +85,8 @@ const HeaderMbl = () => {
                                             <BsFillTelephoneFill size={25} className={styles.email} />
                                         </div>
                                         <div>
-                                            <a className='font15 font-medium white fontf' href="tel:18557991171" onClick={handleMenu}>
-                                                +1 855 799 1171
+                                            <a className='font15 font-medium white fontf' href={PHONE_NUMBER_TEL} onClick={handleMenu}>
+                                                {PHONE_NUMBER}
                                             </a>
                                         </div>
                                     </div>

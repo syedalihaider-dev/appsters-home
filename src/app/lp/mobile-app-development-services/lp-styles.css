@@ -1,4 +1,47 @@
 /* Scoped fonts for the Mobile App Development Services Landing Page */
+:root {
+  --dark: #000000;
+  --white: #fff;
+  --primary: #f32f53;
+  --mry: #f32f53;
+  --gradient: linear-gradient(90deg,
+      rgba(116, 25, 227, 0.5) 0%,
+      rgba(243, 47, 92, 0.5) 100%);
+}
+
+.pink {
+  --pulseSize: 10px;
+  --blue: #f32f53;
+  --transparentBlue: #f32f5321;
+}
+
+.blackPulse {
+  --pulseSize: 6px;
+  --blue: #050505;
+  --transparentBlue: #00000021;
+}
+
+.grey {
+  --pulseSize: 10px;
+  --blue: #05050545;
+  --transparentBlue: #6f6f6f21;
+}
+
+.blueShade {
+  --pulseSize: 10px;
+  --blue: #4a78ef;
+  --transparentBlue: #4a79ef1c;
+}
+
+.bgGrdiant {
+  background: linear-gradient(to right, #4a78ef, #f32fc2, #f32f53);
+}
+
+.grdiant {
+  background: linear-gradient(to right, #eb335b 35%, #4a78ef 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .lp-mobile-app-wrapper {
   font-family: var(--font-inter), sans-serif !important;
@@ -31,30 +74,649 @@
   font-family: var(--font-inter), sans-serif !important;
 }
 
-/* Pulsing Animation for blackPulse class buttons - Premium Theme Variant */
-.blackPulse {
-  --pulse-color: #CCFF00; 
-  --pulse-glow: rgba(204, 255, 0, 0.45);
-  --pulse-fade: rgba(204, 255, 0, 0);
-  
-  animation: pulsingThree 2.2s cubic-bezier(0.25, 0, 0, 1) infinite;
-  transition: all 0.3s ease;
+/* Buttons Animation  */
+
+.pink {
+  animation: pulsing 2s infinite;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
-.blackPulse:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(204, 255, 0, 0.35) !important;
+@keyframes pulsing {
+  from {
+    box-shadow: 0 0 0 0 var(--blue);
+  }
+
+  70% {
+    box-shadow: 0 0 0 var(--pulseSize) var(--transparentBlue);
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--transparentBlue);
+  }
+}
+
+.grey {
+  animation: pulsingFour 2s infinite;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+@keyframes pulsingFour {
+  from {
+    box-shadow: 0 0 0 0 var(--blue);
+  }
+
+  70% {
+    box-shadow: 0 0 0 var(--pulseSize) var(--transparentBlue);
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--transparentBlue);
+  }
+}
+
+.blackPulse {
+  animation: pulsingThree 2s infinite;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 @keyframes pulsingThree {
-  0% {
-    box-shadow: 0 0 0 0 var(--pulse-glow);
+  from {
+    box-shadow: 0 0 0 0 var(--blue);
   }
+
   70% {
-    box-shadow: 0 0 0 15px var(--pulse-fade);
+    box-shadow: 0 0 0 var(--pulseSize) var(--transparentBlue);
   }
-  100% {
-    box-shadow: 0 0 0 0 var(--pulse-fade);
+
+  to {
+    box-shadow: 0 0 0 0 var(--transparentBlue);
   }
 }
+
+.blueShade {
+  animation: pulsingTwo 2s infinite;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+@keyframes pulsingTwo {
+  from {
+    box-shadow: 0 0 0 0 var(--blue);
+  }
+
+  70% {
+    box-shadow: 0 0 0 var(--pulseSize) var(--transparentBlue);
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--transparentBlue);
+  }
+}
+
+/* Buttons Animation  */
+
+.center {
+  text-align: center;
+}
+
+/* Apps Slider Start */
+
+.appsSlider .slick-prev:before {
+  content: url(../../../../public/newmobileapp/slider-arrow.png);
+}
+
+.appsSlider .slick-next:before {
+  content: url(../../../../public/newmobileapp/slider-arrow.png);
+}
+
+.appsSlider .slick-prev:hover,
+.appsSlider .slick-prev:focus,
+.appsSlider .slick-next:hover,
+.appsSlider .slick-next:focus {
+  background: rgb(255 255 255 / 15%);
+}
+
+.appsSlider .slick-prev {
+  right: 17px;
+  left: inherit;
+  background: rgb(255 255 255 / 15%);
+  backdrop-filter: blur(1px);
+  z-index: 9999;
+  top: 43px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.appsSlider .slick-next,
+.appsSlider .slick-prev {
+  width: 26px;
+  height: 60px;
+}
+
+.appsSlider .slick-next {
+  right: 17px;
+  background: rgb(255 255 255 / 15%);
+  backdrop-filter: blur(1px);
+  z-index: 9999;
+  transform: rotate(180deg);
+  top: 72px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+/* Apps Slider End */
+
+/*====================== faqsblogs ======================*/
+
+.faqsblog .accordion-item {
+  margin-bottom: 20px;
+}
+
+.faqsblog .accordion-button {
+  border: 1px solid black;
+  color: black;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 15px 40px 15px 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.faqsblog .accordion-body {
+  font-size: 16px;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.faqsblog .accordion-button:not(.collapsed) {
+  border: 1px solid black;
+  color: black;
+  background-color: unset;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 15px 40px 15px 15px;
+  position: relative;
+  text-transform: uppercase;
+  border-radius: 0px;
+}
+
+.faqsblog .accordion-item:first-of-type .accordion-button {
+  border-radius: 0px;
+}
+
+.faqsblog .accordion-item {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+
+.faqsblog .accordion-item {
+  background-color: #faf7fa;
+}
+
+.faqsblog .accordion-item:first-of-type {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+
+.faqsblog .accordion-item:last-of-type {
+  border-bottom-right-radius: unset;
+  border-bottom-right-radius: unset;
+}
+
+.faqsblog .accordion-button:focus {
+  z-index: 3;
+  border-color: unset;
+  outline: 0;
+  box-shadow: unset;
+}
+
+.activefapost {
+  position: relative;
+}
+
+.activefapost .d-block img {
+  position: relative;
+  right: 80px;
+  margin-top: -4%;
+  margin-bottom: 2%;
+}
+
+.activefapost .newfoldpost {
+  border-bottom: unset !important;
+  border-bottom-left-radius: unset !important;
+  border-bottom-right-radius: unset !important;
+}
+
+.activefapost .newfoldpost p {
+  display: none;
+}
+
+.ppcFaqs .newfoldpost {
+  border: 2px solid #f32f53;
+}
+
+.servicesFaqs .newfoldpost {
+  border: 2px solid #bcbcbc;
+}
+
+/*===========================*/
+
+.faqsLp .accordion-button {
+  border: 1px solid #fff;
+  border-radius: 0px !important;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 15px 40px 15px 15px;
+  position: relative;
+  text-transform: uppercase;
+  background-color: #515151;
+  border-top: 2px solid #fff !important;
+}
+
+.faqsLp .accordion-body {
+  font-size: 16px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-radius: 0px !important;
+  background-color: #515151;
+}
+
+.faqsLp .accordion-button:not(.collapsed) {
+  border: 1px solid #fff;
+  border-radius: 0px !important;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 15px 40px 15px 15px;
+  position: relative;
+  text-transform: uppercase;
+  background-color: #515151;
+}
+
+.faqsLp .accordion-item {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #faf7fa;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+}
+
+.faqsLp .accordion-item:first-of-type,
+.faqsLp .accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.faqsLp .accordion-item:last-of-type,
+.faqsLp .accordion-item:last-of-type .accordion-button {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.faqsLp .accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: unset;
+  border-color: #fff;
+}
+
+.faqsLp .accordion-button svg {
+  position: absolute;
+  right: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.faqsLp .accordion-button:not(.collapsed) svg {
+  transform: rotate(180deg);
+}
+
+.faqsLp .accordion-button::after {
+  display: none;
+}
+
+
+.newtownfy {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+  display: flex;
+  height: 143px;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.newtownfy .icon {
+  color: #000;
+  display: table;
+  z-index: 111;
+  background-color: #fff;
+  font-size: 28px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 #000000c2;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 9px;
+}
+
+.newtownfy .icon img {
+  display: inline-block;
+  margin-left: 15px;
+  filter: hue-rotate(307deg);
+}
+
+.newtownfy .call,
+.newtownfy .chat {
+  position: relative;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  /* animation: fadeInLeft 0.3s ease-in-out; */
+  transform: translateX(-179px);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.newtownfy .call:hover,
+.newtownfy .chat:hover {
+  transform: translateX(0px);
+}
+
+.newtownfy .call a,
+.newtownfy .chat a {
+  font-size: 15px;
+  color: #000;
+  font-weight: 700;
+}
+
+.newtownfy .call .txtBody,
+.newtownfy .chat .txtBody {
+  background-color: #fff;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 170px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: 0.3s;
+  border: 1px solid #00000045;
+  border-left: 0;
+  position: relative;
+}
+
+.openForm.active {
+  transform: translateX(0);
+}
+
+.openForm {
+  display: block;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #fff;
+  z-index: 999999;
+  height: 420px;
+  transform: translateX(305px);
+  transition: 0.5s ease-in-out;
+  border-radius: 30px 0 0 30px;
+  animation: fadeInRight 0.3s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(350px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(305px);
+  }
+}
+
+.openForm .wrapper {
+  padding: 1rem;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: 0 0 10px grey;
+  border-radius: 30px 0 0 30px;
+}
+
+.openForm .wrapper .close {
+  position: absolute;
+  top: 20%;
+  left: -100px;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+  width: 200px;
+  text-align: center;
+  height: 100px;
+  background-color: var(--w-color);
+  color: var(--p-color);
+  padding-right: 0;
+  border-radius: 30px 30px 0 0;
+  line-height: 50px;
+  box-shadow: 0 1px 3px 0 #000000c2;
+  transform: rotate(-90deg);
+  letter-spacing: 1px;
+}
+
+.openForm .wrapper .ppcOpen {
+  position: absolute;
+  top: 20%;
+  left: -100px;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+  width: 200px;
+  text-align: center;
+  height: 100px;
+  background-color: #e83468;
+  color: white;
+  padding-right: 0;
+  border-radius: 30px 30px 0 0;
+  line-height: 50px;
+  box-shadow: 0 1px 3px 0 #000000c2;
+  transform: rotate(-90deg);
+  letter-spacing: 1px;
+}
+
+.openForm .wrapper form {
+  width: 100%;
+}
+
+.openForm .wrapper form .inputGroup {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.openForm.active .wrapper .close {
+  width: 50px;
+  height: 50px;
+  top: 40%;
+  left: -55px;
+  background-color: #f32f53;
+  color: white;
+  font-size: 30px;
+  border-radius: 100px;
+  font-family: "Noto Sans";
+  line-height: 1.5;
+}
+
+.openForm .wrapper form .inputGroup input {
+  height: 40px;
+  padding: 0 0.5rem;
+}
+
+.openForm .wrapper form .inputGroup input,
+.openForm .wrapper form .inputGroup textarea {
+  border: 1px solid black;
+  font-weight: 400;
+  width: 100%;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+}
+
+.openForm .wrapper form .inputGroup input::-moz-placeholder {
+  font-size: 12px;
+  color: grey !important;
+}
+
+.openForm .wrapper form .inputGroup input::placeholder {
+  font-size: 12px;
+  color: grey !important;
+}
+
+.openForm .wrapper form .inputGroup textarea::-moz-placeholder {
+  font-size: 12px;
+  color: grey;
+}
+
+.openForm .wrapper form .inputGroup textarea::placeholder {
+  font-size: 12px;
+  color: grey;
+}
+
+.openForm .wrapper form .inputGroup textarea {
+  padding: 0.5rem;
+  height: 100px;
+  resize: none;
+}
+
+.openForm .wrapper form button {
+  width: 100%;
+  height: 40px;
+  background-color: #f32f53;
+  border: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.f-20 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+}
+
+/* =======================================================================
+   GLOBAL RESPONSIVE & PRODUCTION-READY OPTIMIZATIONS
+   ======================================================================= */
+
+/* Prevent horizontal scrolling on all devices */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.lp-mobile-app-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Ensure all images and SVGs are responsive */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Fluid Typography and Flexible Containers for small screens */
+@media screen and (max-width: 767px) {
+  h1 { font-size: clamp(2rem, 8vw, 3.5rem) !important; line-height: 1.2 !important; }
+  h2 { font-size: clamp(1.75rem, 6vw, 2.8rem) !important; line-height: 1.3 !important; }
+  h3 { font-size: clamp(1.5rem, 5vw, 2.2rem) !important; line-height: 1.4 !important; }
+  p, a, span, li, label, input, textarea, button { 
+    font-size: clamp(1rem, 4vw, 1.125rem) !important; 
+  }
+  
+  /* Stacking Flex Containers */
+  .row {
+    flex-direction: column !important;
+  }
+  
+  .col-md-6, .col-lg-6, .col-sm-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+
+/* Fix specific fixed-width elements overlapping on tablet/mobile */
+[class*="module_"] {
+  max-width: 100% !important;
+}
+
+/* Better padding/margin on small screens */
+@media screen and (max-width: 991px) {
+  section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}
+
+/* Ultra-wide Screen Optimization */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1540px !important;
+    margin: 0 auto;
+  }
+  section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+}
+
+/* Make clickable elements touch-friendly on mobile */
+@media (pointer: coarse) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+}

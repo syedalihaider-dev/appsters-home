@@ -41,12 +41,12 @@ const NewMobileHeader = () => {
                         <div className={`${styles.navPill} d-none d-lg-flex align-items-center`}>
                             <ul className="d-flex align-items-center list-unstyled mb-0 gap-4">
                                 <li><a href="#services" className={styles.navLink}>Services</a></li>
-                                <li><a href="#casestudies" className={styles.navLink}>Portfolio</a></li>
-                                <li><a href="#testimonials" className={styles.navLink}>Testimonial</a></li>
+                                <li><a href="#portfolio" className={styles.navLink}>Portfolio</a></li>
+                                <li><a href="#testimonial" className={styles.navLink}>Testimonial</a></li>
                                 <li><a href="#process" className={styles.navLink}>Process</a></li>
-                                <li><a href="#href" className={styles.navLink}>Contact</a></li>
+                                <li><a href="#contact" className={styles.navLink}>Contact</a></li>
                             </ul>
-                            <a href="#href" className={`${styles.connectBtn} ms-4`}>
+                            <a href="#contact" className={`${styles.connectBtn} ms-4`}>
                                 Connect Now
                             </a>
                         </div>
@@ -65,9 +65,9 @@ const NewMobileHeader = () => {
                         <li className="my-4"><a href="#casestudies" className={styles.mobileLink} onClick={toggleMenu}>Portfolio</a></li>
                         <li className="my-4"><a href="#testimonials" className={styles.mobileLink} onClick={toggleMenu}>Testimonial</a></li>
                         <li className="my-4"><a href="#process" className={styles.mobileLink} onClick={toggleMenu}>Process</a></li>
-                        <li className="my-4"><a href="#href" className={styles.mobileLink} onClick={toggleMenu}>Contact</a></li>
+                        <li className="my-4"><a href="#contact" className={styles.mobileLink} onClick={toggleMenu}>Contact</a></li>
                         <li className="mt-5">
-                            <a href="#href" className={styles.mobileConnectBtn} onClick={toggleMenu}>
+                            <a href="#contact" className={styles.mobileConnectBtn} onClick={toggleMenu}>
                                 Connect Now
                             </a>
                         </li>

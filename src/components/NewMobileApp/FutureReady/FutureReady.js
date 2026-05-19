@@ -40,7 +40,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </Col>
@@ -56,7 +56,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </Col>
@@ -72,7 +72,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </Col>
@@ -88,7 +88,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </Col>
@@ -104,7 +104,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </Col>
@@ -120,7 +120,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </Col>
@@ -140,7 +140,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +188,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@ const FutureReady = () => {
                                         </p>
                                     </div>
                                     <div className={styles.btn}>
-                                        <a href='javascript:window.replaceChat();' className='pink'>Let's Talk</a>
+                                        <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
                                     </div>
                                 </div>
                             </div>

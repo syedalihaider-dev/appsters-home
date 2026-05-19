@@ -54,7 +54,7 @@ const Conviced = ({ content, onAnchorClick }) => {
                                     <p>Industry Leading Clients Vouch for Us</p>
                                 </div>
                                 <div className={`${styles.btnImage} clutch`}>
-                                    <Image src="/newmobileapp/clutch.png" alt='Appsters' width={127} height={60} className={`img-fluid d-block mt-4 ms-md-auto ${styles.clutch}`} />
+                                    <Image src="/newmobileapp/clutch.png" alt='Appsters' width={217} height={50} className={`img-fluid d-block mt-4 ms-md-auto ${styles.clutch}`} />
                                     <div className={styles.btn}>
                                         <a href="#href" onClick={onAnchorClick} className='gap-4 pink'>
                                             Free Consultation
