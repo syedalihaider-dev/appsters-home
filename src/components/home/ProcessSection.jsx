@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./ProcessSection.module.css";
 
 export default function ProcessSection() {
@@ -39,7 +40,8 @@ export default function ProcessSection() {
     },
     {
       step: "07",
-      title: "We integrate your solution into production environments using zero-downtime deployment strategies. Our team ensures backend configurations, APIs, and third-party services are stable and synchronized. Continuous deployment pipelines keep future releases smooth and predictable. With a focus on scalability, we prepare our infrastructure for peak traffic scenarios from the very first release.",
+      title: "Launch & Deployment",
+      text: "We integrate your solution into production environments using zero-downtime deployment strategies. Our team ensures backend configurations, APIs, and third-party services are stable and synchronized. Continuous deployment pipelines keep future releases smooth and predictable. With a focus on scalability, we prepare our infrastructure for peak traffic scenarios from the very first release.",
     },
     {
       step: "08",
@@ -116,6 +118,7 @@ export default function ProcessSection() {
 
                     <div className="combo_btn">
                       <ActionButtons />
+                      <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                     </div>
                   </div>
                 </div>

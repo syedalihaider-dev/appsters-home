@@ -413,6 +413,7 @@
 
     .content_wrapper {
         padding: 20px;
+        padding-bottom: 40px;
     }
 
     .sec_right .process_before {
@@ -511,7 +512,7 @@
     .dots_wrapper {
         top: unset;
         right: unset;
-        bottom: 20px;
+        bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
         gap: 10px;

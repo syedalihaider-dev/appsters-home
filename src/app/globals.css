@@ -13,7 +13,7 @@
   --border-color: #d5d5d5;
 
   /* Typography */
-  --font-size-xl: 100px;
+  --font-size-xl: 75px;
   --font-size-lg: 65px;
   --font-size-base: 16px;
 
@@ -100,7 +100,7 @@ select {
 }
 
 .mybtn .text {
-  width: 200px;
+  width: 170px;
   height: 50px;
   background: var(--light-color);
   border-radius: 50px;
@@ -308,7 +308,7 @@ p {
     --font-size-base: 16px;
     --font-size-lg: 55px;
     --font-size-sm: 14px;
-    --font-size-xl: 80px;
+    --font-size-xl: 65px;
   }
 
   .container,
@@ -371,7 +371,7 @@ p {
 @media screen and (max-width:1199px) {
   :root {
     --font-size-lg: 40px;
-    --font-size-xl: 50px;
+    --font-size-xl: 45px;
   }
 
   .container,
@@ -399,9 +399,23 @@ p {
     font-size: 18px;
   }
 
+  .combo_btn {
+    gap: 10px;
+  }
+
   .btn .text {
     width: 90px;
     height: 40px;
+  }
+
+  .mybtn .text {
+    border-radius: 6px;
+    width: 125px;
+    height: 45px;
+  }
+
+  .mybtn .icon {
+    display: none;
   }
 
   .btn .icon {
@@ -413,7 +427,7 @@ p {
 @media screen and (max-width:991px) {
   :root {
     --font-size-lg: 28px;
-    --font-size-xl: 35px;
+    --font-size-xl: 32px;
   }
 
   .container,
@@ -456,7 +470,7 @@ p {
 @media screen and (max-width:767px) {
   :root {
     --font-size-lg: 35px;
-    --font-size-xl: 35px;
+    --font-size-xl: 30px;
   }
 
   .container,
@@ -466,6 +480,11 @@ p {
   .container-xl,
   .container-xxl {
     max-width: 540px;
+  }
+
+  .mybtn .text {
+    width: 110px;
+    height: 40px;
   }
 }
 

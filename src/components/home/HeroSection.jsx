@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from './HeroSection.module.css';
 import gsap from "gsap";
 
@@ -40,13 +41,15 @@ export default function HeroSection() {
                         <div className={styles.banner_left}>
                             <p className={styles.sub_heading}>A Digital Transformation Company</p>
                             <h1 className={styles.main_heading}>
-                                <span className="primarytxt">Create Apps</span> That Scale With Your <span className="primarytxt">Growth.</span>
+                                <span className="primarytxt">Mobile App Development</span> From <span className="primarytxt">Idea</span> to Launch <br /> in <span className="primarytxt">12 Weeks</span>
+                                {/* <span className="primarytxt">Create Apps</span> That Scale With Your <span className="primarytxt">Growth.</span> */}
                             </h1>
                             <p className={styles.paragraph}>
-                                Trusted by CTOs, valued by users, and built for AI scalability. Appsters deliver mobile apps and digital ecosystems that your business needs today & tomorrow.
+                                Trusted by CTOs. 3,000+ Apps Delivered. Appsters deliver mobile apps and digital ecosystems that your business needs today & tomorrow.
                             </p>
                             <div className="combo_btn">
-                                <ActionButtons />
+                                <ActionButtons text="Get a Quote"/>
+                                <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                             </div>
                             <div className={styles.clutch_rating_badge}>
                                 <Image

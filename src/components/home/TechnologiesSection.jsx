@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./TechnologiesSection.module.css";
 
 export default function TechnologiesSection() {
@@ -31,6 +32,7 @@ export default function TechnologiesSection() {
         </ul>
         <div className="combo_btn">
           <ActionButtons />
+          <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
         </div>
       </div>
     ),
@@ -49,6 +51,7 @@ export default function TechnologiesSection() {
         </ul>
         <div className="combo_btn">
           <ActionButtons />
+          <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
         </div>
       </div>
     ),
@@ -67,6 +70,7 @@ export default function TechnologiesSection() {
         </ul>
         <div className="combo_btn">
           <ActionButtons />
+          <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
         </div>
       </div>
     ),
@@ -85,6 +89,7 @@ export default function TechnologiesSection() {
         </ul>
         <div className="combo_btn">
           <ActionButtons />
+          <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
         </div>
       </div>
     ),
@@ -103,6 +108,7 @@ export default function TechnologiesSection() {
         </ul>
         <div className="combo_btn">
           <ActionButtons />
+          <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
         </div>
       </div>
     ),

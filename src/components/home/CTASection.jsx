@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./CTASection.module.css";
 
 export default function CTASection() {
@@ -36,6 +37,7 @@ export default function CTASection() {
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />
+                                <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                             </div>
                         </div>
                     </div>

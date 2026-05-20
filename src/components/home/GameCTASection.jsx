@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./GameCTASection.module.css";
 
 export default function GameCTASection() {
@@ -27,6 +28,7 @@ export default function GameCTASection() {
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />
+                                <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                             </div>
                         </div>
                     </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-export default function ActionButtons({ text = "Let’s Build Your App", href = "#contactForm", className = "", textClassName = "", iconClassName = "" }) {
+export default function ActionButtons({ text = "Get a Quote", href = "#contactForm", className = "", textClassName = "", iconClassName = "" }) {
   const isLink = Boolean(href);
   const classes = `mybtn btn_1 ${!isLink ? 'popup_btn' : ''} ${className}`.trim();
 
@@ -35,11 +35,11 @@ export default function ActionButtons({ text = "Let’s Build Your App", href = 
     <>
       {isLink ? (
         <Link href={href} className={classes}>
-          <InnerContent />
+          {InnerContent()}
         </Link>
       ) : (
         <a href="#!" className={classes}>
-          <InnerContent />
+          {InnerContent()}
         </a>
       )}
     </>

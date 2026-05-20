@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from './DeliveredSolutions.module.css';
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 
 import Script from "next/script";
 
@@ -74,7 +75,8 @@ export default function DeliveredSolutions() {
                                     Our experience spans Saas, healthcare, finance, retail, automotive, and more, with solutions adapted to each sector’s demands for security, AI, compliance, and user adoption.
                                 </p>
                                 <div className="combo_btn">
-                                    <ActionButtons text="Read More" href="#contactForm" />
+                                    <ActionButtons href="#contactForm" />
+                                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                                 </div>
                             </div>
                             <div className={styles.box}>
@@ -112,7 +114,8 @@ export default function DeliveredSolutions() {
                                     Thousands of projects executed with an emphasis on speed, AI-adoption, stability, and clear ROI across both startup and enterprise environments.
                                 </p>
                                 <div className="combo_btn">
-                                    <ActionButtons text="Read More" href="#contactForm" />
+                                    <ActionButtons href="#contactForm" />
+                                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                                 </div>
                             </div>
                         </div>
@@ -154,7 +157,8 @@ export default function DeliveredSolutions() {
                                     Every model is designed for high accuracy, reliable outputs, and performance at scale for mission-critical workflows and more.
                                 </p>
                                 <div className="combo_btn">
-                                    <ActionButtons text="Read More" href="#contactForm" />
+                                    <ActionButtons href="#contactForm" />
+                                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                                 </div>
                             </div>
                             <div className={styles.box}>
@@ -192,7 +196,8 @@ export default function DeliveredSolutions() {
                                     Outdated processes replaced with modern, streamlined systems that cut costs and improve operational efficiency.
                                 </p>
                                 <div className="combo_btn">
-                                    <ActionButtons text="Read More" href="#contactForm" />
+                                    <ActionButtons href="#contactForm" />
+                                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                                 </div>
                             </div>
                         </div>
@@ -201,4 +206,4 @@ export default function DeliveredSolutions() {
             </div>
         </section>
     )
-}
+}

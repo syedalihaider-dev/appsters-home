@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 
 import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from './ServicesSection.module.css';
 
 export default function ServicesSection() {
@@ -96,6 +97,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>
@@ -129,6 +131,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>
@@ -162,6 +165,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>
@@ -195,6 +199,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>
@@ -228,6 +233,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>
@@ -261,6 +267,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>
@@ -294,6 +301,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="combo_btn">
                     <ActionButtons />
+                    <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                   </div>
                 </div>
               </div>

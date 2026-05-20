@@ -561,7 +561,7 @@
     .content_after {
         z-index: -1;
         width: 250px;
-        height: 15px;
+        height: 16px;
         top: -15px;
     }
 
