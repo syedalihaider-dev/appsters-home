@@ -3,6 +3,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
+
 import styles from "./LogoSlider.module.css"
 //
 import Slider from "react-slick";
@@ -126,7 +128,11 @@ const LogoSlider = (props) => {
                         <Col lg={12}>
                             <div className={styles.btn}>
                                 <Link href="#form" className='d-flex align-items-center gap-3 pink'>
-                                    Free Consultation
+                                    Get a Quote
+                                    <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={12} />
+                                </Link>
+                                <Link href={PHONE_NUMBER_TEL} className='d-flex align-items-center gap-3 pink'>
+                                    Call Us Now
                                     <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={12} />
                                 </Link>
                             </div>

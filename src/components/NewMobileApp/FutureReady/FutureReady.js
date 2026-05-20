@@ -2,8 +2,7 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import styles from "./FutureReady.module.css"
 import Image from 'next/image'
-import Link from 'next/link'
-// Images
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 import Slider from 'react-slick'
 
 const FutureReady = () => {
@@ -41,6 +40,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </Col>
@@ -57,6 +57,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </Col>
@@ -73,6 +74,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </Col>
@@ -89,6 +91,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </Col>
@@ -105,6 +108,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </Col>
@@ -121,6 +125,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </Col>
@@ -141,6 +146,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -157,6 +163,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -173,6 +180,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -189,6 +197,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -205,6 +214,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -221,6 +231,7 @@ const FutureReady = () => {
                                     </div>
                                     <div className={styles.btn}>
                                         <a href='javascript:window.replaceChat();' className='pink chat'>Let's Talk</a>
+                                        <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                                     </div>
                                 </div>
                             </div>

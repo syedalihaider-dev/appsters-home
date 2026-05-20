@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import styles from "./NewHouston.module.css";
 import Image from 'next/image'; 
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 
 const NewHouston = ({ content }) => {
     const { menus, sections } = content;
@@ -27,7 +28,7 @@ const NewHouston = ({ content }) => {
                     </Col>
                 </Row>
                 <Container>
-                    <Row>
+                    <Row className="align-items-center">
                         <Col lg={6} className='px-sm-0'>
                             <nav className={styles.applicationlong}>
                                 <Image src="/newmobileapp/appLong.png" alt="Appsters" className="img-fluid d-lg-block d-none" width={300} height={300} />
@@ -59,7 +60,11 @@ const NewHouston = ({ content }) => {
                                                 <div dangerouslySetInnerHTML={{ __html: item.content }} />
                                                 <div className={styles.btn}>
                                                     <a href="#form" className="d-flex gap-3 pink">
-                                                        Free Consultation
+                                                        Get a Quote
+                                                        <Image src="/newmobileapp/right-arrow.png" alt="Appsters" width={24} height={12} />
+                                                    </a>
+                                                    <a href={PHONE_NUMBER_TEL} className="d-flex gap-3 pink">
+                                                        Call Us Now
                                                         <Image src="/newmobileapp/right-arrow.png" alt="Appsters" width={24} height={12} />
                                                     </a>
                                                 </div>

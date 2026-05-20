@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 import styles from "./Industries.module.css"
 import Slider from 'react-slick'
 
@@ -241,8 +241,11 @@ const Industries = () => {
 
                         <Col lg={12}>
                             <div className={`${styles.btns}`}>
-                                <a href="#form">
-                                    Let’s Discuss Your Project
+                                <a href="#form" className="pink">
+                                    Get a Quote
+                                </a>
+                                <a href={PHONE_NUMBER_TEL} className="pink">
+                                    Call Us Now
                                 </a>
                             </div>
                         </Col>

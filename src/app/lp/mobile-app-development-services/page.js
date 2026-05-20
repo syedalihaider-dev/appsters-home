@@ -111,7 +111,7 @@ const page = ({ content }) => {
   };
   // Banner Content
   const Banner = {
-    title: "Top Mobile App Development Services",
+    title: <>Top Mobile App <br /> Development Services</>,
     desc: "Join the revolution with unparalleled expertise in mobile application development services specializing in iOS, Android, and cross-platform solutions that get your ROI on-point.",
   }
   // award Content

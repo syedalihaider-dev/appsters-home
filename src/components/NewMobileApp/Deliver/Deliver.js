@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from "./Deliver.module.css";
+import { PHONE_NUMBER_TEL } from '@/config/phone'
+
 import Slider from 'react-slick';
 
 const CardComponent = ({ activeIndex, setActiveIndex }) => {
@@ -112,7 +114,8 @@ const Deliver = () => {
                     </Col>
                     <Col lg={12}>
                         <div className={styles.btns}>
-                            <a href="#contact" className='pink'>Let’s Discuss Your Project</a>
+                            <a href="#form" className='pink'>Get a Quote</a>
+                            <a href={PHONE_NUMBER_TEL} className='pink'>Call Us Now</a>
                         </div>
                     </Col>
                 </Row>

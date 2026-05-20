@@ -120,6 +120,12 @@
     color: white;
 }
 
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .btn a {
     width: 245px;
     height: 50px;

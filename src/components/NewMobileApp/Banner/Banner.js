@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 import styles from './Banner.module.css';
 
 const Typewriter = ({ text, speed, eraseDelay, typingDelay, className }) => {
@@ -143,9 +144,14 @@ const Banner = ({ content }) => {
                                 <p className='font16 text-black fw300 mt-3 mb-lg-4 fontsfregular'>
                                     {desc}
                                 </p>
-                                <a href='#contact' className={`${styles.deliver} blackPulse`}>
-                                    Let’s Discuss Your Project
-                                </a>
+                                <div className="combo_btn">
+                                    <a href='#contact' className={`${styles.deliver} blackPulse`}>
+                                        Get a Quote
+                                    </a>
+                                    <a href={PHONE_NUMBER_TEL} className={`${styles.deliver} blackPulse`}>
+                                        Call Us Now
+                                    </a>    
+                                </div>                                
                             </div>
                             <div className={styles.badge}>
                                 <div className={`d-flex align-items-center ${styles.clientRviews}`}>
@@ -161,7 +167,7 @@ const Banner = ({ content }) => {
                                             <Image src="/newmobileapp/star.png" alt='Appsters' width={25} height={22} />
                                         </div>
                                         <p className='mb-0'>
-                                            <strong>4.8 out of 5</strong> (review rating)
+                                            <strong>4.8 out of 5</strong> (review rating) <br/>
                                             Over 1,200+ reviews
                                         </p>
                                     </div>

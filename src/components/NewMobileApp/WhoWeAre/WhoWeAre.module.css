@@ -189,6 +189,12 @@
   transition: all 0.4s ease-in-out;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .btn a {
   background-color: black;
   box-shadow: 0 5px 12px #00000075;
@@ -200,130 +206,116 @@
   font-weight: 300;
   letter-spacing: 1px;
   position: relative;
-  perspective: 300px;
-  width: 245px;
-  height: 45px;
+  padding: 10px 30px;
 }
 
 /* Media Query Start */
 
-@media only screen and (max-width: 1920px) {
-  .intransition h3 {
-    font-size: 60px;
-    line-height: 75px;
-    margin-bottom: 20px;
-  }
-
-  .android p {
-    font-size: 30px;
-    line-height: 40px;
-    letter-spacing: 0.4px;
-    /* max-width: 1165px; */
-  }
-}
-
-@media only screen and (max-width: 1599px) {
-  .intransition {
-    padding: 29px 0px;
-  }
-
-  .intransition h6 {
-    margin-bottom: 0px;
-  }
-
-  .intransition h3 {
-    font-size: 50px;
-    line-height: 60px;
-  }
-
+@media only screen and (max-width: 1600px) {
   .counterdigit {
-    padding: 0px 60px 0px 75px;
+    padding: 20px 50px 20px 50px;
   }
-}
 
-@media only screen and (max-width: 1399px) {
   .android h2 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-
-  .android p {
-    font-size: 25px;
-    line-height: 35px;
-    /* max-width: 1040px; */
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .intransition {
-    background-size: 100% 100%;
-    margin-right: 49px;
-  }
-
-  .counterdigit {
-    padding: 0px 45px 0px 35px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .ImageDiv img {
-    min-height: 344px;
-    max-height: auto;
-  }
-
-  .counter h4 {
-    margin-bottom: 0;
-  }
-
-  .counter h4 p {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .counter h4 span {
-    font-size: 20px;
-    bottom: 0px;
-    right: 50px;
-  }
-
-  .counter span {
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  .counterdigit {
-    padding: 50px 20px 40px 35px;
-  }
-
-  .intransition {
-    margin-right: 23px;
-  }
-
-  .intransition h3 {
+    margin-bottom: 15px;
     font-size: 40px;
     line-height: 50px;
   }
 
-  .intransition h6 {
-    font-size: 16px;
-    margin-bottom: 0;
+  .android p {
+    margin: 0px auto 20px;
+    padding-bottom: 0px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .intransition {
+    margin-right: 0px;
+    padding: 60px 0;
+  }
+
+  .intransition h3 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+
+@media only screen and (max-width: 1399px) {
+  .counterdigit {
+    padding: 20px 50px 20px 50px;
   }
 
   .counterdigit h5 {
     font-size: 30px;
     line-height: 40px;
-    margin-bottom: 0;
   }
 
   .counterdigit p {
-    font-size: 13px;
+    margin-bottom: 10px;
+    font-size: 14px;
     line-height: 20px;
+  }
+
+  .android h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .android p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .intransition {
+    margin-right: 0px;
+    padding: 60px 0;
+  }
+
+  .intransition h3 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .ImageDiv img {
+    min-height: 296px;
+    max-height: auto;
+  }
+
+  .counterdigit h5 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .counterdigit {
+    padding: 10px 20px;
+  }
+
+  .borderOne,
+  .borderTwo,
+  .borderThree,
+  .borderFour,
+  .borderFive,
+  .borderSix {
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  .intransition {
+    margin-right: 0;
+    padding: 43px 0;
   }
 }
 
 @media screen and (max-width: 991px) {
   .comm {
     display: none;
+  }
+
+  .counterdigit {
+    padding: 10px 20px;
+    margin-top: 25px;
   }
 
   .ImageDiv img {
@@ -376,11 +368,7 @@
   }
 }
 
-@media screen and (max-width: 567px) {
-  .counterSec {
-    padding: 0px 0;
-  }
-
+@media screen and (max-width: 767px) {
   .ImageDiv {
     display: none;
   }
@@ -391,9 +379,8 @@
   }
 
   .android p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
-    padding: 0px 10px;
   }
 
   .counterdigit {

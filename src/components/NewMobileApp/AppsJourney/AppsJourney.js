@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import Link from 'next/link'
 import Image from 'next/image'
 import { PHONE_NUMBER_TEL } from '@/config/phone'
 
@@ -82,7 +81,10 @@ const AppsJourney = ({ content, onAnchorClick }) => {
                                 </h2>
                                 <div className={styles.btn}>
                                     <a href="#href" className='blackPulse' onClick={onAnchorClick}>
-                                        Make A Move!
+                                        Get a Quote
+                                    </a>
+                                    <a href={PHONE_NUMBER_TEL} className='blackPulse'>
+                                        Call Us Now
                                     </a>
                                 </div>
                             </Col>

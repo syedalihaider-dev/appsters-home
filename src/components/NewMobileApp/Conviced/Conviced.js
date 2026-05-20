@@ -5,7 +5,7 @@ import styles from "./Conviced.module.css"
 // Images 
 // import Client1 from "media/newmobileapp/client1.png"
 import Image from 'next/image'
-import Link from 'next/link'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
 import Slider from 'react-slick'
 
 const Conviced = ({ content, onAnchorClick }) => {
@@ -57,7 +57,11 @@ const Conviced = ({ content, onAnchorClick }) => {
                                     <Image src="/newmobileapp/clutch.png" alt='Appsters' width={217} height={50} className={`img-fluid d-block mt-4 ms-md-auto ${styles.clutch}`} />
                                     <div className={styles.btn}>
                                         <a href="#href" onClick={onAnchorClick} className='gap-4 pink'>
-                                            Free Consultation
+                                            Get a Quote
+                                            <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={15} />
+                                        </a>
+                                        <a href={PHONE_NUMBER_TEL} className='gap-4 pink'>
+                                            Call Us Now
                                             <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={15} />
                                         </a>
                                     </div>

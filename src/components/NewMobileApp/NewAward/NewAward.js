@@ -3,42 +3,45 @@ import React from 'react'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap'
 import Slider from 'react-slick'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
+
 import styles from "./NewAwards.module.css"
 
 const NewAward = ({ content, contentTwo, onAnchorClick }) => {
     const { title, desc } = content;
     var awardSlider = {
-        arrows: false,
-        slidesToShow: 3.1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 14000,
-        cssEase: "linear",
-        centerMode: true,
-        centerPadding: '20px',
-        responsive: [
-            {
-                breakpoint: 1099,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    speed: 20000,
-                }
-            },
-        ]
-    };
+    arrows: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 14000,
+    cssEase: "linear",
+    centerMode: true,
+    centerPadding: "20px",
+
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                centerMode: true,
+                centerPadding: "20px",
+            }
+        },
+
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: false,
+                centerPadding: "0px",
+            }
+        }
+    ]
+};
     return (
         <>
             <section className={styles.awardSec}>
@@ -54,8 +57,11 @@ const NewAward = ({ content, contentTwo, onAnchorClick }) => {
                                         {desc}
                                     </p>
                                     <div className={`${styles.btn} mt-5 mt-md-0`}>
-                                        <a href="#href" className='blackPulse' onClick={onAnchorClick}>
-                                            Free Consultation
+                                        <a href="#href" className={`${styles.deliver} blackPulse`} onClick={onAnchorClick}>
+                                            Get a Quote
+                                        </a>
+                                        <a href={PHONE_NUMBER_TEL} className={`${styles.deliver} blackPulse`}>
+                                            Call Us Now
                                         </a>
                                     </div>
                                 </div>

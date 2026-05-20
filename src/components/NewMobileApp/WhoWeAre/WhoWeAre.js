@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import { Container, Row, Col } from 'react-bootstrap'
+import { PHONE_NUMBER_TEL } from '@/config/phone'
+
 import styles from "./WhoWeAre.module.css";
 
 const Whowearenew = ({ content, contentTwo, onAnchorClick }) => {
@@ -170,8 +172,11 @@ const Whowearenew = ({ content, contentTwo, onAnchorClick }) => {
                                     <h3>Progress By <br /> Numbers</h3>
                                     <div className={`${styles.btn}`}>
                                         <a href="#href" className='blackPulse' onClick={onAnchorClick}>
-                                            Time to Execute
+                                            Get a Quote
                                         </a>
+                                        <a href={PHONE_NUMBER_TEL} className={`${styles.deliver} blackPulse`}>
+                                            Call Us Now
+                                        </a> 
                                     </div>
                                 </div>
                             </Col>

@@ -2,10 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Slider from 'react-slick'
 import Image from 'next/image'
-import Link from 'next/link'
 import { PHONE_NUMBER_TEL } from '@/config/phone'
 
-// Images 
 import styles from "./AppsLived.module.css"
 
 
@@ -221,8 +219,12 @@ const AppsLived = ({ content, onAnchorClick }) => {
                                     <p>We aim to provide the best value for money through quality provisions. ROI’s that far exceed expectations.</p>
 
                                     <div className={styles.blackBtn}>
+                                        <a href='#contact' className='d-flex align-items-center gap-4 blackPulse'>
+                                            Get In Touch
+                                            <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={12} />
+                                        </a>
                                         <a href={PHONE_NUMBER_TEL} className='d-flex align-items-center gap-4 blackPulse'>
-                                            Free Consultation
+                                            Call Us Now
                                             <Image src="/newmobileapp/right-arrow.png" alt='Appsters' width={24} height={12} />
                                         </a>
                                     </div>
