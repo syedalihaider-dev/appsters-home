@@ -4,7 +4,7 @@ import styles from './AboutSection.module.css';
 export default function AboutSection() {
     return (
         <section className={styles.aboutSection}>
-            <div className={styles.marque}>
+            {/* <div className={styles.marque}>
                 <ul className={styles.marquee_slider}>
                     <li>
                         <div className={styles.box}>
@@ -97,7 +97,7 @@ export default function AboutSection() {
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> */}
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-sm-12 col-md-6">

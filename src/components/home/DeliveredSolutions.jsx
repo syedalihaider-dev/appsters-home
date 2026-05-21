@@ -38,7 +38,7 @@ export default function DeliveredSolutions() {
             </div>
             <div className="container">
                 <div className="row justify-content-between align-items-center">
-                    <div className="col-sm-12 col-md-4">
+                    <div className="col-sm-12 col-md-6 col-lg-4">
                         <div className={styles.sec_left}>
                             <div className={styles.box}>
                                 <div className={styles.box_before}>
@@ -120,7 +120,7 @@ export default function DeliveredSolutions() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm-12 col-md-4">
+                    <div className="col-sm-12 col-md-6 col-lg-4">
                         <div className={styles.sec_right}>
                             <div className={styles.box}>
                                 <div className={styles.box_before}>

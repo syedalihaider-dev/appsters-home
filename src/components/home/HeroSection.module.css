@@ -1,7 +1,8 @@
 .heroSection {
     padding: 195px 0 200px;
+    /* overflow: hidden; */
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .bannerBg {
@@ -96,18 +97,19 @@
 }
 
 .hand_holding_mobile img,
-.mobile_screen img {
+.mobile_screen img,
+.appsters_shape_decor img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 .appsters_shape_decor {
-    width: 979px;
-    height: 916px;
+    width: 920px;
+    height: auto;
     position: absolute;
-    bottom: -65px;
-    right: 170px;
+    bottom: 0px;
+    right: 140px;
     z-index: -1;
 }
 
@@ -225,9 +227,227 @@
     margin-left: auto;
 }
 
+/* ==========================================================================
+   Consultation Form Styles (Matching Screenshot)
+   ========================================================================== */
+.banner_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.consultation_form_card {
+    position: relative;
+    background: var(--light-color);
+    border-radius: 20px;
+    padding: 35px 30px 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 10;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    transition: var(--cubic);
+}
+
+/* .consultation_form_card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #CCFF00 0%, #101010 100%);
+    background: radial-gradient(circle at center, #ccff00 0%, #111119 100%);
+    z-index: 2;
+} */
+
+.consultation_form_card:hover {
+    box-shadow: 0 25px 50px rgba(204, 255, 0, 0.05), 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.form_title {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    text-transform: none;
+}
+
+.form_subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+}
+
+.consultation_form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form_field_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form_field_label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-color);
+    text-align: left;
+}
+
+.required_star {
+    color: #ef4444;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.form_field_group input,
+.form_field_group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #F5F6F8;
+    border: 1px solid #F5F6F8;
+    border-radius: 30px;
+    color: var(--dark-color);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form_field_group textarea {
+    border-radius: 15px;
+}
+
+.form_field_group input::placeholder {
+    color: #9ca3af;
+}
+
+.form_field_group textarea {
+    resize: none;
+}
+
+.form_field_group input:focus,
+.form_field_group textarea:focus {
+    border-color: #111111f2;
+    box-shadow: 0 0 0 2px rgba(16, 16, 16, 0.05);
+}
+
+.submit_btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    margin-top: 8px;
+}
+
+.submit_btn:hover {
+    background: #000000;
+    transform: translateY(-1px);
+}
+
+.submit_btn:active {
+    transform: translateY(0px);
+}
+
+.submit_btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.form_footer_text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #111111f2;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Marquee */
+.marque {
+    width: 100%;
+    padding: 10px 0;
+    background: var(--dark-light-color);
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    z-index: 4;
+    transform: rotate(-1deg);
+    overflow: hidden;
+}
+
+.marquee_slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee_slider li {
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.marquee_slider .box p {
+    font-size: 90px;
+    font-family: 'Big Shoulders', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+
+.marquee_slider .box p span {
+    font-family: 'Big Shoulders', sans-serif;
+    color: var(--primary-color);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.center_logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform: rotateY(0deg);
+    z-index: 1;
+    animation: rotate-2 10s linear infinite;
+}
+
+@keyframes rotate-2 {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Marquee */
+
 @media screen and (max-width:1600px) {
     .heroSection {
-        padding: 200px 0 150px;
+        padding: 160px 0 120px;
     }
 
     .sub_heading {
@@ -269,13 +489,6 @@
         right: 251px;
     }
 
-    .appsters_shape_decor {
-        width: 690px;
-        height: 645px;
-        bottom: 50px;
-        right: 150px;
-    }
-
     .circle {
         width: 130px;
         height: 130px;
@@ -303,11 +516,47 @@
         width: 200px;
         height: 46px;
     }
+
+    .consultation_form_card {
+        padding: 25px;
+    }
+
+    .marque {
+        transform: rotate(-1deg);
+    }
+
+    .marquee_slider .box p {
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+
+    .form_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .form_subtitle {
+        margin-bottom: 15px;
+    }
+
+    .form_field_group input,
+    .form_field_group textarea {
+        padding: 12px 20px;
+    }
+
+    .submit_btn {
+        padding: 12px 20px;
+    }
+
+    .appsters_shape_decor {
+        width: 820px;
+        right: 0px;
+    }
 }
 
 @media screen and (max-width:1399px) {
     .heroSection {
-        padding: 160px 0 140px;
+        padding: 140px 0 120px;
     }
 
     .sub_heading {
@@ -349,9 +598,7 @@
     }
 
     .appsters_shape_decor {
-        width: 550px;
-        height: 525px;
-        bottom: 20px;
+        width: 740px;
     }
 
     .circle {
@@ -385,11 +632,37 @@
         width: 150px;
         height: 34px;
     }
+
+    .marque {
+        bottom: -30px;
+    }
+
+    .marquee_slider .box p {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+    .consultation_form_card {
+        padding: 25px;
+        width: 480px;
+    }
+
+    .form_title {
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0px;
+    }
+
+    .form_field_group input,
+    .form_field_group textarea,
+    .submit_btn {
+        padding: 10px 15px;
+    }
 }
 
 @media screen and (max-width:1199px) {
     .heroSection {
-        padding: 170px 0 100px;
+        padding: 140px 0 80px;
     }
 
     .sub_heading {
@@ -424,10 +697,8 @@
     }
 
     .appsters_shape_decor {
-        width: 550px;
-        height: 525px;
-        bottom: 10px;
-        right: 70px;
+        width: 635px;
+        right: -40px;
     }
 
     .circle {
@@ -444,6 +715,41 @@
         font-size: 40px;
         line-height: 50px;
     }
+
+    .marquee_slider .box p {
+        font-size: 50px;
+        letter-spacing: -3px;
+    }
+
+    .center_logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .consultation_form_card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .consultation_form {
+        gap: 10px;
+    }
+
+    .form_subtitle {
+        margin-bottom: 10px;
+    }
+
+    .form_field_group input,
+    .form_field_group textarea,
+    .form_field_group input::placeholder,
+    .form_field_group textarea::placeholder {
+        font-size: 14px;
+    }
+
+    .form_footer_text {
+        margin-top: 0px;
+    }
+
 }
 
 @media screen and (max-width:991px) {
@@ -458,7 +764,7 @@
     .transparent_heading {
         font-size: 125px;
         line-height: 125px;
-        bottom: 60px;
+        bottom: 20px;
     }
 
     .main_heading {
@@ -482,10 +788,7 @@
     }
 
     .appsters_shape_decor {
-        width: 400px;
-        height: 375px;
-        bottom: 20px;
-        right: 75px;
+        width: 585px;
     }
 
     .circle {
@@ -518,24 +821,60 @@
         width: 100px;
         height: 25px;
     }
+
+    .marquee_slider .box p {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .center_logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .consultation_form_card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .form_subtitle {
+        display: none;
+    }
+
+    .form_title {
+        margin-bottom: 15px;
+    }
+
+    .form_field_group {
+        gap: 5px;
+    }
+
+    .form_field_group input,
+    .form_field_group textarea {
+        border-radius: 10px;
+    }
+
+    .submit_btn {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width:767px) {
     .heroSection {
-        padding: 130px 0 60px;
+        padding: 120px 0 80px;
     }
 
     .transparent_heading {
         font-size: 90px;
         line-height: 90px;
-        bottom: 60px;
+        bottom: 20px;
     }
 
     .main_heading {
         line-height: 30px;
     }
 
-    .main_heading br{
+    .main_heading br {
         display: none;
     }
 
@@ -544,7 +883,7 @@
     }
 
     .banner_right {
-        margin-top: 60px;
+        margin-top: 20px;
     }
 
     .hand_holding_mobile {
@@ -565,9 +904,6 @@
     .appsters_shape_decor {
         z-index: -1;
         width: 300px;
-        height: 285px;
-        bottom: 10px;
-        right: 200px;
         opacity: .2;
     }
 
@@ -602,6 +938,32 @@
         width: 100px;
         height: 25px;
     }
+
+    .marque {
+        bottom: -20px;
+    }
+
+    .marquee_slider .box p {
+        font-size: 35px;
+        letter-spacing: 0px;
+    }
+
+    .marquee_slider li {
+        margin: 0 -5px;
+    }
+
+    .center_logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .consultation_form_card {
+        padding: 30px 20px;
+    }
+
+    .form_subtitle {
+        display: block;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -612,7 +974,8 @@
     .transparent_heading {
         font-size: 50px;
         line-height: 50px;
-        bottom: 60px;
+        bottom: 20px;
+        letter-spacing: -2px;
     }
 
     .sub_heading {
@@ -629,7 +992,7 @@
     }
 
     .banner_right {
-        margin-top: 60px;
+        margin-top: 20px;
     }
 
     .hand_holding_mobile,

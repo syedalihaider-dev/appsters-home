@@ -332,6 +332,10 @@ p {
     font-size: 25px;
   }
 
+  .mybtn .text {
+    width: 130px;
+  }
+
 }
 
 @media screen and (max-width:1399px) {
@@ -365,6 +369,16 @@ p {
 
   .sec_padding {
     padding: 40px 0;
+  }
+
+  .mybtn .text {
+    width: 100px;
+    height: 45px;
+  }
+
+  .mybtn .icon {
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -457,7 +471,7 @@ p {
   }
 
   .mybtn .text {
-    width: 150px;
+    width: 130px;
     height: 40px;
   }
 
@@ -483,7 +497,7 @@ p {
   }
 
   .mybtn .text {
-    width: 110px;
+    width: 100px;
     height: 40px;
   }
 }

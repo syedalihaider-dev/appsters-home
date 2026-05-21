@@ -176,7 +176,7 @@
 
 @media screen and (max-width:1199px) {
     .deliveredSection {
-        padding: 60px 0 40px;
+        padding: 100px 0 40px;
     }
 
     .appsters_shape_decor {
@@ -269,6 +269,10 @@
 
     .sec_right {
         margin-top: 60px;
+    }
+
+    .box {
+        flex: 1;
     }
 
     .box_before {
