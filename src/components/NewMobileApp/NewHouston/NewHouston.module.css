@@ -346,12 +346,24 @@
     padding-bottom: 0px;
   }
 
+  .txt h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
   .understand h2 {
     font-size: 25px;
   }
 
+  .topBorder p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
   .houston select {
-    font-size: 13px;
+    margin: 15px auto 0;
+    padding: 0 10px;
+    font-size: 14px;
   }
 
   .txt {
@@ -365,18 +377,28 @@
   .understand p {
     margin: 0 0px 50px;
   }
+
+  .slick-dots li button:before {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+    height: 260px;
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .houston {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .applicationlong {
     margin-top: 20px;
   }
 
-  .topBorder { 
+  .topBorder {
     padding: 20px 15px;
   }
 

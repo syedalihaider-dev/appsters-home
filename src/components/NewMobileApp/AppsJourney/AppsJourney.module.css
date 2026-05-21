@@ -120,7 +120,7 @@
     color: white;
 }
 
-.btn{
+.btn {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -275,7 +275,7 @@
 @media only screen and (max-width: 567px) {
     .appSec {
         padding: 0px 0 50px;
-        height: 130vh;
+        height: unset;
     }
 
     .smallBanner {
@@ -284,13 +284,14 @@
 
     .appSec h2 {
         width: 100%;
-        font-size: 32px;
+        font-size: 25px;
         line-height: 1.2;
     }
 
     .smallBanner h2 {
-        font-size: 32px;
+        font-size: 22px;
         line-height: 1.2;
+        margin-bottom: 20px;
     }
 
     .bannerWrapper {
@@ -307,7 +308,7 @@
 
     .appSec .card p {
         margin: 0 30px 12px;
-        font-size: 16px;
+        font-size: 14px;
         padding-right: 0px;
     }
 

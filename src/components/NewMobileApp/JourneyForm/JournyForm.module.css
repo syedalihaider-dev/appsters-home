@@ -86,7 +86,7 @@
   margin-bottom: 26px;
 }
 
-.JournyForm form label{
+.JournyForm form label {
   color: #000;
 }
 
@@ -247,16 +247,16 @@
 @media only screen and (max-width: 567px) {
 
   .JournyForm {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .JournyForm .content h2 {
-    font-size: 32px;
+    font-size: 25px;
     line-height: 1.3;
   }
 
   .experts h4 {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.4;
   }
 
@@ -272,5 +272,9 @@
 
   .value {
     width: 100%;
+  }
+
+  .JournyForm form h3 {
+    font-size: 25px;
   }
 }

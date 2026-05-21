@@ -29,12 +29,12 @@
   margin-top: 50px;
 }
 
-.indusSlider :global(.slick-list) {
-  padding: 40px 0 !important;
+.indusSlider :global(.swiper) {
+  padding: 40px 0 30px 0 !important;
 }
 
-.indusSlider :global(.slick-slide) {
-  margin: 0 20px;
+.indusSlider :global(.swiper-slide) {
+  padding: 30px 15px;
 }
 
 .indusSlide {
@@ -140,21 +140,19 @@
   object-fit: contain;
 }
 
-.btns{
+.btns {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .btns a {
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
-  padding: 0 20px;
-  width: max-content;
-  height: 45px;
+  padding: 10px 30px;
   border-radius: 6px;
   background: #f32f53;
   box-shadow: 0 5px 12px #00000075;
@@ -165,32 +163,19 @@
   transition: all ease-in-out 0.4s;
 }
 
-.indusSlider :global(.slick-slider) {
-  margin-bottom: 0 !important;
-}
-
-.indusSlider :global(.slick-list) {
-  margin-bottom: 0 !important;
-  padding-bottom: 30px !important;
-}
-
-.indusSlider :global(.slick-track) {
+.indusSlider :global(.swiper-wrapper) {
   display: flex !important;
   align-items: stretch !important;
 }
 
-.indusSlider :global(.slick-slide) {
+.indusSlider :global(.swiper-slide) {
   height: auto !important;
   display: flex !important;
   flex-shrink: 0 !important;
 }
 
-.indusSlider :global(.slick-slide>div) {
+.indusSlider :global(.swiper-slide>div) {
   width: 100%;
-  height: 100%;
-}
-
-.indusSlider :global(.slick-slide>div>div) {
   height: 100%;
 }
 
@@ -206,18 +191,37 @@
   }
 
   .content h3 {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 991px) {
   .industries {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 }
 
 @media only screen and (max-width: 567px) {
-  .industries {
-    padding: 50px 0 50px;
+  .indusSlider {
+    margin-top: 10px;
+  }
+
+  .industries h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .industries p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .industries p br {
+    display: none;
+  }
+
+  .btns a {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }

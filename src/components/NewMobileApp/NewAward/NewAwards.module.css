@@ -111,32 +111,21 @@
   margin-bottom: 0 !important;
 }
 
-.awardSlider :global(.slick-slider) {
-  margin-bottom: 0 !important;
+.awardSlider :global(.swiper-wrapper) {
+  transition-timing-function: linear !important;
 }
 
-.awardSlider :global(.slick-list) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+.awardSlider:hover :global(.swiper-wrapper) {
+  transition-duration: 1ms !important;
 }
 
-.awardSlider :global(.slick-track) {
-  display: flex !important;
-  align-items: stretch !important;
-}
-
-.awardSlider :global(.slick-slide) {
+.awardSlider :global(.swiper-slide) {
   height: auto !important;
   display: flex !important;
-  flex-shrink: 0 !important;
 }
 
-.awardSlider :global(.slick-slide > div) {
+.awardSlider :global(.swiper-slide > div) {
   width: 100%;
-  height: 100%;
-}
-
-.awardSlider :global(.slick-slide > div > div) {
   height: 100%;
 }
 
@@ -297,7 +286,7 @@
     padding: 10px 20px;
   }
 
-    .awardsHeading {
+  .awardsHeading {
     font-size: 23px;
     line-height: 25px;
   }
