@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -66,7 +66,8 @@
 /* Large Cards */
 .largeCard {
     background: radial-gradient(circle at 100% 0%, rgba(160, 255, 51, 0.15) 0%, #111111 60%);
-    border: 1px solid #2a2c24;
+    /* border: 1px solid #2a2c24; */
+    border: 1px solid #474c1e;
     border-radius: 20px;
     padding: 40px;
     width: 100%;
@@ -123,7 +124,9 @@
     align-items: center;
     gap: 15px;
     margin-top: auto;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.05); */
+    /* background-color: #1a1b16; */
+    border-top: 1px solid #474c1e;
     padding-top: 25px;
 }
 
@@ -157,8 +160,10 @@
 
 /* Small Cards */
 .smallCard {
-    background-color: #111111;
-    border: 1px solid #2a2c24;
+    /* background-color: #111111;
+    border: 1px solid #2a2c24; */
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
     border-radius: 16px;
     padding: 35px 30px;
     width: 100%;
@@ -205,8 +210,10 @@
 
 /* CTA Card */
 .ctaCard {
-    background-color: #151515;
-    border: 1px solid #2a2c24;
+    /* background-color: #151515;
+    border: 1px solid #2a2c24; */
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
     border-radius: 20px;
     padding: 50px;
 }
@@ -287,6 +294,7 @@
     .ctaCard {
         padding: 30px;
     }
+
     .trustBadges {
         margin-top: 40px;
     }
@@ -297,6 +305,7 @@
         flex-direction: column;
         gap: 30px;
     }
+
     .trustItem {
         width: 100%;
         border-right: none;

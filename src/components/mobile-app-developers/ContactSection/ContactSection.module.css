@@ -1,0 +1,340 @@
+.contactSection {
+    background-color: #0d0d0d;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    z-index: 1;
+}
+
+.gridBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
+    color: #caff33;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.badgeDot {
+    width: 6px;
+    height: 6px;
+    background-color: #caff33;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #caff33;
+}
+
+.mainTitle {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #caff33;
+}
+
+.mainDesc {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.leftColumn {
+    padding-top: 30px;
+}
+
+.sectionSubTitle {
+    font-size: 12px;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.checkIcon {
+    color: #caff33;
+    font-size: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.benefitTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.benefitDesc {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contactMethodsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contactMethodCard {
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.methodIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.methodLabel {
+    font-size: 11px;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.methodValue {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.trustBanner {
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    border: 2px solid #111;
+    margin-left: -8px;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.trustText {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.5;
+}
+
+.highlightText {
+    color: #fff;
+    font-weight: 600;
+}
+
+.formCard {
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.formTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.formSubtitle {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.contactForm {
+    margin-bottom: 30px;
+}
+
+.formLabel {
+    font-size: 11px;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.formInput {
+    background: #242421;
+    border: 1px solid #34332f;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.formInput:focus {
+    background-color: #1a1a1a;
+    border-color: #caff33;
+    color: #fff;
+    box-shadow: none;
+}
+
+.formInput::placeholder {
+    color: #555;
+}
+
+select.formInput {
+    color: #888;
+    cursor: pointer;
+}
+
+select.formInput:focus {
+    color: #fff;
+}
+
+.submitBtn {
+    width: 100%;
+    background-color: #caff33;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #b5e62b;
+    transform: translateY(-2px);
+}
+
+.ndaText {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+}
+
+.ratingsRow {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #2a2c24;
+    padding-top: 30px;
+}
+
+.ratingItem {
+    text-align: center;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.score {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.source {
+    font-size: 10px;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 991px) {
+    .mainTitle {
+        font-size: 36px;
+    }
+
+    .formCard {
+        padding: 30px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contactMethodsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .ratingsRow {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
