@@ -1,0 +1,304 @@
+.testimonialsSection {
+    background-color: #0d0d0d;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    z-index: 1;
+}
+
+.gridBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a1b16;
+    border: 1px solid #474c1e;
+    color: #caff33;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.badgeDot {
+    width: 6px;
+    height: 6px;
+    background-color: #caff33;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #caff33;
+}
+
+.mainTitle {
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #caff33;
+}
+
+.mainDesc {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+/* Large Cards */
+.largeCard {
+    background: radial-gradient(circle at 100% 0%, rgba(160, 255, 51, 0.15) 0%, #111111 60%);
+    border: 1px solid #2a2c24;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.largeCard:hover {
+    transform: translateY(-5px);
+}
+
+.starsRow {
+    color: #ffcc00;
+    font-size: 14px;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.resultBadge {
+    display: inline-flex;
+    background: rgba(202, 255, 51, 0.1);
+    border: 1px solid rgba(202, 255, 51, 0.2);
+    color: #caff33;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.quoteIcon {
+    font-size: 60px;
+    font-family: serif;
+    color: #333;
+    line-height: 0;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.testimonialText {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+
+.profileWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 25px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.profileTitle {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Small Cards */
+.smallCard {
+    background-color: #111111;
+    border: 1px solid #2a2c24;
+    border-radius: 16px;
+    padding: 35px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.smallCard:hover {
+    transform: translateY(-5px);
+}
+
+.smallTestimonialText {
+    font-size: 15px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.avatarSmall {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.profileNameSmall {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.profileTitleSmall {
+    font-size: 13px;
+    color: #666;
+}
+
+/* CTA Card */
+.ctaCard {
+    background-color: #151515;
+    border: 1px solid #2a2c24;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.ctaTitle {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.ctaDesc {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.primaryBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #caff33;
+    color: #000;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+    background-color: #b5e62b;
+    transform: translateY(-2px);
+    color: #000;
+}
+
+.trustBadges {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trustItem {
+    width: 33%;
+    border-right: 1px solid #474c1e;
+    text-align: center;
+}
+
+.trustItem:last-child {
+    border-right: none;
+}
+
+.stars {
+    color: #ffb400;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.ratingScore {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.ratingSource {
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 991px) {
+    .ctaCard {
+        padding: 30px;
+    }
+    .trustBadges {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .trustBadges {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .trustItem {
+        width: 100%;
+        border-right: none;
+    }
+}

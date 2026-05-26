@@ -1,0 +1,21 @@
+.lpMobileAppStudio {
+    font-family: var(--font-dmsans);
+    background: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.lpMobileAppStudio h1,
+.lpMobileAppStudio h2,
+.lpMobileAppStudio h3,
+.lpMobileAppStudio h4,
+.lpMobileAppStudio h5,
+.lpMobileAppStudio h6 {
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: -1px;
+}
+
+.lpMobileAppStudio section {
+    position: relative;
+}

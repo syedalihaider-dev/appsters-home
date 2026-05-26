@@ -15,9 +15,9 @@ const Typewriter = ({ text, speed, eraseDelay, typingDelay, className }) => {
         let timer;
         const handleType = () => {
             const fullText = text;
-            
-            setDisplayedText(isDeleting 
-                ? fullText.substring(0, displayedText.length - 1) 
+
+            setDisplayedText(isDeleting
+                ? fullText.substring(0, displayedText.length - 1)
                 : fullText.substring(0, displayedText.length + 1)
             );
 
@@ -28,7 +28,7 @@ const Typewriter = ({ text, speed, eraseDelay, typingDelay, className }) => {
             } else if (isDeleting && displayedText === '') {
                 setIsDeleting(false);
                 setLoopNum(loopNum + 1);
-                timer = setTimeout(() => {}, typingDelay);
+                timer = setTimeout(() => { }, typingDelay);
             } else {
                 timer = setTimeout(handleType, typingSpeed);
             }
@@ -146,12 +146,12 @@ const Banner = ({ content }) => {
                                 </p>
                                 <div className="combo_btn">
                                     <a href='#contact' className={`${styles.deliver} blackPulse`}>
-                                        Get a Quote
+                                        Get a Free Project Estimate
                                     </a>
                                     <a href={PHONE_NUMBER_TEL} className={`${styles.deliver} blackPulse`}>
                                         Call Us Now
-                                    </a>    
-                                </div>                                
+                                    </a>
+                                </div>
                             </div>
                             <div className={styles.badge}>
                                 <div className={`d-flex align-items-center ${styles.clientRviews}`}>
@@ -167,7 +167,7 @@ const Banner = ({ content }) => {
                                             <Image src="/newmobileapp/star.png" alt='Appsters' width={25} height={22} />
                                         </div>
                                         <p className='mb-0'>
-                                            <strong>4.8 out of 5</strong> (review rating) <br/>
+                                            <strong>4.8 out of 5</strong> (review rating) <br />
                                             Over 1,200+ reviews
                                         </p>
                                     </div>
@@ -194,7 +194,7 @@ const Banner = ({ content }) => {
                                     <input className={styles.vehicle1} type='checkbox' name='vehicle1' checked={checkboxes.includes('Share Non Disclosure Agreement')} onChange={handleOptionChange3} value='Share Non Disclosure Agreement' />
                                     <label className='form-check-label' htmlFor='flexCheckDefault'>Sign Non-Disclosure Agreement </label>
                                     <button className={`pink ${styles.value} mt-4 mt-sm-0 blackPulse bitsForm`} type='submit' disabled={isDisabled}>
-                                        <Image src="/newmobileapp/formImg.png" className='img-fluid' alt='Appsters' width={18} height={18}/>
+                                        <Image src="/newmobileapp/formImg.png" className='img-fluid' alt='Appsters' width={18} height={18} />
                                         {score}
                                     </button>
                                 </div>
