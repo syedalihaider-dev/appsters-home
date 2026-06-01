@@ -12,7 +12,9 @@ const Banner = () => {
         email: '',
         phone: '',
         service: '',
-        budget: ''
+        budget: '',
+        timeline: '',
+        description: ''
     })
 
     const handleChange = (e) => {
@@ -22,11 +24,26 @@ const Banner = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsSubmitting(true)
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const response = await fetch('/api/lp-mobile-app-developers', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...formData,
+                    pageUrl: window.location.href
+                })
+            })
+            if (response.ok) {
+                router.push('/lp/mobile-app-developers/thank-you')
+            } else {
+                alert('Submission failed. Please try again.')
+            }
+        } catch (error) {
+            console.error('Submission error:', error)
+            alert('An error occurred. Please try again.')
+        } finally {
             setIsSubmitting(false)
-            router.push('/lp/mobile-app-developers/thank-you')
-        }, 1500)
+        }
     }
 
     return (
@@ -117,21 +134,42 @@ const Banner = () => {
                                     <label>WHAT ARE YOU BUILDING?</label>
                                     <select name="service" value={formData.service} onChange={handleChange} required>
                                         <option value="" disabled>Select a service</option>
-                                        <option value="iOS Development">iOS Development</option>
-                                        <option value="Android Development">Android Development</option>
-                                        <option value="Cross-Platform Development">Cross-Platform Development</option>
-                                        <option value="UI/UX Design">UI/UX Design</option>
+                                        <option value="iOS App">iOS App</option>
+                                        <option value="Android App">Android App</option>
+                                        <option value="Cross-Platform App">Cross-Platform App</option>
                                     </select>
                                 </div>
 
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className={styles.inputGroup}>
+                                            <label>ESTIMATED BUDGET</label>
+                                            <select name="budget" value={formData.budget} onChange={handleChange} required>
+                                                <option value="" disabled>Select a range</option>
+                                                <option value="$3k - $5k">$3k - $5k</option>
+                                                <option value="$5k - $10k">$5k - $10k</option>
+                                                <option value="$10k - $25k">$10k - $25k</option>
+                                                <option value="$25k - $50k">$25k - $50k</option>
+                                                <option value="$50k+">$50k+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className={styles.inputGroup}>
+                                            <label>PROJECT TIMELINE</label>
+                                            <select name="timeline" value={formData.timeline} onChange={handleChange} required>
+                                                <option value="" disabled>When to start?</option>
+                                                <option value="Immediately">Immediately</option>
+                                                <option value="1-3 Months">1-3 Months</option>
+                                                <option value="3+ Months">3+ Months</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div className={styles.inputGroup}>
-                                    <label>ESTIMATED BUDGET</label>
-                                    <select name="budget" value={formData.budget} onChange={handleChange} required>
-                                        <option value="" disabled>Select a range</option>
-                                        <option value="$10k - $25k">$10k - $25k</option>
-                                        <option value="$25k - $50k">$25k - $50k</option>
-                                        <option value="$50k+">$50k+</option>
-                                    </select>
+                                    <label>BRIEF PROJECT DESCRIPTION</label>
+                                    <textarea name="description" rows="3" value={formData.description} onChange={handleChange} placeholder="Tell us about your app idea — what it does, who it's for, and any key features..." required></textarea>
                                 </div>
 
                                 <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
