@@ -9,6 +9,7 @@ import TestimonialsSection from '@/components/mobile-app-developers/Testimonials
 import ProcessSection from '@/components/mobile-app-developers/ProcessSection/ProcessSection'
 import ContactSection from '@/components/mobile-app-developers/ContactSection/ContactSection'
 import Footer from '@/components/mobile-app-developers/Footer/Footer'
+import CaseStudySection from '@/components/mobile-app-developers/CaseStudySection/CaseStudySection'
 import styles from './page.module.css'
 
 const inter = Inter({
@@ -38,6 +39,7 @@ const Page = () => {
             <Banner />
             <IndustryServices />
             <PortfolioSection />
+            <CaseStudySection />
             <TestimonialsSection />
             <ProcessSection />
             <ContactSection />
