@@ -2,40 +2,53 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import Script from "next/script";
+
 import NewMobileHeader from '@/components/NewMobileApp/Header/NewMobileHeader';
 import LpFooter from '@/components/NewMobileApp/LpFooter/LpFooter';
+
 import styles from './thank-you.module.css';
+
 
 export default function ThankYouPage() {
     useEffect(() => {
-        // Safe registration of global replaceChat utility
         window.replaceChat = () => {
-            if (window.$zopim && window.$zopim.livechat) {
-                window.$zopim.livechat.window.show();
-            } else if (window.zE) {
-                try {
-                    window.zE('webWidget', 'open');
-                } catch (e) {
-                    console.error("Zendesk error:", e);
+            try {
+                // New Zendesk Messaging
+                if (typeof window.zE !== "undefined") {
+                    window.zE("messenger", "open");
+                    return;
                 }
-            } else {
+
+                // Legacy Zopim
+                if (window.$zopim?.livechat) {
+                    window.$zopim.livechat.window.show();
+                    return;
+                }
+
                 console.warn("Chat widget is not loaded yet.");
+            } catch (error) {
+                console.error("Chat widget error:", error);
             }
+        };
+
+        return () => {
+            delete window.replaceChat;
         };
     }, []);
 
     return (
         <>
-            {/* Event snippet for appsters-Sign-up conversion page */}
-            <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                        if (typeof gtag === 'function') {
-                            gtag('event', 'conversion', {'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'});
-                        }
-                    `
-                }}
-            />
+            {/* Google Ads Conversion */}
+            <Script id="google-ads-conversion" strategy="afterInteractive">
+                {`
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'
+                        });
+                    }
+                `}
+            </Script>
 
             <NewMobileHeader />
 

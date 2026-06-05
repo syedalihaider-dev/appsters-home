@@ -25,8 +25,8 @@ export const metadata = {
   alternates: { canonical: '/lp/custom-app' },
   //===== No-Index =====
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     nocache: true,
   },
 }

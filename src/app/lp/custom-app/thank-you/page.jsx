@@ -3,36 +3,37 @@ import Script from 'next/script'
 import styles from './ThankYou.module.css'
 
 export const metadata = {
+    title: 'Thank You - Appsters',
+    description:
+        'Thank you for contacting Appsters. Your inquiry has been received and our team will get back to you shortly.',
     robots: {
-        title: "Thank You - Appsters",
-        description:
-            "Thank you for contacting Appsters. Your inquiry has been received and our team will get back to you shortly.",
         index: false,
         follow: false,
-        nocache: true,
     },
 }
 
 export default function ThankYou() {
     return (
         <main className={styles.thankYouPage}>
-            {/* Event snippet for conversion */}
             <Script id="google-conversion" strategy="afterInteractive">
                 {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'
-                });
+                  if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                      'send_to': 'AW-16476280714/MD9mCJjo2ZkcEIqvwLA9'
+                    });
+                  }
                 `}
             </Script>
+
             <div className="container">
                 <div className={styles.content}>
                     <h1 className={styles.title}>Thank You!</h1>
+
                     <p className={styles.desc}>
-                        Your inquiry has been received. One of our "Appsters" will get back to you shortly
+                        Your inquiry has been received. One of our Appsters will get back to you shortly
                         to discuss how we can bring your mobile vision to life.
                     </p>
+
                     <div className={styles.btnRow}>
                         <Link href="/lp/custom-app" className={styles.backBtn}>
                             &larr; BACK TO HOME
