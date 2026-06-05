@@ -15,6 +15,7 @@ import PlansSection from '@/components/home/PlansSection';
 import GameCTASection from '@/components/home/GameCTASection';
 import IndustriesSection from '@/components/home/IndustriesSection';
 import FAQSection from '@/components/home/FAQSection';
+import NewsletterSection from '@/components/home/NewsletterSection/NewsletterSection';
 import LocationSection from '@/components/home/LocationSection';
 import ContactForm from '@/components/home/ContactForm';
 // import TestimonialSection from '@/components/home/TestimonialSection';
@@ -42,6 +43,7 @@ export default function HomePage() {
       <GameCTASection />
       <IndustriesSection />
       <FAQSection />
+      <NewsletterSection />
       <LocationSection />
       {/* <TopCompaniesSection />
       <TestimonialSection /> */}
