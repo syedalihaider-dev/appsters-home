@@ -91,7 +91,7 @@ const technologies = [
     { title: "React Native", subtitle: "CROSS-PLATFORM APPS" }
 ]
 
-const IndustryServices = () => {
+const IndustryServices = ({ onOpenPopup }) => {
     return (
         <section className={styles.servicesSection} id="services">
             <div className={styles.gridBg}></div>
@@ -125,9 +125,9 @@ const IndustryServices = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <Link href={service.linkUrl} className={styles.cardLink}>
+                                <a href={service.linkUrl} className={styles.cardLink} onClick={(e) => { e.preventDefault(); if (onOpenPopup) onOpenPopup(); }}>
                                     {service.linkText} <FaArrowRight className={styles.arrowIcon} />
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     ))}
