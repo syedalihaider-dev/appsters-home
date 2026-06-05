@@ -4,10 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './Popup.module.css';
 import { IoCloseCircleOutline } from 'react-icons/io5';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 const Popup = () => {
     const router = useRouter();
+    const pathname = usePathname();
     const [show, setShow] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [selectedService, setSelectedService] = useState("");
@@ -42,6 +43,8 @@ const Popup = () => {
     const currentBudgets = selectedService === "Business Proposal" ? proposalBudgets : standardBudgets;
 
     useEffect(() => {
+        if (pathname?.startsWith('/lp')) return;
+
         // Auto-play popup after 5 seconds
         const timer = setTimeout(() => {
             setShow(true);
@@ -109,7 +112,7 @@ const Popup = () => {
         }
     };
 
-    if (!show) return null;
+    if (!show || pathname?.startsWith('/lp')) return null;
 
     return (
         <div className={styles.popupOverlay} onClick={() => setShow(false)}>
