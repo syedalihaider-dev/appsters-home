@@ -1,8 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Banner.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Banner = () => {
+    const router = useRouter();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        idea: '',
+        budget: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/lp-build-your-app', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...formData,
+                    pageUrl: window.location.href
+                })
+            });
+            if (response.ok) {
+                router.push('/lp/build-your-app/thank-you');
+            } else {
+                alert('Submission failed. Please try again.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section className={styles.banner}>
             <div className="container">
@@ -60,12 +100,12 @@ const Banner = () => {
                                 Get a free consultation & cost estimate — no strings attached.
                             </p>
 
-                            <form className={styles.estimateForm} onSubmit={(e) => e.preventDefault()}>
+                            <form className={styles.estimateForm} onSubmit={handleSubmit}>
                                 <div className={styles.inputGroup}>
-                                    <input type="text" placeholder="Full name" required />
+                                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full name" required />
                                 </div>
                                 <div className={styles.inputGroup}>
-                                    <input type="email" placeholder="Work email" required />
+                                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Work email" required />
                                 </div>
 
                                 <div className={styles.phoneGroup}>
@@ -76,15 +116,15 @@ const Banner = () => {
                                             <path d="M1 1L5 5L9 1" stroke="#666" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <input type="tel" placeholder="Phone number" required className={styles.phoneInput} />
+                                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone number" required className={styles.phoneInput} />
                                 </div>
 
                                 <div className={styles.inputGroup}>
-                                    <select required defaultValue="" className={styles.selectInput}>
+                                    <select name="idea" value={formData.idea} onChange={handleChange} required className={styles.selectInput}>
                                         <option value="" disabled>What are you building?</option>
-                                        <option value="ios">iOS App</option>
-                                        <option value="android">Android App</option>
-                                        <option value="cross">Cross-platform App</option>
+                                        <option value="iOS App">iOS App</option>
+                                        <option value="Android App">Android App</option>
+                                        <option value="Cross-platform App">Cross-platform App</option>
                                     </select>
                                     <div className={styles.selectArrow}>
                                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +134,7 @@ const Banner = () => {
                                 </div>
 
                                 <div className={styles.inputGroup}>
-                                    <select required defaultValue="" className={styles.selectInput}>
+                                    <select name="budget" value={formData.budget} onChange={handleChange} required className={styles.selectInput}>
                                         <option value="" disabled>Estimated budget</option>
                                         <option value="10k-25k">$10k - $25k</option>
                                         <option value="25k-50k">$25k - $50k</option>
@@ -107,8 +147,8 @@ const Banner = () => {
                                     </div>
                                 </div>
 
-                                <button type="submit" className={styles.submitBtn}>
-                                    Get My Free Estimate <span className={styles.arrow}>→</span>
+                                <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                                    {isSubmitting ? 'Sending...' : 'Get My Free Estimate'} <span className={styles.arrow}>→</span>
                                 </button>
 
                                 <div className={styles.formFooter}>
