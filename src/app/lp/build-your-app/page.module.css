@@ -1,0 +1,5 @@
+.buildYourAppMain {
+    background-color: #050505;
+    min-height: 100vh;
+    font-family: var(--font-inter), var(--font-montserrat), sans-serif;
+}

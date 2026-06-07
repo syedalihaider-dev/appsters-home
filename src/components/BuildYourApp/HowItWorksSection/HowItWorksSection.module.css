@@ -1,0 +1,213 @@
+.howItWorksSection {
+    padding: 100px 0;
+    background-color: #050505;
+    color: #fff;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    color: #0cebed;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #0cebed;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0cebed;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.glowCyan {
+    color: #0cebed;
+    text-shadow: 0 0 20px rgba(12, 235, 237, 0.5);
+}
+
+.glowPink {
+    color: #f72585;
+    text-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+}
+
+.description {
+    color: #888;
+    font-size: 15px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.timelineWrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Connecting line behind icons */
+.connectingLine {
+    position: absolute;
+    top: 35px; /* Adjust based on iconBox size (70px / 2 = 35px) */
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(45, 130, 255, 0.3) 0%, rgba(157, 78, 221, 0.3) 25%, rgba(247, 37, 133, 0.3) 50%, rgba(12, 235, 237, 0.3) 75%, rgba(0, 187, 249, 0.3) 100%);
+    z-index: 1;
+}
+
+.stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.iconBox {
+    width: 70px;
+    height: 70px;
+    background-color: #0a0a0a;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.iconBox:hover {
+    transform: translateY(-5px);
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numberBadge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.stepTitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.stepDesc {
+    font-size: 11px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+.stepDuration {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Color Classes applied to iconBox for border/glow, to icon color, and to text */
+
+.colorBlue { color: #2d82ff; }
+.colorBlue.iconBox {
+    border: 1px solid rgba(45, 130, 255, 0.3);
+    box-shadow: 0 0 20px rgba(45, 130, 255, 0.2), inset 0 0 0 1px rgba(45, 130, 255, 0.1);
+}
+.colorBlue.iconBox:hover { box-shadow: 0 0 30px rgba(45, 130, 255, 0.4); }
+.colorBlue .numberBadge { background-color: #2d82ff; }
+
+.colorPurple { color: #9d4edd; }
+.colorPurple.iconBox {
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.2), inset 0 0 0 1px rgba(157, 78, 221, 0.1);
+}
+.colorPurple.iconBox:hover { box-shadow: 0 0 30px rgba(157, 78, 221, 0.4); }
+.colorPurple .numberBadge { background-color: #9d4edd; }
+
+.colorPink { color: #f72585; }
+.colorPink.iconBox {
+    border: 1px solid rgba(247, 37, 133, 0.3);
+    box-shadow: 0 0 20px rgba(247, 37, 133, 0.2), inset 0 0 0 1px rgba(247, 37, 133, 0.1);
+}
+.colorPink.iconBox:hover { box-shadow: 0 0 30px rgba(247, 37, 133, 0.4); }
+.colorPink .numberBadge { background-color: #f72585; }
+
+.colorCyan { color: #0cebed; }
+.colorCyan.iconBox {
+    border: 1px solid rgba(12, 235, 237, 0.3);
+    box-shadow: 0 0 20px rgba(12, 235, 237, 0.2), inset 0 0 0 1px rgba(12, 235, 237, 0.1);
+}
+.colorCyan.iconBox:hover { box-shadow: 0 0 30px rgba(12, 235, 237, 0.4); }
+.colorCyan .numberBadge { background-color: #0cebed; }
+
+.colorLightBlue { color: #00bbf9; }
+.colorLightBlue.iconBox {
+    border: 1px solid rgba(0, 187, 249, 0.3);
+    box-shadow: 0 0 20px rgba(0, 187, 249, 0.2), inset 0 0 0 1px rgba(0, 187, 249, 0.1);
+}
+.colorLightBlue.iconBox:hover { box-shadow: 0 0 30px rgba(0, 187, 249, 0.4); }
+.colorLightBlue .numberBadge { background-color: #00bbf9; }
+
+@media (max-width: 991px) {
+    .stepsContainer {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .connectingLine {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        background: linear-gradient(180deg, rgba(45, 130, 255, 0.3) 0%, rgba(157, 78, 221, 0.3) 25%, rgba(247, 37, 133, 0.3) 50%, rgba(12, 235, 237, 0.3) 75%, rgba(0, 187, 249, 0.3) 100%);
+    }
+
+    .stepDesc {
+        min-height: auto;
+    }
+}

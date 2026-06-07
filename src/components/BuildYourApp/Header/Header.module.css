@@ -1,0 +1,114 @@
+.header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 20px 0;
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoImg {
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.navList li a {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.navList li a:hover {
+    color: #0cebed;
+}
+
+.ctaBtn {
+    background: linear-gradient(90deg, #0cebed, #a05afc);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+    background: linear-gradient(90deg, #0cebed, #a05afc);
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+@media (max-width: 991px) {
+    .mobileToggle {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #111;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navOpen {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navList {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
