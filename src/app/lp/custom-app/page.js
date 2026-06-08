@@ -21,8 +21,10 @@ const Page = () => {
       const chatBtn = e.target.closest('.chat');
       if (chatBtn) {
         e.preventDefault();
-        if (window.$zopim) {
-          window.$zopim.livechat.window.toggle();
+        if (typeof window.toggleChat === 'function') {
+          window.toggleChat();
+        } else if (typeof zE !== 'undefined') {
+          zE('webWidget', 'toggle');
         }
       }
     };
@@ -39,38 +41,16 @@ const Page = () => {
       <Script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=239dfa05-01f6-4362-bfb9-4f75a7455e10" strategy="lazyOnload" />
       <Script id="zopim-init" strategy="lazyOnload">
         {`
-          window.$zopim || function (a, d) {
-            var b = $zopim = function (a) {
-                b._.push(a)
-            },
-            c = b.s = a.createElement(d);
-            a = a.getElementsByTagName(d)[0];
-            b.set = function (a) {
-                b.set._.push(a)
-            };
-            b._ = [];
-            b.set._ = [];
-            c.async = !0;
-            c.setAttribute("charset", "utf-8");
-            c.src = "";
-            b.t = +new Date;
-            c.type = "text/javascript";
-            a.parentNode.insertBefore(c, a)
-          }(document, "script");
-
-          $zopim(function () {
-              function a(a) {
-                  1 <= a && $zopim.livechat.window.show()
+          window.toggleChat = function() {
+              if(typeof zE !== 'undefined') {
+                zE('webWidget', 'toggle');
+              } else if(window.$zopim && window.$zopim.livechat){
+                window.$zopim.livechat.window.toggle();
               }
-              $zopim.livechat.setOnUnreadMsgs(a)
-          });
+          };
           
           window.setButtonURL = function() {
-              $zopim.livechat.window.show();
-          };
-
-          window.toggleChat = function() {
-              $zopim.livechat.window.toggle();
+              window.toggleChat();
           };
         `}
       </Script>

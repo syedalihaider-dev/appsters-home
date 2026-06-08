@@ -68,37 +68,25 @@ export default function RootLayout({ children }) {
 
         {/* Zendesk Chat */}
         <Script
-          id="zendesk-snippet"
+          id="ze-snippet"
           src="https://static.zdassets.com/ekr/snippet.js?key=239dfa05-01f6-4362-bfb9-4f75a7455e10"
           strategy="afterInteractive"
         />
 
         <Script id="zendesk-init" strategy="afterInteractive">
           {`
-            window.$zopim || function(a,d){
-              var b=$zopim=function(a){b._.push(a)};
-              var c=b.s=a.createElement(d);
-              a=a.getElementsByTagName(d)[0];
-              b.set=function(a){b.set._.push(a)};
-              b._=[];
-              b.set._=[];
-              c.async=true;
-              c.setAttribute("charset","utf-8");
-              c.type="text/javascript";
-              a.parentNode.insertBefore(c,a);
-            }(document,"script");
-
-            function toggleChat(){
-              if(window.$zopim && $zopim.livechat){
-                $zopim.livechat.window.toggle();
+            window.toggleChat = function() {
+              if(typeof zE !== 'undefined') {
+                zE('webWidget', 'toggle');
+              } else if(window.$zopim && window.$zopim.livechat){
+                window.$zopim.livechat.window.toggle();
               }
-            }
+            };
 
             document.addEventListener('click', function(e){
-              if(e.target.closest('.chat') || e.target.closest('[class*="talkBtn"]')){
-                if(window.$zopim && $zopim.livechat){
-                  $zopim.livechat.window.toggle();
-                }
+              if(e.target.closest('.chat') || e.target.closest('.chat-btn') || e.target.closest('[class*="talkBtn"]')){
+                e.preventDefault();
+                window.toggleChat();
               }
             });
           `}

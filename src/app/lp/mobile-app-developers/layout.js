@@ -57,46 +57,22 @@ export default function RootLayout({ children }) {
       <Script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=239dfa05-01f6-4362-bfb9-4f75a7455e10" strategy="afterInteractive" />
       <Script id="zendesk-chat" strategy="afterInteractive">
         {`
-           window.$zopim || function (a, d) {
-               var b = $zopim = function (a) {
-                       b._.push(a)
-                   },
-                   c = b.s = a.createElement(d);
-               a = a.getElementsByTagName(d)[0];
-               b.set = function (a) {
-                   b.set._.push(a)
-               };
-               b._ = [];
-               b.set._ = [];
-               c.async = !0;
-               c.setAttribute("charset", "utf-8");
-               c.src = "";
-               b.t = +new Date;
-               c.type = "text/javascript";
-               a.parentNode.insertBefore(c, a)
-           }(document, "script");
+           window.toggleChat = function() {
+              if(typeof zE !== 'undefined') {
+                zE('webWidget', 'toggle');
+              } else if(window.$zopim && window.$zopim.livechat){
+                window.$zopim.livechat.window.toggle();
+              }
+           };
 
-           $zopim(function () {
-               function a(a) {
-                   1 <= a && $zopim.livechat.window.show()
-               }
-               $zopim.livechat.setOnUnreadMsgs(a)
-           });
-
-           function setButtonURL() {
-               $zopim.livechat.window.show();
-           }
-
-           function toggleChat() {
-               $zopim.livechat.window.toggle();
-           }
+           window.setButtonURL = function() {
+               window.toggleChat();
+           };
 
            document.addEventListener('click', function(e) {
-               if (e.target.closest('.chat') || e.target.closest('.chat-btn')) {
+               if (e.target.closest('.chat') || e.target.closest('.chat-btn') || e.target.closest('[class*="talkBtn"]')) {
                    e.preventDefault();
-                   if (window.$zopim && window.$zopim.livechat && window.$zopim.livechat.window) {
-                       window.$zopim.livechat.window.toggle();
-                   }
+                   window.toggleChat();
                }
            });
          `}
