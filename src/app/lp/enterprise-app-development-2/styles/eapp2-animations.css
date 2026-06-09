@@ -1,0 +1,113 @@
+/* ============================================================
+   Appsters — Enterprise App Development LP (v2)
+   eapp2-animations.css — premium scroll-based motion design.
+   Driven by an IntersectionObserver in page.js that toggles
+   `.in` on `.reveal` elements. Variants via data-anim, stagger
+   via --i, parallax via JS-set --py. Honors reduced-motion.
+   ============================================================ */
+
+/* ---------- Base reveal (slide-up) ---------- */
+.eapp2 .reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.eapp2 .reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Directional variants ---------- */
+.eapp2 .reveal[data-anim="left"] { transform: translateX(-46px); }
+.eapp2 .reveal[data-anim="right"] { transform: translateX(46px); }
+.eapp2 .reveal[data-anim="up-lg"] { transform: translateY(60px); }
+.eapp2 .reveal[data-anim="zoom"] { transform: scale(0.9); opacity: 0; }
+.eapp2 .reveal[data-anim="zoom-up"] { transform: translateY(40px) scale(0.94); }
+.eapp2 .reveal[data-anim="blur"] { filter: blur(14px); }
+.eapp2 .reveal[data-anim="left"].in,
+.eapp2 .reveal[data-anim="right"].in,
+.eapp2 .reveal[data-anim="up-lg"].in,
+.eapp2 .reveal[data-anim="zoom"].in,
+.eapp2 .reveal[data-anim="zoom-up"].in { transform: none; opacity: 1; }
+.eapp2 .reveal[data-anim="blur"].in { filter: none; opacity: 1; }
+
+/* ---------- Stagger delays (set --i on the element) ---------- */
+.eapp2 .reveal { transition-delay: calc(var(--i, 0) * 90ms); }
+/* legacy data-d support (1..8) */
+.eapp2 .reveal[data-d="1"] { transition-delay: 0.08s; }
+.eapp2 .reveal[data-d="2"] { transition-delay: 0.16s; }
+.eapp2 .reveal[data-d="3"] { transition-delay: 0.24s; }
+.eapp2 .reveal[data-d="4"] { transition-delay: 0.32s; }
+.eapp2 .reveal[data-d="5"] { transition-delay: 0.40s; }
+.eapp2 .reveal[data-d="6"] { transition-delay: 0.48s; }
+.eapp2 .reveal[data-d="7"] { transition-delay: 0.56s; }
+.eapp2 .reveal[data-d="8"] { transition-delay: 0.64s; }
+
+/* ---------- Word-by-word text reveal ---------- */
+.eapp2 .tr-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em) rotate(2deg);
+  transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-delay: calc(var(--wi, 0) * 55ms);
+  will-change: opacity, transform;
+}
+.eapp2 .tr.in .tr-word { opacity: 1; transform: none; }
+
+/* ---------- Clip-up headline reveal ---------- */
+.eapp2 .clip-up { overflow: hidden; }
+.eapp2 .clip-up > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.eapp2 .clip-up.in > span { transform: none; }
+
+/* ---------- Parallax (JS writes --py in px) ---------- */
+.eapp2 .parallax { transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
+
+/* ---------- Animated process connector line ---------- */
+.eapp2 .proc-line {
+  position: absolute; top: 34px; left: 8%; right: 8%; height: 2px; z-index: 0;
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink)); opacity: 0.4;
+  transform-origin: left center; transform: scaleX(0);
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.eapp2 .proc-line.in { transform: scaleX(1); }
+.eapp2 .proc-line::after {
+  content: ""; position: absolute; inset: 0; width: 30%;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  animation: procflow 3.2s linear infinite;
+}
+@keyframes procflow { from { transform: translateX(-30%); } to { transform: translateX(430%); } }
+@media (max-width: 991px) { .eapp2 .proc-line { display: none; } }
+
+/* ---------- Node pop for process steps ---------- */
+.eapp2 .pstep .node { transform: scale(0.6); opacity: 0; transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease; transition-delay: calc(var(--i, 0) * 90ms); }
+.eapp2 .reveal.in .pstep .node,
+.eapp2 .pstep.in .node { transform: none; opacity: 1; }
+
+/* ---------- Count-up number flicker-in ---------- */
+.eapp2 .counter { font-variant-numeric: tabular-nums; }
+
+/* ---------- Soft float loop for the hero form glow accent ---------- */
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+/* ---------- Marquee-safe: reduce all motion when requested ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .eapp2 .reveal,
+  .eapp2 .tr-word,
+  .eapp2 .clip-up > span,
+  .eapp2 .pstep .node {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  .eapp2 .parallax { transform: none !important; }
+  .eapp2 .proc-line { transform: scaleX(1) !important; transition: none !important; }
+  .eapp2 .proc-line::after,
+  .eapp2 .fform .submit.pulse { animation: none !important; }
+}
