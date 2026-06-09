@@ -50,9 +50,9 @@ export default function ContactSection() {
                 <li><span className="tk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span> A senior solutions architect replies within 4 hours</li>
               </ul>
               <div className="final__contact">
-                <a href="tel:+18554422711"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" /></svg></span> +1 (855) 442-2711</a>
+                <a href="tel:+18557991171"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" /></svg></span> +1 (855) 799-1171</a>
                 <a href="mailto:support@appsters.io"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M4 7l8 6 8-6" /></svg></span> support@appsters.io</a>
-                <span className="chat-btn" style={{ cursor: 'pointer' }}><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l.9-5.3A8 8 0 1121 12z" /></svg></span> Live Chat 24/7</span>
+                <span className="chat-btn chat" style={{ cursor: 'pointer' }}><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l.9-5.3A8 8 0 1121 12z" /></svg></span> Live Chat 24/7</span>
               </div>
               <div className="final__badges">
                 <span className="b"><b>Clutch</b> 4.9<span className="stars">★★★★★</span></span>
