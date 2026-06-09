@@ -1,0 +1,47 @@
+/* ===== Enterprise App Development — page shell ===== */
+.page {
+  --lime: #ccff00;
+  --lime-2: #d4ff00;
+  --lime-glow: rgba(204, 255, 0, 0.35);
+  --cyan: #22d3ee;
+  --purple: #a855f7;
+  --pink: #ec4899;
+
+  --bg-0: #06080d;
+  --bg-1: #0a0d14;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-2: rgba(255, 255, 255, 0.05);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-2: rgba(255, 255, 255, 0.14);
+
+  --fg: #f2f5f7;
+  --muted: #9aa3ad;
+  --muted-2: #6b7480;
+
+  --fd: var(--font-montserrat), system-ui, sans-serif;
+  --fb: var(--font-dmsans), system-ui, sans-serif;
+  --fm: var(--font-inter), ui-monospace, monospace;
+
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg-0);
+  color: var(--fg);
+  font-family: var(--fb);
+  overflow-x: hidden;
+}
+
+.page :global(a){
+  text-decoration: none;
+}
+
+/* .page :global(.container) {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (max-width: 600px) {
+  .page :global(.container) {
+    padding-inline: 18px;
+  }
+} */
