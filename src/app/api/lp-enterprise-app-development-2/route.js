@@ -14,8 +14,8 @@ import nodemailer from 'nodemailer'
  */
 const SMTP_HOST = 'maltaserver.stagingtestserver.com'
 const SMTP_PORT = 465
-const SMTP_USER = process.env.SMTP_USER || '' // same as existing LP route
-const SMTP_PASS = process.env.SMTP_PASS || '' // same as existing LP route
+const SMTP_USER = process.env.SMTP_USER || 'no-reply@appsters.io' // same as existing LP route
+const SMTP_PASS = process.env.SMTP_PASS || 'lG;nI8Y333TUIpfg' // same as existing LP route
 
 const transporter = nodemailer.createTransport({
             host: "maltaserver.stagingtestserver.com",
