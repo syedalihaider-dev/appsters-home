@@ -1,0 +1,55 @@
+.lpFooter {
+    background-color: #030303;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoArea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconBox {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: rgba(12, 235, 237, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(12, 235, 237, 0.3);
+    box-shadow: 0 0 10px rgba(12, 235, 237, 0.2);
+}
+
+.logoText {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.logoCyan {
+    color: #0cebed;
+}
+
+.copyText {
+    color: #555;
+    font-size: 11px;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .footerContainer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

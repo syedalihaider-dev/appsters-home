@@ -1,0 +1,168 @@
+.whyAppstersSection {
+    padding: 100px 0;
+    background-color: #050505;
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    color: #0cebed;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #0cebed;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0cebed;
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: clamp(30px, 4.4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-wrap: balance;
+}
+
+.glowTextPurple {
+    color: #a05afc;
+    text-shadow: 0 0 20px rgba(160, 90, 252, 0.6);
+}
+
+/*
+ * IMPROVED LAYOUT:
+ * 6-column grid so 5 cards balance as 3 on top + 2 centered below.
+ * align-items: stretch + flex cards = every card is the SAME height.
+ */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+    max-width: 1040px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.featureCard {
+    grid-column: span 2;
+    background-color: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 34px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Center the two cards on the second row between the three above */
+.featureCard:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+.featureCard:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.featureCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.09);
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background-color: #111;
+    flex-shrink: 0;
+}
+
+.colorCyan { color: #0cebed; }
+.colorCyan.iconBox {
+    border: 1px solid rgba(12, 235, 237, 0.3);
+    box-shadow: 0 0 15px rgba(12, 235, 237, 0.15), inset 0 0 0 1px rgba(12, 235, 237, 0.05);
+}
+
+.colorPurple { color: #a05afc; }
+.colorPurple.iconBox {
+    border: 1px solid rgba(160, 90, 252, 0.3);
+    box-shadow: 0 0 15px rgba(160, 90, 252, 0.15), inset 0 0 0 1px rgba(160, 90, 252, 0.05);
+}
+
+.colorPink { color: #f72585; }
+.colorPink.iconBox {
+    border: 1px solid rgba(247, 37, 133, 0.3);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.15), inset 0 0 0 1px rgba(247, 37, 133, 0.05);
+}
+
+.colorBlue { color: #2d82ff; }
+.colorBlue.iconBox {
+    border: 1px solid rgba(45, 130, 255, 0.3);
+    box-shadow: 0 0 15px rgba(45, 130, 255, 0.15), inset 0 0 0 1px rgba(45, 130, 255, 0.05);
+}
+
+.featureTitle {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #eee;
+}
+
+.featureDesc {
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tablet: 2 per row, last card centered */
+@media (max-width: 991px) {
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+    .featureCard,
+    .featureCard:nth-child(4),
+    .featureCard:nth-child(5) {
+        grid-column: auto;
+    }
+    .featureCard:nth-child(5) {
+        grid-column: 1 / span 2;
+        max-width: 50%;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* Mobile: single column */
+@media (max-width: 600px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+    }
+    .featureCard:nth-child(5) {
+        grid-column: auto;
+        max-width: 100%;
+    }
+}

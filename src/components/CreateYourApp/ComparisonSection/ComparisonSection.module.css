@@ -1,0 +1,238 @@
+.comparisonSection {
+    padding: 100px 0;
+    background-color: #050505;
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    color: #0cebed;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #0cebed;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0cebed;
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: clamp(30px, 4.4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-wrap: balance;
+}
+
+.glowTextPink {
+    color: #f72585;
+    text-shadow: 0 0 30px rgba(247, 37, 133, 0.8), 0 0 60px rgba(247, 37, 133, 0.4);
+    display: inline-block;
+}
+
+.description {
+    color: #888;
+    font-size: 15px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.tableWrapper {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.tableHeader {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0d0d0d;
+}
+
+.colFeature {
+    flex: 1.5;
+    padding: 30px;
+}
+
+.colDiy {
+    flex: 1;
+    padding: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.colAppsters {
+    flex: 1;
+    padding: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    background: linear-gradient(180deg, rgba(12, 235, 237, 0.03) 0%, transparent 100%);
+}
+
+.colAppsters::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0cebed, #a05afc);
+    box-shadow: 0 0 15px rgba(12, 235, 237, 0.8), 0 0 15px rgba(160, 90, 252, 0.8);
+}
+
+.tableHeader h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: #fff;
+}
+
+.tableHeader p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.colTitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.colTitleWrapper h4 {
+    margin: 0;
+}
+
+.badges {
+    display: flex;
+    gap: 5px;
+}
+
+.smallBadge {
+    font-size: 9px;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.agencyBadge {
+    font-size: 9px;
+    padding: 2px 6px;
+    background: rgba(12, 235, 237, 0.1);
+    color: #0cebed;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(12, 235, 237, 0.3);
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.tableRow {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    transition: background-color 0.3s;
+}
+
+.tableRow:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.tableRow > div {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.featureName {
+    font-weight: 500;
+    color: #ccc;
+}
+
+.colDiy span {
+    color: #888;
+}
+
+.colAppsters span {
+    color: #fff;
+}
+
+.crossIcon {
+    width: 18px;
+    height: 18px;
+    background: rgba(247, 37, 133, 0.1);
+    color: #f72585;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.checkIcon {
+    width: 18px;
+    height: 18px;
+    background: rgba(12, 235, 237, 0.1);
+    color: #0cebed;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(12, 235, 237, 0.3);
+}
+
+@media (max-width: 991px) {
+    .tableHeader, .tableRow {
+        flex-direction: column;
+    }
+    .colDiy, .colAppsters {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .colAppsters::before {
+        height: 1px;
+    }
+    .tableRow > div {
+        padding: 16px 24px;
+    }
+    .colFeature {
+        padding-bottom: 0;
+    }
+}

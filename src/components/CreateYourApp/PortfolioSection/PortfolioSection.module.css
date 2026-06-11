@@ -1,0 +1,242 @@
+.portfolioSection {
+    padding: 100px 0;
+    background-color: #050505;
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    color: #0cebed;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #0cebed;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0cebed;
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: clamp(30px, 4.4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-wrap: balance;
+}
+
+.cyanText {
+    color: #0cebed;
+    text-shadow: 0 0 20px rgba(12, 235, 237, 0.4);
+}
+
+.description {
+    color: #888;
+    font-size: 15px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.portfolioList {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.portfolioItem {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.imageCol {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.portfolioItem:nth-child(1) .imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 10%; left: 10%; right: 10%; bottom: 10%;
+    background: rgba(12, 235, 237, 0.3);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.portfolioItem:nth-child(2) .imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 10%; left: 10%; right: 10%; bottom: 10%;
+    background: rgba(65, 105, 225, 0.3);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.portfolioItem:nth-child(3) .imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 10%; left: 10%; right: 10%; bottom: 10%;
+    background: rgba(160, 90, 252, 0.3);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.contentCol {
+    flex: 1;
+    min-width: 0;
+}
+
+.itemTitle {
+    font-size: clamp(26px, 3vw, 32px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.itemDesc {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.tag {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 500;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.tag:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.primaryBtn {
+    background: linear-gradient(90deg, #0cebed 0%, #a05afc 100%);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 10px 20px rgba(160, 90, 252, 0.3);
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    color: #fff;
+    box-shadow: 0 15px 30px rgba(160, 90, 252, 0.4);
+}
+
+.arrow {
+    font-weight: normal;
+}
+
+.industriesWrapper {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 50px;
+}
+
+.industriesTitle {
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.industriesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #999;
+}
+
+.industryDot {
+    color: #444;
+}
+
+.moreText {
+    color: #0cebed;
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .portfolioItem {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .reverse {
+        flex-direction: column;
+    }
+    .contentCol {
+        text-align: center;
+    }
+    .tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolioList {
+        gap: 64px;
+    }
+}
