@@ -15,7 +15,6 @@
     position: relative;
     width: min(560px, 100%);
     max-height: calc(100vh - 40px);
-    overflow-y: auto;
     background: #0a0a0a;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
