@@ -17,7 +17,7 @@
 }
 
 .highlight {
-  color: var(--primary-color);
+  color: #CCFF00;
   font-family: 'Big Shoulders', sans-serif;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .serviceId {
-  color: var(--primary-color);
+  color: #CCFF00;
   font-family: 'Big Shoulders', sans-serif;
   font-size: 32px;
   font-weight: 700;

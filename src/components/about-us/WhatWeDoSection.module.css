@@ -58,7 +58,7 @@
 
 .highlight {
   background: var(--secondary-color);
-  color: var(--primary-color);
+  color: #CCFF00;
   border-radius: 7px;
   padding: 3px 8px;
   font-family: 'Big Shoulders', sans-serif;

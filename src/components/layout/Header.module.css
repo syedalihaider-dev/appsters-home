@@ -50,7 +50,7 @@
 }
 
 .navLink:hover {
-    color: #ccff00;
+    color: #CCFF00;
 }
 
 .arrow {
@@ -64,7 +64,7 @@
 }
 
 .navLink:hover .arrow {
-    border-color: #ccff00;
+    border-color: #CCFF00;
 }
 
 .dropdown {
@@ -151,7 +151,7 @@
 }
 
 .serviceItem:hover h4 {
-    color: #ccff00;
+    color: #CCFF00;
 }
 
 .headerRight {
@@ -210,10 +210,10 @@
 .dot {
     width: 8px;
     height: 8px;
-    background: #ccff00;
+    background: #CCFF00;
     border-radius: 50%;
     display: inline-block;
-    box-shadow: 0 0 10px #ccff00;
+    box-shadow: 0 0 10px #CCFF00;
 }
 
 .header.scrolled {
@@ -444,7 +444,7 @@
     }
 
     .closeMenuBtn:hover {
-        color: #ccff00;
+        color: #CCFF00;
     }
 
     .navLink {

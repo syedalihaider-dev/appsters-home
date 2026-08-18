@@ -1,0 +1,138 @@
+.portfolioCTASection {
+  position: relative;
+  background-image: url('/images/industries/portfolioCTA-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.blueCard {
+  background-color: #101FC4;
+  position: relative;
+  padding: 110px 50px 110px 40px;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+.watermark {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 115px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+  line-height: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heading {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 70px;
+  line-height: 1.08;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 22px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 35px;
+  font-weight: 400;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ctaBtnText {
+  background-color: #CCFF00 !important;
+}
+
+.ctaBtnText span {
+  color: #000000 !important;
+}
+
+
+@media screen and (max-width:1399px) {
+  .heading {
+    font-size: var(--font-size-lg);
+    line-height: 1.2;
+  }
+  .description {
+      font-size: 16px;
+  }
+  .blueCard {
+      padding: 70px 50px 70px 40px;
+  }
+  .watermark {
+      font-size: 70px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .heading {
+    font-size: 44px;
+  }
+  
+  .blueCard {
+    padding: 50px 40px 55px;
+  }
+
+  .watermark {
+    font-size: 95px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+
+  .heading {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .watermark {
+    font-size: 70px;
+    top: 10px;
+    right: -10px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+
+  .blueCard {
+    padding: 40px 25px 45px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .watermark {
+    font-size: 50px;
+  }
+}

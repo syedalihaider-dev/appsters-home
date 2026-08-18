@@ -34,7 +34,7 @@
 
 .highlight {
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: #CCFF00;
   border-radius: 12px;
   padding: 0 15px;
   display: inline-block;
@@ -149,7 +149,7 @@
 }
 
 .customBtn .btnIconGreen {
-  background: var(--primary-color) !important;
+  background: #CCFF00 !important;
 }
 
 .customBtn:hover .btnTextBlack span {
@@ -166,7 +166,7 @@
 }
 
 .mobileSwiper .swiper-pagination-bullet-active {
-  background: var(--primary-color);
+  background: #CCFF00;
   opacity: 1;
 }
 

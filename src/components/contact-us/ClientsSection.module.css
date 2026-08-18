@@ -1,0 +1,86 @@
+.clientsSection {
+  padding: 90px 0 110px;
+  background-color: #ffffff;
+}
+
+.titleWrap {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.mainTitle {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.logoItem {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoItem:hover {
+  transform: translateY(-4px);
+}
+
+.logoImg {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+  .mainTitle {
+    font-size: 44px;
+  }
+
+  .logoItem {
+    height: 95px;
+    padding: 12px 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .clientsSection {
+    padding: 70px 0 80px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  .titleWrap {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .clientsSection {
+    padding: 50px 0 60px;
+  }
+
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .logoItem {
+    height: 80px;
+    padding: 10px 15px;
+  }
+
+  .logoImg {
+    max-height: 48px;
+  }
+}

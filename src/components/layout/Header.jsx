@@ -50,6 +50,7 @@ export default function Header() {
             <div className={styles.closeMenuBtn} onClick={() => setIsMobileMenuOpen(false)}>×</div>
             <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>HOME</Link>
             <Link href="/about-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
+            <Link href="/industry" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>INDUSTRY</Link>
             <Link href="/services" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SERVICES</Link>
 
             {/* <div
@@ -88,6 +89,7 @@ export default function Header() {
 
             <Link href="/case-study" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CASE STUDY</Link>
             <Link href="/contact-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
+            {/* <Link href="/location" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>LOCATION</Link> */}
           </nav>
 
           <div className={styles.headerRight}>

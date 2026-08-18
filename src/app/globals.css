@@ -143,7 +143,7 @@ select {
 .mybtn .icon {
   width: 50px;
   height: 50px;
-  background: var(--primary-color);
+  background: #CCFF00;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -193,13 +193,13 @@ li {
 }
 
 a {
-  color: var(--primary-color);
+  color: #CCFF00;
   text-decoration: none;
   transition: var(--cubic);
 }
 
 a:hover {
-  color: var(--primary-color);
+  color: #CCFF00;
   text-decoration: underline;
 }
 
@@ -240,12 +240,12 @@ p {
 }
 
 .primarytxt {
-  color: var(--primary-color);
+  color: #CCFF00;
   font-family: 'Big Shoulders', sans-serif;
 }
 
 .primarybg {
-  background-color: var(--primary-color);
+  background-color: #CCFF00;
   font-family: 'Big Shoulders', sans-serif;
 }
 
@@ -372,7 +372,7 @@ p {
   }
 
   .mybtn .text {
-    width: 100px;
+    width: 130px;
     height: 45px;
   }
 
@@ -380,6 +380,7 @@ p {
     width: 45px;
     height: 45px;
   }
+  
 }
 
 @media screen and (max-width:1199px) {

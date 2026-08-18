@@ -38,7 +38,7 @@
 
 .marquee_slider .box p span {
     font-family: 'Big Shoulders', sans-serif;
-    color: var(--primary-color);
+    color: #CCFF00;
 }
 
 @keyframes marquee {
@@ -98,7 +98,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: var(--primary-color);
+    background: #CCFF00;
     position: absolute;
     top: 5px;
     left: 0;

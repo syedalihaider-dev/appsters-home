@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import styles from './DevelopmentStack.module.css';
 
-export default function DevelopmentStack() {
+export default function DevelopmentStack({ style = {} }) {
   const techImages = [
     "/images/angular-icon.png",
     "/images/realm-icon.png",
@@ -23,7 +23,7 @@ export default function DevelopmentStack() {
   ];
 
   return (
-    <section className={styles.developmentSection}>
+    <section className={styles.developmentSection} style={style}>
       <div className="container">
         <div className={styles.sec_wrapper}>
           <div className={styles.secBefore}>

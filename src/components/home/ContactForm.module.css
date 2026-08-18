@@ -74,7 +74,7 @@
 }
 
 .sec_content :global(.mybtn .text) {
-    background: var(--primary-color);
+    background: #CCFF00;
 }
 
 @media screen and (max-width:1600px) {

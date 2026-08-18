@@ -1,0 +1,236 @@
+.ideasSection {
+  background-color: #080d24;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainHeading {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 65px;
+  line-height: 1.08;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.yellowText {
+  color: #CCFF00;
+  font-family: 'Big Shoulders', sans-serif;
+}
+
+.headerDescription {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.cardsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 50px;
+}
+
+.ideaCard {
+  background-color: #1a1a1c;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ideaCard:hover {
+  border-color: rgba(204, 255, 0, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.cardContent {
+  width: 60%;
+  padding: 55px 45px 55px 55px;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.cardDesc {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #D1D5DB;
+  margin-bottom: 28px;
+  max-width: 580px;
+}
+
+.tagsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+  max-width: 580px;
+}
+
+.tagItem {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #E5E7EB;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.tagItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #CCFF00;
+  color: #ffffff;
+}
+
+.btnRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.yellowBtnText {
+  background-color: #CCFF00 !important;
+}
+
+.yellowBtnText span {
+  color: #000000 !important;
+}
+
+.graphicArea {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.yellowBgImg {
+  object-fit: contain;
+  object-position: right center;
+  z-index: 1;
+}
+
+.featureImg {
+  object-fit: contain;
+  object-position: center center;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.ideaCard:hover .featureImg {
+  transform: scale(1.04);
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1399px) {
+  .mainHeading {
+    font-size: var(--font-size-lg);
+  }
+
+  .cardContent {
+    width: 62%;
+    padding: 45px 35px;
+  }
+
+  .graphicArea {
+    width: 38%;
+  }
+
+  .cardTitle {
+    font-size: 34px;
+  }
+  .yellowBgImg {
+      top: 51px!important;
+  }
+  .featureImg {
+      top: 70px!important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ideasSection {
+    padding: 70px 0;
+  }
+
+  .mainHeading {
+    font-size: 36px;
+  }
+
+  .ideaCard {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .cardContent {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .graphicArea {
+    position: relative;
+    width: 100%;
+    height: 320px;
+  }
+
+  .tagsGrid {
+    max-width: 100%;
+  }
+
+  .tagItem {
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .ideasSection {
+    padding: 50px 0;
+  }
+
+  .mainHeading {
+    font-size: 30px;
+  }
+
+  .cardContent {
+    padding: 30px 20px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+
+  .graphicArea {
+    height: 250px;
+  }
+}

@@ -39,8 +39,8 @@
 .tabBtn:hover,
 .activeTab {
     color: var(--dark-color);
-    background: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background: #CCFF00;
+    border: 1px solid #CCFF00;
     opacity: 1;
 }
 

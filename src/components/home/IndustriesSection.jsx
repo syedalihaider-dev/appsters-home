@@ -5,7 +5,7 @@ import ActionButtons from "@/components/ui/ActionButtons";
 import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./IndustriesSection.module.css";
 
-export default function IndustriesSection() {
+export default function IndustriesSection({ style = {} }) {
     const [active, setActive] = useState(0);
 
     const tabs = [
@@ -57,7 +57,7 @@ export default function IndustriesSection() {
     ];
 
     return (
-        <section className={styles.industriesSection}>
+        <section className={styles.industriesSection} style={style}>
             <div className="container">
                 <div className={styles.sec_top}>
                     <div className="row align-items-center justify-content-between">

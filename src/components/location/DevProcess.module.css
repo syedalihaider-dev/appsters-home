@@ -1,0 +1,229 @@
+.devProcessSection {
+  background: linear-gradient(180deg, #050718 0%, #1D2B97 100%);
+
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.headerWrap {
+  margin-bottom: 35px;
+}
+
+.mainTitle {
+  text-transform: uppercase;
+    margin: 25px 0;
+    font-size: 65px;
+        line-height: 1.2
+}
+
+.yellowText {
+  color: #CCFF00;
+  font-family: Big Shoulders, sans-serif;
+}
+
+.stepsViewport {
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 10px;
+}
+
+.timelineList {
+  position: relative;
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  will-change: transform;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stepItem {
+  position: relative;
+  opacity: 0.3;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stepItem::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.4;
+  transition: all 0.4s ease;
+}
+
+.activeStepItem {
+  opacity: 1;
+}
+
+.activeStepItem::before {
+  background-color: #CCFF00;
+  opacity: 1;
+  box-shadow: 0 0 14px #CCFF00;
+  transform: scale(1.35);
+}
+
+.stepNumber {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #CCFF00;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.stepTitle {
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.stepDesc {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #D1D5DB;
+  max-width: 480px;
+  margin: 0;
+}
+
+.mobileImgWrap {
+  display: none;
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mobileImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.rightContent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.showcaseImg {
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.activeShowcaseImg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1399px) {
+  .stepNumber {
+    font-size: 30px;
+}
+  .mainTitle, .stepTitle {
+      font-size: var(--font-size-lg);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainTitle {
+    font-size: 40px;
+  }
+
+  .stepTitle {
+    font-size: 34px;
+  }
+
+  .stepsViewport {
+    height: 380px;
+  }
+
+  .imageCard {
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .devProcessSection {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .mainTitle {
+    font-size: 34px;
+  }
+
+  .stepsViewport {
+    height: auto;
+    overflow: visible;
+  }
+
+  .timelineList {
+    gap: 45px;
+  }
+
+  .stepItem {
+    opacity: 1;
+  }
+
+  .mobileImgWrap {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .devProcessSection {
+    padding: 50px 0;
+  }
+
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .stepTitle {
+    font-size: 28px;
+  }
+}

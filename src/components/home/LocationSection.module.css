@@ -62,7 +62,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: var(--primary-color);
+    background: #CCFF00;
     position: absolute;
     top: 10px;
     left: 0;
@@ -99,7 +99,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background: var(--primary-color);
+    background: #CCFF00;
     border: 1px solid transparent;
     position: absolute;
     top: 50%;
@@ -121,7 +121,7 @@
 }
 
 .sec_content :global(.swiper-slide-active) .box {
-    background: var(--primary-color);
+    background: #CCFF00;
 }
 
 .box {

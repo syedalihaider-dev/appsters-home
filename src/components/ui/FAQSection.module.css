@@ -9,7 +9,7 @@
 
 .faq_section .sec_top h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: #CCFF00;
 }
 
 .faq_section .sec_content {
@@ -26,7 +26,7 @@
 
 .faq_section .sec_content .box.active {
     background: #e6f2ff;
-    border: 1px solid var(--primary-color);
+    border: 1px solid #CCFF00;
 }
 
 .faq_section .sec_content .box .heading {

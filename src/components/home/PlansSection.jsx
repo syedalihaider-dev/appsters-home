@@ -4,7 +4,7 @@ import Image from "next/image";
 import ChatButton from "@/components/ui/ChatButton";
 import styles from "./PlansSection.module.css";
 
-export default function PlansSection() {
+export default function PlansSection({ style = {} }) {
 
     const [hoverCol, setHoverCol] = useState(null);
 
@@ -47,7 +47,7 @@ export default function PlansSection() {
   }, [hoverCol]);
 
 return (
-<section className={styles.plansSection}>
+<section className={styles.plansSection} style={style}>
     <div className="container">
         <div className={styles.sec_top}>
             <div className="row">

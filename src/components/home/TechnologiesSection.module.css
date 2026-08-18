@@ -38,7 +38,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: var(--primary-color);
+    background: #CCFF00;
     position: absolute;
     top: 10px;
     left: 0;
@@ -54,7 +54,7 @@
 .sec_content {
     height: 509px;
     margin-top: 20px;
-    background: var(--primary-color);
+    background: #CCFF00;
     padding: 20px;
     border-radius: 20px 0 20px 20px;
     position: relative;

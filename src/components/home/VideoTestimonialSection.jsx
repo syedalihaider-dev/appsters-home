@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function VideoTestimonialSection() {
+export default function VideoTestimonialSection({ style = {} }) {
 
   useEffect(() => {
     Fancybox.bind("[data-fancybox]", {});
@@ -19,7 +19,7 @@ export default function VideoTestimonialSection() {
   }, []);
 
   return (
-    <section className={styles.videoTestimonialSection}>
+    <section className={styles.videoTestimonialSection} style={style}>
       <p className={styles.transparent_heading}>Trusted Clients</p>
       <div className="container">
         <div className={styles.sec_top}>

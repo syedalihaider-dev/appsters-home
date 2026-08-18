@@ -62,7 +62,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: var(--primary-color);
+    background: #CCFF00;
     position: absolute;
     top: 10px;
     left: 0;
@@ -169,7 +169,7 @@
 }
 
 .box_content :global(.combo_btn .mybtn .text) {
-    background: var(--primary-color);
+    background: #CCFF00;
 }
 
 .sec_content :global(.swiper .swiper-pagination) {
@@ -186,7 +186,7 @@
 
 .sec_content :global(.swiper .swiper-pagination-bullet-active) {
     width: 70px;
-    background: var(--primary-color);
+    background: #CCFF00;
     border-radius: 30px;
 }
 
@@ -479,7 +479,7 @@
     }
 
     .step {
-        background: var(--primary-color);
+        background: #CCFF00;
         color: var(--dark-color);
         font-size: 22px;
         right: -10px;

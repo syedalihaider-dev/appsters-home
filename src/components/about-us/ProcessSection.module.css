@@ -51,7 +51,7 @@
 }
 
 .highlightText {
-  color: var(--primary-color);
+  color: #CCFF00;
   font-family: 'Big Shoulders', sans-serif;
 }
 
@@ -87,7 +87,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--primary-color);
+  background: #CCFF00;
   height: 0%;
   z-index: 2;
 }
@@ -101,8 +101,8 @@
   height: 14px;
   background-color: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 15px var(--primary-color);
-  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 15px #CCFF00;
+  border: 2px solid #CCFF00;
 }
 
 .cardsWrapper {
@@ -148,7 +148,7 @@
 
 .active .cardNumber {
   border-color: #fff;
-  background-color: var(--primary-color);
+  background-color: #CCFF00;
   color: var(--secondary-color);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
@@ -166,7 +166,7 @@
 }
 
 /* .active .cardNumber::before {
-  background-color: var(--primary-color);
+  background-color: #CCFF00;
 } */
 
 .cardContentWrapper {

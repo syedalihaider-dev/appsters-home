@@ -1,0 +1,131 @@
+.storiesSection {
+  padding: 100px 0 200px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.mainHeading {
+  color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.greenBadge {
+      background-color: var(--secondary-color);
+    color: #CCFF00;
+    border-radius: 12px;
+    padding: 0 10px;
+    font-family: Big Shoulders, sans-serif;
+    display: inline-block;
+}
+
+.controlsWrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #000000;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.navBtn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.counterText {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+  min-width: 36px;
+  text-align: center;
+}
+
+.swiperContainer {
+    width: 90%;
+    overflow: visible;
+    margin: 0 auto;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.storiesSwiper {
+  width: 100%;
+  overflow: visible !important;
+}
+
+.swiperSlideItem {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.slideCard {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  background-color: #ffffff;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Active centered slide styling */
+:global(.swiper-slide-active) .slideCard {
+  border-color: #000000 !important;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 1200px) {
+  .mainHeading {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .storiesSection {
+    padding: 70px 0 80px;
+  }
+
+  .mainHeading {
+    font-size: 34px;
+  }
+
+  .greenBadge {
+    border-width: 2px;
+    padding: 1px 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .storiesSection {
+    padding: 50px 0 60px;
+  }
+
+  .mainHeading {
+    font-size: 28px;
+  }
+
+  .greenBadge {
+    border-width: 2px;
+    padding: 0 8px;
+    font-size: 0.85em;
+  }
+}

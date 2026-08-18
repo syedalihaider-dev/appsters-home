@@ -102,7 +102,7 @@ export async function POST(request) {
     const html = `
       <div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;margin:0 auto;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
         <div style="background:#0b0d12;padding:22px 26px;">
-          <h2 style="margin:0;color:#ccff00;font-size:20px;">New LP Lead: Enterprise App Development (v2)</h2>
+          <h2 style="margin:0;color:#CCFF00;font-size:20px;">New LP Lead: Enterprise App Development (v2)</h2>
           <p style="margin:6px 0 0;color:#9aa3ad;font-size:13px;">Submitted via /lp/enterprise-app-development-2</p>
         </div>
         <table style="width:100%;border-collapse:collapse;font-size:14px;color:#111827;">

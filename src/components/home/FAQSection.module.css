@@ -21,7 +21,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: var(--primary-color);
+    background: #CCFF00;
     position: absolute;
     top: 10px;
     left: 0;
