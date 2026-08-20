@@ -233,4 +233,7 @@
   .graphicArea {
     height: 250px;
   }
+  .featureImg {
+      top: 0px!important;
+  }
 }

@@ -29,7 +29,7 @@ export default function CTASectionIndustry() {
                             </p>
 
                             <div className="combo_btn combo_btn_v1">
-                                <ActionButtons text="Free Consultation" />
+                                <ActionButtons  />
                             </div>
                         </div>
                     </div>

@@ -326,7 +326,7 @@
 
 @media screen and (max-width:767px) {
     .ctaSection {
-        padding: 40px 0 0;
+        padding: 40px 0 40px 0;
     }
 
     .transparent_heading {
@@ -386,7 +386,7 @@
 
     .title {
         margin: 15px 0;
-        font-size: 25px;
+        font-size: 50px;
         line-height: 30px;
     }
 
@@ -400,7 +400,7 @@
     .circle {
         width: 90px;
         height: 90px;
-        top: 20px;
+        top: 2px;
         right: 5px;
     }
 

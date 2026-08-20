@@ -34,7 +34,7 @@ export default function StoriesSection() {
               &amp; TECHNOLOGY IN ACTION.
             </h2>
           </div>
-          <div className="col-12 col-md-4 col-lg-3 d-flex justify-content-md-end justify-content-start">
+          <div className="col-12 col-md-4 col-lg-3 d-flex justify-content-md-end justify-content-end">
             <div className={styles.controlsWrap}>
               {/* Prev Button */}
               <button

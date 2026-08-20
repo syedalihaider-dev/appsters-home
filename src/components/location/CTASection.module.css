@@ -341,7 +341,7 @@
 
 @media screen and (max-width:767px) {
     .ctaSection {
-        padding: 40px 0 0;
+        padding: 15px;
     }
 
     .transparent_heading {
@@ -383,6 +383,9 @@
     .statLabel {
         font-size: 12px;
     }
+    .mobileImg {
+        display: none;
+    }
 }
 
 
@@ -422,6 +425,9 @@
     .circle_content {
         width: 65px;
         height: 65px;
+    }
+    .ctaBg {
+        border-radius: 10px!important;
     }
 }
 

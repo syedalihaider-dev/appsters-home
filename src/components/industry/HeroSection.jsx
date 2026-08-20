@@ -91,7 +91,7 @@ export default function HeroSection() {
                                 care. Hire us to see why healthcare providers trust us!
                             </p>
                             <div className="combo_btn">
-                                <ActionButtons text="Free Consultation" />
+                                <ActionButtons />
                             </div>
                             <div className={styles.clutch_rating_badge}>
                                 <Image

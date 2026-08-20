@@ -297,4 +297,10 @@
   .techItem {
     min-width: 100%;
   }
+  .tabBar {
+    justify-content: center;
+}
+.tabBtn {
+    width: 45%;
+}
 }
