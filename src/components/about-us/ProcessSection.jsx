@@ -54,53 +54,69 @@ export default function ProcessSection() {
     }
   ];
 
+  const activeStepRef = useRef(0);
+
   useEffect(() => {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 992px)", () => {
       const wrapper = cardsWrapperRef.current;
-      const cards = gsap.utils.toArray(`.${styles.cardItem}`);
+      const section = sectionRef.current;
+      if (!wrapper || !section) return;
 
-      // Calculate how much we need to scroll the cards wrapper
-      // container height is around 650px (defined in CSS)
-      const containerHeight = 650;
-      const wrapperHeight = wrapper.scrollHeight;
-      const totalMove = wrapperHeight - containerHeight;
+      const getTotalMove = () => {
+        const containerHeight = containerRef.current?.clientHeight || 650;
+        const wrapperHeight = wrapper.scrollHeight;
+        return Math.max(0, wrapperHeight - containerHeight + 80);
+      };
 
-      // Pin the entire section and animate the right side wrapper
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "bottom bottom",
-        end: `+=${wrapperHeight + 500}`, // Creates the scroll distance
-        pin: true,
-        scrub: 1,
-        onUpdate: (self) => {
-          // Move the cards wrapper up as we scroll
-          gsap.to(wrapper, {
-            y: -self.progress * (totalMove + 100),
-            overwrite: true,
-            duration: 0.1
-          });
-
-          // Highlight the active card based on progress
-          const stepIndex = Math.floor(self.progress * (processes.length + 0.5));
-          setActiveStep(Math.min(processes.length - 1, stepIndex));
-        }
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${wrapper.scrollHeight + 300}`,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          scrub: 0.6,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => {
+            const stepIndex = Math.min(
+              processes.length - 1,
+              Math.max(0, Math.floor(self.progress * processes.length))
+            );
+            if (activeStepRef.current !== stepIndex) {
+              activeStepRef.current = stepIndex;
+              setActiveStep(stepIndex);
+            }
+          },
+        },
       });
 
-      // Simple timeline progress sync
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: `+=${wrapperHeight + 500}`,
-        scrub: 1,
-        onUpdate: (self) => {
-          const progressLine = document.querySelector(`.${styles.timelineProgress}`);
-          if (progressLine) {
-            progressLine.style.height = `${self.progress * 100}%`;
-          }
-        }
+      tl.to(wrapper, {
+        y: () => -getTotalMove(),
+        ease: "none",
+        duration: 1,
+        force3D: true,
       });
+
+      const refreshTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+
+      return () => {
+        clearTimeout(refreshTimeout);
+        tl.kill();
+        if (wrapper) {
+          gsap.set(wrapper, { clearProps: "transform" });
+        }
+      };
+    });
+
+    mm.add("(max-width: 991px)", () => {
+      if (cardsWrapperRef.current) {
+        gsap.set(cardsWrapperRef.current, { clearProps: "transform" });
+      }
     });
 
     return () => mm.revert();

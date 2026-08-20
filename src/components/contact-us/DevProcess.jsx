@@ -64,49 +64,84 @@ const processSteps = [
 export default function DevProcess() {
   const sectionRef = useRef(null);
   const stepsWrapperRef = useRef(null);
+  const viewportRef = useRef(null);
   const [activeStep, setActiveStep] = useState(0);
+  const activeStepRef = useRef(0);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 992px)", () => {
       const section = sectionRef.current;
       const wrapper = stepsWrapperRef.current;
-      if (!section || !wrapper) return;
+      const viewport = viewportRef.current;
+      if (!section || !wrapper || !viewport) return;
 
-      const wrapperHeight = wrapper.scrollHeight;
-      const maxScroll = Math.max(0, wrapperHeight - 340);
+      const getMaxScroll = () => {
+        if (!wrapper || !viewport) return 0;
+        const lastItem = wrapper.lastElementChild;
+        if (lastItem) {
+          const itemOffset = lastItem.offsetTop;
+          const itemHeight = lastItem.offsetHeight;
+          const viewportH = viewport.clientHeight;
+          return Math.max(0, itemOffset + itemHeight - viewportH + 20);
+        }
+        return Math.max(0, wrapper.scrollHeight - viewport.clientHeight);
+      };
 
-      // Pin section exactly when its top touches the viewport top
-      const st = ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: `+=${processSteps.length * 420}`,
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        scrub: 1,
-        onUpdate: (self) => {
-          // Scrub the steps list upward proportionally
-          gsap.to(wrapper, {
-            y: -self.progress * maxScroll,
-            overwrite: "auto",
-            ease: "none",
-            duration: 0,
-          });
+      // Native GSAP timeline with scrub
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${processSteps.length * 360}`,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          scrub: 0.6,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => {
+            const rawIndex = self.progress * processSteps.length;
+            const newIndex = Math.min(
+              processSteps.length - 1,
+              Math.max(0, Math.floor(rawIndex))
+            );
 
-          // Derive active step index (0–5) from scroll progress
-          const index = Math.min(
-            processSteps.length - 1,
-            Math.floor(self.progress * processSteps.length)
-          );
-          setActiveStep(index);
+            // Ref-guarded: Only trigger React state update when index actually changes
+            if (activeStepRef.current !== newIndex) {
+              activeStepRef.current = newIndex;
+              setActiveStep(newIndex);
+            }
+          },
         },
       });
 
+      tl.to(wrapper, {
+        y: () => -getMaxScroll(),
+        ease: "none",
+        duration: 1,
+        force3D: true,
+      });
+
+      const refreshTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+
       return () => {
-        st.kill();
+        clearTimeout(refreshTimeout);
+        tl.kill();
+        if (wrapper) {
+          gsap.set(wrapper, { clearProps: "transform" });
+        }
       };
+    });
+
+    mm.add("(max-width: 991px)", () => {
+      if (stepsWrapperRef.current) {
+        gsap.set(stepsWrapperRef.current, { clearProps: "transform" });
+      }
     });
 
     return () => mm.revert();
@@ -129,7 +164,7 @@ export default function DevProcess() {
               </div>
 
               {/* Viewport Box for Moving Steps */}
-              <div className={styles.stepsViewport}>
+              <div className={styles.stepsViewport} ref={viewportRef}>
                 <div className={styles.timelineList} ref={stepsWrapperRef}>
                   <div className={styles.timelineLine} />
                   {processSteps.map((step, index) => (
