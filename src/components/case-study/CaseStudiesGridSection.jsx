@@ -36,6 +36,14 @@ const caseStudiesData = [
     stats: ["33 Species at Launch", "Gold Coin Economy", "Daily Retention Loops"],
     link: "/case-study/my-tank"
   },
+  {
+    id: 4,
+    title: "MINDE APP",
+    image: "/images/case-study/my-tank-virtual.webp",
+    desc: "MINDE is an AI-powered voice companion designed around a simple but powerful idea: Continuity of Self. It allows people to capture thoughts, intentions, reminders, encouragement, and important moments in their own voice, then deliver them back to themselves when they matter most. No typing. No complicated workflows. Just your voice, carried across time.",
+    stats: ["Stay Motivated", "Preserve Memories", "Smart Reminders"],
+    link: "/case-study/mind-app"
+  },
   // {
   //   id: 4,
   //   title: "Where2Map",

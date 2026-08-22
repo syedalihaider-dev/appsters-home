@@ -185,6 +185,68 @@ export const caseStudies = {
       image: "/images/case-study/my-tank/iphone-cta.png",
     }
   },
+  "mind-app": {
+  slug: "mind-app",
+  hero: {
+    subTitle: "MINDE APP",
+    mainTitle: "YOUR VOICE <span class='primarytxt'> YOUR FUTURE.</span>",
+    description: "MINDE is an AI-powered voice companion designed around a simple but powerful idea: Continuity of Self. It allows people to capture thoughts, intentions, reminders, encouragement, and important moments in their own voice, then deliver them back to themselves when they matter most. No typing. No complicated workflows. Just your voice, carried across time.",
+    mobileImage: "/images/case-study/my-tank/banner-mobile.png",
+  },
+  overview: {
+    transparentHeading: "THE PROBLEM",
+    title: "LIFE INTERRUPTS THE CONNECTION WITH OURSELVES.",
+    text1: "People make promises to themselves every day. Start the business. Stay focused. Call Mom. Pay the bill. Don’t give up. But as days become weeks and priorities change, those intentions are easily forgotten.",
+    text2: "Traditional reminder applications preserve information, but they often remove the emotion and context behind why something mattered in the first place. MINDE was created to approach the problem differently. Instead of simply reminding people what they need to do, MINDE helps them reconnect with why they wanted to do it.",
+    image: "/images/case-study/my-tank/my-tank.png",
+  },
+  features: {
+    transparentHeading: "KEY HIGHLIGHTS",
+    title: "THE CORE EXPERIENCE OF MINDE.",
+    list: [
+      {
+        title: "Voice-First Recording",
+        desc: "Capture a thought, reminder, intention, or message naturally using your own voice.",
+        icon: "/images/case-study/icon-01.webp"
+      },
+      {
+        title: "AI Processing",
+        desc: "MINDE processes the spoken input and extracts relevant event details to simplify scheduling.",
+        icon: "/images/case-study/icon-02.webp"
+      },
+      {
+        title: "Future Delivery",
+        desc: "Choose when your message should return, whether that is tomorrow, next week, or further into the future.",
+        icon: "/images/case-study/icon-03.webp"
+      },
+      {
+        title: "Original Voice Playback",
+        desc: "When the moment arrives, users hear the message in their own original voice.",
+        icon: "/images/case-study/icon-04.webp"
+      }
+    ],
+    image: "/images/case-study/my-tank/features.png",
+  },
+  problem: {
+    transparentHeading: "THE SOLUTION",
+    title: "MINDE PUTS YOUR VOICE AT THE CENTER.",
+    text: "The experience was designed around one principle: The voice is the product. Everything else supports it.<br/><br/>Users speak naturally to MINDE. The platform processes the recording, understands the relevant context, allows the user to select when it should return, and preserves the original voice for future playback. The result is a simple loop: Speak → Understand → Schedule → Deliver → Listen. No unnecessary complexity. Just a direct connection between Present You and Future You.",
+    image: "/images/case-study/my-tank/choose-role.png",
+  },
+  solution: {
+    transparentHeading: "THE PHILOSOPHY",
+    title: "CONTINUITY OF SELF.",
+    description: "The person you are today and the person you’ll become tomorrow are still connected. MINDE creates a bridge between them. A message recorded today can become a conversation with your future self weeks, months, or years later. Your voice carries more than words. It carries intention, emotion, encouragement, wisdom, and identity. MINDE preserves that connection across time.",
+    infoText: "The platform offers:",
+    points: [
+      "Voice Recording",
+      "AI Processing",
+      "Future Delivery",
+      "Original Voice Playback"
+    ],
+    image: "/images/case-study/my-tank/iphone-cta.png",
+  }
+},
   "where-2-map": {
     slug: "where-2-map",
     hero: {
