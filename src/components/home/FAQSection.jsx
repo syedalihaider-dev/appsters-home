@@ -3,14 +3,14 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./FAQSection.module.css";
 
-export default function FAQSection() {
+export default function FAQSection({ data }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const faqs = [
+  const defaultFaqs = [
     {
       question: "How long does it take to build a mobile app?",
       answer:
@@ -42,16 +42,18 @@ export default function FAQSection() {
     }
   ];
 
+  const faqs = data?.faqs || defaultFaqs;
+  const subHeading = data?.subHeading || "Frequently Asked Questions";
+  const title = data?.title || 'Your Questions, <br /><span class="primarytxt">Our Clarity</span>.';
+
   return (
     <section className={styles.faqSection}>
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col-sm-12 col-md-5">
             <div className={styles.sec_left}>
-              <p className={styles.sub_heading}>Frequently Asked Questions</p>
-              <h2 className={styles.title}>
-                Your Questions, <br /><span className="primarytxt">Our Clarity</span>.
-              </h2>
+              <p className={styles.sub_heading}>{subHeading}</p>
+              <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h2>
               <div className={styles.diamond}>
                 <iframe
                   src="https://player.vimeo.com/video/1184219827?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&background=1"

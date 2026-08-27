@@ -8,13 +8,67 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import ActionButtons from "@/components/ui/ActionButtons";
+import { caseStudiesData } from "@/data/caseStudiesData";
 
-export default function CaseStudiesSection() {
+const defaultCases = [
+  {
+    image: "/images/case-study/mic2money.webp",
+    title: 'Mic2Money | <span class="primarytxt">Music</span> <span class="primarytxt">Entertainment</span> <span class="primarytxt">Monetization</span>',
+    desc: "Mic2Money is a live music competition platform built for artists who are tired of waiting for permission. Artists enter contests, perform for a real audience, and earn actual cash based on fan votes: no label, no algorithm, no gatekeepers deciding who gets heard. For fans, it's the first platform that makes discovery feel like participation. You don't just listen. You influence outcomes and get rewarded for spotting talent before the rest of the world catches on.",
+    features: ["Live Contest Engine", "Real Cash Payouts", "Fan-Driven Voting"],
+    link: "/case-study/mic-2-money"
+  },
+  {
+    image: "/images/case-study/global-reflex.webp",
+    title: 'Global Reflex | <span class="primarytxt">Gaming</span> <span class="primarytxt">Competitive</span> <span class="primarytxt">Real-Time</span>',
+    desc: "Global Reflex is a precision reaction-time game that strips competitive mobile gaming down to its most honest form. A dot appears. The millisecond timer starts. You tap. Your score is verified, ranked, and placed on a global leaderboard against every other player on the planet. No upgrades that buy you an edge. No luck mechanics. Just the speed of your nervous system, measured accurately, compared fairly, and ranked in real time against the world.",
+    features: ["iOS & Android", "Anti-Cheat Verified", "Global Leaderboards"],
+    link: "/case-study/global-reflex"
+  },
+  {
+    image: "/images/case-study/my-tank-virtual.webp",
+    title: 'My Tank | <span class="primarytxt">Gaming</span> <span class="primarytxt">Interactive</span> <span class="primarytxt">Community</span>',
+    desc: "Virtual LiveWell is a fishing app that gives your catch a life after release. Photograph what you reel in, upload it through the app, and watch an animated version of that exact species swim into your personal virtual tank. Your tank grows with every trip, decorates with every milestone, and connects you to a community of anglers whose collections tell the story of every river, lake, and shoreline they have fished. It turns catch-and-release into something you genuinely look forward to logging.",
+    features: ["33 Species at Launch", "Gold Coin Economy", "Daily Retention Loops"],
+    link: "/case-study/my-tank"
+  },
+  {
+    image: "/images/case-study/where2map.webp",
+    title: 'Where2Map | <span class="primarytxt">Navigation</span> <span class="primarytxt">Smart Mapping</span>',
+    desc: "Where2Map is a smart navigation app designed to make travel simple, fast, and accurate. It helps users find the best routes, explore nearby places, and reach destinations with real-time directions and traffic updates. Built for everyday use, it combines precise mapping with intuitive guidance, ensuring a smooth navigation experience.",
+    features: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"],
+    link: "/case-study/where-2-map"
+  },
+  {
+    image: "/images/case-study/marine-fitness.webp",
+    title: 'Fitness | <span class="primarytxt">Health</span> <span class="primarytxt">Workouts</span>',
+    desc: "Fitness is an all-in-one mobile app designed to help users build healthier routines through personalized workouts, progress tracking, and goal-driven plans. It offers guided exercises, performance insights, and flexible programs tailored to different fitness levels and lifestyles. Built to keep users motivated, the app combines smart tracking with intuitive design.",
+    features: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"],
+    link: "/case-study/marina-fitness"
+  },
+  {
+    image: "/images/case-study/auto-parts.webp",
+    title: 'Auto Parts | <span class="primarytxt">Automotive</span> <span class="primarytxt">E-Commerce</span>',
+    desc: "Auto Parts is a comprehensive mobile app designed to help users quickly find, browse, and purchase genuine vehicle parts with ease. It connects car owners, mechanics, and workshops to a wide range of auto components, ensuring accurate compatibility and reliable sourcing. Built for speed and convenience, the app simplifies part discovery.",
+    features: ["4.8k Job Completed", "12+ Industry Experience", "120+ Won Awards"],
+    link: "/case-study/auto-parts"
+  }
+];
+
+export default function CaseStudiesSection({ data, noSwiper }) {
+  const transparentHeading = data?.transparentHeading || "Case Studies";
+  const subHeading = data?.subHeading || "Case Studies";
+  const title = data?.title || '<span class="primarytxt">Experience the stories.</span> See the results & technology in action.';
+  const description = data?.description || data?.desc;
+
+  // When noSwiper is true (service detail pages), use real case studies from centralized data
+  // Otherwise use data.cases or defaultCases for the homepage Swiper
+  const cases = noSwiper ? caseStudiesData : (data?.cases || defaultCases);
+
   return (
     <section className={styles.caseStudiesSection}>
-      <p className={styles.transparent_heading}>Case Studies</p>
+      <p className={styles.transparent_heading}>{transparentHeading}</p>
       <div className="container">
         <div className={styles.sec_top}>
           <div className={styles.caseStudies_before}>
@@ -27,285 +81,142 @@ export default function CaseStudiesSection() {
             />
           </div>
 
-          <p className={styles.sub_heading}>Case Studies</p>
+          <p className={styles.sub_heading}>{subHeading}</p>
 
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-5">
               <div className={styles.sec_left}>
-                <div className={styles.custom_arrow}>
-                  <div className={`swiper-button-prev ${styles.left} ${styles.dots}`}>
-                    <Image
-                      src="/images/slider-arrow.png"
-                      alt="Arrow Image"
-                      fill
-                      style={{ objectFit: "contain" }}
-                    />
-                  </div>
+                {!noSwiper && (
+                  <div className={styles.custom_arrow}>
+                    <div className={`swiper-button-prev ${styles.left} ${styles.dots}`}>
+                      <Image
+                        src="/images/slider-arrow.png"
+                        alt="Arrow Image"
+                        fill
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
 
-                  <div className={`swiper-button-next ${styles.right} ${styles.dots}`}>
-                    <Image
-                      src="/images/slider-arrow.png"
-                      alt="Arrow Image"
-                      fill
-                      style={{ objectFit: "contain" }}
-                    />
+                    <div className={`swiper-button-next ${styles.right} ${styles.dots}`}>
+                      <Image
+                        src="/images/slider-arrow.png"
+                        alt="Arrow Image"
+                        fill
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
             <div className="col-sm-12 col-md-7">
               <div className={styles.sec_right}>
-                <h2>
-                  <span className="primarytxt">Experience the stories.</span> See the results & technology in action.
-                </h2>
+                <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
+                {description && <p dangerouslySetInnerHTML={{ __html: description }}></p>}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={styles.sec_content}>
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          loop={true}
-          autoplay={{ delay: 3000 }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
-          spaceBetween={20}
-          slidesPerView={2}
-          //centeredSlides={true}
-          //centeredSlidesBounds={true}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            480: { slidesPerView: 2 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 2 },
-          }}
-        >
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-study/mic2money.webp"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      Mic2Money | <span className={styles.primarytxt}>Music</span> <span className={styles.primarytxt}>Entertainment</span> <span className={styles.primarytxt}>Monetization</span>
-                    </h4>
-                    {/* <h5>Music · Entertainment · Monetization</h5> */}
-                    <p className="scroll_block">
-                      Mic2Money is a live music competition platform built for artists who are tired of waiting for permission. Artists enter contests, perform for a real audience, and earn actual cash based on fan votes: no label, no algorithm, no gatekeepers deciding who gets heard. For fans, it's the first platform that makes discovery feel like participation. You don't just listen. You influence outcomes and get rewarded for spotting talent before the rest of the world catches on.
-                    </p>
+
+      {noSwiper ? (
+        /* Grid layout for service detail pages — no Swiper */
+        <div className={`${styles.sec_content} ${styles.gridLayout}`}>
+          {cases.map((item, idx) => (
+            <li key={item.id || idx}>
+              <div className={styles.gridCardLink}>
+                <div className={styles.box}>
+                  <p className={styles.case_heading}>Case</p>
+                  <div className={styles.case_img}>
+                    <Image
+                      src={item.image}
+                      alt={item.title || "Case Image"}
+                      fill
+                      style={{ objectFit: "contain" }}
+                    />
                   </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
-                </div>
-                <ul className={styles.case_features}>
-                  <li>Live Contest Engine</li>
-                  <li>Real Cash Payouts</li>
-                  <li>Fan-Driven Voting</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons text="View Case Study" href="/case-study/mic-2-money" />
+                  <div className={styles.case_info}>
+                    <div className={styles.left}>
+                      <h4 className={styles.title}>{item.title}</h4>
+                      <p className="scroll_block">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                  {item.stats && item.stats.length > 0 && (
+                    <ul className={styles.case_features}>
+                      {item.stats.map((stat, sIdx) => (
+                        <li key={sIdx}>{stat}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="combo_btn">
+                    <ActionButtons text="View Case Study" href={item.link || "#contactForm"} />
+                  </div>
                 </div>
               </div>
             </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-study/global-reflex.webp"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      Global Reflex | <span className={styles.primarytxt}>Mobile Gaming</span> <span className={styles.primarytxt}>Competitive</span> <span className={styles.primarytxt}>Leaderboards</span>
-                    </h4>
-                    {/* <h5>Mobile Gaming · Competitive · Leaderboards</h5> */}
-                    <p className="scroll_block">
-                      Global Reflex is a precision reaction-time game that strips competitive mobile gaming down to its most honest form. A dot appears. The millisecond timer starts. You tap. Your score is verified, ranked, and placed on a global leaderboard against every other player on the planet. No upgrades that buy you an edge. No luck mechanics. Just the speed of your nervous system, measured accurately, compared fairly, and ranked in real time against the world.
-                    </p>
+          ))}
+        </div>
+      ) : (
+        /* Swiper layout for homepage */
+        <div className={styles.sec_content}>
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            loop={true}
+            autoplay={{ delay: 3000 }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            spaceBetween={20}
+            slidesPerView={2}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              480: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 2 },
+            }}
+          >
+            {cases.map((item, idx) => (
+              <SwiperSlide key={idx}>
+                <li>
+                  <div className={styles.box}>
+                    <p className={styles.case_heading}>Case</p>
+                    <div className={styles.case_img}>
+                      <Image
+                        src={item.image}
+                        alt={item.title || "Case Image"}
+                        fill
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
+                    <div className={styles.case_info}>
+                      <div className={styles.left}>
+                        <h4 className={styles.title} dangerouslySetInnerHTML={{ __html: item.title }}></h4>
+                        <p className="scroll_block">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                    {item.features && item.features.length > 0 && (
+                      <ul className={styles.case_features}>
+                        {item.features.map((feat, fIdx) => (
+                          <li key={fIdx}>{feat}</li>
+                        ))}
+                      </ul>
+                    )}
+                    <div className="combo_btn">
+                      <ActionButtons text={item.btnText || "View Case Study"} href={item.link || "#contactForm"} />
+                    </div>
                   </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
-                </div>
-                <ul className={styles.case_features}>
-                  <li>iOS & Android</li>
-                  <li>Anti-Cheat Verified</li>
-                  <li>Global Leaderboards</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons text="View Case Study" href="/case-study/global-reflex" />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-study/my-tank-virtual.webp"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      My Tank | Virtual LiveWell <span className={styles.primarytxt}>Gamification</span> <span className={styles.primarytxt}>Conservation</span> <span className={styles.primarytxt}>Community</span>
-                    </h4>
-                    {/* <h5>Sonic architecture for low-bandwidth entertainment and music. </h5> */}
-                    <p className="scroll_block">
-                      Virtual LiveWell is a fishing app that gives your catch a life after release. Photograph what you reel in, upload it through the app, and watch an animated version of that exact species swim into your personal virtual tank. Your tank grows with every trip, decorates with every milestone, and connects you to a community of anglers whose collections tell the story of every river, lake, and shoreline they have fished. It turns catch-and-release into something you genuinely look forward to logging.
-                    </p>
-                  </div>
-                  {/* <div className={styles.right}>
-                    <p className={styles.rating}>
-                      98%
-                      <span>Generate Revenue</span>
-                    </p>
-                  </div> */}
-                </div>
-                <ul className={styles.case_features}>
-                  <li>33 Species at Launch</li>
-                  <li>Gold Coin Economy</li>
-                  <li>Daily Retention Loops</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons text="View Case Study" href="/case-study/my-tank" />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          {/* <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-study/where2map.webp"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      Where2Map | <span className={styles.primarytxt}>Navigation</span> <span className={styles.primarytxt}>Location Intelligence</span> <span className={styles.primarytxt}>Utility</span>
-                    </h4>
-                    <p className="scroll_block">
-                      Where2Map is a location intelligence platform built for people who need more than a blue dot on a screen. It layers contextual information on top of real-time mapping data so users don't just know where something is, and they understand what it means, what's around it, and whether the trip is worth making. Built for decisions, not just navigation, it's the mapping tool that finally treats location data as something worth acting on rather than just something worth displaying.
-                    </p>
-                  </div>
-                </div>
-                <ul className={styles.case_features}>
-                  <li>Real-Time Mapping</li>
-                  <li>Smart Location Layer</li>
-                  <li>Cross-Platform</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons text="View Case Study" href="/case-study/where-2-map" />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-study/marine-fitness.webp"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      Marina Fitness |
-                      <span className={styles.primarytxt}>Health & Fitness</span> <span className={styles.primarytxt}>Tracking</span> <span className={styles.primarytxt}>Lifestyle</span>
-                    </h4>
-                    <p className="scroll_block">
-                      Marina Fitness is an all-in-one fitness platform built around the user who actually exists, not the idealized version who never misses a session and already knows what they're doing. It personalizes from the very first workout, tracks performance in ways that keep motivation alive rather than turning progress into a spreadsheet, and structures programs around real fitness levels, real schedules, and real goals. The result is a fitness app that earns its place on your home screen past the first month, because it stays relevant as you improve.
-                    </p>
-                  </div>
-                </div>
-                <ul className={styles.case_features}>
-                  <li>Personalized Fitness Programs</li>
-                  <li>Gamification</li>
-                  <li>Goal-Driven Design</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons text="View Case Study" href="/case-study/marina-fitness" />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <p className={styles.case_heading}>Case</p>
-                <div className={styles.case_img}>
-                  <Image
-                    src="/images/case-study/auto-parts.webp"
-                    alt="Case Image"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className={styles.case_info}>
-                  <div className={styles.left}>
-                    <h4 className={styles.title}>
-                      AutoParts | <span className={styles.primarytxt}>Automotive</span> <span className={styles.primarytxt}>E-Commerce</span> <span className={styles.primarytxt}>On-Demand</span>
-                    </h4>
-                    <p className="scroll_block">
-                      AutoParts is an on-demand automotive parts platform that solves the wrong-fitment problem before it starts. Enter your VIN and the catalog filters instantly to parts confirmed compatible with your exact make, model, year, and trim with no cross-referencing, no guesswork, no return shipping on a part that almost fit. Multiple vendors surface in a single search, pricing is transparent, and the checkout flow was built for urgency, because when your car is off the road, the platform's job is to get it back on as fast as possible.
-                    </p>
-                  </div>
-                </div>
-                <ul className={styles.case_features}>
-                  <li>VIN-Based Search</li>
-                  <li>Multi-Vendor Catalog</li>
-                  <li>Fitment Guarantee</li>
-                </ul>
-                <div className="combo_btn">
-                  <ActionButtons text="View Case Study" href="/case-study/auto-parts" />
-                </div>
-              </div>
-            </li>
-          </SwiperSlide> */}
-        </Swiper>
-      </div>
+                </li>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      )}
     </section>
   );
 }

@@ -128,9 +128,41 @@
     text-transform: uppercase;
 }
 
+.sec_right p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dark-color);
+    margin-top: 15px;
+}
+
 .sec_content {
     margin-top: 50px;
     margin-left: 220px;
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.gridLayout li {
+    list-style: none;
+}
+
+.gridCardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.gridLayout .box {
+    width: 100%;
 }
 
 .box {
@@ -585,6 +617,12 @@
 
     .sec_content {
         margin-left: 10px;
+    }
+
+    .gridLayout {
+        grid-template-columns: 1fr;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .box {

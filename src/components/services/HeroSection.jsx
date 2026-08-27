@@ -4,12 +4,19 @@ import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
 import styles from './HeroSection.module.css';
 
-export default function HeroSection() {
+export default function HeroSection({ data }) {
+    const transparentHeading = data?.transparentHeading || "App Deveopment";
+    const subTitle = data?.subTitle || "We Create Apps that Solve Problems";
+    const mainTitle = data?.mainTitle || '<span class="primarytxt">Smart Solutions</span> for Modern Businesses';
+    const description = data?.description || "Our approach focuses on building meaningful digital experiences that improve efficiency, engage users, and generate measurable results.";
+    const mobileImage = data?.mobileImage || "/images/services/banner-mobile.webp";
+    const bannerBg = data?.bannerBg || "/images/banner-bg.png";
+
     return (
         <section className={styles.heroSection}>
-            <span className={styles.transparent_heading}>App Deveopment</span>
+            <span className={styles.transparent_heading}>{transparentHeading}</span>
             <Image
-                src="/images/banner-bg.png"
+                src={bannerBg}
                 alt="Main Banner Image..."
                 fill
                 priority
@@ -21,12 +28,13 @@ export default function HeroSection() {
                 <div className="row align-items-center">
                     <div className="col-sm-12 col-md-6">
                         <div className={styles.banner_left}>
-                            <p className={styles.sub_heading}>We Create Apps that Solve Problems</p>
-                            <h1 className={styles.main_heading}>
-                                <span className="primarytxt">Smart Solutions</span> for Modern Businesses
-                            </h1>
+                            <p className={styles.sub_heading}>{subTitle}</p>
+                            <h1 
+                                className={styles.main_heading}
+                                dangerouslySetInnerHTML={{ __html: mainTitle }}
+                            />
                             <p className={styles.paragraph}>
-                                Our approach focuses on building meaningful digital experiences that improve efficiency, engage users, and generate measurable results.
+                                {description}
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />
@@ -47,8 +55,8 @@ export default function HeroSection() {
                         <div className={styles.banner_right}>
                             <div className={styles.banner_mobile}>
                                 <Image
-                                    src="/images/services/banner-mobile.webp"
-                                    alt="Banner Mobile Image..."
+                                    src={mobileImage}
+                                    alt={`${subTitle} Mobile Image...`}
                                     priority
                                     width={612}
                                     height={598}

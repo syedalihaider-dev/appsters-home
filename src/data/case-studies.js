@@ -186,67 +186,129 @@ export const caseStudies = {
     }
   },
   "mind-app": {
-  slug: "mind-app",
-  hero: {
-    subTitle: "MINDE APP",
-    mainTitle: "YOUR VOICE <span class='primarytxt'> YOUR FUTURE.</span>",
-    description: "MINDE is an AI-powered voice companion designed around a simple but powerful idea: Continuity of Self. It allows people to capture thoughts, intentions, reminders, encouragement, and important moments in their own voice, then deliver them back to themselves when they matter most. No typing. No complicated workflows. Just your voice, carried across time.",
-    mobileImage: "/images/case-study/my-tank/banner-mobile.png",
+    slug: "mind-app",
+    hero: {
+      subTitle: "MINDE APP",
+      mainTitle: "YOUR VOICE <span class='primarytxt'> YOUR FUTURE.</span>",
+      description: "MINDE is an AI-powered voice companion designed around a simple but powerful idea: Continuity of Self. It allows people to capture thoughts, intentions, reminders, encouragement, and important moments in their own voice, then deliver them back to themselves when they matter most. No typing. No complicated workflows. Just your voice, carried across time.",
+      mobileImage: "/images/case-study/my-tank/banner-mobile.png",
+    },
+    overview: {
+      transparentHeading: "THE PROBLEM",
+      title: "LIFE INTERRUPTS THE CONNECTION WITH OURSELVES.",
+      text1: "People make promises to themselves every day. Start the business. Stay focused. Call Mom. Pay the bill. Don’t give up. But as days become weeks and priorities change, those intentions are easily forgotten.",
+      text2: "Traditional reminder applications preserve information, but they often remove the emotion and context behind why something mattered in the first place. MINDE was created to approach the problem differently. Instead of simply reminding people what they need to do, MINDE helps them reconnect with why they wanted to do it.",
+      image: "/images/case-study/my-tank/my-tank.png",
+    },
+    features: {
+      transparentHeading: "KEY HIGHLIGHTS",
+      title: "THE CORE EXPERIENCE OF MINDE.",
+      list: [
+        {
+          title: "Voice-First Recording",
+          desc: "Capture a thought, reminder, intention, or message naturally using your own voice.",
+          icon: "/images/case-study/icon-01.webp"
+        },
+        {
+          title: "AI Processing",
+          desc: "MINDE processes the spoken input and extracts relevant event details to simplify scheduling.",
+          icon: "/images/case-study/icon-02.webp"
+        },
+        {
+          title: "Future Delivery",
+          desc: "Choose when your message should return, whether that is tomorrow, next week, or further into the future.",
+          icon: "/images/case-study/icon-03.webp"
+        },
+        {
+          title: "Original Voice Playback",
+          desc: "When the moment arrives, users hear the message in their own original voice.",
+          icon: "/images/case-study/icon-04.webp"
+        }
+      ],
+      image: "/images/case-study/my-tank/features.png",
+    },
+    problem: {
+      transparentHeading: "THE SOLUTION",
+      title: "MINDE PUTS YOUR VOICE AT THE CENTER.",
+      text: "The experience was designed around one principle: The voice is the product. Everything else supports it.<br/><br/>Users speak naturally to MINDE. The platform processes the recording, understands the relevant context, allows the user to select when it should return, and preserves the original voice for future playback. The result is a simple loop: Speak → Understand → Schedule → Deliver → Listen. No unnecessary complexity. Just a direct connection between Present You and Future You.",
+      image: "/images/case-study/my-tank/choose-role.png",
+    },
+    solution: {
+      transparentHeading: "THE PHILOSOPHY",
+      title: "CONTINUITY OF SELF.",
+      description: "The person you are today and the person you’ll become tomorrow are still connected. MINDE creates a bridge between them. A message recorded today can become a conversation with your future self weeks, months, or years later. Your voice carries more than words. It carries intention, emotion, encouragement, wisdom, and identity. MINDE preserves that connection across time.",
+      infoText: "The platform offers:",
+      points: [
+        "Voice Recording",
+        "AI Processing",
+        "Future Delivery",
+        "Original Voice Playback"
+      ],
+      image: "/images/case-study/my-tank/iphone-cta.png",
+    }
   },
-  overview: {
-    transparentHeading: "THE PROBLEM",
-    title: "LIFE INTERRUPTS THE CONNECTION WITH OURSELVES.",
-    text1: "People make promises to themselves every day. Start the business. Stay focused. Call Mom. Pay the bill. Don’t give up. But as days become weeks and priorities change, those intentions are easily forgotten.",
-    text2: "Traditional reminder applications preserve information, but they often remove the emotion and context behind why something mattered in the first place. MINDE was created to approach the problem differently. Instead of simply reminding people what they need to do, MINDE helps them reconnect with why they wanted to do it.",
-    image: "/images/case-study/my-tank/my-tank.png",
+  "story-sign": {
+    slug: "story-sign",
+    hero: {
+      subTitle: "STORYSIGN",
+      mainTitle: "Digital Autographs. <span class='primarytxt'>Real Connections.</span>",
+      description: "StorySign brings the personal experience of author autographs into the digital reading world, allowing readers to request personalized signatures from authors and keep their signed eBooks in one digital library.",
+      mobileImage: "/images/case-study/my-tank/banner-mobile.png",
+    },
+    overview: {
+      transparentHeading: "THE IDEA BEHIND THE STORIESIGN APP.",
+      title: "StorySign was developed to bridge the gap between traditional signed books and digital reading.",
+      text1: "Readers can upload their existing PDF eBooks, request a personalized autograph from an author, and receive their signed edition digitally.",
+      text2: "For authors, the platform provides a dedicated space to manage autograph requests and create meaningful connections with their readers.",
+      image: "/images/case-study/my-tank/my-tank.png",
+    },
+    features: {
+      transparentHeading: "SOME KEY HIGHLIGHTS OF THE APP.",
+      title: "A DIGITAL EXPERIENCE BUILT AROUND AUTHORS & READERS.",
+      list: [
+        {
+          title: "Personalized Autograph Requests",
+          desc: "Readers can request personalized digital signatures from participating authors.",
+          icon: "/images/case-study/icon-01.webp"
+        },
+        {
+          title: "Author Profiles",
+          desc: "Readers can discover authors, biographies, and available autograph options.",
+          icon: "/images/case-study/icon-02.webp"
+        },
+        {
+          title: "Request Management",
+          desc: "Authors can review, accept, or decline incoming autograph requests.",
+          icon: "/images/case-study/icon-03.webp"
+        },
+        {
+          title: "Digital Library",
+          desc: "Readers can access and manage their completed signed eBooks.",
+          icon: "/images/case-study/icon-04.webp"
+        }
+      ],
+      image: "/images/case-study/my-tank/features.png",
+    },
+    problem: {
+      transparentHeading: "THE PROBLEM.",
+      title: "MAKING DIGITAL READING FEEL PERSONAL AGAIN.",
+      text: "Digital books are convenient, but they often lack the personal connection associated with a signed physical book.<br/><br/>Traditional author signings are also limited by location, events, and availability.<br/><br/>StorySign was created to bring that personal experience into a digital environment.",
+      image: "/images/case-study/my-tank/choose-role.png",
+    },
+    solution: {
+      transparentHeading: "PRESERVATION, CONNECTION & DIGITAL READING.",
+      title: "THE TECHNOLOGY BEHIND STORIESIGN.",
+      description: "StorySign takes something deeply personal from traditional publishing, the author’s signature, and gives it a place in the digital world.<br/><br/>Instead of a signed book requiring a physical meeting, StorySign creates a digital connection between the author and reader.<br/><br/>The book is digital.<br/>The connection remains personal.",
+      infoText: "Core Technology & Platform",
+      points: [
+        "iOS / SwiftUI",
+        "Firebase",
+        "Secure Authentication",
+        "PDF Management"
+      ],
+      image: "/images/case-study/my-tank/iphone-cta.png",
+    }
   },
-  features: {
-    transparentHeading: "KEY HIGHLIGHTS",
-    title: "THE CORE EXPERIENCE OF MINDE.",
-    list: [
-      {
-        title: "Voice-First Recording",
-        desc: "Capture a thought, reminder, intention, or message naturally using your own voice.",
-        icon: "/images/case-study/icon-01.webp"
-      },
-      {
-        title: "AI Processing",
-        desc: "MINDE processes the spoken input and extracts relevant event details to simplify scheduling.",
-        icon: "/images/case-study/icon-02.webp"
-      },
-      {
-        title: "Future Delivery",
-        desc: "Choose when your message should return, whether that is tomorrow, next week, or further into the future.",
-        icon: "/images/case-study/icon-03.webp"
-      },
-      {
-        title: "Original Voice Playback",
-        desc: "When the moment arrives, users hear the message in their own original voice.",
-        icon: "/images/case-study/icon-04.webp"
-      }
-    ],
-    image: "/images/case-study/my-tank/features.png",
-  },
-  problem: {
-    transparentHeading: "THE SOLUTION",
-    title: "MINDE PUTS YOUR VOICE AT THE CENTER.",
-    text: "The experience was designed around one principle: The voice is the product. Everything else supports it.<br/><br/>Users speak naturally to MINDE. The platform processes the recording, understands the relevant context, allows the user to select when it should return, and preserves the original voice for future playback. The result is a simple loop: Speak → Understand → Schedule → Deliver → Listen. No unnecessary complexity. Just a direct connection between Present You and Future You.",
-    image: "/images/case-study/my-tank/choose-role.png",
-  },
-  solution: {
-    transparentHeading: "THE PHILOSOPHY",
-    title: "CONTINUITY OF SELF.",
-    description: "The person you are today and the person you’ll become tomorrow are still connected. MINDE creates a bridge between them. A message recorded today can become a conversation with your future self weeks, months, or years later. Your voice carries more than words. It carries intention, emotion, encouragement, wisdom, and identity. MINDE preserves that connection across time.",
-    infoText: "The platform offers:",
-    points: [
-      "Voice Recording",
-      "AI Processing",
-      "Future Delivery",
-      "Original Voice Playback"
-    ],
-    image: "/images/case-study/my-tank/iphone-cta.png",
-  }
-},
   "where-2-map": {
     slug: "where-2-map",
     hero: {
