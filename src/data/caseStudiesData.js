@@ -34,7 +34,7 @@ export const caseStudiesData = [
   {
     id: 5,
     title: "STORYSIGN",
-    image: "/images/case-study/storysign-banner.png",
+    image: "/images/case-study/storysign.png",
     desc: "StorySign brings the personal experience of author autographs into the digital reading world, allowing readers to request personalized signatures from authors and keep their signed eBooks in one digital library.",
     stats: ["Digital Autographs", "Real Connections"],
     link: "/case-study/storysign"
