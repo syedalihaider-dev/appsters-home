@@ -191,14 +191,14 @@ export const caseStudies = {
       subTitle: "MINDE APP",
       mainTitle: "YOUR VOICE <span class='primarytxt'> YOUR FUTURE.</span>",
       description: "MINDE is an AI-powered voice companion designed around a simple but powerful idea: Continuity of Self. It allows people to capture thoughts, intentions, reminders, encouragement, and important moments in their own voice, then deliver them back to themselves when they matter most. No typing. No complicated workflows. Just your voice, carried across time.",
-      mobileImage: "/images/case-study/my-tank/banner-mobile.png",
+      mobileImage: "/images/case-study/minde-banner.png",
     },
     overview: {
       transparentHeading: "THE PROBLEM",
       title: "LIFE INTERRUPTS THE CONNECTION WITH OURSELVES.",
       text1: "People make promises to themselves every day. Start the business. Stay focused. Call Mom. Pay the bill. Don’t give up. But as days become weeks and priorities change, those intentions are easily forgotten.",
       text2: "Traditional reminder applications preserve information, but they often remove the emotion and context behind why something mattered in the first place. MINDE was created to approach the problem differently. Instead of simply reminding people what they need to do, MINDE helps them reconnect with why they wanted to do it.",
-      image: "/images/case-study/my-tank/my-tank.png",
+      image: "/images/case-study/minde-banner.png",
     },
     features: {
       transparentHeading: "KEY HIGHLIGHTS",
@@ -231,7 +231,7 @@ export const caseStudies = {
       transparentHeading: "THE SOLUTION",
       title: "MINDE PUTS YOUR VOICE AT THE CENTER.",
       text: "The experience was designed around one principle: The voice is the product. Everything else supports it.<br/><br/>Users speak naturally to MINDE. The platform processes the recording, understands the relevant context, allows the user to select when it should return, and preserves the original voice for future playback. The result is a simple loop: Speak → Understand → Schedule → Deliver → Listen. No unnecessary complexity. Just a direct connection between Present You and Future You.",
-      image: "/images/case-study/my-tank/choose-role.png",
+      image: "/images/case-study/minde-banner.png",
     },
     solution: {
       transparentHeading: "THE PHILOSOPHY",
@@ -244,7 +244,7 @@ export const caseStudies = {
         "Future Delivery",
         "Original Voice Playback"
       ],
-      image: "/images/case-study/my-tank/iphone-cta.png",
+      image: "/images/case-study/minde-banner.png",
     }
   },
   "story-sign": {
@@ -253,14 +253,14 @@ export const caseStudies = {
       subTitle: "STORYSIGN",
       mainTitle: "Digital Autographs. <span class='primarytxt'>Real Connections.</span>",
       description: "StorySign brings the personal experience of author autographs into the digital reading world, allowing readers to request personalized signatures from authors and keep their signed eBooks in one digital library.",
-      mobileImage: "/images/case-study/my-tank/banner-mobile.png",
+      mobileImage: "/images/case-study/storysign-banner.png",
     },
     overview: {
       transparentHeading: "THE IDEA BEHIND THE STORIESIGN APP.",
       title: "StorySign was developed to bridge the gap between traditional signed books and digital reading.",
       text1: "Readers can upload their existing PDF eBooks, request a personalized autograph from an author, and receive their signed edition digitally.",
       text2: "For authors, the platform provides a dedicated space to manage autograph requests and create meaningful connections with their readers.",
-      image: "/images/case-study/my-tank/my-tank.png",
+      image: "/images/case-study/storysign-banner.png",
     },
     features: {
       transparentHeading: "SOME KEY HIGHLIGHTS OF THE APP.",
@@ -293,7 +293,7 @@ export const caseStudies = {
       transparentHeading: "THE PROBLEM.",
       title: "MAKING DIGITAL READING FEEL PERSONAL AGAIN.",
       text: "Digital books are convenient, but they often lack the personal connection associated with a signed physical book.<br/><br/>Traditional author signings are also limited by location, events, and availability.<br/><br/>StorySign was created to bring that personal experience into a digital environment.",
-      image: "/images/case-study/my-tank/choose-role.png",
+      image: "/images/case-study/storysign-banner.png",
     },
     solution: {
       transparentHeading: "PRESERVATION, CONNECTION & DIGITAL READING.",
@@ -306,7 +306,7 @@ export const caseStudies = {
         "Secure Authentication",
         "PDF Management"
       ],
-      image: "/images/case-study/my-tank/iphone-cta.png",
+      image: "/images/case-study/storysign-banner.png",
     }
   },
   "where-2-map": {

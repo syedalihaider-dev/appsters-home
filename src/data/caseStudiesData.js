@@ -26,7 +26,7 @@ export const caseStudiesData = [
   {
     id: 4,
     title: "MINDE APP",
-    image: "/images/case-study/my-tank-virtual.webp",
+    image: "/images/case-study/minde.png",
     desc: "MINDE is an AI-powered voice companion designed around a simple but powerful idea: Continuity of Self. It allows people to capture thoughts, intentions, reminders, encouragement, and important moments in their own voice, then deliver them back to themselves when they matter most. No typing. No complicated workflows. Just your voice, carried across time.",
     stats: ["Stay Motivated", "Preserve Memories", "Smart Reminders"],
     link: "/case-study/mind-app"
@@ -34,7 +34,7 @@ export const caseStudiesData = [
   {
     id: 5,
     title: "STORYSIGN",
-    image: "/images/case-study/my-tank-virtual.webp",
+    image: "/images/case-study/storysign-banner.png",
     desc: "StorySign brings the personal experience of author autographs into the digital reading world, allowing readers to request personalized signatures from authors and keep their signed eBooks in one digital library.",
     stats: ["Digital Autographs", "Real Connections"],
     link: "/case-study/storysign"
