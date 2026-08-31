@@ -13,6 +13,10 @@
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+.header h2 span {
+  font-family: 'Big Shoulders', sans-serif;
+  color: #cf0;
+}
 
 .highlight {
   background-color: var(--secondary-color);

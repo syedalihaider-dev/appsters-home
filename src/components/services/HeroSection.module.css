@@ -36,7 +36,7 @@
 }
 
 .sub_heading {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
     font-weight: var(--font-500);
     font-family: 'Big Shoulders', sans-serif;
@@ -45,8 +45,8 @@
 
 .main_heading {
     letter-spacing: -3px;
-    font-size: 95px;
-    line-height: 95px;
+    font-size: 75px;
+    line-height: 75px;
     font-weight: var(--font-700);
     text-transform: uppercase;
     margin: 25px 0 15px;

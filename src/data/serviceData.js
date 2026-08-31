@@ -2302,82 +2302,73 @@ export const serviceData = {
   "mobile-app-development-company": {
     "slug": "mobile-app-development-company",
     "title": "Mobile App Development",
-    "seoTitle": "",
-    "seoDesc": "",
+    "seoTitle": "Best Mobile App Development Company in USA - Appsters",
+    "seoDesc": "Want to develop your mobile app without much hassle and coding knowledge? Appsters is here to help you develop the best mobile app. Hire best mobile app developers!",
     "icon": "/images/services/custom-mobile-icon.webp",
     "bg": "/images/services/custom-mobile-app-development.webp",
-    "cardDesc": "Top App Developers in the USA",
+    "cardDesc": "Appsters builds apps optimized for scaling and long-term performance. Our mobile app development services combine product thinking with tech-driven production, delivering software that users love and businesses rely on. From startups validating their first MVPs to enterprises expanding global ecosystems, we engineer custom app development solutions that integrate dynamically into your digital infrastructure.",
     "hero": {
-      "subTitle": "Meta Title: Best Mobile App Development Company in USA - Appsters",
-      "mainTitle": "Meta Description: Want to develop your mobile app without much hassle and coding knowledge? Appsters is here to help you develop the best mobile app. Hire best mobile app developers!",
-      "description": "Top App Developers in the USA",
+      "subTitle": "Top App Developers in the USA",
+      "mainTitle": "Top-Grade Mobile App Development Company.",
+      "description": "Appsters builds apps optimized for scaling and long-term performance. Our mobile app development services combine product thinking with tech-driven production, delivering software that users love and businesses rely on. From startups validating their first MVPs to enterprises expanding global ecosystems, we engineer custom app development solutions that integrate dynamically into your digital infrastructure.",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "Mobile App Development"
     },
     "endToEndSection": {
-      "title": "Top-Grade Mobile App Development Company.",
-      "description": "Appsters builds apps optimized for scaling and long-term performance. Our mobile app development services combine product thinking with tech-driven production, delivering software that users love and businesses rely on. From startups validating their first MVPs to enterprises expanding global ecosystems, we engineer custom app development solutions that integrate dynamically into your digital infrastructure.",
+      "title": "End-to-End Mobile App Development Services Redefining The Future.",
+      "description": "Our service stack covers every major platform and framework, ensuring your business and disruptive ideas can move from concept to launch without friction and glitches. Our developers integrate modern frameworks, data layers, and security-first architecture.",
       "cards": [
         {
           "id": 1,
-          "title": "End-to-End Mobile App Development Services Redefining The Future.",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
-          "desc": "Our service stack covers every major platform and framework, ensuring your business and disruptive ideas can move from concept to launch without friction and glitches. Our developers integrate modern frameworks, data layers, and security-first architecture.",
-          "buttonText": "Get a Quote",
-          "buttonHref": "#contactForm"
-        },
-        {
-          "id": 2,
           "title": "Android App Development",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
+          "icon": "/images/services/android-icon.webp",
+          "bg": "/images/services/android-app-development.webp",
           "desc": "Appsters delivers custom Android app development services that combine native performance with modular architecture. Our engineers use Kotlin, Jetpack, and scalable APIs to build Android apps that handle complex workloads while maintaining seamless UI performance across devices. Each release is built for stability, scalability, and security, ready for millions of active users.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
-          "id": 3,
+          "id": 2,
           "title": "iOS App Development",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
+          "icon": "/images/services/ios-icon.webp",
+          "bg": "/images/services/ios-app-development.webp",
           "desc": "As a leading iOS app development company, we specialize in creating high-performance iPhone and iPad applications that reflect Apple’s design precision. Our teams leverage Swift, Xcode, and ARKit frameworks to deliver immersive, responsive iOS experiences. We focus on optimizing data flow, UX consistency, and App Store compliance for long-term success.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
-          "id": 4,
+          "id": 3,
           "title": "React Native App Development",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
+          "icon": "/images/services/react-native-icon.webp",
+          "bg": "/images/services/react-native-app-development.webp",
           "desc": "Our React Native app developers build cross-platform apps that combine native performance with rapid deployment cycles. Using JavaScript and TypeScript frameworks, we deliver products that reduce development costs by up to 40% while maintaining native-like responsiveness. Perfect for startups and fast-scaling enterprises that prioritize time-to-market.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
-          "id": 5,
+          "id": 4,
           "title": "Flutter App Development",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
+          "icon": "/images/services/flutter-icon.webp",
+          "bg": "/images/services/flutter-app-development.webp",
           "desc": "Our Flutter app developers craft stunning, single-codebase apps optimized for Android and iOS. Using Dart, we deliver smooth UI animations, quick rendering, and reliable backend integrations. The result? Apps that launch faster, perform better, and require minimal maintenance over their lifecycle and product development",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
-          "id": 6,
+          "id": 5,
           "title": "Mobile Game App Development",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
           "desc": "As a game app development company, Appsters designs high-performance, GPU-optimized games across genres such as arcade, simulation, and multiplayer. Our developers use Unity and Unreal Engine to deliver smooth frame rates, dynamic environments, and high replayability. Every title we build is engineered to drive engagement and monetization.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
-          "id": 7,
+          "id": 6,
           "title": "Cross-Platform App Development",
-          "icon": "/images/services/custom-mobile-icon.webp",
-          "bg": "/images/services/custom-mobile-app-development.webp",
+          "icon": "/images/services/cross-platform-icon.webp",
+          "bg": "/images/services/cross-platform-app-development.webp",
           "desc": "We create cross-platform mobile apps that combine efficiency and reach. Built with hybrid frameworks such as Ionic, Xamarin, and React Native, our apps deliver a unified experience across devices. From backend API orchestration to cloud deployment, every layer is designed for speed, stability, and scalability.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
@@ -3492,18 +3483,27 @@ export const serviceData = {
     "cardDesc": "End-To-End Hybrid App Development Services That Drive Real OutcomesFrom ideation to post-launch optimization, we offer comprehensive hybrid development services tailored to address every modern business challenge. Our hybrid app development services are structured to achieve measurable results that are fast, stable, and scalable.",
     "hero": {
       "subTitle": "Leading Hybrid App Developers",
-      "mainTitle": "Hybrid App Development Company Building Unified App Experiences.When a single product needs to perform across multiple platforms, it needs smart engineering. Our Hybrid application development services are designed to help brands scale faster with unified codebases, seamless performance, and consistent user journeys. With Appsters’ Hybrid app solutions, you can accelerate time to market, reduce maintenance costs, and maintain platform parity.",
-      "description": "End-To-End Hybrid App Development Services That Drive Real OutcomesFrom ideation to post-launch optimization, we offer comprehensive hybrid development services tailored to address every modern business challenge. Our hybrid app development services are structured to achieve measurable results that are fast, stable, and scalable.",
+      "mainTitle": "Hybrid App Development Company Building Unified App Experiences.",
+      "description": "When a single product needs to perform across multiple platforms, it needs smart engineering. Our Hybrid application development services are designed to help brands scale faster with unified codebases, seamless performance, and consistent user journeys. With Appsters’ Hybrid app solutions, you can accelerate time to market, reduce maintenance costs, and maintain platform parity.",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "Hybrid App Development"
     },
     "endToEndSection": {
-      "title": "Hybrid App Consultation",
-      "description": "Before a single line of code is written, our Hybrid app developers evaluate your business model, audience, and technical goals to shape a hybrid strategy that actually performs. From framework selection to architecture validation, our consultation process ensures each decision supports long-term adaptability, speed, and user satisfaction.",
+      "title": "End-To-End Hybrid App Development Services That Drive Real Outcomes",
+      "description": "From ideation to post-launch optimization, we offer comprehensive hybrid development services tailored to address every modern business challenge. Our hybrid app development services are structured to achieve measurable results that are fast, stable, and scalable.",
       "cards": [
         {
           "id": 1,
+          "title": "Hybrid App Consultation",
+          "icon": "/images/services/ecommerce-icon.webp",
+          "bg": "/images/services/ecommerce-app-development.webp",
+          "desc": "Before a single line of code is written, our Hybrid app developers evaluate your business model, audience, and technical goals to shape a hybrid strategy that actually performs. From framework selection to architecture validation, our consultation process ensures each decision supports long-term adaptability, speed, and user satisfaction.",
+          "buttonText": "Get a Quote",
+          "buttonHref": "#contactForm"
+        },
+        {
+          "id": 2,
           "title": "UI/UX Design For Hybrid Apps",
           "icon": "/images/services/ecommerce-icon.webp",
           "bg": "/images/services/ecommerce-app-development.webp",
@@ -3512,7 +3512,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 2,
+          "id": 3,
           "title": "Hybrid App Development",
           "icon": "/images/services/ecommerce-icon.webp",
           "bg": "/images/services/ecommerce-app-development.webp",
@@ -3521,7 +3521,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 3,
+          "id": 4,
           "title": "Hybrid App QA & Testing",
           "icon": "/images/services/ecommerce-icon.webp",
           "bg": "/images/services/ecommerce-app-development.webp",
@@ -3530,7 +3530,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 4,
+          "id": 5,
           "title": "Hybrid App Maintenance",
           "icon": "/images/services/ecommerce-icon.webp",
           "bg": "/images/services/ecommerce-app-development.webp",
@@ -3539,7 +3539,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 5,
+          "id": 6,
           "title": "HTML5 Development",
           "icon": "/images/services/ecommerce-icon.webp",
           "bg": "/images/services/ecommerce-app-development.webp",
@@ -5244,58 +5244,67 @@ export const serviceData = {
     "cardDesc": "2D Game Development Services Designed for Immersive Mobile Experiences.",
     "hero": {
       "subTitle": "#1 2D Game Developers in the USA.",
-      "mainTitle": "2D Game Development Company That Turns Ideas into Playing Success.Great games don’t happen by accident; they’re engineered with strategy, story, and scalability in mind. Appsters stands as a 2D game development company focused on building high-performance 2D game apps that win users, retain engagement, and drive measurable ROI.",
-      "description": "2D Game Development Services Designed for Immersive Mobile Experiences.",
+      "mainTitle": "2D Game Development Company That Turns Ideas into Playing Success.",
+      "description": "Great games don’t happen by accident; they’re engineered with strategy, story, and scalability in mind. Appsters stands as a 2D game development company focused on building high-performance 2D game apps that win users, retain engagement, and drive measurable ROI.",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "2D Game Development"
     },
     "endToEndSection": {
-      "title": "Our 2D game development services bring together performance-driven design and real-world playability. From visuals to logic, every layer of development is planned to help you launch games that feel premium, run smoothly, and deliver lasting player retention.",
-      "description": "Visual Conceptualization",
+      "title": "2D Game Development Services Designed for Immersive Mobile Experiences.",
+      "description": "Our 2D game development services bring together performance-driven design and real-world playability. From visuals to logic, every layer of development is planned to help you launch games that feel premium, run smoothly, and deliver lasting player retention.",
       "cards": [
         {
           "id": 1,
-          "title": "Every hit game begins with a clear visual story. Our 2D game developers turn your concept into structured visual blueprints that define style, flow, and engagement direction. We analyze audience behavior, gameplay rhythm, and brand identity to shape visual elements that instantly connect. The result? A consistent art direction that builds recognition and accelerates user immersion from the very first frame.",
+          "title": "Visual Conceptualization",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
-          "desc": "2D Character Design & Animation",
+          "desc": "Every hit game begins with a clear visual story. Our 2D game developers turn your concept into structured visual blueprints that define style, flow, and engagement direction. We analyze audience behavior, gameplay rhythm, and brand identity to shape visual elements that instantly connect. The result? A consistent art direction that builds recognition and accelerates user immersion from the very first frame.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 2,
-          "title": "Characters drive the emotional heartbeat of any game. Our 2D game animators build expressive characters that look dynamic, move naturally, and enhance gameplay response. From movement systems to player feedback animations, every frame supports interactive storytelling. We ensure the motion feels responsive across all devices, creating believable personalities that elevate gameplay without breaking its pace or performance.",
+          "title": "2D Character Design & Animation",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
-          "desc": "2D Environment Design",
+          "desc": "Characters drive the emotional heartbeat of any game. Our 2D game animators build expressive characters that look dynamic, move naturally, and enhance gameplay response. From movement systems to player feedback animations, every frame supports interactive storytelling. We ensure the motion feels responsive across all devices, creating believable personalities that elevate gameplay without breaking its pace or performance.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 3,
-          "title": "A game world is only as strong as its setting. Our 2D game environment design focuses on functional beauty, vivid yet optimized spaces that set the tone and maintain frame-rate stability. We integrate lighting layers, parallax depth, and modular backgrounds to deliver worlds that feel expansive without being heavy on device performance. The outcome is visually engaging gameplay with seamless user flow.",
+          "title": "2D Environment Design",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
-          "desc": "2D Gameplay Mechanics",
+          "desc": "A game world is only as strong as its setting. Our 2D game environment design focuses on functional beauty, vivid yet optimized spaces that set the tone and maintain frame-rate stability. We integrate lighting layers, parallax depth, and modular backgrounds to deliver worlds that feel expansive without being heavy on device performance. The outcome is visually engaging gameplay with seamless user flow.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 4,
-          "title": "Game engagement depends on balance, timing, and replayability. Our team engineers mechanics for 2D games that are responsive, precise, and endlessly engaging. Every movement, trigger, and reward system is designed to enhance interaction flow. From intuitive control setups to smart difficulty scaling, we make sure gameplay feels smooth, fair, and impossible to put down.",
+          "title": "2D Gameplay Mechanics",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
-          "desc": "Scripting & Logic Development",
+          "desc": "Game engagement depends on balance, timing, and replayability. Our team engineers mechanics for 2D games that are responsive, precise, and endlessly engaging. Every movement, trigger, and reward system is designed to enhance interaction flow. From intuitive control setups to smart difficulty scaling, we make sure gameplay feels smooth, fair, and impossible to put down.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 5,
-          "title": "Behind every smooth experience lies bulletproof logic. Our developers specialize in making logic for 2D games that power fluid gameplay and responsive systems. From input handling to physics simulations, every script is lightweight yet stable. We design intelligent frameworks that adapt across levels, supporting multiplayer sync, AI behavior, and custom mechanics that define player experience.",
+          "title": "Scripting & Logic Development",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
-          "desc": "Cross-Platform Compatibility",
+          "desc": "Behind every smooth experience lies bulletproof logic. Our developers specialize in making logic for 2D games that power fluid gameplay and responsive systems. From input handling to physics simulations, every script is lightweight yet stable. We design intelligent frameworks that adapt across levels, supporting multiplayer sync, AI behavior, and custom mechanics that define player experience.",
+          "buttonText": "Get a Quote",
+          "buttonHref": "#contactForm"
+        },
+        {
+          "id": 6,
+          "title": "Cross-Platform Compatibility",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Launching on multiple devices shouldn’t mean sacrificing quality. Our cross-platform 2D games run seamlessly across iOS, Android, and desktop ecosystems. With adaptive design layers, resolution management, and hardware optimization, we ensure consistent frame rates and gameplay across every screen. It’s about scalability that doesn’t compromise user satisfaction or gameplay precision.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         }
@@ -5641,7 +5650,7 @@ export const serviceData = {
     "process": {
       "subHeading": "8 Steps. 1 Powerful Outcome.",
       "title": "Our Interactive 2D Game Development Process",
-      "description": "Building a game that truly performs demands structure and a tested pipeline. Appsters’ 2D game development service integrates design, engineering, testing, and live iterations. As a 2D game development company, we follow a rigorous process so your 2D game app performs reliably, engages users deeply, and remains maintainable long after launch.",
+      "description": "Building a game that truly performs demands structure and a tested pipeline. Appsters’ 2D game development service integrates design, engineering, testing, and live iterations. As a 2D game development company, we follow a rigorous process so your 2D game app performs reliably, engages users deeply, and remains maintainable long after launch",
       "steps": [
         {
           "title": "Game Idea & Research",
@@ -5822,18 +5831,27 @@ export const serviceData = {
     "cardDesc": "3D Game Development Services That Redefine Interactive Worlds.The future of gaming is immersive, adaptive, and limitless. Our 3D game development services span end-to-end production, design, and optimization to help your game reach its highest visual and technical potential.",
     "hero": {
       "subTitle": "3D Game Developers in the USA",
-      "mainTitle": "Break Dimensions & Realities With Our 3D Game Development Company.Creating extraordinary 3D worlds takes more than technical skill; it demands an understanding of how visual depth, movement, and interaction come together to form experiences that feel alive. As a 3D game development company, Appsters specializes in delivering scalable and high-performance 3D game apps that perform seamlessly across platforms and genres.",
-      "description": "3D Game Development Services That Redefine Interactive Worlds.The future of gaming is immersive, adaptive, and limitless. Our 3D game development services span end-to-end production, design, and optimization to help your game reach its highest visual and technical potential.",
+      "mainTitle": "Break Dimensions & Realities With Our 3D Game Development Company.",
+      "description": "Creating extraordinary 3D worlds takes more than technical skill; it demands an understanding of how visual depth, movement, and interaction come together to form experiences that feel alive. As a 3D game development company, Appsters specializes in delivering scalable and high-performance 3D game apps that perform seamlessly across platforms and genres.",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "3D Game Development"
     },
     "endToEndSection": {
-      "title": "Full-Cycle Development",
-      "description": "Behind every great experience is a flawless process that’s built for longevity. Our 3D game developers manage the complete pipeline, from ideation and prototyping to deployment and live support with optimized architecture, adaptable codebases, meticulous QA integration, and scalable systems that adapt to evolving game mechanics and platforms. Each milestone is engineered for sustainability, ensuring stable performance and a refined player experience across every stage of development.",
+      "title": "3D Game Development Services That Redefine Interactive Worlds.",
+      "description": "The future of gaming is immersive, adaptive, and limitless. Our 3D game development services span end-to-end production, design, and optimization to help your game reach its highest visual and technical potential.",
       "cards": [
         {
           "id": 1,
+          "title": "Full-Cycle Development",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Behind every great experience is a flawless process that’s built for longevity. Our 3D game developers manage the complete pipeline, from ideation and prototyping to deployment and live support with optimized architecture, adaptable codebases, meticulous QA integration, and scalable systems that adapt to evolving game mechanics and platforms. Each milestone is engineered for sustainability, ensuring stable performance and a refined player experience across every stage of development.",
+          "buttonText": "Get a Quote",
+          "buttonHref": "#contactForm"
+        },
+        {
+          "id": 2,
           "title": "3D Game Art",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
@@ -5842,7 +5860,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 2,
+          "id": 3,
           "title": "AAA Art",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
@@ -5851,7 +5869,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 3,
+          "id": 4,
           "title": "3D Game Animation",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
@@ -5860,7 +5878,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 4,
+          "id": 5,
           "title": "UI/UX Design for 3D Games",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
@@ -5869,7 +5887,7 @@ export const serviceData = {
           "buttonHref": "#contactForm"
         },
         {
-          "id": 5,
+          "id": 6,
           "title": "3D Game QA & Testing",
           "icon": "/images/services/mobile-game-icon.webp",
           "bg": "/images/services/mobile-game-app-development.webp",
@@ -6396,58 +6414,67 @@ export const serviceData = {
     "cardDesc": "Our Web3 Game Development Services Deliver Real Utility.",
     "hero": {
       "subTitle": "Experienced Web3 Game Developers",
-      "mainTitle": "A Web3 Game Development Company Creating Playable Economies.We build blockchain-native Web3 games that reward players with real ownership, predictable economies, and clear monetization paths. Our engineers design on-chain logic, secure smart contracts, and scalable off-chain services, enabling games to handle real traffic and marketplaces. Our designers focus on retention loops, balanced progression, and token sinks so that play leads to measurable revenue.",
-      "description": "Our Web3 Game Development Services Deliver Real Utility.",
+      "mainTitle": "A Web3 Game Development Company Creating Playable Economies.",
+      "description": "We build blockchain-native Web3 games that reward players with real ownership, predictable economies, and clear monetization paths. Our engineers design on-chain logic, secure smart contracts, and scalable off-chain services, enabling games to handle real traffic and marketplaces. Our designers focus on retention loops, balanced progression, and token sinks so that play leads to measurable revenue.",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "Web3 App Development"
     },
     "endToEndSection": {
-      "title": "We deliver end-to-end systems: smart contracts, player wallets, asset pipelines, and live-ops tooling. Our services focus on secure economics, measurable player retention, and cross-chain compatibility for studios.",
-      "description": "Full-Cycle Web3 Game Development",
+      "title": "Our Web3 Game Development Services Deliver Real Utility.",
+      "description": "We deliver end-to-end systems: smart contracts, player wallets, asset pipelines, and live-ops tooling. Our services focus on secure economics, measurable player retention, and cross-chain compatibility for studios.",
       "cards": [
         {
           "id": 1,
-          "title": "Our full-cycle teams design game rules, on-chain settlement, off-chain services, and live-ops playbooks. Appsters’ Web3 game developers define token flows, economic sinks, and anti-abuse controls before code lands. We test load, simulate markets, and run audits so launch windows do not become failure modes. We also provide operator dashboards and moderation tools. The result: economies that sustain trading while player experience stays responsive.",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Web3 Game Porting",
+          "title": "Full-Cycle Web3 Game Development",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Our full-cycle teams design game rules, on-chain settlement, off-chain services, and live-ops playbooks. Appsters’ Web3 game developers define token flows, economic sinks, and anti-abuse controls before code lands. We test load, simulate markets, and run audits so launch windows do not become failure modes. We also provide operator dashboards and moderation tools. The result: economies that sustain trading while player experience stays responsive.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 2,
-          "title": "We port titles to decentralized stacks with care: asset pipeline optimization, rewire server logic, and integrate crypto wallets or tokens natively. Our Web3 game animators rework skeletons and LODs to fit minting workflows and chain constraints. We preserve frame budgets, retool networking for eventual consistency, and validate UX on target devices. We coordinate migrations to testnets and mainnets with staged player cohorts so that ported releases maintain quality while unlocking new monetization.",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Web3 Token Creation",
+          "title": "Web3 Game Porting",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "We port titles to decentralized stacks with care: asset pipeline optimization, rewire server logic, and integrate crypto wallets or tokens natively. Our Web3 game animators rework skeletons and LODs to fit minting workflows and chain constraints. We preserve frame budgets, retool networking for eventual consistency, and validate UX on target devices. We coordinate migrations to testnets and mainnets with staged player cohorts so that ported releases maintain quality while unlocking new monetization.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 3,
-          "title": "Token design determines long-term economic health. For Web3 games, we model supply curves, emission schedules, staking, and burn mechanics to control inflation and preserve value. Smart contracts include role-based minting, timelocks, and upgrade patterns with formal tests. We simulate secondary markets, integrate price oracles for real signals, and provide governance tools, so studios steer economies responsibly. We also run audits and third-party reviews.",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Integration of Wallets in Web3 Games",
+          "title": "Web3 Token Creation",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Token design determines long-term economic health. For Web3 games, we model supply curves, emission schedules, staking, and burn mechanics to control inflation and preserve value. Smart contracts include role-based minting, timelocks, and upgrade patterns with formal tests. We simulate secondary markets, integrate price oracles for real signals, and provide governance tools, so studios steer economies responsibly. We also run audits and third-party reviews.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 4,
-          "title": "Wallet flows must preserve play momentum. We implement session management, transaction batching, and gas abstraction so mechanics for Web3 games feel native and predictable. Our team supports hosted and self-custody wallets, social sign-ins, and operator multi-sig tools for moderation. We stress-test signing and rebroadcast flows under network jitter to prevent failed purchases and lost assets.",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Web3 Game Asset Creation",
+          "title": "Integration of Wallets in Web3 Games",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Wallet flows must preserve play momentum. We implement session management, transaction batching, and gas abstraction so mechanics for Web3 games feel native and predictable. Our team supports hosted and self-custody wallets, social sign-ins, and operator multi-sig tools for moderation. We stress-test signing and rebroadcast flows under network jitter to prevent failed purchases and lost assets.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 5,
-          "title": "We produce assets optimized for minting, streaming, and constrained devices. For Web3 mobile games, our artists create low-poly variants, atlas textures, and progressive LODs that load fast and look good on phones. Each asset links to on-chain metadata, royalty rules, and lifecycle states. We provide editor tools for creators and pipelines that avoid costly re-minting while enabling dynamic content updates.",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "NFT Marketplace for Web3 Games",
+          "title": "Web3 Game Asset Creation",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "We produce assets optimized for minting, streaming, and constrained devices. For Web3 mobile games, our artists create low-poly variants, atlas textures, and progressive LODs that load fast and look good on phones. Each asset links to on-chain metadata, royalty rules, and lifecycle states. We provide editor tools for creators and pipelines that avoid costly re-minting while enabling dynamic content updates.",
+          "buttonText": "Get a Quote",
+          "buttonHref": "#contactForm"
+        },
+        {
+          "id": 6,
+          "title": "NFT Marketplace for Web3 Games",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "We build marketplaces tuned for in-game traffic: off-chain order books, on-chain settlement, and indexers for fast discovery. Our NFT marketplace for Web3 games supports batched listings, royalties, and escrow mechanics that reduce failed trades. We add fraud detection, rate limits, and cache invalidation so marketplaces handle drops and peak events. We also provide analytics for marketplace health.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         }
@@ -6974,57 +7001,66 @@ export const serviceData = {
     "cardDesc": "Blockchain Game Development Services Focused On Real-World PerformanceWe design systems end-to-end. Our Blockchain Game Development Services align gameplay loops with token rules, settlement paths, and operator tooling, delivering smoother launches and maintaining growth without degrading performance.",
     "hero": {
       "subTitle": "Robust Blockchain Game Development",
-      "mainTitle": "Blockchain Game Development Company For Playful Ownership Systems.At Appsters, our Blockchain game development leverages decentralized technologies to enable secure, transparent gameplay, allowing for digital ownership and an innovative monetization model. Experience Blockchain game development services that combine audited smart contracts, performant clients, and reliable off-chain services, enabling blockchain games to run fast, verify ownership, and withstand traffic spikes..",
-      "description": "Blockchain Game Development Services Focused On Real-World PerformanceWe design systems end-to-end. Our Blockchain Game Development Services align gameplay loops with token rules, settlement paths, and operator tooling, delivering smoother launches and maintaining growth without degrading performance.",
+      "mainTitle": "Blockchain Game Development Company For Playful Ownership Systems.",
+      "description": "At Appsters, our Blockchain game development leverages decentralized technologies to enable secure, transparent gameplay, allowing for digital ownership and an innovative monetization model. Experience Blockchain game development services that combine audited smart contracts, performant clients, and reliable off-chain services, enabling blockchain games to run fast, verify ownership, and withstand traffic spikes..",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "Blockchain Game Development"
     },
     "endToEndSection": {
-      "title": "Custom Blockchain Game Development",
-      "description": "Our Blockchain game developers start with the core loop and economy map, then bind ownership and trading to mechanics that reward real play. We document token supply, sinks, and governance before code lands. Client logic stays responsive while on-chain records secure rights. We stage testnets, run audits, and ship dashboards for liquidity, fraud, and cohort health so roadmaps adjust with data, not guesswork.",
+      "title": "Blockchain Game Development Services Focused On Real-World Performance",
+      "description": "We design systems end-to-end. Our Blockchain Game Development Services align gameplay loops with token rules, settlement paths, and operator tooling, delivering smoother launches and maintaining growth without degrading performance.",
       "cards": [
         {
           "id": 1,
-          "title": "Smart Contracts Integration",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Contracts must match on-screen events. Our engineers pair with Blockchain game animators and designers to wire escrow, manage royalties, handle staking, and craft clear visual triggers. We use standard interfaces, role-based admin, timelocks, and proxy upgrades with audit gates. Monitoring watches reorgs, failed calls, and unusual transfer patterns so operations react quickly and players keep trust in outcomes.",
+          "title": "Custom Blockchain Game Development",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Our Blockchain game developers start with the core loop and economy map, then bind ownership and trading to mechanics that reward real play. We document token supply, sinks, and governance before code lands. Client logic stays responsive while on-chain records secure rights. We stage testnets, run audits, and ship dashboards for liquidity, fraud, and cohort health so roadmaps adjust with data, not guesswork.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 2,
-          "title": "AR/VR in Blockchain Games",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Immersion only works if ownership persists. We connect AR or VR scenes to tokenized items so interactions update state reliably in Blockchain games. Unity or Unreal handles tracking and rendering. Contracts record rarity and history. Indexers refresh inventories immediately. We test comfort budgets, device heat, and session length to keep frame rates steady while assets remain verifiably scarce.",
+          "title": "Smart Contracts Integration",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Contracts must match on-screen events. Our engineers pair with Blockchain game animators and designers to wire escrow, manage royalties, handle staking, and craft clear visual triggers. We use standard interfaces, role-based admin, timelocks, and proxy upgrades with audit gates. Monitoring watches reorgs, failed calls, and unusual transfer patterns so operations react quickly and players keep trust in outcomes.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 3,
-          "title": "Unity/Unreal Engine Game Development",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Performance and verification must coexist. We implement Blockchain game mechanics inside Unity or Unreal with componentized code, wallet flows, and marketplace UIs that feel native. Off-chain services cache reads for speed. On-chain transactions finalize sensitive actions. Build pipelines that enforce frame budgets, memory caps, and platform checks so releases remain fast on phones, desktops, and consoles.",
+          "title": "AR/VR in Blockchain Games",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Immersion only works if ownership persists. We connect AR or VR scenes to tokenized items so interactions update state reliably in Blockchain games. Unity or Unreal handles tracking and rendering. Contracts record rarity and history. Indexers refresh inventories immediately. We test comfort budgets, device heat, and session length to keep frame rates steady while assets remain verifiably scarce.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 4,
-          "title": "Custom Wallet Integration",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
-          "desc": "Wallet UX decides adoption. For Blockchain mobile games, we add biometric sign-in, session keys, fee previews, and recovery flows that pass store reviews. We support self-custody and hosted options, rate-limit-sensitive actions, and batch noncritical writes. Analytics report failed transactions, abandoned carts, and risky devices so the team can fix friction and protect revenue quickly.",
+          "title": "Unity/Unreal Engine Game Development",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Performance and verification must coexist. We implement Blockchain game mechanics inside Unity or Unreal with componentized code, wallet flows, and marketplace UIs that feel native. Off-chain services cache reads for speed. On-chain transactions finalize sensitive actions. Build pipelines that enforce frame budgets, memory caps, and platform checks so releases remain fast on phones, desktops, and consoles.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 5,
+          "title": "Custom Wallet Integration",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Wallet UX decides adoption. For Blockchain mobile games, we add biometric sign-in, session keys, fee previews, and recovery flows that pass store reviews. We support self-custody and hosted options, rate-limit-sensitive actions, and batch noncritical writes. Analytics report failed transactions, abandoned carts, and risky devices so the team can fix friction and protect revenue quickly.",
+          "buttonText": "Get a Quote",
+          "buttonHref": "#contactForm"
+        },
+        {
+          "id": 6,
           "title": "Cross-Platform Blockchain Game App",
-          "icon": "/images/services/ai-icon.webp",
-          "bg": "/images/services/ai-app-development.webp",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
           "desc": "Players expect continuity across devices. We build cross-platform Blockchain games with a single asset ledger, synchronized inventories, and input-aware UIs for mobile, desktop, and web. RPC routing, indexers, and caches keep state fresh without blocking input. Releases use staged cohorts and rollback paths, giving operators clear control while maintaining parity and performance in every environment",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
@@ -7552,57 +7588,66 @@ export const serviceData = {
     "cardDesc": "NFT Game Development Services That Power Measurable Player Value.Every service below plugs into a full NFT pipeline from design, contracts, infrastructure, telemetry, and live-ops. You get production assets, verified ownership, and tools that operators can run without guesswork.",
     "hero": {
       "subTitle": "Play-To-Earn NFT Game Development",
-      "mainTitle": "NFT Game Development Company Building Player-Owned Game Worlds.Players care about value; studios care about stability. We design NFT game development services that turn assets into utility, not noise. You get audited contracts, fast marketplaces, and clear telemetry for retention, trading volume, and fraud signals. Our teams ship NFT games that load quickly, scale under traffic, and keep ownership verifiable. At Appsters, we take a tech-first, results-driven approach to NFT app development and let the numbers speak for themselves.",
-      "description": "NFT Game Development Services That Power Measurable Player Value.Every service below plugs into a full NFT pipeline from design, contracts, infrastructure, telemetry, and live-ops. You get production assets, verified ownership, and tools that operators can run without guesswork.",
+      "mainTitle": "NFT Game Development Company Building Player-Owned Game Worlds.",
+      "description": "Players care about value; studios care about stability. We design NFT game development services that turn assets into utility, not noise. You get audited contracts, fast marketplaces, and clear telemetry for retention, trading volume, and fraud signals. Our teams ship NFT games that load quickly, scale under traffic, and keep ownership verifiable. At Appsters, we take a tech-first, results-driven approach to NFT app development and let the numbers speak for themselves.",
       "mobileImage": "/images/services/banner-mobile.webp",
       "bannerBg": "/images/banner-bg.png",
       "transparentHeading": "NFT Game Development"
     },
     "endToEndSection": {
-      "title": "Full Cycle NFT Game Development",
-      "description": "Our NFT game developers drive the concept to live release. We map core loops, model token supply and sinks, and implement contracts using standards like ERC-721 and ERC-1155. Engineers align on-chain settlement with off-chain gameplay so input feels instant while ownership stays verifiable. We stage testnets, run audits, and launch with dashboards for trading, retention, and abuse detection.",
+      "title": "NFT Game Development Services That Power Measurable Player Value.",
+      "description": "Every service below plugs into a full NFT pipeline from design, contracts, infrastructure, telemetry, and live-ops. You get production assets, verified ownership, and tools that operators can run without guesswork.",
       "cards": [
         {
           "id": 1,
-          "title": "2D/3D NFT Art Creation",
-          "icon": "/images/services/ecommerce-icon.webp",
-          "bg": "/images/services/ecommerce-app-development.webp",
-          "desc": "Our NFT game animators and artists produce mint-ready assets that perform on phones and desktops. Models ship with atlas textures, LODs, and animation clips sized for real-time engines. Every asset includes validated metadata and rarity tiers. We maintain source files, export presets, and a review workflow so art, contracts, and marketplaces stay in sync without rework.",
+          "title": "Full Cycle NFT Game Development",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Our NFT game developers drive the concept to live release. We map core loops, model token supply and sinks, and implement contracts using standards like ERC-721 and ERC-1155. Engineers align on-chain settlement with off-chain gameplay so input feels instant while ownership stays verifiable. We stage testnets, run audits, and launch with dashboards for trading, retention, and abuse detection.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 2,
-          "title": "NFT Marketplace Integration",
-          "icon": "/images/services/ecommerce-icon.webp",
-          "bg": "/images/services/ecommerce-app-development.webp",
-          "desc": "Trades must feel native to play. We integrate listing, bidding, and royalties directly into core flows for NFT games, using off-chain indexing for speed and on-chain settlement for trust. Operators track liquidity, floor movements, and creator payouts in one view. Players get clear fees, instant state refresh, and purchase safeguards that prevent failed transactions.",
+          "title": "2D/3D NFT Art Creation",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Our NFT game animators and artists produce mint-ready assets that perform on phones and desktops. Models ship with atlas textures, LODs, and animation clips sized for real-time engines. Every asset includes validated metadata and rarity tiers. We maintain source files, export presets, and a review workflow so art, contracts, and marketplaces stay in sync without rework.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 3,
-          "title": "Cross-Platform Integration For NFT Games",
-          "icon": "/images/services/ecommerce-icon.webp",
-          "bg": "/images/services/ecommerce-app-development.webp",
-          "desc": "One inventory across every device. We standardize auth, wallets, and asset sync so cross-platform NFT games behave consistently on mobile, desktop, and web. Rendering pipelines stay aligned, and state refresh is predictable after every trade. Teams avoid duplicate builds, cut maintenance, and grow reach without sacrificing performance targets on lower-end hardware.",
+          "title": "NFT Marketplace Integration",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "Trades must feel native to play. We integrate listing, bidding, and royalties directly into core flows for NFT games, using off-chain indexing for speed and on-chain settlement for trust. Operators track liquidity, floor movements, and creator payouts in one view. Players get clear fees, instant state refresh, and purchase safeguards that prevent failed transactions.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 4,
-          "title": "NFT Game Assets Creation",
-          "icon": "/images/services/ecommerce-icon.webp",
-          "bg": "/images/services/ecommerce-app-development.webp",
-          "desc": "We create game-ready NFT mobile games with supply caps, provenance, and upgradable attributes. Pipelines include visual tests, metadata validation, and version control that tracks every edit. Items connect to in-game effects and marketplace rules at mint time. Creators get simple publishing tools, and operators enforce royalties and scarcity without manual policing.",
+          "title": "Cross-Platform Integration For NFT Games",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "One inventory across every device. We standardize auth, wallets, and asset sync so cross-platform NFT games behave consistently on mobile, desktop, and web. Rendering pipelines stay aligned, and state refresh is predictable after every trade. Teams avoid duplicate builds, cut maintenance, and grow reach without sacrificing performance targets on lower-end hardware.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
         },
         {
           "id": 5,
+          "title": "NFT Game Assets Creation",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
+          "desc": "We create game-ready NFT mobile games with supply caps, provenance, and upgradable attributes. Pipelines include visual tests, metadata validation, and version control that tracks every edit. Items connect to in-game effects and marketplace rules at mint time. Creators get simple publishing tools, and operators enforce royalties and scarcity without manual policing.",
+          "buttonText": "Get a Quote",
+          "buttonHref": "#contactForm"
+        },
+        {
+          "id": 6,
           "title": "NFT Gaming Platform Development",
-          "icon": "/images/services/ecommerce-icon.webp",
-          "bg": "/images/services/ecommerce-app-development.webp",
+          "icon": "/images/services/mobile-game-icon.webp",
+          "bg": "/images/services/mobile-game-app-development.webp",
           "desc": "Launch and operate multiple NFT-driven titles from one control plane. We build a complete gaming platform for NFTs: identity layers, economy dashboards, payment gateways, and in-game analytics. We add telemetry for cohorts, ARPU, and liquidity so teams react quickly to market shifts. These systems allow studios to launch, monitor, and evolve multiple games within a shared ecosystem. Our expertise in smart contract orchestration ensures that each project runs smoothly under high concurrency and real-time trade conditions.",
           "buttonText": "Get a Quote",
           "buttonHref": "#contactForm"
@@ -8192,7 +8237,7 @@ export const servicesList = [
     "title": "Custom Mobile App Development",
     "icon": "/images/services/custom-mobile-icon.webp",
     "bg": "/images/services/custom-mobile-app-development.webp",
-    "desc": "We provide tailored mobile app development services to meet your unique business requirements and deliver scalable solutions.",
+    "desc": "Appsters builds apps optimized for scaling and long-term performance. Our mobile app development services combine product thinking with tech-driven production, delivering software that users love and businesses rely on.",
     "link": "/servicedetail/mobile-app-development-company"
   },
   {
@@ -8203,5 +8248,50 @@ export const servicesList = [
     "bg": "/images/services/ai-app-development.webp",
     "desc": "Integrate artificial intelligence into your mobile apps to offer smart features, predictive analytics, and personalized user experiences.",
     "link": "/servicedetail/ai-app-development-services"
+  },
+  {
+    "id": 10,
+    "slug": "2d-game-development-services",
+    "title": "2D Game Development",
+    "icon": "/images/services/mobile-game-icon.webp",
+    "bg": "/images/services/mobile-game-app-development.webp",
+    "desc": "Our 2D game development studio crafts smooth, addictive mobile games with striking art and tight controls to turn ideas into playing success.",
+    "link": "/servicedetail/2d-game-development-services"
+  },
+  {
+    "id": 11,
+    "slug": "3d-game-development-services",
+    "title": "3D Game Development",
+    "icon": "/images/services/mobile-game-icon.webp",
+    "bg": "/images/services/mobile-game-app-development.webp",
+    "desc": "Appsters builds immersive 3D games with Unity and Unreal Engine, optimized for console-grade visuals, dynamic depth, and performance on mobile.",
+    "link": "/servicedetail/3d-game-development-services"
+  },
+  {
+    "id": 12,
+    "slug": "web3-game-development-company",
+    "title": "Web3 App Development",
+    "icon": "/images/services/mobile-game-icon.webp",
+    "bg": "/images/services/mobile-game-app-development.webp",
+    "desc": "Launch decentralized games with our Web 3 game development services featuring wallet logins, token economies, and true digital ownership.",
+    "link": "/servicedetail/web3-game-development-company"
+  },
+  {
+    "id": 13,
+    "slug": "blockchain-game-development-company",
+    "title": "Blockchain Game Development",
+    "icon": "/images/services/mobile-game-icon.webp",
+    "bg": "/images/services/mobile-game-app-development.webp",
+    "desc": "We build provably fair blockchain games with on-chain economies, audited smart contracts, and seamless custom wallet integration.",
+    "link": "/servicedetail/blockchain-game-development-company"
+  },
+  {
+    "id": 14,
+    "slug": "nft-game-development-company",
+    "title": "NFT Game Development",
+    "icon": "/images/services/mobile-game-icon.webp",
+    "bg": "/images/services/mobile-game-app-development.webp",
+    "desc": "Build play-to-earn worlds with full-cycle NFT game development, verified asset ownership, smart contracts, and marketplace integration.",
+    "link": "/servicedetail/nft-game-development-company"
   }
 ];
