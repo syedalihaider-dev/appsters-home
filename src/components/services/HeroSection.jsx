@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ActionButtons from "@/components/ui/ActionButtons";
+import ClutchWidget from "@/components/ClutchWidget";
 import styles from './HeroSection.module.css';
 
 export default function HeroSection({ data }) {
@@ -40,14 +41,7 @@ export default function HeroSection({ data }) {
                                 <ActionButtons />
                             </div>
                             <div className={styles.clutch_rating_badge}>
-                                <Image
-                                    src="/images/clutch-rating-badge.png"
-                                    alt="Clutch Rating Badge Image..."
-                                    width={331}
-                                    height={68}
-                                    priority
-                                    style={{ objectFit: "contain" }}
-                                />
+                                <ClutchWidget />
                             </div>
                         </div>
                     </div>

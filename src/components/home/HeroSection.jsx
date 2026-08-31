@@ -9,6 +9,8 @@ import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from './HeroSection.module.css';
 import gsap from "gsap";
 
+import ClutchWidget from '@/components/ClutchWidget';
+
 export default function HeroSection() {
     const router = useRouter();
     const [count, setCount] = useState(0);
@@ -106,16 +108,7 @@ export default function HeroSection() {
                                 <ActionButtons text="Get a Quote" />
                                 <ActionButtons text="Call Us Now" href={SITE_PHONE_LINK} />
                             </div>
-                            <div className={styles.clutch_rating_badge}>
-                                <Image
-                                    src="/images/clutch-rating-badge.png"
-                                    alt="Clutch Rating Badge Image..."
-                                    width={331}
-                                    height={68}
-                                    priority
-                                    style={{ objectFit: "contain" }}
-                                />
-                            </div>
+                            <ClutchWidget />
                         </div>
                     </div>
                     <div className="col-sm-12 col-md-6">

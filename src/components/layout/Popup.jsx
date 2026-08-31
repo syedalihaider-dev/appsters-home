@@ -5,6 +5,9 @@ import Image from 'next/image';
 import styles from './Popup.module.css';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { useRouter, usePathname } from 'next/navigation';
+import ClutchWidget from '../ClutchWidget';
+
+
 
 const Popup = () => {
     const router = useRouter();
@@ -64,7 +67,20 @@ const Popup = () => {
             clearTimeout(timer);
             document.removeEventListener('click', handlePopupTrigger);
         };
-    }, []);
+    }, [pathname]);
+
+    useEffect(() => {
+        if (!show) return;
+
+        const initClutchWidget = () => {
+            if (typeof window !== 'undefined' && window.CLUTCHCO && typeof window.CLUTCHCO.Init === 'function') {
+                window.CLUTCHCO.Init();
+            }
+        };
+
+        const frame = requestAnimationFrame(initClutchWidget);
+        return () => cancelAnimationFrame(frame);
+    }, [show]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -141,8 +157,9 @@ const Popup = () => {
                             </ul>
 
                             <div className={styles.clutchBox}>
-                                <Image src="/images/mobile-app-studio/popup/clutch-star.png" alt="clutch" width={269} height={89} className={styles.clutchImg} />
+                                <ClutchWidget/>
                             </div>
+                            
 
                             <div className={styles.partnerLogos}>
                                 <Image src="/images/mobile-app-studio/popup/featherDev.png" alt="featherDev" width={151} height={37} />

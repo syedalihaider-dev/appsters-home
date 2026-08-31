@@ -18,6 +18,7 @@ import FAQSection from '@/components/home/FAQSection';
 import NewsletterSection from '@/components/home/NewsletterSection/NewsletterSection';
 import LocationSection from '@/components/home/LocationSection';
 import ContactForm from '@/components/home/ContactForm';
+
 // import TestimonialSection from '@/components/home/TestimonialSection';
 // import TopCompaniesSection from '@/components/home/TopCompaniesSection';
 
