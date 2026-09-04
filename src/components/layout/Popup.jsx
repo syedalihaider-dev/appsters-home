@@ -182,7 +182,7 @@ const Popup = () => {
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Phone Number*</label>
-                                <input type="tel" name="phone" placeholder="+1 000 000 0000" required />
+                                <input type="number" name="phone" placeholder="+1 000 000 0000" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Select Services*</label>

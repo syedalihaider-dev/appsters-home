@@ -84,7 +84,7 @@ export default function Banner() {
                       </select>
                       <Chevron size={13} />
                     </div>
-                    <input className="input" name="phone" type="tel" inputMode="tel" placeholder="Phone number" value={formData.phone} onChange={onChange} aria-invalid={!!errors.phone} />
+                    <input className="input" name="phone" type="number" inputMode="tel" placeholder="Phone number" value={formData.phone} onChange={onChange} aria-invalid={!!errors.phone} />
                   </div>
                   {errors.phone && <span className="fld-err">{errors.phone}</span>}
                   <div className={`field${errors.email ? ' invalid' : ''}`}>

@@ -106,7 +106,7 @@ const Popup = () => {
 
                             <div className={`${styles.phone} ${styles.full}`}>
                                 <div className={styles.phoneCode}><span>🇺🇸</span><span>+1</span></div>
-                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone number" required />
+                                <input type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone number" required />
                             </div>
 
                             <div className={styles.select}>

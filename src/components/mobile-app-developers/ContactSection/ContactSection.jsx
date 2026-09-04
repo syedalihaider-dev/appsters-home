@@ -153,7 +153,7 @@ const ContactSection = () => {
                                     <Col md={6}>
                                         <Form.Group className="mb-3">
                                             <Form.Label className={styles.formLabel}>PHONE NUMBER</Form.Label>
-                                            <Form.Control type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (000) 000-0000" className={styles.formInput} required />
+                                            <Form.Control type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (000) 000-0000" className={styles.formInput} required />
                                         </Form.Group>
                                     </Col>
                                 </Row>

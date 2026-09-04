@@ -156,7 +156,7 @@ export default function ContactForm() {
                                 <div className={styles.form_group}>
                                     <label htmlFor="phone">Phone Number</label>
                                     <input
-                                        type="tel"
+                                        type="number"
                                         name="phone"
                                         placeholder="000 000 0000"
                                         required

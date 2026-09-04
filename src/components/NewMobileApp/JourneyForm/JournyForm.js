@@ -107,7 +107,7 @@ const JournyForm = () => {
                                     <h3 className='grdiant'>We’re Listening</h3>
                                 </div>
                                 <input type='text' minLength="4" name='name' required className='form-control' placeholder="Full Name"></input>
-                                <input type="tel" minLength="10" maxLength="13" pattern="[0-9]*" name='phone' required className='form-control mt-3' placeholder="Phone Number"></input>
+                                <input type="number" minLength="10" maxLength="13" pattern="[0-9]*" name='phone' required className='form-control mt-3' placeholder="Phone Number"></input>
                                 <input type='email' name='email' required className='form-control mt-3' placeholder="Email Address"></input>
                                 <textarea placeholder='Comment' name='comment' className='form-control mt-3'></textarea>
                                 <div className={`d-flex justify-content-between mt-3 mt-md-5 ${styles.formBottom}`}>

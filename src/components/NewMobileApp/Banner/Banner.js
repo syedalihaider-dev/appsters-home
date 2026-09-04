@@ -187,7 +187,7 @@ const Banner = ({ content }) => {
                                 <h3>Let’s Discuss <br /> Your App Idea In Detail</h3>
                                 <p className='text-white text-center'>Our experts help you in the best way possible. Get customized plans!</p>
                                 <input type='text' minLength="4" name='name' required className='form-control' placeholder="Full Name"></input>
-                                <input type="tel" minLength="10" maxLength="13" pattern="[0-9]*" name='phone' required className='form-control mt-3' placeholder="Phone Number"></input>
+                                <input type="number" minLength="10" maxLength="13" pattern="[0-9]*" name='phone' required className='form-control mt-3' placeholder="Phone Number"></input>
                                 <input type='email' name='email' required className='form-control mt-3' placeholder="Email Address"></input>
                                 <textarea placeholder='Description' name='comment' className='form-control mt-3'></textarea>
                                 <div className='d-sm-flex align-items-center mt-4'>

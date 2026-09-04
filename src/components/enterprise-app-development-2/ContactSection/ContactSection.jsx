@@ -72,7 +72,7 @@ export default function ContactSection() {
                 </div>
                 <div className={`field${errors.phone ? ' invalid' : ''}`}>
                   <label className="lab" htmlFor="c-phone">Phone number <span className="req">*</span></label>
-                  <input className="input" id="c-phone" name="phone" type="tel" inputMode="tel" placeholder="+1 (555) 000-0000" value={formData.phone} onChange={onChange} aria-invalid={!!errors.phone} />
+                  <input className="input" id="c-phone" name="phone" type="number" inputMode="tel" placeholder="+1 (555) 000-0000" value={formData.phone} onChange={onChange} aria-invalid={!!errors.phone} />
                   {errors.phone && <span className="fld-err">{errors.phone}</span>}
                 </div>
                 <div className={`field${errors.email ? ' invalid' : ''}`}>

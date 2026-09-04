@@ -11,7 +11,7 @@ import ActionButtons from "@/components/ui/ActionButtons";
 
 import styles from './EndToEndAppDevSection.module.css';
 
-const servicesData = [
+const defaultServicesData = [
   {
     id: 1,
     title: "Android App Development",
@@ -77,9 +77,12 @@ const servicesData = [
   }
 ];
 
-export default function EndToEndAppDevSection({ style = {} }) {
+export default function EndToEndAppDevSection({ data = {}, style = {} }) {
   const [mounted, setMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const title = data.title || 'Our Comprehensive Mobile App <br />Development <span class="highlight">Services in Houston</span>';
+  const servicesData = data.servicesData || defaultServicesData;
 
   useEffect(() => {
     setMounted(true);
@@ -118,11 +121,7 @@ export default function EndToEndAppDevSection({ style = {} }) {
     <section className={styles.endToEndSection} style={style}>
       <div className="container">
         <div className={styles.header}>
-          <h2>
-            Our Comprehensive Mobile App <br />
-            Development <span className={styles.highlight}>Services in Houston</span>
-          </h2>
-          
+          <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
         </div>
 
         {mounted && isMobile ? (

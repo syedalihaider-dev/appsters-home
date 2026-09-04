@@ -140,7 +140,7 @@ const Popup = ({ isOpen, onClose }) => {
                                     <option>🇬🇧 +44</option>
                                     <option>🇦🇺 +61</option>
                                 </select>
-                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={`${styles.formInput} ${styles.phoneInput}`} required />
+                                <input type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={`${styles.formInput} ${styles.phoneInput}`} required />
                             </div>
                         </div>
                         

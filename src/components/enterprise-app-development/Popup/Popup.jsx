@@ -137,7 +137,7 @@ export default function Popup({ isOpen, onClose }) {
             />
           </div>
           <input
-            type="tel"
+            type="number"
             name="phone"
             placeholder="Phone number"
             value={formData.phone}

@@ -172,7 +172,7 @@ export default function Banner() {
                 </div>
                 <div className={styles.inputGroup}>
                   <input
-                    type="tel"
+                    type="number"
                     name="phone"
                     placeholder="Phone Number"
                     value={formData.phone}

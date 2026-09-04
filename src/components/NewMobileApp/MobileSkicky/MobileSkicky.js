@@ -124,7 +124,7 @@ const MobileSkicky = ({ isHovered, showSticky, loc }) => {
                                 <input name="email" type="email" placeholder="Email Address*" required />
                             </div>
                             <div className="inputGroup">
-                                <input type="tel" minLength="10" maxLength="13" pattern="[0-9]*" required name="phone" placeholder="Phone No*" />
+                                <input type="number" minLength="10" maxLength="13" pattern="[0-9]*" required name="phone" placeholder="Phone No*" />
                             </div>
                             <div className="inputGroup">
                                 <textarea name='comment' required placeholder="Let Us know Time And Date To Call You."></textarea>

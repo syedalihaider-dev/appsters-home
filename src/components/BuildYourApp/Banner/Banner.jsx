@@ -116,7 +116,7 @@ const Banner = () => {
                                             <path d="M1 1L5 5L9 1" stroke="#666" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone number" required className={styles.phoneInput} />
+                                    <input type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone number" required className={styles.phoneInput} />
                                 </div>
 
                                 <div className={styles.inputGroup}>

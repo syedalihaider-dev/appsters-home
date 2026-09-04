@@ -139,7 +139,7 @@ const FormContent = () => {
                     </div>
                     <div className={styles.inputGroup}>
                         <label>Phone Number</label>
-                        <input type="tel" name="phone" required placeholder="+1 000 000 0000" />
+                        <input type="number" name="phone" required placeholder="+1 000 000 0000" />
                     </div>
                     <div className={styles.inputGroup}>
                         <label>Select Services</label>

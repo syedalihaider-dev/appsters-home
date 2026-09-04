@@ -128,7 +128,7 @@ const Banner = () => {
                                     <input type="email" name="email" placeholder="Email Address*" required />
                                 </div>
                                 <div className={styles.inputGroup}>
-                                    <input type="tel" name="phone" placeholder="Phone Number*" required />
+                                    <input type="number" name="phone" placeholder="Phone Number*" required />
                                 </div>
                                 <div className={styles.inputGroup}>
                                     <select

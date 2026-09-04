@@ -7,16 +7,68 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/pagination";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function VideoTestimonialSection({ style = {} }) {
+const defaultTestimonials = [
+  {
+    name: "Sophia",
+    role: "Entrepreneur",
+    img: "/images/cclient-review-sophia.webp",
+    video: "https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Daniel",
+    role: "Game Developer",
+    img: "/images/cclient-review-daniel.webp",
+    video: "https://vimeo.com/1184930327?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Mateo",
+    role: "Founder Fintech Company",
+    img: "/images/cclient-review-mateo.webp",
+    video: "https://vimeo.com/1184931603?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Jason",
+    role: "Fitness App",
+    img: "/images/cclient-review-jason.webp",
+    video: "https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Sophia",
+    role: "Entrepreneur",
+    img: "/images/cclient-review-sophia.webp",
+    video: "https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Daniel",
+    role: "Game Developer",
+    img: "/images/cclient-review-daniel.webp",
+    video: "https://vimeo.com/1184930327?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Mateo",
+    role: "Founder Fintech Company",
+    img: "/images/cclient-review-mateo.webp",
+    video: "https://vimeo.com/1184931603?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "Jason",
+    role: "Fitness App",
+    img: "/images/cclient-review-jason.webp",
+    video: "https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci",
+  },
+];
 
+export default function VideoTestimonialSection({ data = {}, style = {} }) {
   useEffect(() => {
     Fancybox.bind("[data-fancybox]", {});
     return () => Fancybox.destroy();
   }, []);
+
+  const title = data.title || '<span class="primarytxt">Real Stories</span> From People Who Wanted <span class="primarytxt">What\'s Next.</span>';
+  const testimonials = data.testimonials || defaultTestimonials;
 
   return (
     <section className={styles.videoTestimonialSection} style={style}>
@@ -48,9 +100,7 @@ export default function VideoTestimonialSection({ style = {} }) {
             </div>
             <div className="col-sm-12 col-md-7">
               <div className={styles.sec_right}>
-                <h2>
-                  <span className="primarytxt">Real Stories</span> From People Who Wanted <span className="primarytxt">What's Next.</span>
-                </h2>
+                <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
               </div>
             </div>
           </div>
@@ -80,286 +130,43 @@ export default function VideoTestimonialSection({ style = {} }) {
             1601: { slidesPerView: 5 },
           }}
         >
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-sophia.webp"
-                    alt="Client Review Sophia..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Sophia</h6>
-                    <p>Entrepreneur</p>
+          {testimonials.map((item, idx) => (
+            <SwiperSlide key={idx}>
+              <li>
+                <div className={styles.box}>
+                  <div className={styles.testimonials_img}>
+                    <Image
+                      src={item.img || "/images/cclient-review-sophia.webp"}
+                      alt={`Client Review ${item.name}...`}
+                      fill
+                      sizes="100vw"
+                    />
                   </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-daniel.webp"
-                    alt="Client Review Daniel..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Daniel</h6>
-                    <p>Game Developer</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184930327?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
+                  <div className={styles.testimonials_info}>
+                    <div className={styles.left}>
+                      <h6>{item.name}</h6>
+                      <p>{item.role}</p>
+                    </div>
+                    <div className={styles.right}>
+                      <a
+                        data-fancybox="testimonial-videos"
+                        data-src={item.video || "https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci"}
+                        className={styles.play_btn}
+                      >
+                        <Image
+                          src="/images/play-btn.png"
+                          alt="Play Button Image..."
+                          fill
+                          sizes="100vw"
+                          style={{ objectFit: "contain" }}
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-mateo.webp"
-                    alt="Video Testimonials Image..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Mateo</h6>
-                    <p>Founder Fintech Company</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184931603?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-jason.webp"
-                    alt="Video Testimonials Image..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Jason</h6>
-                    <p>Fitness App</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-sophia.webp"
-                    alt="Client Review Sophia..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Sophia</h6>
-                    <p>Entrepreneur</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-daniel.webp"
-                    alt="Client Review Daniel..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Daniel</h6>
-                    <p>Game Developer</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184930327?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-mateo.webp"
-                    alt="Video Testimonials Image..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Mateo</h6>
-                    <p>Founder Fintech Company</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184931603?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <div className={styles.box}>
-                <div className={styles.testimonials_img}>
-                  <Image
-                    src="/images/cclient-review-jason.webp"
-                    alt="Video Testimonials Image..."
-                    fill
-                    sizes="100vw"
-                  />
-                </div>
-                <div className={styles.testimonials_info}>
-                  <div className={styles.left}>
-                    <h6>Jason</h6>
-                    <p>Fitness App</p>
-                  </div>
-                  <div className={styles.right}>
-                    <a
-                      data-fancybox="testimonial-videos"
-                      data-src="https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci"
-                      className={styles.play_btn}
-                    >
-                      <Image
-                        src="/images/play-btn.png"
-                        alt="Play Button Image..."
-                        fill
-                        sizes="100vw"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </SwiperSlide>
+              </li>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

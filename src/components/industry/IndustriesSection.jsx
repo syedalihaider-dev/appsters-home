@@ -5,43 +5,45 @@ import ActionButtons from "@/components/ui/ActionButtons";
 import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./IndustriesSection.module.css";
 
-export default function IndustriesSection({ style = {} }) {
+const defaultTabs = [
+    {
+        title: "Cutting-Edge Technology",
+        img: "/images/industries/Cutting-Edge.png",
+        text: "We continuously adopt the latest technologies to offer you innovative solutions in mobile app development. By integrating modern tools and techniques, we create apps that are not only operational but also geared for the future. This approach keeps your business ahead of the competition.",
+    },
+    {
+        title: "Ongoing Support and Maintenance",
+        img: "/images/industries/fintech.webp",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+        title: "Competitive Pricing",
+        img: "/images/industries/education.webp",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+        title: "Uncompromising Quality",
+        img: "/images/industries/real-estate.webp",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+        title: "Customized Solutions",
+        img: "/images/industries/automotive.webp",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+        title: "Expertise and Experience",
+        img: "/images/industries/music.webp",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+];
+
+export default function IndustriesSection({ data = {}, style = {} }) {
     const [active, setActive] = useState(0);
 
-    const tabs = [
-        {
-            title: "Cutting-Edge Technology",
-            img: "/images/industries/Cutting-Edge.png",
-            text: `We continuously adopt the latest technologies to offer you innovative solutions in mobile app development. By integrating modern tools and techniques, we create apps that are not only operational but also geared for the future. This approach keeps your business ahead of the competition.`,
-        },
-        {
-            title: "Ongoing Support and Maintenance",
-            img: "/images/industries/fintech.webp",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        },
-        {
-            title: "Competitive Pricing",
-            img: "/images/industries/education.webp",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        },
-        {
-            title: "Uncompromising Quality",
-            img: "/images/industries/real-estate.webp",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        },
-        {
-            title: "Customized Solutions",
-            img: "/images/industries/automotive.webp",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        },
-        {
-            title: "Expertise and Experience",
-            img: "/images/industries/music.webp",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        },
-
-
-    ];
+    const title = data.title || '<span class="primarytxt">Compelling</span> Reasons to Choose Us <span class="primarytxt">as a Trustable</span> App <span class="primarytxt">Development</span> Company in <span class="primarytxt">Houston</span>';
+    const para = data.para || "Being one of the fastest-growing mobile app development companies in Houston, we are well aware of all the intricacies that could happen during app development. Our adept team of Houston app developers has the expertise to develop flawless digital apps that help generate massive revenue. Here are the top reasons why you should choose us a mobile app development company in Houston.";
+    const tabs = data.tabs || defaultTabs;
 
     return (
         <section className={`${styles.industriesSection} ${styles.industriesSection_v1}`} style={style}>
@@ -50,16 +52,12 @@ export default function IndustriesSection({ style = {} }) {
                     <div className="row align-items-center justify-content-between">
                         <div className="col-sm-12 col-md-6">
                             <div className={styles.top_left}>
-                                <h2 className={styles.title}>
-                                    <span className="primarytxt">Compelling</span> Reasons to Choose Us <span className="primarytxt">as a Trustable</span> App <span className="primarytxt">Development</span> Company in <span className="primarytxt">Houston</span>
-                                </h2>
+                                <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h2>
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-4">
                             <div className={styles.top_right}>
-                                <p className={styles.para}>
-                                    Being one of the fastest-growing mobile app development companies in Houston, we are well aware of all the intricacies that could happen during app development. Our adept team of Houston app developers has the expertise to develop flawless digital apps that help generate massive revenue. Here are the top reasons why you should choose us a mobile app development company in Houston.
-                                </p>
+                                <p className={styles.para}>{para}</p>
                             </div>
                         </div>
                     </div>

@@ -5,7 +5,19 @@ import ActionButtons from "@/components/ui/ActionButtons";
 import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./CTASection.module.css";
 
-export default function CTASection() {
+export default function CTASection({ data = {} }) {
+    const transparentHeading = data.transparentHeading || "Creative Agency";
+    const title = data.title || "helpp";
+    const para = data.para || "What if you get your desired services at home quickly? Exciting, right? Helpp app has got you covered. Our rewarding app makes service bookings easy and supports requests. Our Houston-based app development team delivered a responsive app that aids users in managing their activities anywhere.";
+    
+    const defaultStats = [
+        { statNumber: "10X", statLabel: "Visitors" },
+        { statNumber: "15X", statLabel: "Call Requests" },
+        { statNumber: "20X", statLabel: "Customer Growth" },
+        { statNumber: "50X", statLabel: "Downloads" },
+    ];
+    const stats = data.stats || defaultStats;
+
     return (
         <section className={styles.ctaSection}>
             <Image
@@ -23,36 +35,26 @@ export default function CTASection() {
                     style={{ objectFit: "contain" }}
                 />
             </div>
-            <p className={styles.transparent_heading}>Creative Agency</p>
+            <p className={styles.transparent_heading}>{transparentHeading}</p>
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 col-md-6">
                         <div className={styles.sec_left}>
                             <h2 className={styles.title}>
-                                helpp
+                                {title}
                             </h2>
                             <p className={styles.para}>
-                                What if you get your desired services at home quickly? Exciting, right? Helpp app has got you covered. Our rewarding app makes service bookings easy and supports requests. Our Houston-based app development team delivered a responsive app that aids users in managing their activities anywhere.
+                                {para}
                             </p>
 
                             {/* Stats Section */}
                             <div className={styles.statsContainer}>
-                                <div className={styles.statItem}>
-                                    <span className={styles.statNumber}>10X</span>
-                                    <span className={styles.statLabel}>Visitors</span>
-                                </div>
-                                <div className={styles.statItem}>
-                                    <span className={styles.statNumber}>15X</span>
-                                    <span className={styles.statLabel}>Call Requests</span>
-                                </div>
-                                <div className={styles.statItem}>
-                                    <span className={styles.statNumber}>20X</span>
-                                    <span className={styles.statLabel}>Customer Growth</span>
-                                </div>
-                                <div className={styles.statItem}>
-                                    <span className={styles.statNumber}>50X</span>
-                                    <span className={styles.statLabel}>Downloads</span>
-                                </div>
+                                {stats.map((stat, idx) => (
+                                    <div key={idx} className={styles.statItem}>
+                                        <span className={styles.statNumber}>{stat.statNumber}</span>
+                                        <span className={styles.statLabel}>{stat.statLabel}</span>
+                                    </div>
+                                ))}
                             </div>
                             <div className="combo_btn">
                                 <ActionButtons />

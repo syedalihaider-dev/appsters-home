@@ -171,7 +171,7 @@ export default function ContactSection() {
                   </label>
                   <input
                     id="c-phone"
-                    type="tel"
+                    type="number"
                     name="phone"
                     placeholder="+1 (555) 000-0000"
                     value={formData.phone}

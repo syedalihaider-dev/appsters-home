@@ -13,7 +13,10 @@
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
+.header h2 span {
+    color: #cf0;
+    font-family: Big Shoulders, sans-serif;
+}
 .highlight {
   background-color: var(--secondary-color);
   color: #CCFF00;

@@ -129,7 +129,7 @@ const ContactSection = () => {
 
                 <div className="mb-3">
                   <input
-                    type="tel"
+                    type="number"
                     name="phone"
                     placeholder="Phone Number*"
                     className={styles.inputField}

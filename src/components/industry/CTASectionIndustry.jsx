@@ -4,7 +4,9 @@ import ActionButtons from "@/components/ui/ActionButtons";
 import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./CTASection.module.css";
 
-export default function CTASectionIndustry() {
+export default function CTASectionIndustry({ data = {} }) {
+    const title = data.title || 'As a Premier <span class="primarytxt">Mobile App Development</span> Company in Houston, We’re Recognized by Leading Industry <span class="primarytxt">Experts & Platforms for</span> Our <span class="primarytxt">Outstanding App</span> Development Services.';
+
     return (
         <section className={styles.ctaSection}>
             <Image
@@ -18,11 +20,7 @@ export default function CTASectionIndustry() {
                 <div className="row">
                     <div className="col-sm-12 col-md-12">
                         <div className={styles.sec_left}>
-                            <h2 className={`${styles.title} ${styles.titleV1}`}>
-                                As a Premier <span className="primarytxt">Mobile App Development</span> Company in Houston,
-                                We’re Recognized by Leading Industry <span className="primarytxt">Experts & Platforms for</span>
-                                Our <span className="primarytxt">Outstanding App</span> Development Services.
-                            </h2>
+                            <h2 className={`${styles.title} ${styles.titleV1}`} dangerouslySetInnerHTML={{ __html: title }}></h2>
 
                             <div className="combo_btn combo_btn_v1 justify-content-center">
                                 <ActionButtons />
@@ -32,8 +30,6 @@ export default function CTASectionIndustry() {
                     </div>
                 </div>
             </div>
-
-
         </section>
     );
 }

@@ -1,28 +1,33 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ActionButtons from "@/components/ui/ActionButtons";
 import ClutchWidget from "@/components/ClutchWidget";
 import styles from './HeroSection.module.css';
 
-export default function HeroSection() {
+export default function HeroSection({ data = {} }) {
     const router = useRouter();
+    const transparentHeading = data.transparentHeading || "Industries";
+    const subHeading = data.subHeading || "Appsters";
+    const mainHeading = data.mainHeading || '<span class="primarytxt">Mobile App Development Company Houston </span>';
+    const paragraph = data.paragraph || "With 10+ years of expertise, BitsWits provides top-graded healthcare app development services that ensure HIPAA compliance, secure patient data and streamline appointment scheduling–so you can focus on your patient care. Hire us to see why healthcare providers trust us!";
+    const formPageTitle = data.formPageTitle || 'Industry Hero Consultation Form';
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         msg: '',
-        pageTitle: 'Industry Hero Consultation Form',
+        pageTitle: formPageTitle,
         pageUrl: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-            setFormData(prev => ({ ...prev, pageUrl: window.location.href }));
+            setFormData(prev => ({ ...prev, pageUrl: window.location.href, pageTitle: formPageTitle }));
         }
-    }, []);
+    }, [formPageTitle]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -67,7 +72,7 @@ export default function HeroSection() {
 
     return (
         <section className={styles.heroSection}>
-            <span className={styles.transparent_heading}>Industries</span>
+            <span className={styles.transparent_heading}>{transparentHeading}</span>
             <Image
                 src="/images/banner-bg.png"
                 alt="Main Banner Image..."
@@ -81,15 +86,10 @@ export default function HeroSection() {
                 <div className="row align-items-center">
                     <div className="col-sm-12 col-md-6">
                         <div className={styles.banner_left}>
-                            <p className={styles.sub_heading}>Appsters</p>
-                            <h1 className={styles.main_heading}>
-                                <span className="primarytxt">Mobile App Development Company Houston </span> 
-                            </h1>
+                            <p className={styles.sub_heading}>{subHeading}</p>
+                            <h1 className={styles.main_heading} dangerouslySetInnerHTML={{ __html: mainHeading }}></h1>
                             <p className={styles.paragraph}>
-                               With 10+ years of expertise, BitsWits provides top-graded healthcare app
-                                development services that ensure HIPAA compliance, secure patient data
-                                and streamline appointment scheduling–so you can focus on your patient
-                                care. Hire us to see why healthcare providers trust us!
+                               {paragraph}
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />
@@ -167,96 +167,28 @@ export default function HeroSection() {
             </div>
             <div className={styles.marque}>
                 <ul className={styles.marquee_slider}>
-                    <li>
-                        <div className={styles.box}>
-                            <p>
-                                Turn Your Wildest Ideas Into <span>Powerful Digital Products</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.center_logo}>
-                            <Image
-                                src="/images/appsters-shape-decor-dark.png"
-                                alt="Appsters Shape Decor Dark Image..."
-                                fill
-                                sizes="100vw"
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.box}>
-                            <p>
-                                Turn Your Wildest Ideas Into <span>Powerful Digital Products</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.center_logo}>
-                            <Image
-                                src="/images/appsters-shape-decor-dark.png"
-                                alt="Appsters Shape Decor Dark Image..."
-                                fill
-                                sizes="100vw"
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.box}>
-                            <p>
-                                Turn Your Wildest Ideas Into <span>Powerful Digital Products</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.center_logo}>
-                            <Image
-                                src="/images/appsters-shape-decor-dark.png"
-                                alt="Appsters Shape Decor Dark Image..."
-                                fill
-                                sizes="100vw"
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.box}>
-                            <p>
-                                Turn Your Wildest Ideas Into <span>Powerful Digital Products</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.center_logo}>
-                            <Image
-                                src="/images/appsters-shape-decor-dark.png"
-                                alt="Appsters Shape Decor Dark Image..."
-                                fill
-                                sizes="100vw"
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.box}>
-                            <p>
-                                Turn Your Wildest Ideas Into <span>Powerful Digital Products</span>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className={styles.center_logo}>
-                            <Image
-                                src="/images/appsters-shape-decor-dark.png"
-                                alt="Appsters Shape Decor Dark Image..."
-                                fill
-                                sizes="100vw"
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>
-                    </li>
+                    {[1, 2, 3, 4, 5].map((idx) => (
+                        <React.Fragment key={idx}>
+                            <li>
+                                <div className={styles.box}>
+                                    <p>
+                                        Turn Your Wildest Ideas Into <span>Powerful Digital Products</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className={styles.center_logo}>
+                                    <Image
+                                        src="/images/appsters-shape-decor-dark.png"
+                                        alt="Appsters Shape Decor Dark Image..."
+                                        fill
+                                        sizes="100vw"
+                                        style={{ objectFit: "contain" }}
+                                    />
+                                </div>
+                            </li>
+                        </React.Fragment>
+                    ))}
                 </ul>
             </div>
         </section>

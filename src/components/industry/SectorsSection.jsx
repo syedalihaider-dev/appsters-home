@@ -7,7 +7,7 @@ import ActionButtons from "@/components/ui/ActionButtons";
 import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./SectorsSection.module.css";
 
-const sectorsData = [
+const defaultSectorsData = [
   {
     id: "on-demand",
     tabTitle: "ON-DEMAND APP SOLUTION",
@@ -84,11 +84,14 @@ const contentVariants = {
   }),
 };
 
-export default function SectorsSection() {
+export default function SectorsSection({ data = {} }) {
   const [activeTab, setActiveTab] = useState(0);
   const [direction, setDirection] = useState(1);
   const tabRefs = useRef([]);
   const tabsContainerRef = useRef(null);
+
+  const mainTitle = data.mainTitle || "SERVING 40+ SECTORS WITH MOBILE<br />APP DEVELOPMENT IN HOUSTON";
+  const sectorsData = data.sectorsData || defaultSectorsData;
 
   const scrollToTab = (index) => {
     const container = tabsContainerRef.current;
@@ -127,18 +130,14 @@ export default function SectorsSection() {
     changeTab(newIndex, 1);
   };
 
-  const currentSector = sectorsData[activeTab];
+  const currentSector = sectorsData[activeTab] || sectorsData[0];
 
   return (
     <section className={styles.sectorsSection}>
       <div className="container">
         {/* Main Section Heading */}
         <div className={styles.titleWrap}>
-          <h2 className={styles.mainTitle}>
-            SERVING 40+ SECTORS WITH MOBILE
-            <br />
-            APP DEVELOPMENT IN HOUSTON
-          </h2>
+          <h2 className={styles.mainTitle} dangerouslySetInnerHTML={{ __html: mainTitle }}></h2>
         </div>
 
         {/* Tab Navigation Row */}
@@ -160,7 +159,7 @@ export default function SectorsSection() {
               const isActive = activeTab === index;
               return (
                 <button
-                  key={sector.id}
+                  key={sector.id || index}
                   ref={(el) => (tabRefs.current[index] = el)}
                   className={`${styles.tabItem} ${isActive ? styles.activeTab : ""}`}
                   onClick={() => handleTabClick(index)}
@@ -241,4 +240,3 @@ export default function SectorsSection() {
     </section>
   );
 }
-

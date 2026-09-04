@@ -4,7 +4,11 @@ import ActionButtons from "@/components/ui/ActionButtons";
 import { SITE_PHONE_LINK } from "@/app/constants";
 import styles from "./GameCTASection.module.css";
 
-export default function GameCTASection() {
+export default function GameCTASection({ data = {} }) {
+    const subHeading = data.subHeading || "Game App Development";
+    const title = data.title || 'Into Engaging Mobile <span class="primarytxt">Games</span>';
+    const para = data.para || "From thumb-tapping mobile hits or a console-grade spectacle, we build games that move players.";
+
     return (
         <section className={styles.gameSection}>
             <div className="container">
@@ -19,12 +23,10 @@ export default function GameCTASection() {
                                     alt="Arrow Image"
                                 />
                             </div>
-                            <p className={styles.sub_heading}>Game App Development</p>
-                            <h2 className={styles.title}>
-                                Into Engaging Mobile <span className="primarytxt">Games</span>
-                            </h2>
+                            <p className={styles.sub_heading}>{subHeading}</p>
+                            <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h2>
                             <p className={styles.para}>
-                                From thumb-tapping mobile hits or a console-grade spectacle, we build games that move players.
+                                {para}
                             </p>
                             <div className="combo_btn">
                                 <ActionButtons />
