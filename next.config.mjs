@@ -6,23 +6,23 @@ const nextConfig = {
     return [
       {
         source: '/mobile-app-development-dubai',
-        destination: '/location-lp/mobile-app-development-dubai',
+        destination: '/location/mobile-app-development-dubai',
       },
       {
         source: '/mobile-app-development-denver',
-        destination: '/location-lp/mobile-app-development-denver',
+        destination: '/location/mobile-app-development-denver',
       },
       {
         source: '/mobile-app-development-dallas',
-        destination: '/location-lp/mobile-app-development-dallas',
+        destination: '/location/mobile-app-development-dallas',
       },
       {
         source: '/mobile-app-development-chicago',
-        destination: '/location-lp/mobile-app-development-chicago',
+        destination: '/location/mobile-app-development-chicago',
       },
       {
         source: '/mobile-app-development-austin',
-        destination: '/location-lp/mobile-app-development-austin',
+        destination: '/location/mobile-app-development-austin',
       },
     ];
   },

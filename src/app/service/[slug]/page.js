@@ -28,6 +28,20 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const data = serviceData[slug];
+
+  if (!data) {
+    return {};
+  }
+
+  return {
+    title: data.seoTitle || data.title,
+    description: data.seoDesc,
+  };
+}
+
 export default async function ServiceDetailPage({ params }) {
   const { slug } = await params;
   const data = serviceData[slug];
@@ -52,7 +66,7 @@ export default async function ServiceDetailPage({ params }) {
       <FeaturesSection data={data.features} />
       <DevelopmentStack />
       <PlansSection />
-      <GameCTASection />
+      {/* <GameCTASection /> */}
       <IndustriesSection data={data.industries} />
       <FAQSection data={data.faq} />
       <LocationSection />

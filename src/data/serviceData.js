@@ -3,7 +3,7 @@ export const serviceData = {
     "slug": "android-app-development-company",
     "title": "Android App Development",
     "seoTitle": "The Best Android App Development Company | Appsters",
-    "seoDesc": "Hire our proficient Android app development services and scale your business with powerful Kotlin and Jetpack solutions. Get a quote today!",
+    "seoDesc": "Hire our proficient Android app development services and see your business scale 50x with our powerful Android solutions. Get a quote today!",
     "icon": "/images/services/android-icon.webp",
     "bg": "/images/services/android-app-development.webp",
     "cardDesc": "Built for scale, trusted by leaders, and engineered for long-term adaptability, our Android application development services deliver powerful architectures, optimized performance, and business outcomes that stand the test of scale.",
@@ -578,7 +578,7 @@ export const serviceData = {
     "slug": "ios-app-development-company",
     "title": "iOS App Development",
     "seoTitle": "Best iOS App Development Company In The USA",
-    "seoDesc": "Looking to develop an iOS app? Our certified developers build secure, high performance apps for iPhone, iPad, and Watch. Get your app built today!",
+    "seoDesc": "Looking to develop an iOS app? Our certified developers build secure, high-performance apps for iPhone, iPad, and Watch. Get your app built today!",
     "icon": "/images/services/ios-icon.webp",
     "bg": "/images/services/ios-app-development.webp",
     "cardDesc": "Appsters is a numbers-driven iOS app development company, delivering transformative digital products that reimagine user interaction. Our extensive iOS app development services splice the entire product lifecycle, moving from concept ideation straight through to time-tested App Store deployment.",
@@ -1726,7 +1726,7 @@ export const serviceData = {
   },
   "flutter-app-development-company": {
     "slug": "flutter-app-development-company",
-    "title": "Flutter App Development",
+    "title": "Flutter App Development Company | Appsters",
     "seoTitle": "Flutter App Development Company | Appsters",
     "seoDesc": "As the best Flutter app development company we deliver top cross platform solutions for iOS and Android. Over 1500 apps built. Get a quote today!",
     "icon": "/images/services/flutter-icon.webp",
@@ -8175,7 +8175,7 @@ export const servicesList = [
     "icon": "/images/services/android-icon.webp",
     "bg": "/images/services/android-app-development.webp",
     "desc": "We engineer Android apps built for reach, reliability, and results. Every interface, API, and database call is optimized for speed and security.",
-    "link": "/servicedetail/android-app-development-company"
+    "link": "/service/android-app-development-company"
   },
   {
     "id": 2,
@@ -8184,7 +8184,7 @@ export const servicesList = [
     "icon": "/images/services/ios-icon.webp",
     "bg": "/images/services/ios-app-development.webp",
     "desc": "As a leading iOS app development company, we specialize in creating high-performance iPhone and iPad applications that reflect Apple's elegance.",
-    "link": "/servicedetail/ios-app-development-company"
+    "link": "/service/ios-app-development-company"
   },
   {
     "id": 3,
@@ -8193,7 +8193,7 @@ export const servicesList = [
     "icon": "/images/services/react-native-icon.webp",
     "bg": "/images/services/react-native-app-development.webp",
     "desc": "Leverage the power of React Native to build cross-platform apps with native-like performance and a single codebase.",
-    "link": "/servicedetail/react-native-app-development-company"
+    "link": "/service/react-native-app-development-company"
   },
   {
     "id": 4,
@@ -8202,7 +8202,7 @@ export const servicesList = [
     "icon": "/images/services/cross-platform-icon.webp",
     "bg": "/images/services/cross-platform-app-development.webp",
     "desc": "We build versatile cross-platform applications that deliver a consistent and exciting user experience across all devices.",
-    "link": "/servicedetail/cross-platform-app-development-company"
+    "link": "/service/cross-platform-app-development-company"
   },
   {
     "id": 5,
@@ -8211,7 +8211,7 @@ export const servicesList = [
     "icon": "/images/services/flutter-icon.webp",
     "bg": "/images/services/flutter-app-development.webp",
     "desc": "Create visually stunning and highly responsive native applications for mobile, web, and desktop from a single codebase using Flutter.",
-    "link": "/servicedetail/flutter-app-development-company"
+    "link": "/service/flutter-app-development-company"
   },
   {
     "id": 6,
@@ -8220,7 +8220,7 @@ export const servicesList = [
     "icon": "/images/services/mobile-game-icon.webp",
     "bg": "/images/services/mobile-game-app-development.webp",
     "desc": "Our game development experts craft immersive and interactive mobile games with stunning graphics and engaging gameplay.",
-    "link": "/servicedetail/mobile-game-development-services"
+    "link": "/service/mobile-game-development-services"
   },
   {
     "id": 7,
@@ -8229,7 +8229,7 @@ export const servicesList = [
     "icon": "/images/services/ecommerce-icon.webp",
     "bg": "/images/services/ecommerce-app-development.webp",
     "desc": "Combine web agility with mobile capability to deploy versatile hybrid apps that reach your audience across multiple devices quickly.",
-    "link": "/servicedetail/hybrid-app-development-company"
+    "link": "/service/hybrid-app-development-company"
   },
   {
     "id": 8,
@@ -8238,7 +8238,7 @@ export const servicesList = [
     "icon": "/images/services/custom-mobile-icon.webp",
     "bg": "/images/services/custom-mobile-app-development.webp",
     "desc": "Appsters builds apps optimized for scaling and long-term performance. Our mobile app development services combine product thinking with tech-driven production, delivering software that users love and businesses rely on.",
-    "link": "/servicedetail/mobile-app-development-company"
+    "link": "/service/mobile-app-development-company"
   },
   {
     "id": 9,
@@ -8247,7 +8247,7 @@ export const servicesList = [
     "icon": "/images/services/ai-icon.webp",
     "bg": "/images/services/ai-app-development.webp",
     "desc": "Integrate artificial intelligence into your mobile apps to offer smart features, predictive analytics, and personalized user experiences.",
-    "link": "/servicedetail/ai-app-development-services"
+    "link": "/service/ai-app-development-services"
   },
   {
     "id": 10,
@@ -8256,7 +8256,7 @@ export const servicesList = [
     "icon": "/images/services/mobile-game-icon.webp",
     "bg": "/images/services/mobile-game-app-development.webp",
     "desc": "Our 2D game development studio crafts smooth, addictive mobile games with striking art and tight controls to turn ideas into playing success.",
-    "link": "/servicedetail/2d-game-development-services"
+    "link": "/service/2d-game-development-services"
   },
   {
     "id": 11,
@@ -8265,7 +8265,7 @@ export const servicesList = [
     "icon": "/images/services/mobile-game-icon.webp",
     "bg": "/images/services/mobile-game-app-development.webp",
     "desc": "Appsters builds immersive 3D games with Unity and Unreal Engine, optimized for console-grade visuals, dynamic depth, and performance on mobile.",
-    "link": "/servicedetail/3d-game-development-services"
+    "link": "/service/3d-game-development-services"
   },
   {
     "id": 12,
@@ -8274,7 +8274,7 @@ export const servicesList = [
     "icon": "/images/services/mobile-game-icon.webp",
     "bg": "/images/services/mobile-game-app-development.webp",
     "desc": "Launch decentralized games with our Web 3 game development services featuring wallet logins, token economies, and true digital ownership.",
-    "link": "/servicedetail/web3-game-development-company"
+    "link": "/service/web3-game-development-company"
   },
   {
     "id": 13,
@@ -8283,7 +8283,7 @@ export const servicesList = [
     "icon": "/images/services/mobile-game-icon.webp",
     "bg": "/images/services/mobile-game-app-development.webp",
     "desc": "We build provably fair blockchain games with on-chain economies, audited smart contracts, and seamless custom wallet integration.",
-    "link": "/servicedetail/blockchain-game-development-company"
+    "link": "/service/blockchain-game-development-company"
   },
   {
     "id": 14,
@@ -8292,6 +8292,6 @@ export const servicesList = [
     "icon": "/images/services/mobile-game-icon.webp",
     "bg": "/images/services/mobile-game-app-development.webp",
     "desc": "Build play-to-earn worlds with full-cycle NFT game development, verified asset ownership, smart contracts, and marketplace integration.",
-    "link": "/servicedetail/nft-game-development-company"
+    "link": "/service/nft-game-development-company"
   }
 ];

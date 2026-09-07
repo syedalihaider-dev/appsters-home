@@ -78,7 +78,7 @@
 
 .para {
     color: var(--secondary-color);
-    height: 70px;
+    height: fit-content;
 }
 .spacer {
         margin-top: 100px;

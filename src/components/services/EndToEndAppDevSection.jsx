@@ -31,7 +31,7 @@ export default function EndToEndAppDevSection({ data }) {
   }, []);
 
   const CardContent = ({ item }) => {
-    const cardHref = item.link || (item.slug ? `/servicedetail/${item.slug}` : (item.buttonHref || "#contactForm"));
+    const cardHref = item.link || (item.slug ? `/service/${item.slug}` : (item.buttonHref || "#contactForm"));
 
     return (
       <Link href={cardHref} className={styles.card}>

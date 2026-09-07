@@ -5,6 +5,7 @@ export const locationLpData = {
     metadata: {
       title: "Mobile App Development Company in Dubai, UAE | Appsters",
       description: "Appsters is a mobile app development company in Dubai building bilingual Arabic and English mobile apps. AED pricing. Book a free consultation today.",
+      alternates: { canonical: "/mobile-app-development-dubai" },
     },
     hero: {
       transparentHeading: "Dubai",
@@ -15,7 +16,7 @@ export const locationLpData = {
     },
     deliveredSolutions: {
       subHeading: "Appsters Dubai",
-      title: "Work With A Local Mobile App <br />Developer In Dubai",
+      title: "Work With A Local Mobile App Developer In Dubai",
       description: "Appsters has engineered platforms serving millions of daily users across fintech, ecommerce, hospitality, and mobility.",
       boxes: [
         {
@@ -390,7 +391,8 @@ export const locationLpData = {
   "slug": "mobile-app-development-denver",
   "metadata": {
     "title": "Mobile App Development Company in Denver, CO | Appsters",
-    "description": "Work with a mobile app development company in Denver building iOS, Android and offline first apps for aerospace, outdoor and energy brands. Get a free quote."
+    "description": "Work with a mobile app development company in Denver building iOS, Android and offline first apps for aerospace, outdoor and energy brands. Get a free quote.",
+    "alternates": { "canonical": "/mobile-app-development-denver" }
   },
   "hero": {
     "transparentHeading": "Denver",
@@ -401,7 +403,7 @@ export const locationLpData = {
   },
   "deliveredSolutions": {
     "subHeading": "Appsters Denver",
-    "title": "Work With A Local Mobile App <br />Developer In Denver",
+    "title": "Work With A Local Mobile App Developer In Denver",
     "description": "Appsters has engineered platforms serving millions of daily users across aerospace, outdoor retail, and clean energy.",
     "boxes": [
       {
@@ -839,7 +841,8 @@ export const locationLpData = {
   "slug": "mobile-app-development-dallas",
   "metadata": {
     "title": "Top Mobile App Development Company in Dallas | Appsters",
-    "description": "Appsters builds iOS, Android and cross platform apps as a trusted mobile app development company in Dallas. Enterprise ready delivery. Book a consultation."
+    "description": "Appsters builds iOS, Android and cross platform apps as a trusted mobile app development company in Dallas. Enterprise ready delivery. Book a consultation.",
+    "alternates": { "canonical": "/mobile-app-development-dallas" }
   },
   "hero": {
     "transparentHeading": "Dallas",
@@ -850,7 +853,7 @@ export const locationLpData = {
   },
   "deliveredSolutions": {
     "subHeading": "Appsters Dallas",
-    "title": "Work With A Local Mobile App <br />Developer In Dallas",
+    "title": "Work With A Local Mobile App Developer In Dallas",
     "description": "Appsters has engineered platforms serving millions of daily users across telecom, energy, aviation, and retail.",
     "boxes": [
       {
@@ -1300,7 +1303,8 @@ export const locationLpData = {
   "slug": "mobile-app-development-chicago",
   "metadata": {
     "title": "Top Mobile App Development Company in Chicago | Appsters",
-    "description": "Hire a mobile app development company in Chicago for iOS, Android and cross platform builds. Trading, freight and healthcare apps built to audit. Get a quote."
+    "description": "Hire a mobile app development company in Chicago for iOS, Android and cross platform builds. Trading, freight and healthcare apps built to audit. Get a quote.",
+    "alternates": { "canonical": "/mobile-app-development-chicago" }
   },
   "hero": {
     "transparentHeading": "Chicago",
@@ -1311,7 +1315,7 @@ export const locationLpData = {
   },
   "deliveredSolutions": {
     "subHeading": "Appsters Chicago",
-    "title": "Work With A Local Mobile App <br />Developer In Chicago",
+    "title": "Work With A Local Mobile App Developer In Chicago",
     "description": "Appsters has engineered platforms carrying millions of daily users across trading, logistics, and healthcare systems.",
     "boxes": [
       {
@@ -1749,7 +1753,8 @@ export const locationLpData = {
   "slug": "mobile-app-development-austin",
   "metadata": {
     "title": "Top Mobile App Development Company in Austin, TX | Appsters",
-    "description": "Appsters is a mobile app development company in Austin building iOS, Android and cross platform apps for startups and enterprises. Book a free consultation."
+    "description": "Appsters is a mobile app development company in Austin building iOS, Android and cross platform apps for startups and enterprises. Book a free consultation.",
+    "alternates": { "canonical": "/mobile-app-development-austin" }
   },
   "hero": {
     "transparentHeading": "Austin",
@@ -1760,7 +1765,7 @@ export const locationLpData = {
   },
   "deliveredSolutions": {
     "subHeading": "Appsters Austin",
-    "title": "Work With A Local Mobile App <br />Developer In Austin",
+    "title": "Work With A Local Mobile App Developer In Austin",
     "description": "Appsters has engineered platforms handling millions of daily users across fintech, ecommerce, and mobility.",
     "boxes": [
       {

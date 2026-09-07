@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
-export default function ServiceDetailRootPage() {
+export default function ServiceRootPage() {
   redirect('/services');
 }
