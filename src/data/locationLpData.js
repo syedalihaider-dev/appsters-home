@@ -5,7 +5,7 @@ export const locationLpData = {
     metadata: {
       title: "Mobile App Development Company in Dubai, UAE | Appsters",
       description: "Appsters is a mobile app development company in Dubai building bilingual Arabic and English mobile apps. AED pricing. Book a free consultation today.",
-      alternates: { canonical: "/mobile-app-development-dubai" },
+      alternates: { canonical: "https://www.appsters.io/location/mobile-app-development-dubai" },
     },
     hero: {
       transparentHeading: "Dubai",
@@ -392,7 +392,7 @@ export const locationLpData = {
   "metadata": {
     "title": "Mobile App Development Company in Denver, CO | Appsters",
     "description": "Work with a mobile app development company in Denver building iOS, Android and offline first apps for aerospace, outdoor and energy brands. Get a free quote.",
-    "alternates": { "canonical": "/mobile-app-development-denver" }
+    "alternates": { "canonical": "https://www.appsters.io/location/mobile-app-development-denver" }
   },
   "hero": {
     "transparentHeading": "Denver",
@@ -842,7 +842,7 @@ export const locationLpData = {
   "metadata": {
     "title": "Top Mobile App Development Company in Dallas | Appsters",
     "description": "Appsters builds iOS, Android and cross platform apps as a trusted mobile app development company in Dallas. Enterprise ready delivery. Book a consultation.",
-    "alternates": { "canonical": "/mobile-app-development-dallas" }
+    "alternates": { "canonical": "https://www.appsters.io/location/mobile-app-development-dallas" }
   },
   "hero": {
     "transparentHeading": "Dallas",
@@ -1304,7 +1304,7 @@ export const locationLpData = {
   "metadata": {
     "title": "Top Mobile App Development Company in Chicago | Appsters",
     "description": "Hire a mobile app development company in Chicago for iOS, Android and cross platform builds. Trading, freight and healthcare apps built to audit. Get a quote.",
-    "alternates": { "canonical": "/mobile-app-development-chicago" }
+    "alternates": { "canonical": "https://www.appsters.io/location/mobile-app-development-chicago" }
   },
   "hero": {
     "transparentHeading": "Chicago",
@@ -1754,7 +1754,7 @@ export const locationLpData = {
   "metadata": {
     "title": "Top Mobile App Development Company in Austin, TX | Appsters",
     "description": "Appsters is a mobile app development company in Austin building iOS, Android and cross platform apps for startups and enterprises. Book a free consultation.",
-    "alternates": { "canonical": "/mobile-app-development-austin" }
+    "alternates": { "canonical": "https://www.appsters.io/location/mobile-app-development-austin" }
   },
   "hero": {
     "transparentHeading": "Austin",
