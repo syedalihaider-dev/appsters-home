@@ -541,9 +541,9 @@ p {
 .appsters-phone-field > .appsters-country-code,
 [class*="countryCode"] > .appsters-country-code {
   display: block;
-  width: 138px;
-  min-width: 138px;
-  max-width: 138px;
+  width: 85px;
+  min-width: 85px;
+  max-width: 85px;
   min-height: 100%;
   border: 0;
   border-right: 1px solid rgba(0, 0, 0, 0.14);
@@ -551,7 +551,7 @@ p {
   appearance: auto;
   background: #fff;
   color: #111 !important;
-  padding: 0 24px 0 12px;
+  padding: 0px;
   font: inherit;
   line-height: 1;
   opacity: 1;
