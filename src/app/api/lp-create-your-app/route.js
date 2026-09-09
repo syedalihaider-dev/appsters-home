@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { name, email, phone, service, idea, budget, pageUrl } = body;
+        const { name, email, phone, service, idea, budget, pageUrl, countryCode } = body;
 
         // Get IP Address from headers for tracking
         const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ||
@@ -63,6 +63,7 @@ export async function POST(req) {
                 <p><strong>Name:</strong> ${name || 'N/A'}</p>
                 <p><strong>Email:</strong> ${email || 'N/A'}</p>
                 <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+                <p><strong>Selected Country Code:</strong> ${countryCode || 'N/A'}</p>
                 <p><strong>Service Needed:</strong> ${service || 'N/A'}</p>
                 <p><strong>App Idea:</strong> ${idea || 'N/A'}</p>
                 <p><strong>Budget:</strong> ${budget || 'N/A'}</p>

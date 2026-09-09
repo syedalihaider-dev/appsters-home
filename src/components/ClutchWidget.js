@@ -4,19 +4,20 @@ import { useEffect } from "react";
 import Script from "next/script";
 
 export default function ClutchWidget() {
-  const initializeWidget = () => {
+  const initializeWidgets = () => {
     if (typeof window === "undefined") return;
 
     const clutch = window.CLUTCHCO;
-    if (!clutch || typeof clutch.Init !== "function") return;
+    const goodfirms = window.GOODFIRMS;
 
     window.setTimeout(() => {
-      clutch.Init();
+      if (clutch && typeof clutch.Init === "function") clutch.Init();
+      if (goodfirms && typeof goodfirms.Init === "function") goodfirms.Init();
     }, 0);
   };
 
   useEffect(() => {
-    initializeWidget();
+    initializeWidgets();
   }, []);
 
   return (
@@ -24,19 +25,34 @@ export default function ClutchWidget() {
       <Script
         src="https://widget.clutch.co/static/js/widget.js"
         strategy="afterInteractive"
-        onLoad={initializeWidget}
+        onLoad={initializeWidgets}
       />
 
-      <div
-        className="clutch-widget w-100 d-flex justify-content-center align-items-center mt-4"
-        data-url="https://widget.clutch.co"
-        data-widget-type="1"
-        data-height="40"
-        data-nofollow="false"
-        data-expandifr="true"
-        data-darkbg="darkbg"
-        data-clutchcompany-id="2569066"
+      <Script
+        src="https://assets.goodfirms.co/assets/js/widget.min.js"
+        strategy="afterInteractive"
+        onLoad={initializeWidgets}
       />
+
+      <div className="appsters-review-widgets">
+        <div
+          className="clutch-widget appsters-clutch-widget"
+          data-url="https://widget.clutch.co"
+          data-widget-type="1"
+          data-height="40"
+          data-nofollow="false"
+          data-expandifr="true"
+          data-darkbg="darkbg"
+          data-clutchcompany-id="2569066"
+        />
+        <div
+          className="goodfirm-widget appsters-goodfirms-widget"
+          data-widget-type="goodfirms-widget-t9"
+          data-widget-pattern="horizontal-inline"
+          data-height="61"
+          data-company-id="191188"
+        />
+      </div>
     </>
   );
 }

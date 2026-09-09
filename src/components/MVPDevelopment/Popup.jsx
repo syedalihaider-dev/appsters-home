@@ -154,15 +154,15 @@ const Popup = () => {
                         <form className={styles.formBox} onSubmit={handleSubmit}>
                             <div className={styles.inputGroup}>
                                 <label>Full Name*</label>
-                                <input type="text" name="name" placeholder="Please share your first and last Name ..." required />
+                                <input type="text" name="name" placeholder="Jordan Rivera" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Email Address*</label>
-                                <input type="email" name="email" placeholder="yourid@domain.com" required />
+                                <input type="email" name="email" placeholder="jordan@company.com" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Phone Number*</label>
-                                <input type="number" name="phone" placeholder="+1 000 000 0000" required />
+                                <input type="number" name="phone" placeholder="555 000 000" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Select Services*</label>

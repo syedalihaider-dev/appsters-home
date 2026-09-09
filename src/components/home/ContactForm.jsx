@@ -132,7 +132,7 @@ export default function ContactForm() {
                                     <input
                                         type="text"
                                         name="name"
-                                        placeholder="Please share your first and last Name ..."
+                                        placeholder="Jordan Rivera"
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
@@ -145,7 +145,7 @@ export default function ContactForm() {
                                     <input
                                         type="email"
                                         name="email"
-                                        placeholder="yourid@domain.com"
+                                        placeholder="jordan@company.com"
                                         required
                                         value={formData.email}
                                         onChange={handleChange}

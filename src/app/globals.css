@@ -531,3 +531,80 @@ p {
     gap: 10px;
   }
 }
+/* Shared international phone field. Applied to every lead form without changing its card/layout styles. */
+.appsters-phone-field {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.appsters-phone-field > .appsters-country-code,
+[class*="countryCode"] > .appsters-country-code {
+  display: block;
+  width: 138px;
+  min-width: 138px;
+  max-width: 138px;
+  min-height: 100%;
+  border: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 0;
+  appearance: auto;
+  background: #fff;
+  color: #111 !important;
+  padding: 0 24px 0 12px;
+  font: inherit;
+  line-height: 1;
+  opacity: 1;
+  -webkit-text-fill-color: #111;
+}
+
+.appsters-phone-field > input[name="phone"] {
+  flex: 1 1 auto !important;
+  width: 1% !important;
+  min-width: 0;
+}
+
+.appsters-review-widgets {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  width: max-content;
+  margin-top: 20px;
+}
+
+.appsters-review-widgets > .clutch-widget,
+.appsters-review-widgets > .goodfirm-widget {
+  flex: 0 0 auto;
+}
+
+.appsters-clutch-widget {
+  width: 134px;
+}
+
+.appsters-goodfirms-widget {
+  display: flex;
+  justify-content: center;
+  width: 236px;
+  min-width: 236px;
+  min-height: 61px;
+  margin: 0;
+}
+
+.appsters-clutch-widget iframe,
+.appsters-goodfirms-widget iframe {
+  display: block;
+  width: 100%;
+}
+
+.appsters-goodfirms-widget iframe {
+  min-height: 61px;
+}
+
+@media (max-width: 480px) {
+  .appsters-review-widgets {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}

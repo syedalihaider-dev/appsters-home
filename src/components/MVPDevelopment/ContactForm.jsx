@@ -131,15 +131,15 @@ const FormContent = () => {
                 <div className="col-lg-6">
                     <div className={styles.inputGroup}>
                         <label>Full Name</label>
-                        <input type="text" name="name" required placeholder="Please share your first and last Name ..." />
+                        <input type="text" name="name" required placeholder="Jordan Rivera" />
                     </div>
                     <div className={styles.inputGroup}>
                         <label>Email Address</label>
-                        <input type="email" name="email" required placeholder="yourid@domain.com" />
+                        <input type="email" name="email" required placeholder="jordan@company.com" />
                     </div>
                     <div className={styles.inputGroup}>
                         <label>Phone Number</label>
-                        <input type="number" name="phone" required placeholder="+1 000 000 0000" />
+                        <input type="number" name="phone" required placeholder="555 000 000" />
                     </div>
                     <div className={styles.inputGroup}>
                         <label>Select Services</label>

@@ -7,8 +7,6 @@ import { IoCloseCircleOutline } from 'react-icons/io5';
 import { useRouter, usePathname } from 'next/navigation';
 import ClutchWidget from '../ClutchWidget';
 
-
-
 const Popup = () => {
     const router = useRouter();
     const pathname = usePathname();
@@ -161,12 +159,12 @@ const Popup = () => {
                             </div>
                             
 
-                            <div className={styles.partnerLogos}>
+                            {/* <div className={styles.partnerLogos}>
                                 <Image src="/images/mobile-app-studio/popup/featherDev.png" alt="featherDev" width={151} height={37} />
                                 <Image src="/images/mobile-app-studio/popup/spherule.png" alt="spherule" width={126} height={37} />
                                 <Image src="/images/mobile-app-studio/popup/globalBank.png" alt="globalBank" width={151} height={37} />
                                 <Image src="/images/mobile-app-studio/popup/boltshift.png" alt="boltshift" width={130} height={37} />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
@@ -174,15 +172,15 @@ const Popup = () => {
                         <form className={styles.formBox} onSubmit={handleSubmit}>
                             <div className={styles.inputGroup}>
                                 <label>Full Name*</label>
-                                <input type="text" name="name" placeholder="Please share your first and last Name ..." required />
+                                <input type="text" name="name" placeholder="Jordan Rivera" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Email Address*</label>
-                                <input type="email" name="email" placeholder="yourid@domain.com" required />
+                                <input type="email" name="email" placeholder="jordan@company.com" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Phone Number*</label>
-                                <input type="number" name="phone" placeholder="+1 000 000 0000" required />
+                                <input type="number" name="phone" placeholder="555 000 000" required />
                             </div>
                             <div className={styles.inputGroup}>
                                 <label>Select Services*</label>

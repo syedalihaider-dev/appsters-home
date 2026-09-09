@@ -7,6 +7,7 @@ import "./globals.css";
 import Script from "next/script";
 import GlobalLayoutWrapper from "@/components/layout/GlobalLayoutWrapper";
 import Popup from "@/components/layout/Popup";
+import FormEnhancements from "@/components/FormEnhancements";
 
 import { bigShoulders, interTight } from "@/font";
 
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
         </GlobalLayoutWrapper>
 
         <Popup />
+        <FormEnhancements />
       </body>
     </html>
   );
