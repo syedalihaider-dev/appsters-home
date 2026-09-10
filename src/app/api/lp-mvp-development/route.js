@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { createSmtpTransport } from '@/lib/smtp';
 
 export async function POST(req) {
     try {
@@ -41,22 +41,11 @@ export async function POST(req) {
             }
         }
 
-        const transporter = nodemailer.createTransport({
-            host: "maltaserver.stagingtestserver.com",
-            port: 465,
-            secure: true,
-            auth: {
-                user: 'no-reply@appsters.io', 
-                pass: "lG;nI8Y333TUIpfg" 
-            },
-            tls: {
-                rejectUnauthorized: false
-            }
-        });
+        const transporter = createSmtpTransport();
 
         const mailOptions = {
             from: '"Appsters - LP" <support@appsters.io>',
-            to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, aleehaiderbalti@gmail.com',
+            to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io,ali.haider@canvasdigital.org',
             subject: `New LP Lead: MVP Development`,
             html: `
                 <h3>New Lead Details (MVP Development LP):</h3>

@@ -1,35 +1,15 @@
 import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { createSmtpTransport } from '@/lib/smtp'
 
 /**
  * Lead handler for the Enterprise App Development landing page (v2).
  * Mirrors /api/lp-enterprise-app-development exactly:
- *  - same SMTP host/port (maltaserver.stagingtestserver.com:465, secure)
+ *  - SMTP credentials from the shared configuration module
  *  - same IP geolocation via ip-api.com using the x-forwarded-for header
  *  - same recipient list + HTML email template (all fields included)
  *  - server-side validation of name / email / phone before sending
  *
- * NOTE: paste the SAME SMTP user/password used in the existing route here,
- * or set them via environment variables (recommended).
  */
-const SMTP_HOST = 'maltaserver.stagingtestserver.com'
-const SMTP_PORT = 465
-const SMTP_USER = process.env.SMTP_USER || '' // same as existing LP route
-const SMTP_PASS = process.env.SMTP_PASS || '' // same as existing LP route
-
-const transporter = nodemailer.createTransport({
-            host: "maltaserver.stagingtestserver.com",
-            port: 465,
-            secure: true,
-            auth: {
-                user: 'no-reply@appsters.io', 
-                pass: "lG;nI8Y333TUIpfg" 
-            },
-            tls: {
-                rejectUnauthorized: false
-            }
-        });
-
 const isValidEmail = (v = '') => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(v).trim())
 const isValidPhone = (v = '') => {
   const digits = String(v).replace(/[^\d]/g, '')
@@ -38,6 +18,7 @@ const isValidPhone = (v = '') => {
 
 export async function POST(request) {
   try {
+    const transporter = createSmtpTransport()
     const data = await request.json()
     const {
       name = '',
@@ -128,7 +109,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: '"Appsters - LP" <support@appsters.io>',
-      to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, aleehaiderbalti@gmail.com',
+      to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io,ali.haider@canvasdigital.org',
       subject: `New LP Lead: Enterprise App Development (v2)`,
       html,
       replyTo: email || undefined,
