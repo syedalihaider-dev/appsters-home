@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { createSmtpTransport } from '@/lib/smtp'
+import { createSmtpTransport, getSmtpFrom } from '@/lib/smtp'
 
 /**
  * Lead handler for the Enterprise App Development landing page (v2).
@@ -108,7 +108,7 @@ export async function POST(request) {
     `
 
     await transporter.sendMail({
-      from: '"Appsters - LP" <support@appsters.io>',
+      from: `"Appsters - LP" <${getSmtpFrom()}>`,
       to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io,ali.haider@canvasdigital.org',
       subject: `New LP Lead: Enterprise App Development (v2)`,
       html,

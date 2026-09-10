@@ -23,3 +23,7 @@ export function createSmtpTransport() {
     auth: { user, pass },
   });
 }
+
+export function getSmtpFrom() {
+  return process.env.SMTP_FROM || smtpConfig.user;
+}

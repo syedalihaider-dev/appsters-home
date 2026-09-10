@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createSmtpTransport } from '@/lib/smtp';
+import { createSmtpTransport, getSmtpFrom } from '@/lib/smtp';
 
 export async function POST(req) {
     try {
@@ -44,7 +44,7 @@ export async function POST(req) {
         const transporter = createSmtpTransport();
 
         const mailOptions = {
-            from: '"Appsters - LP" <support@appsters.io>',
+            from: `"Appsters - LP" <${getSmtpFrom()}>`,
             to: 'zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io,ali.haider@canvasdigital.org',
             subject: `New LP Lead: Custom App`,
             html: `
