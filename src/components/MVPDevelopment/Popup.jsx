@@ -97,7 +97,7 @@ const Popup = () => {
 
             if (response.ok) {
                 setShow(false);
-                router.push("/lp/mobile-app-studio/thank-you");
+                router.push("/lp/mvp-development/thank-you");
             } else {
                 alert("Submission failed. Please try again.");
             }
