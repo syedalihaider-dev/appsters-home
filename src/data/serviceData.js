@@ -1,6 +1,7 @@
 export const serviceData = {
   "android-app-development-company": {
     "slug": "android-app-development-company",
+    "canonical": "https://www.appsters.io/service/android-app-development-company",
     "title": "Android App Development",
     "seoTitle": "The Best Android App Development Company | Appsters",
     "seoDesc": "Hire our proficient Android app development services and see your business scale 50x with our powerful Android solutions. Get a quote today!",
@@ -576,6 +577,7 @@ export const serviceData = {
   },
   "ios-app-development-company": {
     "slug": "ios-app-development-company",
+    "canonical": "https://www.appsters.io/service/ios-app-development-company",
     "title": "iOS App Development",
     "seoTitle": "Best iOS App Development Company In The USA",
     "seoDesc": "Looking to develop an iOS app? Our certified developers build secure, high-performance apps for iPhone, iPad, and Watch. Get your app built today!",
@@ -1151,6 +1153,7 @@ export const serviceData = {
   },
   "ai-app-development-services": {
     "slug": "ai-app-development-services",
+    "canonical": "https://www.appsters.io/service/ai-app-development-services",
     "title": "AI App Development",
     "seoTitle": "AI App Development Company | Appsters",
     "seoDesc": "Appsters builds AI apps that ship to production, not prototypes. Predictive analytics, intelligent automation, and custom ML models. Get a quote today!",
@@ -1726,6 +1729,7 @@ export const serviceData = {
   },
   "flutter-app-development-company": {
     "slug": "flutter-app-development-company",
+    "canonical": "https://www.appsters.io/service/flutter-app-development-company",
     "title": "Flutter App Development Company | Appsters",
     "seoTitle": "Flutter App Development Company | Appsters",
     "seoDesc": "As the best Flutter app development company we deliver top cross platform solutions for iOS and Android. Over 1500 apps built. Get a quote today!",
@@ -2301,6 +2305,7 @@ export const serviceData = {
   },
   "mobile-app-development-company": {
     "slug": "mobile-app-development-company",
+    "canonical": "https://www.appsters.io/service/mobile-app-development-company",
     "title": "Mobile App Development",
     "seoTitle": "Best Mobile App Development Company in USA - Appsters",
     "seoDesc": "Want to develop your mobile app without much hassle and coding knowledge? Appsters is here to help you develop the best mobile app. Hire best mobile app developers!",
@@ -2888,6 +2893,7 @@ export const serviceData = {
   },
   "cross-platform-app-development-company": {
     "slug": "cross-platform-app-development-company",
+    "canonical": "https://www.appsters.io/service/cross-platform-app-development-company",
     "title": "Cross-Plaform App Development",
     "seoTitle": "Cross Platform App Development Company | Appsters",
     "seoDesc": "Reach every device with one codebase. Appsters builds cross platform apps with native grade speed for iOS, Android, and web. Book a consultation!",
@@ -3475,6 +3481,7 @@ export const serviceData = {
   },
   "hybrid-app-development-company": {
     "slug": "hybrid-app-development-company",
+    "canonical": "https://www.appsters.io/service/hybrid-app-development-company",
     "title": "Hybrid App Development",
     "seoTitle": "Hybrid App Development Company That Scales Fast",
     "seoDesc": "Appsters builds hybrid apps that cut costs and launch faster without losing performance. Get scalable hybrid app solutions. Talk to our team today!",
@@ -4062,6 +4069,7 @@ export const serviceData = {
   },
   "react-native-app-development-company": {
     "slug": "react-native-app-development-company",
+    "canonical": "https://www.appsters.io/service/react-native-app-development-company",
     "title": "React-Native App Development",
     "seoTitle": "React Native App Development Company USA",
     "seoDesc": "Appsters provide top grade cross platform solutions through our react native app development services. Hire the #1 react app developers today!",
@@ -4649,6 +4657,7 @@ export const serviceData = {
   },
   "mobile-game-development-services": {
     "slug": "mobile-game-development-services",
+    "canonical": "https://www.appsters.io/service/mobile-game-development-services",
     "title": "Mobile Game Development",
     "seoTitle": "Best Mobile Game Development Company In The USA",
     "seoDesc": "Hire our game developers to build GPU optimized mobile games across arcade, simulation, and multiplayer genres using Unity and Unreal. Start today!",
@@ -5236,6 +5245,7 @@ export const serviceData = {
   },
   "2d-game-development-services": {
     "slug": "2d-game-development-services",
+    "canonical": "https://www.appsters.io/service/2d-game-development-services",
     "title": "2D Game Development",
     "seoTitle": "2D Game Development Company That Builds Hits",
     "seoDesc": "Our 2D game development studio crafts smooth, addictive mobile games with striking art and tight controls. See your game idea come to life. Get a quote!",
@@ -5823,6 +5833,7 @@ export const serviceData = {
   },
   "3d-game-development-services": {
     "slug": "3d-game-development-services",
+    "canonical": "https://www.appsters.io/service/3d-game-development-services",
     "title": "3D Game Development",
     "seoTitle": "3D Game Development Company | Appsters",
     "seoDesc": "Appsters builds immersive 3D games with Unity and Unreal Engine, optimized for console grade visuals on mobile. Start your 3D game project today!",
@@ -6406,6 +6417,7 @@ export const serviceData = {
   },
   "web3-game-development-company": {
     "slug": "web3-game-development-company",
+    "canonical": "https://www.appsters.io/service/web3-game-development-company",
     "title": "Web3 App Development",
     "seoTitle": "Web 3 Game Development Company | Appsters",
     "seoDesc": "Launch decentralized games with our Web 3 game development services. Wallet logins, token economies, and true digital ownership. Talk to our experts!",
@@ -6993,6 +7005,7 @@ export const serviceData = {
   },
   "blockchain-game-development-company": {
     "slug": "blockchain-game-development-company",
+    "canonical": "https://www.appsters.io/service/blockchain-game-development-company",
     "title": "Blockchain Game Development",
     "seoTitle": "Blockchain Game Development Company In The USA",
     "seoDesc": "Appsters is a blockchain game development company building provably fair games with on chain economies and wallet integration. Get your quote today!",
@@ -7580,6 +7593,7 @@ export const serviceData = {
   },
   "nft-game-development-company": {
     "slug": "nft-game-development-company",
+    "canonical": "https://www.appsters.io/service/nft-game-development-company",
     "title": "NFT Game Development",
     "seoTitle": "NFT Game Development Company | Appsters",
     "seoDesc": "Build play to earn worlds with our NFT game development services. We handle smart contracts, marketplaces, and secure minting. Get a free quote!",

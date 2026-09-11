@@ -36,6 +36,7 @@ export default function CaseStudiesGridSection() {
           alt={item.title}
           width={726}
           height={529}
+          unoptimized
           className={styles.caseImage}
         />
       </div>
