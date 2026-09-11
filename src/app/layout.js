@@ -12,6 +12,7 @@ import FormEnhancements from "@/components/FormEnhancements";
 import { bigShoulders, interTight } from "@/font";
 
 export const metadata = {
+  metadataBase: new URL("https://www.appsters.io"),
   title: "Tech Company That Provides App Solutions - Appsters",
   description:
     "As a digital tech company we offer innovative mobile app solutions to every type of business & industry. Give your business the tech overhaul it deserves today!",

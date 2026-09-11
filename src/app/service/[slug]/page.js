@@ -36,9 +36,14 @@ export async function generateMetadata({ params }) {
     return {};
   }
 
+  const canonicalUrl = data.canonical || `https://www.appsters.io/service/${slug}`;
+
   return {
     title: data.seoTitle || data.title,
     description: data.seoDesc,
+    alternates: {
+      canonical: canonicalUrl,
+    },
   };
 }
 
