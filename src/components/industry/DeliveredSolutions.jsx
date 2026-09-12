@@ -58,7 +58,7 @@ export default function DeliveredSolutions({ data = {} }) {
                 </div>
 
                 <div className={styles.spacer}>
-                    <div className="row align-items-center">
+                    <div className="row align-items-center" style={{ rowGap: "4rem" }}>
                         {boxes.map((box, index) => (
                             <div key={index} className="col-sm-12 col-md-4 col-lg-4">
                                 <div className={index === 0 ? styles.sec_left : styles.sec_right}>

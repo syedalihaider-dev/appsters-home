@@ -9,6 +9,52 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [industryDropdownOpen, setIndustryDropdownOpen] = useState(false);
+
+  const industryColumns = [
+    {
+      items: [
+        { name: "Automotive", href: "/industry/automotive-software-development" },
+        { name: "Education", href: "/industry/education-app-development" },
+      ],
+    },
+    {
+      items: [
+        { name: "Taxi", href: "/industry/taxi-app-development-company" },
+        { name: "Logistics", href: "/industry/logistics-software-development" },
+      ],
+    },
+    {
+      items: [
+        { name: "Music", href: "/industry/music-app-development-company" },
+      ],
+    },
+    {
+      items: [
+        { name: "Social Media", href: "/industry/social-media-app-development-services" },
+      ],
+    },
+    {
+      items: [
+        { name: "Restaurant", href: "/industry/restaurant-app-development-company" },
+      ],
+    },
+    {
+      items: [
+        { name: "Hybrid App", href: "/industry/hybrid-app" },
+      ],
+    },
+    {
+      items: [
+        { name: "Healthcare", href: "/industry/healthcare-app-development-services" },
+      ],
+    },
+    {
+      items: [
+        { name: "Real Estate", href: "/industry/real-estate-app-development" },
+      ],
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +96,70 @@ export default function Header() {
             <div className={styles.closeMenuBtn} onClick={() => setIsMobileMenuOpen(false)}>×</div>
             <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>HOME</Link>
             <Link href="/about-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
-            <Link href="/industry" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>INDUSTRY</Link>
+
+            <div
+              className={`${styles.dropdown} ${industryDropdownOpen ? styles.mobileDropdownActive : ""}`}
+              onMouseEnter={() => setActiveMenu("industry")}
+              onMouseLeave={() => setActiveMenu(null)}
+            >
+              <Link
+                href="/industry"
+                className={`${styles.navLink} ${activeMenu === "industry" ? styles.activeNavLink : ""}`}
+                onClick={(e) => {
+                  if (isMobileMenuOpen) {
+                    e.preventDefault();
+                    setIndustryDropdownOpen((prev) => !prev);
+                  } else {
+                    setIsMobileMenuOpen(false);
+                    setActiveMenu(null);
+                  }
+                }}
+              >
+                INDUSTRY <i className={`${styles.arrow} ${(activeMenu === "industry" && !isMobileMenuOpen) || (isMobileMenuOpen && industryDropdownOpen) ? styles.arrowUp : ""}`}></i>
+              </Link>
+
+              <div
+                className={`${styles.industryMegaMenu} ${activeMenu === "industry" ? styles.showMenu : ""} ${industryDropdownOpen ? styles.mobileShowMenu : ""}`}
+              >
+                <div className={styles.industryMenuInner}>
+                  <div className={styles.industryHeaderRow}>
+                    <Link
+                      href="/industry"
+                      className={styles.industryMainTitle}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setActiveMenu(null);
+                        setIndustryDropdownOpen(false);
+                      }}
+                    >
+                      Industries <span className={styles.chevron}>⌵</span>
+                    </Link>
+                  </div>
+
+                  <div className={styles.industryColumnsGrid}>
+                    {industryColumns.map((col, colIdx) => (
+                      <div key={colIdx} className={styles.industryCol}>
+                        {col.items.map((item, itemIdx) => (
+                          <Link
+                            key={itemIdx}
+                            href={item.href}
+                            className={styles.industryLink}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setActiveMenu(null);
+                              setIndustryDropdownOpen(false);
+                            }}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <Link href="/services" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SERVICES</Link>
 
             {/* <div
