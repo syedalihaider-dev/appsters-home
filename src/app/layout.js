@@ -16,12 +16,24 @@ export const metadata = {
   title: "Tech Company That Provides App Solutions - Appsters",
   description:
     "As a digital tech company we offer innovative mobile app solutions to every type of business & industry. Give your business the tech overhaul it deserves today!",
+  verification: {
+    google: "Aw1_LALe6YnPv2KABtEEBV-FjEt7GZwpBIDZLV518hs",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${interTight.variable} ${bigShoulders.variable}`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MC882F8M"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
 
         {/* Google Tag Manager */}
         <Script
@@ -38,14 +50,15 @@ export default function RootLayout({ children }) {
                 j.async=true;
                 j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
                 f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-N3PBLKRR');
+              })(window,document,'script','dataLayer','GTM-MC882F8M');
             `,
           }}
         />
 
-        {/* Google Ads / gtag */}
+        {/* Google tag (gtag.js) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16476280714"
+          id="google-tag"
+          src="https://www.googletagmanager.com/gtag/js?id=G-7XMPNVL46X"
           strategy="afterInteractive"
         />
 
@@ -54,19 +67,10 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'G-7XMPNVL46X');
             gtag('config', 'AW-16476280714');
           `}
         </Script>
-
-        {/* Google Tag Manager NoScript */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N3PBLKRR"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
 
         {/* Zendesk Chat */}
         <Script
