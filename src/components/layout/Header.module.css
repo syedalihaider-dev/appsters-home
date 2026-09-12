@@ -47,6 +47,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    padding: 13px 0;
 }
 
 .navLink:hover {
@@ -69,6 +70,117 @@
 
 .dropdown {
     position: static;
+}
+
+.industryMegaMenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 5px);
+    background: #111219;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 34px 50px 42px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 1px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 100;
+}
+
+/* Hover bridge between capsule and dropdown menu */
+.industryMegaMenu::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+.dropdown:hover .industryMegaMenu,
+.industryMegaMenu.showMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown:hover > .navLink,
+.activeNavLink {
+    color: #CCFF00 !important;
+}
+
+.dropdown:hover > .navLink .arrow,
+.activeNavLink .arrow {
+    border-color: #CCFF00 !important;
+    transform: rotate(225deg) !important;
+    margin-bottom: -2px !important;
+}
+
+.industryMenuInner {
+    width: 100%;
+}
+
+.industryHeaderRow {
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.industryMainTitle {
+    color: #CCFF00;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    letter-spacing: 0.2px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.industryMainTitle:hover {
+    opacity: 0.85;
+    transform: translateX(2px);
+    color: #CCFF00;
+}
+
+.chevron {
+    font-size: 11px;
+    color: #CCFF00;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.industryColumnsGrid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 20px 18px;
+    align-items: start;
+}
+
+.industryCol {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+.industryLink {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+    letter-spacing: 0.2px;
+}
+
+.industryLink:hover {
+    color: #CCFF00;
+    transform: translateX(3px);
 }
 
 .megaMenu {
@@ -239,6 +351,11 @@
     padding: 0 40px;
 }
 
+.header.scrolled .industryMegaMenu {
+    top: calc(100% + 1px);
+    border-radius: 0 0 20px 20px;
+}
+
 @media (max-width: 1399px) {
     .capsule {
         padding: 10px 20px;
@@ -319,6 +436,22 @@
     .header.scrolled .capsule {
         padding: 10px 0;
     }
+
+    .industryMegaMenu {
+        padding: 28px 35px 35px;
+    }
+
+    .industryColumnsGrid {
+        gap: 15px 12px;
+    }
+
+    .industryCol {
+        gap: 36px;
+    }
+
+    .industryLink {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -392,6 +525,26 @@
         padding: 10px 15px;
         font-size: 14px;
         gap: 10px;
+    }
+
+    .industryMegaMenu {
+        padding: 24px 25px 30px;
+    }
+
+    .industryColumnsGrid {
+        gap: 12px 10px;
+    }
+
+    .industryCol {
+        gap: 28px;
+    }
+
+    .industryLink {
+        font-size: 12px;
+    }
+
+    .industryMainTitle {
+        font-size: 14px;
     }
 }
 
@@ -517,6 +670,64 @@
     .arrowUp {
         transform: rotate(-135deg);
         margin-bottom: -3px;
+    }
+
+    .industryMegaMenu {
+        position: static;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        transition: all 0.3s ease;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .industryMegaMenu::before {
+        display: none;
+    }
+
+    .dropdown:hover .industryMegaMenu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .industryMegaMenu.mobileShowMenu {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        padding: 16px 0 10px;
+        margin-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .industryHeaderRow {
+        display: none;
+    }
+
+    .industryColumnsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 14px;
+    }
+
+    .industryCol {
+        gap: 16px;
+    }
+
+    .industryLink {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .industryLink:hover {
+        color: #CCFF00;
+        transform: translateX(2px);
     }
 }
 
