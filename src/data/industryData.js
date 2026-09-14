@@ -875,22 +875,22 @@ export const industryData = {
         },
         {
           "id": 2,
-          "title": "Food Ordering App Development",
-          "desc": "Cold-chain and last-mile delivery increasingly overlap with food logistics, and our food ordering app developers know how to build ordering flows that plug straight into a broader fleet management system. One dispatch engine handles groceries, meal kits, and freight without needing separate platforms.",
+          "title": "Freight Booking & Dispatch App Development",
+          "desc": "We build booking platforms that match loads to carriers in seconds, with instant rate quotes, capacity checks, and automated dispatch assignment. Shippers stop calling around for trucks, and your dispatchers stop rebuilding the same schedule every single morning.",
           "icon": "/images/services/ios-icon.webp",
           "bg": "/images/services/ios-app-development.webp"
         },
         {
           "id": 3,
-          "title": "Food Delivery App Development",
-          "desc": "As a food delivery app development company, we build routing and fulfillment layers that work whether the cargo is a pallet or a grocery order, with live tracking that keeps both dispatchers and end customers informed.",
+          "title": "Fleet Tracking & Last-Mile Delivery App Development",
+          "desc": "As logistics app developers, we build GPS tracking, route optimization, and proof-of-delivery capture into one driver app, so customers see accurate ETAs instead of guesswork and your operations team knows where every vehicle sits right now.",
           "icon": "/images/services/react-native-icon.webp",
           "bg": "/images/services/react-native-app-development.webp"
         },
         {
           "id": 4,
-          "title": "Discounts App Development",
-          "desc": "Our Logistics discounts app development work helps carriers and 3PLs reward repeat shippers with volume-based pricing, loyalty tiers, and referral incentives built directly into the booking flow.",
+          "title": "Freight Rate & Cost Optimization App Development",
+          "desc": "We build rate engines that compare carrier pricing, fuel surcharges, and lane history before a load is booked. Teams see the real landed cost upfront, which cuts margin leakage and stops overpaying on routes you run weekly.",
           "icon": "/images/services/cross-platform-icon.webp",
           "bg": "/images/services/cross-platform-app-development.webp"
         },
@@ -1143,22 +1143,22 @@ export const industryData = {
         },
         {
           "id": 2,
-          "title": "Food Ordering App Development",
-          "desc": "Live events are where music apps make real money, and our food ordering app developers know how to build in-venue ordering directly into a festival or concert app. Fans order food and drinks from their seats while the app keeps the show experience front and center.",
+          "title": "Music Streaming App Development",
+          "desc": "We build streaming apps with gapless playback, offline downloads, and adaptive bitrates that hold steady on weak connections. Listeners press play and the track starts instantly, whether they're on fiber at home or mobile data deep underground.",
           "icon": "/images/services/ios-icon.webp",
           "bg": "/images/services/ios-app-development.webp"
         },
         {
           "id": 3,
-          "title": "Food Delivery App Development",
-          "desc": "As a food delivery app development company, we build fulfillment layers that connect vendor stalls to mobile orders at large-scale events, with live status updates so fans know exactly when to head back and pick up their order.",
+          "title": "Live Concert & Ticketing App Development",
+          "desc": "As music app developers, we build ticketing and live event modules into your platform, covering seat selection, QR entry, and lineup updates, so fans move from streaming an artist to standing in the crowd without leaving the app.",
           "icon": "/images/services/react-native-icon.webp",
           "bg": "/images/services/react-native-app-development.webp"
         },
         {
           "id": 4,
-          "title": "Discounts App Development",
-          "desc": "Our Music discounts app development work helps platforms reward superfans with early ticket access, merch discounts, and loyalty perks tied directly to listening history and concert attendance.",
+          "title": "Fan Rewards & Subscription App Development",
+          "desc": "We build loyalty layers that turn listening history into real perks, early ticket access, merch discounts, and tiered subscriptions. Superfans get rewarded for the streams they already log, and your platform gets predictable recurring revenue back from them.",
           "icon": "/images/services/cross-platform-icon.webp",
           "bg": "/images/services/cross-platform-app-development.webp"
         },
@@ -1411,15 +1411,15 @@ export const industryData = {
         },
         {
           "id": 2,
-          "title": "Food Ordering App Development",
-          "desc": "Mixed-use developments and residential communities increasingly bundle amenities with their resident apps, and our food ordering app developers know how to build ordering flows that plug directly into a property management platform.",
+          "title": "Property Listing & Search App Development",
+          "desc": "We build listing platforms with map-based search, saved filters, and high-resolution galleries that load instantly. Buyers narrow thousands of properties to a realistic shortlist in minutes, and agents see exactly which listings are actually pulling genuine buyer attention.",
           "icon": "/images/services/ios-icon.webp",
           "bg": "/images/services/ios-app-development.webp"
         },
         {
           "id": 3,
-          "title": "Food Delivery App Development",
-          "desc": "As a food delivery app development company, we build fulfillment layers that connect building concierge services to resident apps, giving property managers one system for deliveries instead of juggling separate vendor tools.",
+          "title": "Virtual Tour & Property Viewing App Development",
+          "desc": "As real estate app developers, we build 3D walkthroughs, video tours, and in-app viewing schedules into your platform, so buyers shortlist homes remotely and only book the in-person visits that are genuinely worth driving across the city for.",
           "icon": "/images/services/react-native-icon.webp",
           "bg": "/images/services/react-native-app-development.webp"
         },
@@ -1947,22 +1947,22 @@ export const industryData = {
         },
         {
           "id": 2,
-          "title": "Food Ordering App Development",
-          "desc": "Social commerce is now a core part of how people shop, and our food ordering app developers know how to embed ordering flows directly into a social feed. From in-app checkout to creator-led promotions, we help social platforms turn engagement into transactions without disrupting the scroll.",
+          "title": "Social Feed & Content Sharing App Development",
+          "desc": "We build feeds that load fast and rank well, with photo, video, and story posting, threaded replies, and real-time reactions. Users open the app expecting something new, and the ranking logic makes sure they find it.",
           "icon": "/images/services/ios-icon.webp",
           "bg": "/images/services/ios-app-development.webp"
         },
         {
           "id": 3,
-          "title": "Food Delivery App Development",
-          "desc": "As a food delivery app development company, we build logistics layers that plug straight into social platforms, live order tracking, delivery partner apps, and notification systems that keep users updated without leaving the app they already trust.",
+          "title": "Messaging & Live Streaming App Development",
+          "desc": "As social media app developers, we build real-time messaging and live video into your platform, covering group chats, disappearing media, and low-latency broadcasts, so conversations keep happening inside your app instead of moving to somebody else's.",
           "icon": "/images/services/react-native-icon.webp",
           "bg": "/images/services/react-native-app-development.webp"
         },
         {
           "id": 4,
-          "title": "Discounts App Development",
-          "desc": "Our Social Media discounts app development work helps platforms reward loyal users and creators with redeemable perks, flash promotions, and referral-based discounts that drive both retention and word-of-mouth growth.",
+          "title": "Creator Monetization App Development",
+          "desc": "We build monetization layers that pay creators directly, tips, paid subscriptions, brand deal tools, and revenue splits handled automatically. Creators see clear earnings without chasing invoices, and your platform keeps the audiences they bring with them onboard.",
           "icon": "/images/services/cross-platform-icon.webp",
           "bg": "/images/services/cross-platform-app-development.webp"
         },
@@ -2437,87 +2437,6 @@ export const industryData = {
         }
       ]
     }
-  },
-  "hybrid-app": {
-    "name": "Hybrid App",
-    "slug": "hybrid-app",
-    "seoTitle": "Hybrid App Development Company - Appsters",
-    "seoDesc": "Build unified, cross-platform hybrid mobile applications with Flutter and React Native that scale fast across iOS and Android.",
-    "hero": {
-      "transparentHeading": "Hybrid Mobile",
-      "subHeading": "Appsters Engineering",
-      "mainHeading": "<span class=\"primarytxt\">Hybrid App Development </span>Company Houston",
-      "paragraph": "One codebase. Zero compromise. We build high-performance hybrid applications using React Native and Flutter that deliver 60fps native responsiveness, consistent cross-platform user journeys, and dramatically faster time-to-market across iOS and Android.",
-      "formPageTitle": "Hybrid App Industry Consultation Form"
-    },
-    "deliveredSolutions": {
-      "subHeading": "Hybrid App Expertise",
-      "title": "Unified Engineering That <br/>Reduces Cost & Speeds Delivery",
-      "description": "Appsters helps enterprises and funded startups save up to 40% on engineering and maintenance costs by consolidating their mobile tech stack into a single unified build.",
-      "boxes": [
-        {
-          "counter": "400",
-          "heading": "Hybrid Apps Deployed",
-          "para": "Enterprise-grade cross-platform apps built with modular architectures, automated testing pipelines, and reusable UI components."
-        },
-        {
-          "counter": "60",
-          "heading": "Percent Shared Codebase",
-          "para": "Shared business logic, state management, and API layers that maintain complete platform parity while reducing future bug fixes."
-        },
-        {
-          "counter": "45",
-          "heading": "Percent Faster Time to Market",
-          "para": "Rapid iteration cycles with hot reloading, centralized CI/CD pipelines, and concurrent App Store & Google Play deployments."
-        }
-      ]
-    },
-    "endToEnd": {
-      "title": "Our Comprehensive Hybrid App <br />Development <span class=\"highlight\">Services</span>"
-    },
-    "cta": {
-      "transparentHeading": "Cross Platform",
-      "title": "Launch Everywhere Faster with Hybrid App Engineering",
-      "para": "Why spend double the budget building separate native iOS and Android apps? Our hybrid app developers deliver smooth, scalable products that delight users across all devices."
-    },
-    "about": {
-      "mainHeading": "Appsters’ <span class=\"primarytxt\">Pioneering</span> Approach to Cross-Platform & <span class=\"primarytxt\">Hybrid Builds</span>",
-      "paragraph": "Modern hybrid frameworks have erased the performance gap between native and multi-platform applications. At Appsters, we write clean, performant TypeScript and Dart code that compiles into native binaries.<br /><br />We bridge native device hardware including cameras, biometrics, Bluetooth sensors, and geolocation seamlessly, giving you the velocity of web development with the performance of native code."
-    },
-    "portfolioCta": {
-      "watermark": "HYBRID",
-      "heading": "QUICK GLIMPSE ON <br />OUR HYBRID APP PORTFOLIO",
-      "description": "Review our cross-platform and hybrid mobile builds across retail, fintech, social commerce, and healthcare ecosystems."
-    },
-    "ctaIndustry": {
-      "title": "As a Premier <span class=\"primarytxt\">Hybrid App Development</span> Company, We Help Global Brands Deliver <span class=\"primarytxt\">Fast & Unified App Experiences</span>."
-    },
-    "map": {
-      "heading": "Accelerate Your Mobile Roadmaps With Our Houston App Development Team"
-    },
-    "faqs": {
-      "faqs": [
-        {
-          "question": "Is hybrid app performance as smooth as fully native apps?",
-          "answer": "Yes. With modern frameworks like React Native with Hermes engine and Flutter compiling to native ARM machine code, hybrid applications achieve smooth 60fps animations indistinguishable from native."
-        },
-        {
-          "question": "Can hybrid apps access device hardware like camera, GPS, and Bluetooth?",
-          "answer": "Yes. Through native bridging modules, hybrid apps have direct access to biometric FaceID, cameras, gyroscope, Bluetooth Low Energy (BLE), NFC, and background location services."
-        },
-        {
-          "question": "How much cost can we save by choosing hybrid app development?",
-          "answer": "Most businesses save 30% to 45% in upfront development costs and ongoing maintenance because a single team manages one centralized codebase for both platforms."
-        },
-        {
-          "question": "Do hybrid apps comply with Apple App Store and Google Play guidelines?",
-          "answer": "Yes. Hybrid apps compile directly into standard iOS .ipa and Android .aab binaries that comply 100% with store review requirements."
-        },
-        {
-          "question": "Can we migrate our existing web application into a hybrid mobile app?",
-          "answer": "Yes. We can reuse your existing APIs, business logic, and UI design systems to rapidly assemble an optimized hybrid mobile application."
-        }
-      ]
-    }
   }
 };
+

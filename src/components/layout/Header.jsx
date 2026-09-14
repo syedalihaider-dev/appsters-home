@@ -15,12 +15,20 @@ export default function Header() {
     {
       items: [
         { name: "Automotive", href: "/industry/automotive-software-development" },
+      ],
+    },
+    {
+      items: [
         { name: "Education", href: "/industry/education-app-development" },
       ],
     },
     {
       items: [
         { name: "Taxi", href: "/industry/taxi-app-development-company" },
+      ],
+    },
+    {
+      items: [
         { name: "Logistics", href: "/industry/logistics-software-development" },
       ],
     },
@@ -37,11 +45,6 @@ export default function Header() {
     {
       items: [
         { name: "Restaurant", href: "/industry/restaurant-app-development-company" },
-      ],
-    },
-    {
-      items: [
-        { name: "Hybrid App", href: "/industry/hybrid-app" },
       ],
     },
     {
@@ -204,7 +207,7 @@ export default function Header() {
           <div className={styles.headerRight}>
             <div className={styles.headerBtn}>
               <Link href="#!" className={styles.talkBtn}>
-                <span className={styles.dot}></span> Let's Talk! ↗
+                <span className={styles.dot}></span> Let&apos;s Talk! ↗
               </Link>
             </div>
 
