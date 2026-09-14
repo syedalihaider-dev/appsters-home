@@ -69,13 +69,13 @@ export default async function IndustryDetailPage({ params }) {
       <IndustriesSection data={data.whyChooseUs} />
       <SectorsSection data={data.sectors} />
       <PlansSection style={{ padding: "100px 0 100px 0px" }} />
-      <GameCTASection />
+      {/* <GameCTASection /> */}
       <AboutSection data={data.about} />
       <AwardsSection />
-      <CTASectionIndustry data={data.ctaIndustry} />
-      <MapSection data={data.map} />
+      {/* <MapSection data={data.map} /> */}
       <PortfolioCTA data={data.portfolioCta} />
       <TechStackSection />
+      <CTASectionIndustry data={data.ctaIndustry} />
       <AppDevProcess data={data.process} />
       <BlogSection />
       <FAQSection data={data.faqs} />

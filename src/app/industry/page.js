@@ -43,7 +43,7 @@ export default function IndustryPage() {
       <IndustriesSection />
       <SectorsSection />
       <PlansSection style={{ padding: "100px 0 100px 0px" }}/>
-      <GameCTASection />
+      {/* <GameCTASection /> */}
       <AboutSection />
       <AwardsSection />
       <CTASectionIndustry />
