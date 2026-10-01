@@ -35,15 +35,7 @@ const nextConfig = {
       {
         source: '/app-publishing/php/send-lead.php',
         destination: '/api/app-publishing',
-      },
-      {
-        source: '/lp/app-publishing',
-        destination: '/app-publishing/index.html',
-      },
-      {
-        source: '/lp/app-publishing/:path*',
-        destination: '/app-publishing/:path*',
-      },
+      }
     ];
   },
 };
