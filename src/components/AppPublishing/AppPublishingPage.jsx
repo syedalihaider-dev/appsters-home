@@ -35,19 +35,19 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
    COUNTRY CODES
    =================================================================== */
 const COUNTRY_CODES = [
-  { code: "+1",   flag: "🇺🇸", label: "US" },
-  { code: "+1",   flag: "🇨🇦", label: "CA" },
-  { code: "+44",  flag: "🇬🇧", label: "GB" },
-  { code: "+61",  flag: "🇦🇺", label: "AU" },
-  { code: "+92",  flag: "🇵🇰", label: "PK" },
-  { code: "+91",  flag: "🇮🇳", label: "IN" },
-  { code: "+971", flag: "🇦🇪", label: "AE" },
-  { code: "+49",  flag: "🇩🇪", label: "DE" },
-  { code: "+33",  flag: "🇫🇷", label: "FR" },
-  { code: "+966", flag: "🇸🇦", label: "SA" },
-  { code: "+65",  flag: "🇸🇬", label: "SG" },
-  { code: "+55",  flag: "🇧🇷", label: "BR" },
-  { code: "+52",  flag: "🇲🇽", label: "MX" },
+  { code: "+1", label: "US" },
+  { code: "+1", label: "CA" },
+  { code: "+44", label: "GB" },
+  { code: "+61", label: "AU" },
+  { code: "+92", label: "PK" },
+  { code: "+91", label: "IN" },
+  { code: "+971", label: "AE" },
+  { code: "+49", label: "DE" },
+  { code: "+33", label: "FR" },
+  { code: "+966", label: "SA" },
+  { code: "+65", label: "SG" },
+  { code: "+55", label: "BR" },
+  { code: "+52", label: "MX" },
 ];
 
 /* ===================================================================
@@ -65,10 +65,7 @@ function LeadForm({ formId, onSuccess, idPrefix = "f" }) {
       const v = (el.value || "").trim();
       let msg = "";
       if (!v) msg = el.tagName === "SELECT" ? "Choose an option." : "This field is required.";
-      else if (el.type === "email" && !EMAIL_RE.test(v)) msg = "Enter a valid email address.";
-      else if (el.type === "tel" && v.replace(/\D/g, "").length < 7) msg = "Enter a phone number with at least 7 digits.";
-      else if (el.name === "name" && v.length < 2) msg = "Enter your full name.";
-      else if (el.name === "message" && v.length < 10) msg = "Add a short description (at least 10 characters).";
+
       if (msg) { ok = false; el.classList.add(s.invalid); if (el.name === "phone") setPhoneInvalid(true); }
       else { el.classList.remove(s.invalid); if (el.name === "phone") setPhoneInvalid(false); }
     }
@@ -81,9 +78,7 @@ function LeadForm({ formId, onSuccess, idPrefix = "f" }) {
     setStatus({ msg: "", ok: false });
     if (!validate(form)) return;
 
-    // Honeypot
     const fd = new FormData(form);
-    if (fd.get("website")) { setStatus({ msg: "Thanks!", ok: true }); return; }
 
     const rawPhone = (fd.get("phone") || "").trim();
     setSubmitting(true);
@@ -109,7 +104,6 @@ function LeadForm({ formId, onSuccess, idPrefix = "f" }) {
         body: JSON.stringify(data),
       });
       if (res.ok) {
-        setStatus({ msg: "Sent! Taking you to the next step…", ok: true });
         ss("lp_popup_seen", "1");
         if (typeof window.dataLayer !== "undefined") {
           window.dataLayer.push({ event: "lead_form_submit", form_id: formId });
@@ -191,7 +185,6 @@ function LeadForm({ formId, onSuccess, idPrefix = "f" }) {
           placeholder="Describe your app, what it does, and any specific publishing requirements…"
           onFocus={(e) => e.target.classList.remove(s.invalid)} />
       </div>
-      <input type="text" name="website" className={s.hp} tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <button className={s.btnGradient} type="submit" disabled={submitting}>
         {submitting ? "Sending…" : "Submit & Get Published Fast"}
       </button>
@@ -364,7 +357,7 @@ export default function AppPublishingPage() {
   const openForm = useCallback(() => setModalOpen(true), []);
   const closeForm = useCallback(() => setModalOpen(false), []);
   const handleFormSuccess = useCallback(() => {
-    setTimeout(() => router.push("/lp/app-publishing/thank-you"), 1200);
+    router.push("/lp/app-publishing/thank-you");
   }, [router]);
 
   const openChat = useCallback(() => {

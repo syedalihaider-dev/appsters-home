@@ -564,8 +564,8 @@
 
 .countryCodeSelect {
   flex: 0 0 auto;
-  width: 100px;
-  min-width: 100px;
+  width: 100px !important;
+  min-width: 100px !important;
   border: 0 !important;
   border-right: 1px solid var(--field-line) !important;
   border-radius: 0 !important;
@@ -589,7 +589,7 @@
 
 .phoneInput {
   flex: 1 1 auto !important;
-  width: 1% !important;
+  width: 100% !important;
   min-width: 0;
   border: 0 !important;
   border-radius: 0 !important;
