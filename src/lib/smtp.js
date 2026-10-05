@@ -13,7 +13,9 @@ export function createSmtpTransport() {
   const { host, port, user, pass } = smtpConfig;
 
   if (!host || !user || !pass) {
-    throw new Error('SMTP configuration is incomplete.');
+    const error = new Error('Email delivery is not configured on this server.');
+    error.code = 'SMTP_CONFIG_MISSING';
+    throw error;
   }
 
   return nodemailer.createTransport({

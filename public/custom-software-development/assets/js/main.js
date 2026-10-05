@@ -288,6 +288,7 @@
             try { data = JSON.parse(txt); } catch (err) { data = null; }
             if (!res.ok || !data || data.ok !== true) {
               var msg = (data && data.message) ? data.message : 'We could not send your details. Call +1 (855) 799 1171 or try again.';
+              if (data && data.code) { msg += ' (Error code: ' + data.code + ')'; }
               throw new Error(msg);
             }
             return data;

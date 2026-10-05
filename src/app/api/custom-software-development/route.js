@@ -41,11 +41,6 @@ export async function POST(req) {
   try {
     const data = await readRequestData(req);
 
-    // Match the App Publishing form's honeypot behavior.
-    if (clean(data.contact_fax, 200)) {
-      return NextResponse.json({ ok: true, message: 'Thanks.' });
-    }
-
     const lead = {
       name: clean(data.name, 100),
       email: clean(data.email, 150),
@@ -112,9 +107,18 @@ export async function POST(req) {
         html: `<h3>New Lead Details (Custom Software Development):</h3><table style="border-collapse:collapse">${htmlRows}</table>`,
       });
     } catch (smtpError) {
-      console.warn('SMTP Send Warning (Custom Software Development):', smtpError.message);
+      console.error('SMTP Send Warning (Custom Software Development):', {
+        code: smtpError.code,
+        message: smtpError.message,
+        command: smtpError.command,
+        responseCode: smtpError.responseCode,
+      });
       return NextResponse.json(
-        { ok: false, message: 'We could not deliver your details right now. Please try again or call us.' },
+        {
+          ok: false,
+          code: smtpError.code || 'SMTP_SEND_FAILED',
+          message: 'Your form was received, but the lead email could not be sent. Please call +1 (855) 799 1171.',
+        },
         { status: 502 },
       );
     }

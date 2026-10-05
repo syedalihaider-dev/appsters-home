@@ -31,7 +31,6 @@ export async function POST(req) {
       phone,
       app_type,
       message,
-      contact_fax,
       form_id,
       page_url,
       utm_source,
@@ -47,11 +46,6 @@ export async function POST(req) {
       landing,
       referrer,
     } = data;
-
-    // Honeypot check
-    if (contact_fax) {
-      return NextResponse.json({ ok: true, message: 'Thanks.' }, { status: 200 });
-    }
 
     // IP Address tracking
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
@@ -109,9 +103,18 @@ export async function POST(req) {
 
       await transporter.sendMail(mailOptions);
     } catch (smtpErr) {
-      console.warn('SMTP Send Warning (App Publishing):', smtpErr.message);
+      console.error('SMTP Send Warning (App Publishing):', {
+        code: smtpErr.code,
+        message: smtpErr.message,
+        command: smtpErr.command,
+        responseCode: smtpErr.responseCode,
+      });
       return NextResponse.json(
-        { ok: false, message: 'We could not deliver your details right now. Please try again or call us.' },
+        {
+          ok: false,
+          code: smtpErr.code || 'SMTP_SEND_FAILED',
+          message: 'Your form was received, but the lead email could not be sent. Please call +1 (855) 799 1171.',
+        },
         { status: 502 }
       );
     }
