@@ -4,7 +4,7 @@
    ========================================================== */
 window.LP_CONFIG = {
   // PHP lead handler (relative to index.html)
-  endpoint: '/custom-software-development/php/send-lead.php',
+  endpoint: '/api/custom-software-development',
 
   // Where the visitor goes after a successful submit
   thankYouUrl: '/custom-software-development/thank-you',
