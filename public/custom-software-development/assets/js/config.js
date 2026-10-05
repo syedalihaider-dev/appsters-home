@@ -3,7 +3,7 @@
    Edit values here only. No other JS file needs changes.
    ========================================================== */
 window.LP_CONFIG = {
-  // PHP lead handler (relative to index.html)
+  // Next.js API route for this landing page.
   endpoint: '/api/custom-software-development',
 
   // Where the visitor goes after a successful submit

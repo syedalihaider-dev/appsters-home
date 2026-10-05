@@ -101,13 +101,11 @@ export async function POST(req) {
       `<tr><th align="left" style="padding:8px;border-bottom:1px solid #ddd">${escapeHtml(label)}</th><td style="padding:8px;border-bottom:1px solid #ddd">${escapeHtml(value).replace(/\n/g, '<br>')}</td></tr>`
     ).join('');
 
-    // As on the reference LP, an SMTP problem is logged server-side while the
-    // visitor's form flow remains available. Configure SMTP to receive the lead.
     try {
       const transporter = createSmtpTransport();
       await transporter.sendMail({
         from: `"Appsters Custom Software Development" <${getSmtpFrom()}>`,
-        to: process.env.SMTP_TO || DEFAULT_RECIPIENTS,
+        to: DEFAULT_RECIPIENTS,
         replyTo: { address: lead.email, name: lead.name },
         subject: `New Lead: Custom Software Development LP (${lead.name})`,
         text: details.map(([label, value]) => `${label}: ${value}`).join('\n'),

@@ -5,6 +5,8 @@ const TRACKING_FIELDS = [
   'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
   'gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid', 'landing', 'referrer',
 ];
+const LEAD_RECIPIENTS =
+  'support@appsters.io, zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, ali.haider@canvasdigital.org';
 
 function clean(value, maxLength = 500) {
   return String(value ?? '')
@@ -25,7 +27,7 @@ export async function POST(req) {
     const field = (key, limit) => clean(formData.get(key), limit);
 
     // Honeypot: keep the visitor flow smooth while dropping bot submissions.
-    if (field('website', 200)) {
+    if (field('contact_fax', 200)) {
       return NextResponse.json({ ok: true, message: 'Thanks.' });
     }
 
@@ -78,7 +80,7 @@ export async function POST(req) {
     const transporter = createSmtpTransport();
     await transporter.sendMail({
       from: `"Appsters Hire Mobile Developer LP" <${getSmtpFrom()}>`,
-      to: 'support@appsters.io',
+      to: LEAD_RECIPIENTS,
       replyTo: { address: lead.email, name: lead.name },
       subject: `New lead: Hire Mobile Developer LP - ${lead.name} (${lead.developerType})`,
       text: details.map(([label, value]) => `${label}: ${value}`).join('\n'),

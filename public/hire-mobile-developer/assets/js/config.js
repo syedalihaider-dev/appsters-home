@@ -3,11 +3,11 @@
    Edit values here only. No other JS file needs changes.
    ========================================================== */
 window.LP_CONFIG = {
-  // PHP lead handler (relative to index.html)
-  endpoint: 'php/send-lead.php',
+  // Next.js API route that handles the PHP-compatible form submission.
+  endpoint: '/api/hire-mobile-developer',
 
   // Where the visitor goes after a successful submit
-  thankYouUrl: 'thank-you.html',
+  thankYouUrl: '/hire-mobile-developer/thank-you',
 
   // Zendesk Web Widget / Messaging key.
   // Zendesk Admin > Channels > Messaging (or Widget) > Installation:
