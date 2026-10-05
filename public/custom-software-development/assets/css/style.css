@@ -258,7 +258,7 @@ p{margin:0 0 1em}
 .modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal[hidden]{display:none}
 .modal-backdrop{position:absolute;inset:0;background:rgba(8,11,30,.7)}
-.modal-card{position:relative;z-index:9999;background:#fff;border-radius:28px;padding:40px 44px 32px;width:100%;max-width:760px;max-height:calc(100vh - 32px);overflow-y:auto;animation:modalIn .25s ease}
+.modal-card{position:relative;background:#fff;border-radius:28px;padding:40px 44px 32px;width:100%;max-width:760px;max-height:calc(100vh - 32px);overflow-y:auto;animation:modalIn .25s ease}
 .modal-close{position:absolute;top:10px;right:12px;background:none;border:0;font-size:1.9rem;line-height:1;color:var(--muted);width:40px;height:40px}
 .modal-close:hover{color:var(--ink)}
 @keyframes modalIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
@@ -279,7 +279,7 @@ body.modal-open{overflow:hidden}
 .svc-panel p{color:var(--muted);font-size:1.03rem;max-width:62ch}
 .svc-points{list-style:none;padding:0;margin:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
 .svc-points li{position:relative;padding-left:24px;font-size:.95rem}
-.svc-points li::before,.check-list li::before{content:"";position:absolute;left:2px;top:18px;width:12px;height:7px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
+.svc-points li::before,.check-list li::before{content:"";position:absolute;left:2px;top:8px;width:12px;height:7px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
 
 /* Split image + checklist */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -402,13 +402,3 @@ body.modal-open{overflow:hidden}
   .ty-next{padding:26px 20px}
   .ty-page .header-phone{font-size:.88rem}
 }
-
-/* Match the brand's unified country-code and phone input treatment. */
-.custom-software-lp .lead-form .appsters-phone-field{display:flex!important;align-items:stretch!important;width:100%!important;background:var(--field-bg)!important;border:1.5px solid var(--field-line)!important;border-radius:var(--radius)!important;overflow:hidden!important;transition:border-color .2s,background .2s,box-shadow .2s!important}
-.custom-software-lp .lead-form .appsters-phone-field:focus-within{border-color:var(--blue)!important;box-shadow:0 0 0 3px rgba(47,91,255,.15)!important;background:#fff!important}
-.custom-software-lp .lead-form .appsters-phone-field:has(input.invalid),.custom-software-lp .lead-form .appsters-phone-field.invalid{border-color:#D6334B!important;background:#FFF7F8!important}
-.custom-software-lp .lead-form .appsters-phone-field>.appsters-country-code{flex:0 0 auto!important;width:90px!important;min-width:90px!important;max-width:90px!important;min-height:100%!important;border:0!important;border-right:1.5px solid var(--field-line)!important;border-radius:0!important;background:transparent!important;background-image:none!important;padding:12px 6px 12px 10px!important;font-family:var(--body)!important;font-size:.92rem!important;font-weight:600!important;color:var(--ink)!important;cursor:pointer!important;appearance:auto!important;-webkit-appearance:auto!important;outline:none!important;box-shadow:none!important;line-height:1.4!important}
-.custom-software-lp .lead-form .appsters-phone-field>.appsters-country-code:focus{outline:none!important;box-shadow:none!important}
-.custom-software-lp .lead-form .appsters-phone-field>input[name="phone"]{flex:1 1 auto!important;width:100%!important;min-width:0!important;border:0!important;border-radius:0!important;background:transparent!important;padding:12px 14px!important;font-size:.98rem!important;color:var(--ink)!important;font-family:var(--body)!important;box-shadow:none!important;outline:none!important}
-.custom-software-lp .lead-form .appsters-phone-field>input[name="phone"]:focus{outline:none!important;box-shadow:none!important}
-@media (max-width:640px){.custom-software-lp .modal-card .lead-form .appsters-phone-field{border-radius:12px!important}.custom-software-lp .modal-card .lead-form .appsters-phone-field>.appsters-country-code{padding:10px 4px 10px 8px!important;font-size:14px!important;width:82px!important;min-width:82px!important}.custom-software-lp .modal-card .lead-form .appsters-phone-field>input[name="phone"]{padding:10px 12px!important;font-size:16px!important}}

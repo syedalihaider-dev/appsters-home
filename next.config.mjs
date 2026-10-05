@@ -35,6 +35,18 @@ const nextConfig = {
       {
         source: '/app-publishing/php/send-lead.php',
         destination: '/api/app-publishing',
+      },
+      {
+        source: '/custom-software-development',
+        destination: '/custom-software-development/index.html',
+      },
+      {
+        source: '/custom-software-development/thank-you',
+        destination: '/custom-software-development/thank-you.html',
+      },
+      {
+        source: '/custom-software-development/php/send-lead.php',
+        destination: '/api/custom-software-development',
       }
     ];
   },
