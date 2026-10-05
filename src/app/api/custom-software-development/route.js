@@ -42,7 +42,7 @@ export async function POST(req) {
     const data = await readRequestData(req);
 
     // Match the App Publishing form's honeypot behavior.
-    if (clean(data.website, 200)) {
+    if (clean(data.contact_fax, 200)) {
       return NextResponse.json({ ok: true, message: 'Thanks.' });
     }
 
