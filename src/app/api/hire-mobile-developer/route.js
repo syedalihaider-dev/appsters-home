@@ -6,7 +6,7 @@ const TRACKING_FIELDS = [
   'gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid', 'landing', 'referrer',
 ];
 const LEAD_RECIPIENTS =
-  'support@appsters.io, zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, ali.haider@canvasdigital.org';
+  'support@appsters.io, zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, ali.haider@canvasdigital.org ,muhammad.nadeem@canvasdigital.net';
 
 function clean(value, maxLength = 500) {
   return String(value ?? '')
