@@ -115,6 +115,10 @@ export async function POST(req) {
       });
     } catch (smtpError) {
       console.warn('SMTP Send Warning (Custom Software Development):', smtpError.message);
+      return NextResponse.json(
+        { ok: false, message: 'We could not deliver your details right now. Please try again or call us.' },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ ok: true, message: 'Your message has been sent successfully.' });
