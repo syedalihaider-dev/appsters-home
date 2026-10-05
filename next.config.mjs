@@ -47,6 +47,18 @@ const nextConfig = {
       {
         source: '/custom-software-development/php/send-lead.php',
         destination: '/api/custom-software-development',
+      },
+      {
+        source: '/hire-mobile-developer',
+        destination: '/hire-mobile-developer/index.html',
+      },
+      {
+        source: '/hire-mobile-developer/thank-you',
+        destination: '/hire-mobile-developer/thank-you.html',
+      },
+      {
+        source: '/hire-mobile-developer/php/send-lead.php',
+        destination: '/api/hire-mobile-developer',
       }
     ];
   },
