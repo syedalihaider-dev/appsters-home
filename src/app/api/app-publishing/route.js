@@ -31,7 +31,7 @@ export async function POST(req) {
       phone,
       app_type,
       message,
-      website,
+      contact_fax,
       form_id,
       page_url,
       utm_source,
@@ -49,7 +49,7 @@ export async function POST(req) {
     } = data;
 
     // Honeypot check
-    if (website) {
+    if (contact_fax) {
       return NextResponse.json({ ok: true, message: 'Thanks.' }, { status: 200 });
     }
 
@@ -110,7 +110,10 @@ export async function POST(req) {
       await transporter.sendMail(mailOptions);
     } catch (smtpErr) {
       console.warn('SMTP Send Warning (App Publishing):', smtpErr.message);
-      // In development or if SMTP is misconfigured, return ok: true so the lead flow doesn't break for visitors
+      return NextResponse.json(
+        { ok: false, message: 'We could not deliver your details right now. Please try again or call us.' },
+        { status: 502 }
+      );
     }
 
     return NextResponse.json({ ok: true, message: 'Your message has been sent successfully.' }, { status: 200 });
