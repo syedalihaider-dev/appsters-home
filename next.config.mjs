@@ -59,7 +59,19 @@ const nextConfig = {
       {
         source: '/hire-mobile-developer/php/send-lead.php',
         destination: '/api/hire-mobile-developer',
-      }
+      },
+      {
+        source: '/legacy-app-modernization',
+        destination: '/legacy-app-modernization/index.html',
+      },
+      {
+        source: '/mobile-app-development',
+        destination: '/mobile-app-development/index.html',
+      },
+      {
+        source: '/mvp-development',
+        destination: '/mvp-development/index.html',
+      },
     ];
   },
 };
