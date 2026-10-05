@@ -1,98 +1,127 @@
 import { NextResponse } from 'next/server';
 import { createSmtpTransport, getSmtpFrom } from '@/lib/smtp';
 
-const TRACKING_FIELDS = [
-  'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
-  'gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid', 'landing', 'referrer',
-];
-const LEAD_RECIPIENTS =
-  'support@appsters.io, zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, ali.haider@canvasdigital.org ,muhammad.nadeem@canvasdigital.net';
-
-function clean(value, maxLength = 500) {
-  return String(value ?? '')
-    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
-    .trim()
-    .slice(0, maxLength);
-}
-
-function escapeHtml(value) {
-  return value.replace(/[&<>"']/g, (char) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  })[char]);
-}
-
 export async function POST(req) {
   try {
-    const formData = await req.formData();
-    const field = (key, limit) => clean(formData.get(key), limit);
+    let data = {};
+    const contentType = req.headers.get('content-type') || '';
 
-    // Honeypot: keep the visitor flow smooth while dropping bot submissions.
-    if (field('contact_fax', 200)) {
-      return NextResponse.json({ ok: true, message: 'Thanks.' });
+    if (contentType.includes('application/json')) {
+      data = await req.json();
+    } else if (contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded')) {
+      const formData = await req.formData();
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+    } else {
+      const rawText = await req.text();
+      try {
+        data = JSON.parse(rawText);
+      } catch {
+        const params = new URLSearchParams(rawText);
+        params.forEach((value, key) => {
+          data[key] = value;
+        });
+      }
     }
 
-    const lead = {
-      name: field('name', 100),
-      email: field('email', 150),
-      phone: field('phone', 25),
-      developerType: field('app_type', 100),
-      message: field('message', 2000),
-      formId: field('form_id', 40),
-      cta: field('cta', 60),
-      pageUrl: field('page_url', 500),
-    };
+    const {
+      name,
+      email,
+      phone,
+      app_type,
+      message,
+      contact_fax,
+      form_id,
+      page_url,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_term,
+      utm_content,
+      gclid,
+      gbraid,
+      wbraid,
+      fbclid,
+      msclkid,
+      landing,
+      referrer,
+    } = data;
 
-    if (lead.name.length < 2) {
-      return NextResponse.json({ ok: false, message: 'Enter your full name.' }, { status: 422 });
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(lead.email)) {
-      return NextResponse.json({ ok: false, message: 'Enter a valid email address.' }, { status: 422 });
-    }
-    if ((lead.phone.match(/\d/g) || []).length < 7) {
-      return NextResponse.json({ ok: false, message: 'Enter a phone number with at least 7 digits.' }, { status: 422 });
-    }
-    if (!lead.developerType) {
-      return NextResponse.json({ ok: false, message: 'Choose the developer type you need.' }, { status: 422 });
-    }
-    if (lead.message.length < 10) {
-      return NextResponse.json({ ok: false, message: 'Add a short description of your project.' }, { status: 422 });
+    // Honeypot check
+    if (contact_fax) {
+      return NextResponse.json({ ok: true, message: 'Thanks.' }, { status: 200 });
     }
 
-    const ip = req.headers.get('cf-connecting-ip') ||
-      req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      req.headers.get('x-real-ip') || '127.0.0.1';
-    const details = [
-      ['Name', lead.name],
-      ['Email', lead.email],
-      ['Phone', lead.phone],
-      ['Developer Needed', lead.developerType],
-      ['Project Details', lead.message],
-      ['Form ID', lead.formId],
-      ['Opened by', lead.cta || '-'],
-      ['Page URL', lead.pageUrl || 'https://www.appsters.io/hire-mobile-developer'],
-      ['IP Address', ip],
-      ...TRACKING_FIELDS.map((key) => [key, field(key, 500)]).filter(([, value]) => value),
-    ];
-    const htmlRows = details.map(([label, value]) =>
-      `<tr><th align="left" style="padding:8px;border-bottom:1px solid #ddd">${escapeHtml(label)}</th><td style="padding:8px;border-bottom:1px solid #ddd">${escapeHtml(value).replace(/\n/g, '<br>')}</td></tr>`
-    ).join('');
+    // IP Address tracking
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+               req.headers.get('x-real-ip') ||
+               req.headers.get('cf-connecting-ip') ||
+               '127.0.0.1';
 
-    const transporter = createSmtpTransport();
-    await transporter.sendMail({
-      from: `"Appsters Hire Mobile Developer LP" <${getSmtpFrom()}>`,
-      to: LEAD_RECIPIENTS,
-      replyTo: { address: lead.email, name: lead.name },
-      subject: `New lead: Hire Mobile Developer LP - ${lead.name} (${lead.developerType})`,
-      text: details.map(([label, value]) => `${label}: ${value}`).join('\n'),
-      html: `<h2>New Hire Mobile Developer lead</h2><table style="border-collapse:collapse">${htmlRows}</table>`,
-    });
+    let locationSummary = 'N/A';
+    if (ip === '::1' || ip === '127.0.0.1') {
+      locationSummary = 'Localhost Development Environment';
+    } else if (!ip.startsWith('192.168.')) {
+      try {
+        const geoRes = await fetch(`http://ip-api.com/json/${ip}`, { signal: AbortSignal.timeout(3000) });
+        const geoData = await geoRes.json();
+        if (geoData.status === 'success') {
+          locationSummary = `${geoData.city}, ${geoData.regionName}, ${geoData.country}`;
+        }
+      } catch (e) {
+        console.error('Geo lookup error:', e);
+      }
+    }
 
-    return NextResponse.json({ ok: true, message: 'Thanks. We received your details.' });
+    const recipients = 'support@appsters.io, zain@iceanimations.com, ppc@iceanimations.com, hassan.ali@iceanimations.com, syed.ali@appsters.io, ali.haider@canvasdigital.org';
+
+    try {
+      const transporter = createSmtpTransport();
+      const mailOptions = {
+        from: `"Appsters App Publishing" <${getSmtpFrom()}>`,
+        to: recipients,
+        subject: `New Lead: App Publishing LP (${name || 'Unknown'})`,
+        html: `
+          <h3>New Lead Details (App Publishing):</h3>
+          <p><strong>Name:</strong> ${name || 'N/A'}</p>
+          <p><strong>Email:</strong> ${email || 'N/A'}</p>
+          <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+          <p><strong>App Type:</strong> ${app_type || 'N/A'}</p>
+          <p><strong>Message:</strong><br>${(message || 'N/A').replace(/\n/g, '<br>')}</p>
+          <br>
+          <hr>
+          <h3>Form & Campaign Details:</h3>
+          <p><strong>Form ID:</strong> ${form_id || 'N/A'}</p>
+          <p><strong>Page URL:</strong> ${page_url || 'https://www.appsters.io/app-publishing'}</p>
+          <p><strong>Landing Page:</strong> ${landing || 'N/A'}</p>
+          <p><strong>Referrer:</strong> ${referrer || 'N/A'}</p>
+          <p><strong>UTM Source:</strong> ${utm_source || 'N/A'}</p>
+          <p><strong>UTM Medium:</strong> ${utm_medium || 'N/A'}</p>
+          <p><strong>UTM Campaign:</strong> ${utm_campaign || 'N/A'}</p>
+          <p><strong>UTM Term:</strong> ${utm_term || 'N/A'}</p>
+          <p><strong>UTM Content:</strong> ${utm_content || 'N/A'}</p>
+          <p><strong>Google Click ID (gclid):</strong> ${gclid || 'N/A'}</p>
+          <p><strong>IP Address:</strong> ${ip}</p>
+          <p><strong>Location:</strong> ${locationSummary}</p>
+        `,
+      };
+
+      await transporter.sendMail(mailOptions);
+    } catch (smtpErr) {
+      console.warn('SMTP Send Warning (App Publishing):', smtpErr.message);
+      return NextResponse.json(
+        { ok: false, message: 'We could not deliver your details right now. Please try again or call us.' },
+        { status: 502 }
+      );
+    }
+
+    return NextResponse.json({ ok: true, message: 'Your message has been sent successfully.' }, { status: 200 });
   } catch (error) {
-    console.error('Error handling hire mobile developer lead:', error);
+    console.error('Error handling app-publishing lead:', error);
     return NextResponse.json(
-      { ok: false, message: 'We could not send your details. Call +1 (855) 799 1171 or try again.' },
-      { status: 500 },
+      { ok: false, message: 'Failed to process lead.' },
+      { status: 500 }
     );
   }
 }
