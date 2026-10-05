@@ -158,26 +158,26 @@
 }
 
 /* Ensure equal height cards in slider */
-:global(.slick-track) {
+.sliderWrapper :global(.slick-track) {
   display: flex !important;
 }
 
-:global(.slick-slide) {
+.sliderWrapper :global(.slick-slide) {
   height: auto;
   padding: 0 15px;
   display: flex;
 }
 
-:global(.slick-slide > div) {
+.sliderWrapper :global(.slick-slide > div) {
   width: 100%;
   display: flex;
 }
 
-:global(.slick-dots li button:before) {
+.sliderWrapper :global(.slick-dots li button:before) {
   color: #fff !important;
 }
 
-:global(.slick-dots li.slick-active button:before) {
+.sliderWrapper :global(.slick-dots li.slick-active button:before) {
   color: #E3F91D !important;
 }
 

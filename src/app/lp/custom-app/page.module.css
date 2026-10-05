@@ -7,10 +7,6 @@
     z-index: -1;
 }
 
-:global(html) {
-    scroll-behavior: smooth;
-}
-
 .lpCustomApp {
     font-family: var(--font-poppins);
     background: #fff;
