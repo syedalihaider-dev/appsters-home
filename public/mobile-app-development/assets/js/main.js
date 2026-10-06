@@ -113,11 +113,17 @@
   var zdKey = (CFG.zendeskKey || '').trim();
   var zdLoaded = false;
   var zdPendingOpen = false;
+  var zdIsOpen = false;
 
-  function zdOpen() {
+  function zdToggle() {
     if (typeof window.zE !== 'function') { return false; }
-    try { window.zE('messenger', 'show'); window.zE('messenger', 'open'); return true; } catch (e) { /* not messaging */ }
-    try { window.zE('webWidget', 'show'); window.zE('webWidget', 'open'); return true; } catch (e2) { /* not classic */ }
+    try {
+      window.zE('messenger', 'show');
+      window.zE('messenger', zdIsOpen ? 'close' : 'open');
+      zdIsOpen = !zdIsOpen;
+      return true;
+    } catch (e) { /* not messaging */ }
+    try { window.zE('webWidget', 'toggle'); return true; } catch (e2) { /* not classic */ }
     return false;
   }
 
@@ -128,7 +134,7 @@
     zs.src = 'https://static.zdassets.com/ekr/snippet.js?key=' + encodeURIComponent(zdKey);
     zs.onload = function () {
       zdLoaded = true;
-      if (zdPendingOpen) { window.setTimeout(zdOpen, 300); }
+      if (zdPendingOpen) { window.setTimeout(zdToggle, 300); }
     };
     zs.onerror = function () { zdLoaded = false; zdKey = ''; if (zdPendingOpen && modal) { openModal('chat_fallback'); } };
     document.body.appendChild(zs);
@@ -139,7 +145,7 @@
       e.preventDefault();
       window.dataLayer.push({ event: 'chat_click' });
       if (zdKey) {
-        if (zdLoaded && zdOpen()) { return; }
+        if (zdLoaded && zdToggle()) { return; }
         if (!zdLoaded) { zdPendingOpen = true; return; }
       }
       if (modal) { openModal('chat_fallback'); } else { window.location.href = 'tel:+18557991171'; }

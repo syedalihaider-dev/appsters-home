@@ -13,7 +13,7 @@ window.LP_CONFIG = {
   // Zendesk Admin > Channels > Messaging (or Widget) > Installation:
   // copy the part after "?key=" from the snippet and paste it here.
   // Leave empty and all "Chat with us" buttons open the lead popup instead.
-  zendeskKey: '',
+  zendeskKey: '239dfa05-01f6-4362-bfb9-4f75a7455e10',
 
   // Popup auto-open delay in ms (0 = never auto-open)
   popupDelay: 10000,
