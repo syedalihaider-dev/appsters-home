@@ -741,3 +741,273 @@
     }
 }
 
+/* Modern shared service and industry menus */
+.dropdownTrigger {
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+}
+
+.industryMegaMenu {
+    top: calc(100% + 10px);
+    max-height: min(72vh, 680px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(204, 255, 0, .45) #111219;
+    background: linear-gradient(135deg, #171914, #101111 72%);
+    border: 1px solid rgba(204, 255, 0, .16);
+    border-radius: 20px;
+    padding: 28px 32px 32px;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, .55);
+}
+
+.industryMenuInner { width: 100%; }
+
+.menuHeadingRow {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, .09);
+}
+
+.menuEyebrow {
+    display: block;
+    margin-bottom: 5px;
+    color: #caff33;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.menuTitle {
+    margin: 0;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.menuViewAll {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border: 1px solid rgba(204, 255, 0, .32);
+    border-radius: 999px;
+    color: #caff33;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .2s ease, color .2s ease;
+}
+
+.menuViewAll:hover { color: #111; background: #caff33; }
+
+.industryColumnsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.industryLink,
+.serviceMenuLink {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 13px;
+    border: 1px solid rgba(255, 255, 255, .055);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .035);
+    color: rgba(255, 255, 255, .88);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-decoration: none;
+    white-space: normal;
+    transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.industryLink:hover,
+.serviceMenuLink:hover {
+    color: #fff;
+    border-color: rgba(204, 255, 0, .35);
+    background: rgba(204, 255, 0, .07);
+    transform: translateY(-1px);
+}
+
+.menuLinkMark {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    color: #caff33;
+    background: rgba(204, 255, 0, .1);
+    font-size: 12px;
+}
+
+.serviceGroupGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr .72fr;
+    gap: 22px;
+}
+
+.serviceGroup { min-width: 0; }
+
+.serviceGroup h3 {
+    margin: 0 0 12px;
+    color: #caff33;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .01em;
+}
+
+.serviceGroupLinks { display: grid; gap: 7px; }
+.serviceMenuLink { padding: 9px 10px; font-size: 12px; }
+.serviceMenuLink .menuLinkMark { width: 19px; height: 19px; flex-basis: 19px; font-size: 10px; }
+
+.dropdown:hover > .dropdownTrigger,
+.dropdown:focus-within > .dropdownTrigger { color: #caff33; }
+
+.dropdown:hover > .dropdownTrigger .arrow,
+.dropdown:focus-within > .dropdownTrigger .arrow { border-color: #caff33; }
+
+.dropdownTrigger:focus-visible,
+.menuViewAll:focus-visible,
+.industryLink:focus-visible,
+.serviceMenuLink:focus-visible { outline: 2px solid #caff33; outline-offset: 3px; }
+
+.closeMenuBtn { background: none; border: 0; padding: 0; }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .industryMegaMenu { padding: 24px; }
+    .serviceGroupGrid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .serviceGroup:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 991px) {
+    .industryMegaMenu,
+    .industryMegaMenu.showMenu,
+    .dropdown:hover .industryMegaMenu,
+    .dropdown:focus-within .industryMegaMenu {
+        position: static;
+        width: 100%;
+        height: 0;
+        max-height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: none;
+    }
+
+    .industryMegaMenu.mobileShowMenu {
+        height: auto;
+        max-height: 58vh;
+        margin-top: 8px;
+        padding: 14px 0 4px;
+        overflow-y: auto;
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menuHeadingRow { align-items: start; margin-bottom: 14px; padding-bottom: 12px; }
+    .menuTitle { font-size: 19px; }
+    .menuViewAll { padding: 7px 10px; font-size: 11px; }
+    .industryColumnsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+    .industryLink { padding: 10px 8px; gap: 7px; font-size: 12px; }
+    .menuLinkMark { width: 19px; height: 19px; flex-basis: 19px; }
+    .serviceGroupGrid { grid-template-columns: 1fr; gap: 14px; }
+    .serviceGroup:last-child { grid-column: auto; }
+    .serviceGroup h3 { margin-bottom: 7px; font-size: 12px; }
+    .serviceGroupLinks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+    .serviceMenuLink { padding: 8px 7px; gap: 6px; font-size: 11px; }
+    .serviceMenuLink .menuLinkMark { width: 17px; height: 17px; flex-basis: 17px; }
+    .industryMenuInner { width: 100%; }
+}
+
+@media (max-width: 380px) {
+    .menuHeadingRow { flex-direction: column; align-items: start; gap: 10px; }
+    .industryColumnsGrid,
+    .serviceGroupLinks { grid-template-columns: 1fr; }
+}
+
+/* Keep navigation typography on the main brand family and easy to scan */
+.header,
+.dropdownTrigger,
+.industryMegaMenu {
+    font-family: var(--font-inter-tight), 'Inter Tight', sans-serif;
+}
+
+.navLink {
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: .02em;
+}
+
+.menuTitle {
+    margin: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+.menuViewAll { font-size: 14px; }
+.industryLink { font-size: 15px; letter-spacing: 0; }
+.serviceGroup h3 { font-size: 15px; letter-spacing: 0; }
+.serviceMenuLink { font-size: 14px; letter-spacing: 0; }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .navLink { font-size: 14px; }
+    .industryLink { font-size: 14px; }
+    .serviceMenuLink { font-size: 13px; }
+}
+
+@media (max-width: 991px) {
+    .navLink { font-size: 16px; }
+    .menuTitle { font-size: 20px; }
+    .menuViewAll { font-size: 13px; }
+    .industryLink,
+    .serviceMenuLink { font-size: 14px; }
+
+    /* Touch devices can keep :hover active after a tap; the open class must win. */
+    .dropdown:hover .industryMegaMenu.mobileShowMenu,
+    .dropdown:focus-within .industryMegaMenu.mobileShowMenu {
+        position: static;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 58vh;
+        margin-top: 8px;
+        padding: 14px 0 4px;
+        overflow-y: auto;
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+

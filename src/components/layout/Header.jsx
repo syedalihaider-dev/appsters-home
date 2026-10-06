@@ -8,53 +8,46 @@ export default function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
-  const [industryDropdownOpen, setIndustryDropdownOpen] = useState(false);
+  const industryLinks = [
+    { name: "Automotive", href: "/industry/automotive-software-development" },
+    { name: "Education", href: "/industry/education-app-development" },
+    { name: "Taxi", href: "/industry/taxi-app-development-company" },
+    { name: "Logistics", href: "/industry/logistics-software-development" },
+    { name: "Music", href: "/industry/music-app-development-company" },
+    { name: "Social Media", href: "/industry/social-media-app-development-services" },
+    { name: "Restaurant", href: "/industry/restaurant-app-development-company" },
+    { name: "Healthcare", href: "/industry/healthcare-app-development-services" },
+    { name: "Real Estate", href: "/industry/real-estate-app-development" },
+  ];
 
-  const industryColumns = [
+  const serviceGroups = [
     {
+      title: "Mobile App Development",
       items: [
-        { name: "Automotive", href: "/industry/automotive-software-development" },
+        { name: "Android App Development", href: "/service/android-app-development-company" },
+        { name: "iOS App Development", href: "/service/ios-app-development-company" },
+        { name: "React Native Development", href: "/service/react-native-app-development-company" },
+        { name: "Cross-Platform App Development", href: "/service/cross-platform-app-development-company" },
+        { name: "Flutter App Development", href: "/service/flutter-app-development-company" },
+        { name: "Hybrid App Development", href: "/service/hybrid-app-development-company" },
+        { name: "Mobile App Development", href: "/service/mobile-app-development-company" },
       ],
     },
     {
+      title: "Game Development",
       items: [
-        { name: "Education", href: "/industry/education-app-development" },
+        { name: "Mobile Game Development", href: "/service/mobile-game-development-services" },
+        { name: "2D Game Development", href: "/service/2d-game-development-services" },
+        { name: "3D Game Development", href: "/service/3d-game-development-services" },
+        { name: "Web3 Game Development", href: "/service/web3-game-development-company" },
+        { name: "Blockchain Game Development", href: "/service/blockchain-game-development-company" },
+        { name: "NFT Game Development", href: "/service/nft-game-development-company" },
       ],
     },
     {
+      title: "Emerging Technology",
       items: [
-        { name: "Taxi", href: "/industry/taxi-app-development-company" },
-      ],
-    },
-    {
-      items: [
-        { name: "Logistics", href: "/industry/logistics-software-development" },
-      ],
-    },
-    {
-      items: [
-        { name: "Music", href: "/industry/music-app-development-company" },
-      ],
-    },
-    {
-      items: [
-        { name: "Social Media", href: "/industry/social-media-app-development-services" },
-      ],
-    },
-    {
-      items: [
-        { name: "Restaurant", href: "/industry/restaurant-app-development-company" },
-      ],
-    },
-    {
-      items: [
-        { name: "Healthcare", href: "/industry/healthcare-app-development-services" },
-      ],
-    },
-    {
-      items: [
-        { name: "Real Estate", href: "/industry/real-estate-app-development" },
+        { name: "AI App Development", href: "/service/ai-app-development-services" },
       ],
     },
   ];
@@ -70,6 +63,17 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setActiveMenu(null);
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   // const services = [
@@ -96,125 +100,76 @@ export default function Header() {
           </div>
 
           <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileNavOpen : ""}`}>
-            <div className={styles.closeMenuBtn} onClick={() => setIsMobileMenuOpen(false)}>×</div>
-            <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>HOME</Link>
-            <Link href="/about-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
+            <button className={styles.closeMenuBtn} type="button" onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }} aria-label="Close navigation">×</button>
+            <Link href="/" className={styles.navLink} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>HOME</Link>
+            <Link href="/about-us" className={styles.navLink} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>ABOUT</Link>
 
-            <div
-              className={`${styles.dropdown} ${industryDropdownOpen ? styles.mobileDropdownActive : ""}`}
-              onMouseEnter={() => setActiveMenu("industry")}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link
-                href="/industry"
-                className={`${styles.navLink} ${activeMenu === "industry" ? styles.activeNavLink : ""}`}
-                onClick={(e) => {
-                  if (isMobileMenuOpen) {
-                    e.preventDefault();
-                    setIndustryDropdownOpen((prev) => !prev);
-                  } else {
-                    setIsMobileMenuOpen(false);
-                    setActiveMenu(null);
-                  }
-                }}
-              >
-                INDUSTRY <i className={`${styles.arrow} ${(activeMenu === "industry" && !isMobileMenuOpen) || (isMobileMenuOpen && industryDropdownOpen) ? styles.arrowUp : ""}`}></i>
-              </Link>
-
-              <div
-                className={`${styles.industryMegaMenu} ${activeMenu === "industry" ? styles.showMenu : ""} ${industryDropdownOpen ? styles.mobileShowMenu : ""}`}
-              >
+            <div className={styles.dropdown} onMouseEnter={() => !isMobileMenuOpen && setActiveMenu("industry")} onMouseLeave={() => !isMobileMenuOpen && setActiveMenu(null)}>
+              <button type="button" className={`${styles.navLink} ${styles.dropdownTrigger} ${activeMenu === "industry" ? styles.activeNavLink : ""}`} aria-expanded={activeMenu === "industry"} aria-controls="industry-menu" onClick={() => setActiveMenu(isMobileMenuOpen && activeMenu === "industry" ? null : "industry")}>
+                INDUSTRIES <i className={`${styles.arrow} ${activeMenu === "industry" ? styles.arrowUp : ""}`}></i>
+              </button>
+              <div id="industry-menu" className={`${styles.industryMegaMenu} ${activeMenu === "industry" ? styles.showMenu : ""} ${activeMenu === "industry" && isMobileMenuOpen ? styles.mobileShowMenu : ""}`}>
                 <div className={styles.industryMenuInner}>
-                  <div className={styles.industryHeaderRow}>
-                    <Link
-                      href="/industry"
-                      className={styles.industryMainTitle}
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setActiveMenu(null);
-                        setIndustryDropdownOpen(false);
-                      }}
-                    >
-                      Industries <span className={styles.chevron}>⌵</span>
-                    </Link>
+                  <div className={styles.menuHeadingRow}>
+                    <div><span className={styles.menuEyebrow}>WHO WE SERVE</span><p className={styles.menuTitle}>Industries</p></div>
+                    <Link href="/industry" className={styles.menuViewAll} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>Explore all industries <span aria-hidden="true">↗</span></Link>
                   </div>
-
                   <div className={styles.industryColumnsGrid}>
-                    {industryColumns.map((col, colIdx) => (
-                      <div key={colIdx} className={styles.industryCol}>
-                        {col.items.map((item, itemIdx) => (
-                          <Link
-                            key={itemIdx}
-                            href={item.href}
-                            className={styles.industryLink}
-                            onClick={() => {
-                              setIsMobileMenuOpen(false);
-                              setActiveMenu(null);
-                              setIndustryDropdownOpen(false);
-                            }}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
+                    {industryLinks.map((item) => (
+                      <Link key={item.href} href={item.href} className={styles.industryLink} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>
+                        <span className={styles.menuLinkMark} aria-hidden="true">↗</span>{item.name}
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            <Link href="/services" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>SERVICES</Link>
-
-            {/* <div
-              className={`${styles.dropdown} ${mobileDropdownOpen ? styles.mobileDropdownActive : ""}`}
-              onMouseEnter={() => setActiveMenu('services')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <span
-                className={styles.navLink}
-                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-              >
-                SERVICES <i className={`${styles.arrow} ${mobileDropdownOpen ? styles.arrowUp : ""}`}></i>
-              </span>
-              <div className={`${styles.megaMenu} ${activeMenu === 'services' ? styles.show : ''} ${mobileDropdownOpen ? styles.mobileShow : ''}`}>
-                <div className="container d-flex flex-wrap">
-                  <div className={styles.megaLeft}>
-                    <h2>Services Recognized by IAOP</h2>
-                    <p>Trusted by CTOs, valued by users, and built for AI scalability. Appsters deliver mobile apps that your business needs today & tomorrow.</p>
-                    <div className={styles.iaopLogo}>
-                      <Image src="/images/iaop-logo.png" alt="IAOP Logo" width={500} height={215} style={{ objectFit: "contain" }} />
-                    </div>
+            <div className={styles.dropdown} onMouseEnter={() => !isMobileMenuOpen && setActiveMenu("services")} onMouseLeave={() => !isMobileMenuOpen && setActiveMenu(null)}>
+              <button type="button" className={`${styles.navLink} ${styles.dropdownTrigger} ${activeMenu === "services" ? styles.activeNavLink : ""}`} aria-expanded={activeMenu === "services"} aria-controls="services-menu" onClick={() => setActiveMenu(isMobileMenuOpen && activeMenu === "services" ? null : "services")}>
+                SERVICES <i className={`${styles.arrow} ${activeMenu === "services" ? styles.arrowUp : ""}`}></i>
+              </button>
+              <div id="services-menu" className={`${styles.industryMegaMenu} ${styles.servicesMegaMenu} ${activeMenu === "services" ? styles.showMenu : ""} ${activeMenu === "services" && isMobileMenuOpen ? styles.mobileShowMenu : ""}`}>
+                <div className={styles.industryMenuInner}>
+                  <div className={styles.menuHeadingRow}>
+                    <div><span className={styles.menuEyebrow}>WHAT WE DO</span><p className={styles.menuTitle}>Our Services</p></div>
+                    <Link href="/services" className={styles.menuViewAll} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>Explore all services <span aria-hidden="true">↗</span></Link>
                   </div>
-                  <div className={styles.megaRight}>
-                    <div className={styles.servicesGrid}>
-                      {services.map((service, index) => (
-                        <Link href="#!" key={index} className={styles.serviceItem} onClick={() => setIsMobileMenuOpen(false)}>
-                          <h4>{service.title}</h4>
-                          <p>{service.desc}</p>
-                        </Link>
-                      ))}
-                    </div>
+                  <div className={styles.serviceGroupGrid}>
+                    {serviceGroups.map((group) => (
+                      <section key={group.title} className={styles.serviceGroup}>
+                        <h3>{group.title}</h3>
+                        <div className={styles.serviceGroupLinks}>
+                          {group.items.map((item) => (
+                            <Link key={item.href} href={item.href} className={styles.serviceMenuLink} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>
+                              <span className={styles.menuLinkMark} aria-hidden="true">↗</span>{item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </section>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div> */}
-
-            <Link href="/case-study" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CASE STUDY</Link>
-            <Link href="/contact-us" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
+            </div>
+            <Link href="/case-study" className={styles.navLink} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>CASE STUDIES</Link>
+            <Link href="/contact-us" className={styles.navLink} onClick={() => { setIsMobileMenuOpen(false); setActiveMenu(null); }}>CONTACT</Link>
             {/* <Link href="/location" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>LOCATION</Link> */}
           </nav>
 
           <div className={styles.headerRight}>
             <div className={styles.headerBtn}>
-              <Link href="#!" className={styles.talkBtn}>
+              <Link href="/contact-us" className={styles.talkBtn}>
                 <span className={styles.dot}></span> Let&apos;s Talk! ↗
               </Link>
             </div>
 
             <button
               className={styles.mobileMenuToggle}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle mobile menu"
+              type="button"
+              onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); setActiveMenu(null); }}
+              aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMobileMenuOpen}
             >
               <span className={styles.bar}></span>
               <span className={styles.bar}></span>
