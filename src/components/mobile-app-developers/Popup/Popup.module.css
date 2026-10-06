@@ -268,22 +268,43 @@
 
 .phoneGroup {
     display: flex;
+    gap: 8px;
 }
 
 .countrySelect {
-    width: 80px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px 0 0 8px;
-    padding: clamp(8px, 1.5vh, 12px) 10px;
+    width: 112px;
+    min-width: 112px;
+    flex: 0 0 112px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #242421;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23caff33' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    border: 1px solid #474c1e;
+    border-radius: 8px;
+    padding: clamp(8px, 1.5vh, 12px) 30px clamp(8px, 1.5vh, 12px) 12px;
     color: #fff;
     font-size: clamp(13px, 2vh, 14px);
-    border-right: none;
+    cursor: pointer;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.countrySelect:focus {
+    outline: none;
+    border-color: #caff33;
+    box-shadow: 0 0 0 2px rgba(202, 255, 51, .12);
+}
+
+.countrySelect option {
+    color: #fff;
+    background: #1a1b16;
 }
 
 .phoneInput {
     flex: 1;
-    border-radius: 0 8px 8px 0;
+    min-width: 0;
+    border-radius: 8px;
 }
 
 textarea.formInput {
@@ -360,6 +381,17 @@ textarea.formInput {
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.phoneInput {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: clamp(8px, 1.5vh, 12px) 15px;
+    color: #fff;
+    font-size: clamp(13px, 2vh, 14px);
+    transition: all 0.3s ease;
 }
 
 /* Tablet & Mobile Layouts */

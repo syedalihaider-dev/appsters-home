@@ -10,6 +10,7 @@ const ContactSection = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        countryCode: '+1',
         phone: '',
         service: '',
         budget: '',
@@ -30,6 +31,7 @@ const ContactSection = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...formData,
+                    phone: `${formData.countryCode} ${formData.phone}`.trim(),
                     pageUrl: window.location.href
                 })
             })
@@ -153,7 +155,14 @@ const ContactSection = () => {
                                     <Col md={6}>
                                         <Form.Group className="mb-3">
                                             <Form.Label className={styles.formLabel}>PHONE NUMBER</Form.Label>
-                                            <Form.Control type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (000) 000-0000" className={styles.formInput} required />
+                                            <div className={styles.phoneGroup}>
+                                                <Form.Select name="countryCode" value={formData.countryCode} onChange={handleChange} className={styles.countrySelect} aria-label="Country calling code">
+                                                    <option value="+1">US (+1)</option>
+                                                    <option value="+44">UK (+44)</option>
+                                                    <option value="+61">AU (+61)</option>
+                                                </Form.Select>
+                                                <Form.Control type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={styles.phoneInput} required />
+                                            </div>
                                         </Form.Group>
                                     </Col>
                                 </Row>

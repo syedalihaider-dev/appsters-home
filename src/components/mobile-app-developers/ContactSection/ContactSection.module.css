@@ -256,6 +256,47 @@ select.formInput:focus {
     color: #fff;
 }
 
+.phoneGroup {
+    display: flex;
+    gap: 8px;
+    min-width: 0;
+}
+
+.countrySelect {
+    width: 120px;
+    min-width: 120px;
+    flex: 0 0 120px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #242421;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23caff33' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    border: 1px solid #474c1e;
+    border-radius: 8px;
+    padding: 12px 30px 12px 12px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.countrySelect:focus {
+    outline: none;
+    border-color: #caff33;
+    box-shadow: 0 0 0 2px rgba(202, 255, 51, .12);
+}
+
+.countrySelect option {
+    color: #fff;
+    background: #1a1b16;
+}
+
+.phoneInput {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 .submitBtn {
     width: 100%;
     background-color: #caff33;

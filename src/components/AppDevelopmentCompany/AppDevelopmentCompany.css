@@ -487,6 +487,70 @@ body.modal-open{overflow:hidden !important}
 .tr-row img{height:40px;width:auto}
 .tr-awards img{height:auto;max-width:160px}
 
+/* Client review platforms */
+.client-reviews{padding:64px 0;background:linear-gradient(115deg,#fff 0%,#fbfcff 100%)}
+.client-reviews-grid{max-width:1600px;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.55fr);gap:clamp(28px,4vw,64px);align-items:center}
+.reviews-eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;margin-bottom:20px;border-radius:999px;background:#edf3ff;color:#42618e;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.025em}
+.reviews-eyebrow svg{color:var(--blue);font-size:1.15rem}
+.reviews-intro h2{font-size:clamp(2rem,3.5vw,3.45rem);line-height:1.08;letter-spacing:-.035em;margin:0 0 22px}
+.reviews-intro h2 span{color:var(--blue)}
+.reviews-intro>p{max-width:55ch;color:#606d82;font-size:clamp(1rem,1.25vw,1.18rem);line-height:1.65;margin:0}
+.review-trust-points{display:flex;align-items:center;gap:15px 0px;flex-wrap:wrap;margin-top:34px;color:#4f5d74;font-size:.92rem;line-height:1.35}
+.review-trust-points>div{display:flex;align-items:center;gap:12px;padding:0 18px;border-right:1px solid #e0e5ef;white-space:nowrap}
+.review-trust-points>div:first-child{padding-left:0}
+.review-trust-points>div:last-child{padding-right:0;border-right:0}
+.trust-icon{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border-radius:50%;background:#edf3ff;color:var(--blue);font-size:1.35rem}
+.review-platforms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.platform-card{min-width:0;min-height:386px;padding:30px 26px;border:1px solid #edf0f5;border-radius:24px;background:rgba(255,255,255,.92);box-shadow:0 12px 36px rgba(23,45,86,.075);display:flex;flex-direction:column}
+.platform-brand{height:48px;display:flex;align-items:center;margin-bottom:13px}
+.platform-brand img{width:auto;max-width:min(100%,175px);height:auto;max-height:43px;object-fit:contain;object-position:left center}
+.trustpilot-brand{gap:10px;color:#111827;font-size:clamp(1.15rem,1.6vw,1.7rem);font-weight:600;letter-spacing:-.04em}
+.trustpilot-brand img{width:38px;height:38px;object-fit:contain}
+.platform-stars{height:42px;color:#ff514c;font-size:2rem;letter-spacing:.08em;line-height:1.2;white-space:nowrap}
+.platform-trustpilot .platform-stars{color:#00ad78}
+.platform-trustpilot .platform-stars span{background:linear-gradient(90deg,#00ad78 50%,#dfe5eb 50%);color:transparent;background-clip:text}
+.platform-goodfirms .platform-stars{color:#3478ff}
+.platform-score{font-family:var(--display);font-size:clamp(2rem,2.4vw,2.65rem);line-height:1.15;color:#111d35;letter-spacing:-.04em}
+.platform-count{margin:4px 0 14px;color:#637087;font-size:.94rem;white-space:nowrap}
+.platform-count a{color:var(--blue);text-decoration:none}
+.platform-description{margin:0 0 20px;padding-top:14px;border-top:1px solid #edf0f5;color:#637087;font-size:.94rem;line-height:1.55;flex:1}
+.platform-link{min-height:46px;padding:9px 12px;display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid currentColor;border-radius:12px;font-weight:700;text-decoration:none;font-size:.94rem;white-space:nowrap}
+.platform-link svg{flex:0 0 auto;font-size:1.05rem}
+.platform-trustpilot .platform-link{color:#00a871;background:#f2fbf7}
+.platform-clutch .platform-link{color:#fb514d;background:#fff7f6}
+.platform-goodfirms .platform-link{color:#3478ff;background:#f4f7ff}
+@media(max-width:1100px){
+  .client-reviews-grid{grid-template-columns:minmax(0,.82fr) minmax(0,1.4fr);gap:28px}
+  .review-platforms{gap:12px}
+  .platform-card{padding:24px 18px;min-height:370px;border-radius:20px}
+  .review-trust-points>div{padding:0 10px;gap:8px;font-size:.84rem}
+  .trust-icon{width:42px;height:42px;flex-basis:42px}
+}
+@media(max-width:900px){
+  .client-reviews{padding:56px 0}
+  .client-reviews-grid{grid-template-columns:1fr;gap:32px}
+  .reviews-intro>p{max-width:68ch}
+  .review-trust-points{margin-top:24px}
+  .platform-card{min-height:350px}
+}
+@media(max-width:600px){
+  .client-reviews{padding:44px 0}
+  .client-reviews .wrap{padding-left:18px;padding-right:18px}
+  .reviews-eyebrow{font-size:.78rem;margin-bottom:15px}
+  .reviews-intro h2{font-size:clamp(2rem,9vw,2.7rem);margin-bottom:15px}
+  .reviews-intro>p{font-size:.98rem;line-height:1.6}
+  .review-trust-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:22px}
+  .review-trust-points>div{min-width:0;padding:0 6px;border-right:0;flex-direction:column;align-items:flex-start;gap:7px;white-space:normal;font-size:.75rem}
+  .review-trust-points>div:first-child{padding-left:6px}
+  .trust-icon{width:40px;height:40px;flex-basis:40px;font-size:1.15rem}
+  .review-platforms{grid-template-columns:1fr;gap:14px}
+  .platform-card{min-height:0;padding:22px;border-radius:18px}
+  .platform-brand{height:42px;margin-bottom:8px}
+  .platform-stars{height:38px}
+  .platform-score{font-size:2.25rem}
+  .platform-description{margin-bottom:16px}
+}
+
 .slim-footer .footer-row{align-items:flex-start}
 .slim-footer address{font-style:normal;color:rgba(255,255,255,.75);font-size:.92rem;line-height:1.7}
 .slim-footer address a{color:#fff}
@@ -645,4 +709,8 @@ body.modal-open{overflow:hidden !important}
   .ty-page{padding-bottom:0}
   .ty-next{padding:26px 20px}
   .ty-page .header-phone{font-size:.88rem}
+}
+@media (max-width:1500px){.review-trust-points > div:last-child {padding:0px;}.platform-link {white-space:wrap;}
+}
+@media (max-width:900px){.review-trust-points > div:last-child {padding-left:10px;}
 }

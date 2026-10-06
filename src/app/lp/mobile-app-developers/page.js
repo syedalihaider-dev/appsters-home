@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Montserrat, DM_Sans, Inter } from 'next/font/google'
 import Header from '@/components/mobile-app-developers/Header/Header'
 import Banner from '@/components/mobile-app-developers/Banner/Banner'
+import ReviewsSection from '@/components/mobile-app-developers/ReviewsSection/ReviewsSection'
 import IndustryServices from '@/components/mobile-app-developers/IndustryServices/IndustryServices'
 import PortfolioSection from '@/components/mobile-app-developers/PortfolioSection/PortfolioSection'
 import TestimonialsSection from '@/components/mobile-app-developers/TestimonialsSection/TestimonialsSection'
@@ -48,6 +49,7 @@ const Page = () => {
         <main className={`${styles.lpMobileAppStudio} ${inter.variable} ${montserrat.variable} ${dmsans.variable}`}>
             <Header />
             <Banner />
+            <ReviewsSection />
             <IndustryServices onOpenPopup={() => setIsPopupOpen(true)} />
             <CaseStudySection />
             <PortfolioSection />

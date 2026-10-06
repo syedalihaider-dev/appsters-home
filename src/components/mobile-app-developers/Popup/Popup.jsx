@@ -9,6 +9,7 @@ const Popup = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        countryCode: '+1',
         phone: '',
         service: '',
         budget: '',
@@ -41,6 +42,7 @@ const Popup = ({ isOpen, onClose }) => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...formData,
+                    phone: `${formData.countryCode} ${formData.phone}`.trim(),
                     pageUrl: window.location.href,
                     formSource: 'Popup'
                 })
@@ -135,12 +137,12 @@ const Popup = ({ isOpen, onClose }) => {
                         <div className={styles.formGroup}>
                             <label className={styles.formLabel}>PHONE NUMBER *</label>
                             <div className={styles.phoneGroup}>
-                                <select className={styles.countrySelect}>
-                                    <option>🇺🇸 +1</option>
-                                    <option>🇬🇧 +44</option>
-                                    <option>🇦🇺 +61</option>
+                                <select name="countryCode" value={formData.countryCode} onChange={handleChange} className={styles.countrySelect} aria-label="Country calling code">
+                                    <option value="+1">US (+1)</option>
+                                    <option value="+44">UK (+44)</option>
+                                    <option value="+61">AU (+61)</option>
                                 </select>
-                                <input type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={`${styles.formInput} ${styles.phoneInput}`} required />
+                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={`${styles.formInput} ${styles.phoneInput}`} required />
                             </div>
                         </div>
                         

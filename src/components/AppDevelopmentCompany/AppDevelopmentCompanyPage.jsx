@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { SITE_PHONE, SITE_PHONE_LINK } from "@/app/constants";
+import { FiExternalLink, FiShield, FiThumbsUp, FiUsers } from "react-icons/fi";
 import "./AppDevelopmentCompany.css";
 
 /* ===================================================================
@@ -385,6 +386,48 @@ export default function AppDevelopmentCompanyPage() {
           </div>
         </section>
 
+        {/* ===== CLIENT REVIEWS ===== */}
+        <section className="client-reviews" aria-labelledby="client-reviews-title">
+          <div className="wrap client-reviews-grid">
+            <div className="reviews-intro">
+              <span className="reviews-eyebrow"><FiShield aria-hidden="true" /> Trusted &amp; reviewed</span>
+              <h2 id="client-reviews-title">Trusted by Clients.<br /><span>Backed by Reviews.</span></h2>
+              <p>See what real clients say about working with Appsters. Our reviews across trusted platforms reflect our commitment to quality, communication and results. Choose Appsters with confidence.</p>
+              <div className="review-trust-points">
+                <div><span className="trust-icon"><FiThumbsUp aria-hidden="true" /></span><span>Real Client<br />Feedback</span></div>
+                <div><span className="trust-icon"><FiShield aria-hidden="true" /></span><span>Verified<br />Reviews</span></div>
+                <div><span className="trust-icon"><FiUsers aria-hidden="true" /></span><span>Trusted by<br />Startups &amp; Businesses</span></div>
+              </div>
+            </div>
+            <div className="review-platforms">
+              <article className="platform-card platform-trustpilot">
+                <div className="platform-brand trustpilot-brand"><img src="/images/trustpilot.jpg" alt="" /><span>Trustpilot</span></div>
+                <div className="platform-stars" aria-label="4.5 out of 5 stars">★★★★<span>★</span></div>
+                <strong className="platform-score">4.5/5</strong>
+                <p className="platform-count">Based on <a href="https://www.trustpilot.com/review/appsters.io" target="_blank" rel="noreferrer">20 reviews</a></p>
+                <p className="platform-description">Independent client reviews from real businesses.</p>
+                <a className="platform-link" href="https://www.trustpilot.com/review/appsters.io" target="_blank" rel="noreferrer">Read Our Reviews <FiExternalLink aria-hidden="true" /></a>
+              </article>
+              <article className="platform-card platform-clutch">
+                <div className="platform-brand"><img src="/images/clutch.png" alt="Clutch" /></div>
+                <div className="platform-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <strong className="platform-score">5.0/5</strong>
+                <p className="platform-count">Based on <a href="https://clutch.co/profile/appsters" target="_blank" rel="noreferrer">12 reviews</a></p>
+                <p className="platform-description">Verified client feedback from Clutch.</p>
+                <a className="platform-link" href="https://clutch.co/profile/appsters" target="_blank" rel="noreferrer">View Our Profile <FiExternalLink aria-hidden="true" /></a>
+              </article>
+              <article className="platform-card platform-goodfirms">
+                <div className="platform-brand"><img src="/images/goodfirms.png" alt="GoodFirms" /></div>
+                <div className="platform-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <strong className="platform-score">5.0/5</strong>
+                <p className="platform-count">Based on <a href="https://www.goodfirms.co/company/appsters" target="_blank" rel="noreferrer">10 reviews</a></p>
+                <p className="platform-description">Trusted reviews from verified clients on GoodFirms.</p>
+                <a className="platform-link" href="https://www.goodfirms.co/company/appsters" target="_blank" rel="noreferrer">View Our Profile <FiExternalLink aria-hidden="true" /></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
         {/* ===== SERVICES INTRO + TECH TABS ===== */}
         <section className="section" id="services-intro">
           <div className="wrap">
@@ -546,19 +589,13 @@ export default function AppDevelopmentCompanyPage() {
           </div>
         </section>
 
-        {/* ===== TOP RATED ===== */}
-        <section className="top-rated" aria-label="Top rated development company">
+        {/* ===== INDUSTRY AWARDS ===== */}
+        <section className="top-rated" aria-label="Industry awards and recognition">
           <div className="wrap">
-            <h2>Top Rated Development Company</h2>
-            <div className="tr-row">
-              <img src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fclutch-badge.png&w=384&q=75" alt="Clutch" loading="lazy" />
-              <img src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fgood-firms-badge.png&w=384&q=75" alt="GoodFirms" loading="lazy" />
-              <img src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Ftrustpilot-badge.png&w=384&q=75" alt="Trustpilot" loading="lazy" />
-              <img src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fdesign-rush-badge.png&w=640&q=75" alt="DesignRush" loading="lazy" />
-            </div>
+            <h2>Industry Awards &amp; Recognition</h2>
             <div className="tr-row tr-awards">
               {["01", "02", "03", "004", "05"].map((n) => (
-                <img key={n} src={`https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fawards-img-${n}.png&w=640&q=75`} alt="Award" loading="lazy" />
+                <img key={n} src={`https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fawards-img-${n}.png&w=640&q=75`} alt="Appsters industry award" loading="lazy" />
               ))}
             </div>
           </div>
