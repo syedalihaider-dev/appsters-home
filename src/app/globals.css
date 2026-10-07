@@ -553,13 +553,19 @@ p {
   border-right: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 0;
   appearance: auto;
-  background: #fff;
-  color: #111 !important;
-  padding: 0px;
+  background: transparent;
+  color: inherit;
+  padding: 0 5px;
   font: inherit;
   line-height: 1;
   opacity: 1;
-  -webkit-text-fill-color: #111;
+  -webkit-text-fill-color: currentColor;
+}
+
+.appsters-phone-field > .appsters-country-code:focus,
+[class*="countryCode"] > .appsters-country-code:focus {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
 }
 
 .appsters-phone-field > input[name="phone"] {

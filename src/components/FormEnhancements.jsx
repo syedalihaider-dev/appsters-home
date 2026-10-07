@@ -23,6 +23,42 @@ function createCountrySelect() {
   return select;
 }
 
+function applyCountrySelectStyle(select, reference, isExistingSlot = false) {
+  const styles = window.getComputedStyle(reference);
+  Object.assign(select.style, {
+    boxSizing: "border-box",
+    font: "inherit",
+    color: styles.color,
+    backgroundColor: "transparent",
+    border: "0",
+    outline: "none",
+    appearance: "auto",
+    WebkitAppearance: "menulist",
+  });
+
+  if (isExistingSlot) {
+    Object.assign(select.style, {
+      display: "block",
+      width: "100%",
+      minWidth: "0",
+      maxWidth: "100%",
+      height: "100%",
+      padding: "0",
+    });
+    return;
+  }
+
+  Object.assign(select.style, {
+    flex: "0 0 88px",
+    width: "88px",
+    minWidth: "0",
+    alignSelf: "stretch",
+    height: "auto",
+    padding: "0 5px",
+    borderRight: `1px solid ${styles.borderColor}`,
+  });
+}
+
 function enhanceFormFields() {
   document.querySelectorAll('input[name="name"]').forEach((input) => {
     input.placeholder = "Jordan Rivera";
@@ -42,14 +78,41 @@ function enhanceFormFields() {
 
     const existingSlot = input.parentElement?.querySelector('[class*="countryCode"]');
     if (existingSlot) {
-      existingSlot.replaceChildren(createCountrySelect());
+      const select = createCountrySelect();
+      applyCountrySelectStyle(select, existingSlot, true);
+      existingSlot.replaceChildren(select);
       return;
     }
 
+    const inputStyles = window.getComputedStyle(input);
     const field = document.createElement("span");
     field.className = "appsters-phone-field";
+    Object.assign(field.style, {
+      display: "flex",
+      alignItems: "stretch",
+      width: "100%",
+      minWidth: "0",
+      margin: inputStyles.margin,
+      border: inputStyles.border,
+      borderRadius: inputStyles.borderRadius,
+      backgroundColor: inputStyles.backgroundColor,
+      color: inputStyles.color,
+      boxSizing: "border-box",
+      overflow: "hidden",
+    });
     const select = createCountrySelect();
+    applyCountrySelectStyle(select, input);
     input.replaceWith(field);
+    Object.assign(input.style, {
+      flex: "1 1 auto",
+      width: "1%",
+      minWidth: "0",
+      margin: "0",
+      border: "0",
+      borderRadius: "0",
+      backgroundColor: "transparent",
+      boxShadow: "none",
+    });
     field.append(select, input);
   });
 }

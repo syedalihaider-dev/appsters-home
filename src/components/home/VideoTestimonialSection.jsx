@@ -37,7 +37,7 @@ const defaultTestimonials = [
   },
   {
     name: "John Townsend",
-    role: "Founder of Mike Damone",
+    role: "Founder of Mic2Money",
     img: "/images/cclient-review-john-townsend.png",
     video: "https://youtu.be/wl-PZN0_XLA?si=hlK7VGeAvfeFb53m",
   },
@@ -67,7 +67,7 @@ const defaultTestimonials = [
   },
   {
     name: "John Townsend",
-    role: "Founder of Mike Damone",
+    role: "Founder of Mic2Money",
     img: "/images/cclient-review-john-townsend.png",
     video: "https://youtu.be/wl-PZN0_XLA?si=hlK7VGeAvfeFb53m",
   },
