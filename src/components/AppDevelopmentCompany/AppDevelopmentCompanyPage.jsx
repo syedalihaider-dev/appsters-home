@@ -176,7 +176,6 @@ function PopupModal({ show, onClose, onSuccess }) {
           <p>Fill out the form and our experts will get back to you right away.</p>
         </div>
         <LeadForm formId="popup_form" idPrefix="m" onSuccess={onSuccess} />
-        <button className="no-thanks" type="button" onClick={onClose}>No, I&rsquo;m not interested right now</button>
       </div>
     </div>
   );
@@ -298,10 +297,10 @@ const SERVICES = [
 ];
 
 const TESTIMONIALS = [
-  { img: "testi-01", name: "Sophia", role: "Entrepreneur" },
-  { img: "testi-02", name: "Daniel", role: "Game Developer" },
-  { img: "testi-03", name: "Mateo", role: "Founder, Fintech Company" },
-  { img: "testi-04", name: "Jason", role: "Fitness App" },
+  { img: "testi-01", name: "Sophia", role: "Entrepreneur", video: "https://vimeo.com/manage/videos/1184929104" },
+  { img: "testi-02", name: "Daniel", role: "Game Developer", video: "https://vimeo.com/manage/videos/1184930327" },
+  { img: "testi-03", name: "Mateo", role: "Founder, Fintech Company", video: "https://vimeo.com/manage/videos/1184931603" },
+  { img: "testi-04", name: "Jason", role: "Fitness App", video: "https://vimeo.com/manage/videos/1184931598" },
 ];
 
 /* ===================================================================
@@ -310,6 +309,7 @@ const TESTIMONIALS = [
 export default function AppDevelopmentCompanyPage() {
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeTestimonialVideo, setActiveTestimonialVideo] = useState("");
   const [activeTech, setActiveTech] = useState(0);
   const [activeProc, setActiveProc] = useState(0);
 
@@ -348,7 +348,7 @@ export default function AppDevelopmentCompanyPage() {
       <header className="site-header" id="top">
         <div className="wrap header-row">
           <a className="brand" href="#top" aria-label="Appsters home">
-            <img src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Flogo.png&w=256&q=75" alt="Appsters" width={150} height={40} />
+            <img src="/images/logo.png" alt="Appsters" width={150} height={40} />
           </a>
           <div className="header-actions">
             <button className="btn btn-sm header-talk" type="button" onClick={openChat}>Talk to us</button>
@@ -563,7 +563,10 @@ export default function AppDevelopmentCompanyPage() {
             {TESTIMONIALS.map((t) => (
               <article key={t.name} className="car-slide">
                 <div className="testi-card">
-                  <img src={`https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2F${t.img}.png&w=1080&q=75`} alt={`${t.name}, ${t.role}`} loading="lazy" />
+                  <button className="testi-video-trigger" type="button" aria-label={`Play ${t.name}'s video testimonial`} onClick={() => setActiveTestimonialVideo(t.video)}>
+                    <img src={`https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2F${t.img}.png&w=1080&q=75`} alt="" loading="lazy" />
+                    <span className="testi-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5.8v12.4L19 12 9 5.8Z" fill="currentColor" /></svg></span>
+                  </button>
                   <div><h3>{t.name}</h3><p>{t.role}</p></div>
                 </div>
               </article>
@@ -574,7 +577,7 @@ export default function AppDevelopmentCompanyPage() {
         {/* ===== CONTACT FORM ===== */}
         <section className="section levelup" id="contact">
           <div className="wrap levelup-grid">
-            <img className="levelup-img" src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fmobile.png&w=1200&q=75" alt="Mobile app built by Appsters" loading="lazy" />
+            <img className="levelup-img" src="/services.webp" alt="Mobile app built by Appsters" loading="lazy" />
             <div className="contact-form form-card">
               <div className="form-head">
                 <span className="form-chip">
@@ -606,7 +609,7 @@ export default function AppDevelopmentCompanyPage() {
       {/* ===== FOOTER ===== */}
       <footer className="site-footer slim-footer">
         <div className="wrap footer-row">
-          <img src="https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fft-logo.png&w=256&q=75" alt="Appsters" width={140} height={40} loading="lazy" />
+          <img src="/images/ft-logo.png" alt="Appsters" width={140} height={40} loading="lazy" />
           <address><strong>Phone</strong><br /><a href={SITE_PHONE_LINK}>{SITE_PHONE}</a></address>
           <address><strong>Address</strong><br />141 W Jackson Blvd STE 300 A<br />Chicago, IL 60604, United States</address>
           <nav className="footer-links" aria-label="Legal">
@@ -628,6 +631,14 @@ export default function AppDevelopmentCompanyPage() {
 
       {/* ===== POPUP ===== */}
       <PopupModal show={modalOpen} onClose={closeForm} onSuccess={handleFormSuccess} />
+      {activeTestimonialVideo && (
+        <div className="testi-video-modal" role="dialog" aria-modal="true" aria-label="Client video testimonial" onClick={() => setActiveTestimonialVideo("")}>
+          <div className="testi-video-dialog" onClick={(event) => event.stopPropagation()}>
+            <button className="testi-video-close" type="button" aria-label="Close video" onClick={() => setActiveTestimonialVideo("")}>&times;</button>
+            <iframe src={`https://player.vimeo.com/video/${activeTestimonialVideo.split("/").pop().split("?")[0]}?autoplay=1`} title="Client video testimonial" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

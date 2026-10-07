@@ -36,6 +36,12 @@ const defaultTestimonials = [
     video: "https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci",
   },
   {
+    name: "John Townsend",
+    role: "Founder of Mike Damone",
+    img: "/images/cclient-review-john-townsend.png",
+    video: "https://youtu.be/wl-PZN0_XLA?si=hlK7VGeAvfeFb53m",
+  },
+  {
     name: "Sophia",
     role: "Entrepreneur",
     img: "/images/cclient-review-sophia.webp",
@@ -58,6 +64,12 @@ const defaultTestimonials = [
     role: "Fitness App",
     img: "/images/cclient-review-jason.webp",
     video: "https://vimeo.com/1184931598?share=copy&fl=sv&fe=ci",
+  },
+  {
+    name: "John Townsend",
+    role: "Founder of Mike Damone",
+    img: "/images/cclient-review-john-townsend.png",
+    video: "https://youtu.be/wl-PZN0_XLA?si=hlK7VGeAvfeFb53m",
   },
 ];
 
