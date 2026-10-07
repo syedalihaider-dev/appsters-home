@@ -161,7 +161,7 @@ const ContactSection = () => {
                                                     <option value="+44">UK (+44)</option>
                                                     <option value="+61">AU (+61)</option>
                                                 </Form.Select>
-                                                <Form.Control type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={styles.phoneInput} required />
+                                                <Form.Control type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={`${styles.formInput} ${styles.phoneInput}`} required />
                                             </div>
                                         </Form.Group>
                                     </Col>

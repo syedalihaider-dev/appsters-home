@@ -25,6 +25,14 @@ const cases = [
         badges: ["33 Species at Launch", "Gold Coin Economy", "Daily Retention Loops"],
         image: "/mobile-app-developers/my-tank-virtual.png",
         reverse: false
+    },
+    {
+        title: "MINDE APP",
+        description: "MINDE is an AI-powered voice companion built around continuity of self. Users capture thoughts, intentions, reminders, and encouragement in their own voice, then choose when to hear those messages again. Voice-first recording, AI-assisted scheduling, and original voice playback help people reconnect with what mattered to them.",
+        badges: ["AI Voice Companion", "Smart Reminders", "Original Voice Playback"],
+        image: "/mobile-app-developers/minde-app.png",
+        // href: "/case-study/mind-app",
+        reverse: true
     }
 ]
 
@@ -63,7 +71,7 @@ const CaseStudySection = () => {
                                                 <span className={styles.caseBadge} key={idx}>{badge}</span>
                                             ))}
                                         </div>
-                                        <Link href="#contact" className={styles.primaryBtn}>
+                                        <Link href={study.href || '#contact'} className={styles.primaryBtn}>
                                             View Case Study <FaArrowRight className={styles.btnIcon} />
                                         </Link>
                                     </div>

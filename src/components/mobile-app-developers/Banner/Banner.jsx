@@ -10,6 +10,7 @@ const Banner = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        countryCode: '+1',
         phone: '',
         service: '',
         budget: '',
@@ -30,6 +31,7 @@ const Banner = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...formData,
+                    phone: `${formData.countryCode} ${formData.phone}`.trim(),
                     pageUrl: window.location.href
                 })
             })
@@ -120,7 +122,14 @@ const Banner = () => {
                                     <div className="col-md-6">
                                         <div className={styles.inputGroup}>
                                             <label>PHONE NUMBER</label>
-                                            <input type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (000) 000-0000" required />
+                                            <div className={styles.phoneGroup}>
+                                                <select name="countryCode" value={formData.countryCode} onChange={handleChange} className={styles.countrySelect} aria-label="Country calling code">
+                                                    <option value="+1">US (+1)</option>
+                                                    <option value="+44">UK (+44)</option>
+                                                    <option value="+61">AU (+61)</option>
+                                                </select>
+                                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="555 000 0000" className={styles.phoneInput} autoComplete="tel-national" inputMode="tel" required />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
