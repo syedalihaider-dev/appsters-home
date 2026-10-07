@@ -180,6 +180,7 @@
     outline-offset: 0px;
     text-shadow: none;
     transition: var(--cubic);
+    position: relative;
 }
 
 .testimonials_info .right:hover {
@@ -190,11 +191,21 @@
 }
 
 .play_btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.play_icon {
     width: 21px;
     height: 23px;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .sec_content :global(.swiper) {

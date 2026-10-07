@@ -63,8 +63,12 @@ const defaultTestimonials = [
 
 export default function VideoTestimonialSection({ data = {}, style = {} }) {
   useEffect(() => {
-    Fancybox.bind("[data-fancybox]", {});
-    return () => Fancybox.destroy();
+    Fancybox.bind('[data-fancybox="testimonial-videos"]', {
+      // Fancybox's scrollbar compensation can leave the page shifted when
+      // the site already hides horizontal overflow on body.
+      hideScrollbar: false,
+    });
+    return () => Fancybox.unbind('[data-fancybox="testimonial-videos"]');
   }, []);
 
   const title = data.title || '<span class="primarytxt">Real Stories</span> From People Who Wanted <span class="primarytxt">What\'s Next.</span>';
@@ -152,13 +156,14 @@ export default function VideoTestimonialSection({ data = {}, style = {} }) {
                         data-fancybox="testimonial-videos"
                         data-src={item.video || "https://vimeo.com/1184929104?share=copy&fl=sv&fe=ci"}
                         className={styles.play_btn}
+                        aria-label={`Play ${item.name}'s video testimonial`}
                       >
                         <Image
                           src="/images/play-btn.png"
                           alt="Play Button Image..."
-                          fill
-                          sizes="100vw"
-                          style={{ objectFit: "contain" }}
+                          width={21}
+                          height={23}
+                          className={styles.play_icon}
                         />
                       </a>
                     </div>
