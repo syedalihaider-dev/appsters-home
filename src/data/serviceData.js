@@ -467,12 +467,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -1043,12 +1043,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -1619,12 +1619,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -2195,12 +2195,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -2783,12 +2783,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -3371,12 +3371,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -3959,12 +3959,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -4547,12 +4547,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -5135,12 +5135,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -5723,12 +5723,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -6307,12 +6307,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -6895,12 +6895,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -7483,12 +7483,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
@@ -8071,12 +8071,12 @@ export const serviceData = {
           "desc": "Our big data solutions collect, process, and analyze massive datasets in real time. Using distributed architectures and optimized pipelines, we help businesses uncover actionable patterns faster.  If your business needs analytics dashboards, predictive models, or scalable storage, we deliver systems that grow with your data without losing performance."
         },
         {
-          "icon": "/images/cloud-computing.webp",
+          "icon": "/images/progressive-web-apps.webp",
           "title": "Voice Recognition & NLP",
           "desc": "We engineer voice-enabled apps that understand, process, and respond naturally. Our NLP models support multiple languages, custom vocabularies, and domain-specific commands. From virtual assistants to call center automation, we build speech solutions that improve user accessibility and deliver faster response times for customer-facing applications."
         },
         {
-          "icon": "/images/iot-apps.webp",
+          "icon": "/images/quantum-computing.webp",
           "title": "Quantum Computing",
           "desc": "Quantum computing is unlocking possibilities in optimization, cryptography, and simulation. Appsters help businesses experiment safely with quantum algorithms by building hybrid apps that pair classical and quantum workflows. Our solutions are designed for future scalability, so early adopters stay ahead as hardware capabilities rapidly change."
         },
