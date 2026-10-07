@@ -67,6 +67,9 @@ export default function VideoTestimonialSection({ data = {}, style = {} }) {
       // Fancybox's scrollbar compensation can leave the page shifted when
       // the site already hides horizontal overflow on body.
       hideScrollbar: false,
+      // The trigger lives inside a transformed Swiper slide. Restoring focus
+      // to that off-center element can make the browser scroll the page sideways.
+      placeFocusBack: false,
     });
     return () => Fancybox.unbind('[data-fancybox="testimonial-videos"]');
   }, []);
