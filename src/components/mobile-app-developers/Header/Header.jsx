@@ -24,15 +24,16 @@ const Header = () => {
 
                     <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
                         <ul className={styles.navList}>
-                            <li><Link href="#services" onClick={() => setIsMenuOpen(false)}>SERVICES</Link></li>
+                            <li><Link href="#services" onClick={() => setIsMenuOpen(false)}>Services <span className={styles.chevron}>⌄</span></Link></li>
                             <li><Link href="#portfolio" onClick={() => setIsMenuOpen(false)}>PORTFOLIO</Link></li>
                             <li><Link href="#testimonials" onClick={() => setIsMenuOpen(false)}>TESTIMONIALS</Link></li>
                             <li><Link href="#process" onClick={() => setIsMenuOpen(false)}>PROCESS</Link></li>
-                            <li><Link href="#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link></li>
+                            <li><Link href="#about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
+                            <li><Link href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
                         </ul>
                         <div className={styles.navAction}>
                             <Link href="#contact" className={styles.ctaBtn} onClick={() => setIsMenuOpen(false)}>
-                                Get a Free Estimate
+                                Get a Free Estimate <span aria-hidden="true">→</span>
                             </Link>
                         </div>
                     </nav>

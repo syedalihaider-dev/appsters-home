@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Montserrat, DM_Sans, Inter } from 'next/font/google'
 import Header from '@/components/mobile-app-developers/Header/Header'
 import Banner from '@/components/mobile-app-developers/Banner/Banner'
@@ -11,6 +11,10 @@ import ProcessSection from '@/components/mobile-app-developers/ProcessSection/Pr
 import ContactSection from '@/components/mobile-app-developers/ContactSection/ContactSection'
 import Footer from '@/components/mobile-app-developers/Footer/Footer'
 import CaseStudySection from '@/components/mobile-app-developers/CaseStudySection/CaseStudySection'
+import MindCaseStudySection from '@/components/mobile-app-developers/MindCaseStudySection/MindCaseStudySection'
+import TankCaseStudySection from '@/components/mobile-app-developers/TankCaseStudySection/TankCaseStudySection'
+import GlobalReflexCaseStudySection from '@/components/mobile-app-developers/GlobalReflexCaseStudySection/GlobalReflexCaseStudySection'
+import StorySignCaseStudySection from '@/components/mobile-app-developers/StorySignCaseStudySection/StorySignCaseStudySection'
 import Popup from '@/components/mobile-app-developers/Popup/Popup'
 import styles from './page.module.css'
 
@@ -37,26 +41,26 @@ const dmsans = DM_Sans({
 const Page = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false)
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsPopupOpen(true)
-        }, 5000)
-
-        return () => clearTimeout(timer)
-    }, [])
-
     return (
         <main className={`${styles.lpMobileAppStudio} ${inter.variable} ${montserrat.variable} ${dmsans.variable}`}>
             <Header />
             <Banner />
             <ReviewsSection />
-            <IndustryServices onOpenPopup={() => setIsPopupOpen(true)} />
+            <IndustryServices />
             <CaseStudySection />
-            <PortfolioSection />
+            <MindCaseStudySection />
+            <TankCaseStudySection />
+            <GlobalReflexCaseStudySection />
+            <StorySignCaseStudySection />
+                        {/* <PortfolioSection /> */}
             <TestimonialsSection />
             <ProcessSection />
             <ContactSection />
             <Footer />
+            {/* Existing page sections are preserved for later reuse.
+            
+
+            */}
             <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
         </main>
     )
