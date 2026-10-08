@@ -1,69 +1,19 @@
-"use client"
-import React, { useState } from 'react'
-import { Montserrat, DM_Sans, Inter } from 'next/font/google'
-import Header from '@/components/mobile-app-developers/Header/Header'
-import Banner from '@/components/mobile-app-developers/Banner/Banner'
-import ReviewsSection from '@/components/mobile-app-developers/ReviewsSection/ReviewsSection'
-import IndustryServices from '@/components/mobile-app-developers/IndustryServices/IndustryServices'
-import PortfolioSection from '@/components/mobile-app-developers/PortfolioSection/PortfolioSection'
-import TestimonialsSection from '@/components/mobile-app-developers/TestimonialsSection/TestimonialsSection'
-import ProcessSection from '@/components/mobile-app-developers/ProcessSection/ProcessSection'
-import ContactSection from '@/components/mobile-app-developers/ContactSection/ContactSection'
-import Footer from '@/components/mobile-app-developers/Footer/Footer'
-import CaseStudySection from '@/components/mobile-app-developers/CaseStudySection/CaseStudySection'
-import MindCaseStudySection from '@/components/mobile-app-developers/MindCaseStudySection/MindCaseStudySection'
-import TankCaseStudySection from '@/components/mobile-app-developers/TankCaseStudySection/TankCaseStudySection'
-import GlobalReflexCaseStudySection from '@/components/mobile-app-developers/GlobalReflexCaseStudySection/GlobalReflexCaseStudySection'
-import StorySignCaseStudySection from '@/components/mobile-app-developers/StorySignCaseStudySection/StorySignCaseStudySection'
-import Popup from '@/components/mobile-app-developers/Popup/Popup'
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+import Script from 'next/script'
 import styles from './page.module.css'
 
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-    display: 'swap',
-})
+const pageMarkup = readFileSync(
+    path.join(process.cwd(), 'public/mobile-app-developers/content.html'),
+    'utf8',
+)
+    .replaceAll('assets/', '/mobile-app-developers/assets/')
+    .replaceAll('https://www.appsters.io/lp/mobile-app-developers', '/lp/mobile-app-developers')
+    .replaceAll(' onsubmit="event.preventDefault()"', '')
 
-const montserrat = Montserrat({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700', '800', '900'],
-    variable: '--font-montserrat',
-    display: 'swap',
-})
-
-const dmsans = DM_Sans({
-    subsets: ['latin'],
-    weight: ['400', '500', '700'],
-    variable: '--font-dmsans',
-    display: 'swap',
-})
-
-const Page = () => {
-    const [isPopupOpen, setIsPopupOpen] = useState(false)
-
-    return (
-        <main className={`${styles.lpMobileAppStudio} ${inter.variable} ${montserrat.variable} ${dmsans.variable}`}>
-            <Header />
-            <Banner />
-            <ReviewsSection />
-            <IndustryServices />
-            <CaseStudySection />
-            <MindCaseStudySection />
-            <TankCaseStudySection />
-            <GlobalReflexCaseStudySection />
-            <StorySignCaseStudySection />
-                        {/* <PortfolioSection /> */}
-            <TestimonialsSection />
-            <ProcessSection />
-            <ContactSection />
-            <Footer />
-            {/* Existing page sections are preserved for later reuse.
-            
-
-            */}
-            <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-        </main>
-    )
+export default function MobileAppDevelopersPage() {
+    return <>
+        <div className={styles.landingPage} dangerouslySetInnerHTML={{ __html: pageMarkup }} />
+        <Script src="/mobile-app-developers/interactions.js" strategy="afterInteractive" />
+    </>
 }
-
-export default Page
