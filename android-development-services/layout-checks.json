@@ -1,0 +1,42 @@
+[
+  {
+    "digitalWallet": true,
+    "documentWidth": 390,
+    "featuredCaseStudies": 5,
+    "imagesLoaded": true,
+    "overflow": [],
+    "reviewCards": 3,
+    "title": "Hire Android Developers | Appsters",
+    "viewport": 390
+  },
+  {
+    "digitalWallet": true,
+    "documentWidth": 768,
+    "featuredCaseStudies": 5,
+    "imagesLoaded": true,
+    "overflow": [],
+    "reviewCards": 3,
+    "title": "Hire Android Developers | Appsters",
+    "viewport": 768
+  },
+  {
+    "digitalWallet": true,
+    "documentWidth": 1024,
+    "featuredCaseStudies": 5,
+    "imagesLoaded": true,
+    "overflow": [],
+    "reviewCards": 3,
+    "title": "Hire Android Developers | Appsters",
+    "viewport": 1024
+  },
+  {
+    "digitalWallet": true,
+    "documentWidth": 1440,
+    "featuredCaseStudies": 5,
+    "imagesLoaded": true,
+    "overflow": [],
+    "reviewCards": 3,
+    "title": "Hire Android Developers | Appsters",
+    "viewport": 1440
+  }
+]
