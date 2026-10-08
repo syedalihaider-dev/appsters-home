@@ -73,7 +73,7 @@ const defaultTestimonials = [
   },
 ];
 
-export default function VideoTestimonialSection({ data = {}, style = {} }) {
+export default function VideoTestimonialSection({ data = {}, style = {}, className = "", theme = "", showTrustedHeading = true }) {
   useEffect(() => {
     Fancybox.bind('[data-fancybox="testimonial-videos"]', {
       // Fancybox's scrollbar compensation can leave the page shifted when
@@ -90,8 +90,8 @@ export default function VideoTestimonialSection({ data = {}, style = {} }) {
   const testimonials = data.testimonials || defaultTestimonials;
 
   return (
-    <section className={styles.videoTestimonialSection} style={style}>
-      <p className={styles.transparent_heading}>Trusted Clients</p>
+    <section className={`${styles.videoTestimonialSection} ${theme === "lp" ? styles.lpTheme : ""} ${className}`} style={style}>
+      {showTrustedHeading && <p className={styles.transparent_heading}>Trusted Clients</p>}
       <div className="container">
         <div className={styles.sec_top}>
           <div className="row align-items-center">

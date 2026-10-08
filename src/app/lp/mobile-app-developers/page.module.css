@@ -8,6 +8,10 @@
     background: #080a0b;
 }
 
+.landingPage :global(.showcase-button) {
+    text-decoration: none;
+}
+
 .landingPage :global(main [class*="Banner_inputWithIcon"]) {
     border: 1px solid #3d4634 !important;
     border-radius: 10px !important;

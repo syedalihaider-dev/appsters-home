@@ -105,7 +105,7 @@ const PortfolioSection = () => {
                                         </div>
 
                                         <Link href="#contact" className={styles.primaryBtn}>
-                                            View Full Case Study <FaArrowRight className={styles.btnIcon} />
+                                            Get a Free Estimate <FaArrowRight className={styles.btnIcon} />
                                         </Link>
                                     </div>
                                 </div>
