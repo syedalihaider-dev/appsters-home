@@ -28,22 +28,27 @@ export default function ThankYou() {
             </Script>
 
             <main className={styles.thankYouPage}>
-                <div className="container">
+                <div className={styles.container}>
                     <div className={styles.content}>
+                        <div className={styles.successIcon} aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="m13 24.5 7.2 7.2L35.5 16" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                        <span className={styles.eyebrow}>MESSAGE RECEIVED</span>
                         <h1 className={styles.title}>Thank You!</h1>
 
                         <p className={styles.desc}>
-                            Your inquiry has been received. One of our Appsters will get back
-                            to you shortly to discuss how we can bring your mobile vision to
-                            life.
+                            Your inquiry is safely with our team. An Appsters specialist will
+                            be in touch shortly to discuss your mobile app and next steps.
                         </p>
 
                         <div className={styles.btnRow}>
                             <Link
-                                href="/lp/mobile-app-studio"
+                                href="/lp/mobile-app-developers"
                                 className={styles.backBtn}
                             >
-                                &larr; BACK TO HOME
+                                <span aria-hidden="true">←</span> Back to the landing page
                             </Link>
                         </div>
                     </div>
