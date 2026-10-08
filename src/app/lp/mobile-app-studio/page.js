@@ -3,6 +3,7 @@ import React from 'react'
 import { Montserrat, DM_Sans } from 'next/font/google'
 import Header from '@/components/MobileAppStudio/Header'
 import Banner from '@/components/MobileAppStudio/Banner'
+import ClientReviewsSection from '@/components/MobileAppStudio/ClientReviewsSection'
 import LeadingPartner from '@/components/MobileAppStudio/LeadingPartner'
 import AwardsSlider from '@/components/MobileAppStudio/AwardsSlider'
 import Services from '@/components/MobileAppStudio/Services'
@@ -40,6 +41,7 @@ const Page = () => {
         <main className={`${styles.lpMobileAppStudio} ${montserrat.variable} ${dmsans.variable}`}>
             <Header />
             <Banner />
+            <ClientReviewsSection />
             <LeadingPartner />
             <AwardsSlider />
             <Services />

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { SITE_PHONE, SITE_PHONE_LINK } from "@/app/constants";
 import { FiExternalLink, FiShield, FiThumbsUp, FiUsers } from "react-icons/fi";
 import "./AppDevelopmentCompany.css";
+import CaseStudiesGridSection from "@/components/case-study/CaseStudiesGridSection";
 
 /* ===================================================================
    UTILITY HELPERS
@@ -454,6 +455,8 @@ export default function AppDevelopmentCompanyPage() {
             ))}
           </div>
         </section>
+
+        <CaseStudiesGridSection />
 
         {/* ===== PORTFOLIO CAROUSEL ===== */}
         <section className="section" id="portfolio" style={{ paddingTop: 0 }}>

@@ -10,6 +10,7 @@ const cases = [
         description: "Mic2Money is a live music competition platform built for artists who are tired of waiting for permission. Artists enter contests, perform for a real audience, and earn actual cash based on fan votes: no label, no algorithm, no gatekeepers deciding who gets heard. For fans, it's the first platform that makes discovery feel like participation. You don't just listen. You influence outcomes and get rewarded for spotting talent before the rest of the world catches on.",
         badges: ["Live Contest Engine", "Real Cash Payouts", "Fan-Driven Voting"],
         image: "/mobile-app-developers/mic2money.png",
+        href: "/case-study/mic-2-money",
         reverse: false
     },
     {
@@ -17,6 +18,7 @@ const cases = [
         description: "Global Reflex is a precision reaction-time game that strips competitive mobile gaming down to its most honest form. A dot appears. The millisecond timer starts. You tap. Your score is verified, ranked, and placed on a global leaderboard against every other player on the planet. No upgrades that buy you an edge. No luck mechanics. Just the speed of your nervous system, measured accurately, compared fairly, and ranked in real time against the world.",
         badges: ["iOS & Android", "Anti-Cheat Verified", "Global Leaderboards"],
         image: "/mobile-app-developers/global-reflex.png",
+        href: "/case-study/global-reflex",
         reverse: true
     },
     {
@@ -24,6 +26,7 @@ const cases = [
         description: "Virtual LiveWell is a fishing app that gives your catch a life after release. Photograph what you reel in, upload it through the app, and watch an animated version of that exact species swim into your personal virtual tank. Your tank grows with every trip, decorates with every milestone, and connects you to a community of anglers whose collections tell the story of every river, lake, and shoreline they have fished. It turns catch-and-release into something you genuinely look forward to logging.",
         badges: ["33 Species at Launch", "Gold Coin Economy", "Daily Retention Loops"],
         image: "/mobile-app-developers/my-tank-virtual.png",
+        href: "/case-study/my-tank",
         reverse: false
     },
     {
@@ -31,8 +34,16 @@ const cases = [
         description: "MINDE is an AI-powered voice companion built around continuity of self. Users capture thoughts, intentions, reminders, and encouragement in their own voice, then choose when to hear those messages again. Voice-first recording, AI-assisted scheduling, and original voice playback help people reconnect with what mattered to them.",
         badges: ["AI Voice Companion", "Smart Reminders", "Original Voice Playback"],
         image: "/mobile-app-developers/minde-app.png",
-        // href: "/case-study/mind-app",
+        href: "/case-study/mind-app",
         reverse: true
+    },
+    {
+        title: "STORYSIGN",
+        description: "StorySign brings the personal experience of author autographs into the digital reading world, allowing readers to request personalized signatures from authors and keep their signed eBooks in one digital library.",
+        badges: ["Digital Autographs", "Real Connections"],
+        image: "/mobile-app-developers/storysign-new-img.webp",
+        href: "/case-study/storysign",
+        reverse: false
     }
 ]
 
@@ -71,7 +82,7 @@ const CaseStudySection = () => {
                                                 <span className={styles.caseBadge} key={idx}>{badge}</span>
                                             ))}
                                         </div>
-                                        <Link href={study.href || '#contact'} className={styles.primaryBtn}>
+                                        <Link href={study.href} className={styles.primaryBtn}>
                                             View Case Study <FaArrowRight className={styles.btnIcon} />
                                         </Link>
                                     </div>
