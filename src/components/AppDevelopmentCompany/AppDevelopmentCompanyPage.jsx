@@ -271,6 +271,7 @@ const PORTFOLIO = [
   { tag: "Check your reflexes", name: "Global Reflex", img: "2", alt: "Global Reflex app screens", desc: "A fast, reliable and engaging app that lets users connect, interact and complete tasks across a modern digital platform.", stats: [{ dt: "Active users", dd: "12.9k" }, { dt: "App rating", dd: "4.8" }, { dt: "Monthly users", dd: "1k+" }] },
   { tag: "Share your content", name: "Mic 2 Money", img: "1", alt: "Mic 2 Money app screens", desc: "Creators record, share and monetize podcast content, grow an audience and turn their voice into income.", stats: [{ dt: "Active users", dd: "4.5k" }, { dt: "App rating", dd: "4.7" }, { dt: "Monthly users", dd: "1.8k+" }] },
   { tag: "Virtual live well", name: "My Tank", img: "3", alt: "My Tank app screens", desc: "Built for anglers to record, track and showcase catches, analyze performance and compete with others.", stats: [{ dt: "Active users", dd: "24.2k" }, { dt: "App rating", dd: "4.7" }, { dt: "Monthly users", dd: "1.2k+" }] },
+  { tag: "Digital Autographs", name: "STORYSIGN", image: "/storysign-new-img.webp", alt: "STORYSIGN app case study", desc: "StorySign brings the personal experience of author autographs into the digital reading world, allowing readers to request personalized signatures from authors and keep their signed eBooks in one digital library.", href: "/case-study/storysign", stats: [{ dt: "Active users", dd: "6.4k" }, { dt: "App rating", dd: "4.8" }, { dt: "Monthly users", dd: "2.1k+" }] },
 ];
 
 const PROCESS_TABS = [
@@ -466,7 +467,7 @@ export default function AppDevelopmentCompanyPage() {
           >
             {PORTFOLIO.map((p) => (
               <article key={p.name} className="car-slide port-slide">
-                <img src={`https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fshowcase%2F${p.img}.png&w=1920&q=75`} alt={p.alt} loading="lazy" />
+                <img src={p.image || `https://www.appsters.io/_next/image?url=%2Fimages%2Fmobile-app-studio%2Fshowcase%2F${p.img}.png&w=1920&q=75`} alt={p.alt} loading="lazy" />
                 <div>
                   <p className="port-tag">{p.tag}</p>
                   <h3>{p.name}</h3>
@@ -476,7 +477,7 @@ export default function AppDevelopmentCompanyPage() {
                       <div key={st.dt}><dt>{st.dt}</dt><dd>{st.dd}</dd></div>
                     ))}
                   </dl>
-                  <button className="btn btn-primary" type="button" onClick={openForm}>Start your project</button>
+                  {p.href ? <a className="btn btn-primary" href={p.href}>View Case Study</a> : <button className="btn btn-primary" type="button" onClick={openForm}>Start your project</button>}
                 </div>
               </article>
             ))}
